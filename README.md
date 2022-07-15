@@ -1,4 +1,4 @@
-# coding2
+# coding
 
 ### 메인 페이지
 https://kdb6.github.io/coding2/index.html   
