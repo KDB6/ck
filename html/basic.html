@@ -95,7 +95,8 @@
             text-align: center;
         }
         .article .box {
-            background-color: #dedede;
+            background-color: #ededed;
+            padding: 10px;
         }
 
         /* 미디어 쿼리 */
@@ -171,7 +172,7 @@
                 </tbody>
                 </table>
 
-                <br> <p>예시1-1에서 &lt;html lang="ko"&gt;나 &lt;meata charest="URF-8"&gt;처럼 태그 내부에 부가적인 설정값을 선언하는<br>것을 속성(attribute)이라고 합니다.</p>
+                <br> <p>예시1-1에서 &lt;html lang="ko"&gt;나 &lt;meata charest="URF-8"&gt;처럼 태그 내부에 부가적인 설정값을 <br>선언하는 것을 속성(attribute)이라고 합니다.</p>
                 <p>lang 속성은 HTML 문서에서 사용하는 언어를 말하며 lang="ko"는 한국어, lang="en"은 영어를 의미</p>
                 <p>lang 속성이 중요한 이유는 시각 장애인들이 사용하는 스크린 리더 (음성낭독 프로그램) 에서 언어 설정에<br>따라 다르게 읽어 주기 때문입니다.</p> <br>
                 <p>예를 들어 1, 2, 3의 경우 lang="ko"로 설정하였다면 '일, 이, 삼' 으로 읽어주며, lang="en"으로 설정하였다면<br>원, 투, 쓰리로 읽어 줍니다. 이러한 이유 때문에 lang 속성은 HTML 문서에서 꼭 정의해야하는 속성<br>중에 하나입니다. 만약, 주 언어를 "ko"로 설저하였는데 특정 부분에서 언어를 바꾸고 싶다면 해당하는 부분에만<br>iang 속성을 다른 언어로 지정할 수 있습니다.</p>
@@ -194,9 +195,13 @@
                 <p>XHTML 1.0버전의 경우 HTML5 보다 문법적으로 조금 더 엄격합니다.</p> <br>
 
                 <p class="box">
-                    &lt;meta name = "veiwport" /&gt;
+                    &lt;meta name = "veiwport"/&gt;
                 </p>
-                <p>뷰포트라고 하면 문서를 조절 해주는 속성이다.</p>
+                <p>뷰포트는 문서를 조절 해주는 속성이다.</p>
+                <p class="box">
+                    &lt;style name = "veiwport"/&gt;
+                </p>
+                <p>&lt;meta&gt;태그의 charset 속성의 값 UTF-8을 문자 인코딩(charest) 방식이라고 하며, UTF-8을 주로 사용한다.</p>
         </article>
     </section>
 </body>
