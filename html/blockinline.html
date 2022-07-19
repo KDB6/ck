@@ -143,20 +143,49 @@
                 '인라인 요소'로 나누어지며, 이 중 '블록 레벨 요소'에 대한 것을 먼저 알아보겠다.
             </p> <br>
             <h2>블록 레벨 요소(Block-level Elements)</h2>
-            <p>블록 레벨 요소는 마크업을 할 때 줄이 바뀌는 특성을 가지고 있는데, 다음 예제를 보면서 설명</p>
+            <p>블록 레벨 요소는 마크업을 할 때 줄이 바뀌는 특성을 가지고 있는데, 다음 예제를 보면서 설명</p> <br>
             <p class="box">
-                &lt;!DOCTYPE html&gt;
-                &lt;html lang="ko"&gt;
-                &lt;head&gt;
-                &lt;meta charest="UFT-8"&gt;
-                &lt;title&gt;블록 레벨 요소&lt;/title&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                &lt;h1&gt;블록 레벨 요소&lt;/h1&gt;
-                &lt;h2&gt;블록 레벨 요소 성질&lt;/h2&gt;
-                &lt;p&gt;줄 바꿈이 생깁니다.&lt;/p&gt;
-                &lt;/body&gt;
-                &lt;/html&gt;
+                &lt;!DOCTYPE html&gt; <br>
+                &lt;html lang="ko"&gt; <br>
+                &lt;head&gt; <br>
+                &emsp;&emsp; &lt;meta charest="UFT-8"&gt; <br>
+                &emsp;&emsp; &lt;title&gt;블록 레벨 요소&lt;/title&gt; <br>
+                &lt;/head&gt; <br>
+                &lt;body&gt; <br>
+                &emsp;&emsp; &lt;h1&gt;블록 레벨 요소&lt;/h1&gt; <br>
+                &emsp;&emsp; &lt;h2&gt;블록 레벨 요소 성질&lt;/h2&gt; <br>
+                &emsp;&emsp; &lt;p&gt;줄 바꿈이 생깁니다.&lt;/p&gt; <br>
+                &lt;/body&gt; <br>
+                &lt;/html&gt; <br>
+            </p>
+            <p>결과 ▽</p>
+            <h1>블록 레벨 요소</h1>
+            <h2>블록 레벨 요소 성질</h2>
+            <p>줄 바꿈이 생깁니다.</p> <br>
+            <p>(예제 ex1-1)에서 마크업 했던 &lt;h1&gt;, &lt;h2&gt;, &lt;p&gt; 요소들은 블록의 성질을 가지고 있어 화면상 줄 바꿈
+                <br>현상이 일어나는 것을 볼 수 있습니다.
+            </p> <br> <br> <br>
+
+            <h2>인라인 요소(Inline Element)</h2>
+            <p>인라인 요소는 블록 레벨 요소와 달리 줄 바꿈 특성이 없습니다. 즉, 블록 레벨 요소처럼 행이 바뀌지 않고 한 줄로 출력</p> <br>
+            <p class="box">
+                &lt;!DOCTYPE html&gt; <br>
+                &lt;html lang="ko"&gt; <br>
+                &lt;head&gt; <br>
+                &emsp;&emsp; &lt;meta charest="UFT-8"&gt; <br>
+                &emsp;&emsp; &lt;title&gt;인라인 요소&lt;/title&gt; <br>
+                &lt;/head&gt; <br>
+                &lt;body&gt; <br>
+                &emsp;&emsp; &lt;strong&gt;인라인 요소&lt;/strong&gt; <br>
+                &emsp;&emsp; &lt;span&gt;인라인 요소는 한 줄로 출력됩니다.&lt;/span&gt; <br>
+                &lt;/body&gt; <br>
+                &lt;/html&gt; <br>
+            </p>
+            <p>결과 ▽</p>
+            <strong>인라인 요소</strong>
+            <span>인라인 요소는 한 줄로 출력됩니다.</span>
+            <br><br> <p>(예제 ex1-2)에서 마크업 했던 &lt;strong&gt;, &lt;span&gt; 요소들은 인라인 성질을 가지고 있어 행이 바뀌지 않고
+                <br>한 줄로 출력 된 것을 확인 가능
             </p>
         </article>
     </section>
