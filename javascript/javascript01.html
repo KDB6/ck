@@ -192,9 +192,9 @@
     const y = 200;
     const z = "javascript";
 
-    x = 300;          //300으로 변경X
-    y = 400;          //400으로 변경X
-    z = "jquery";     //jquery으로 변경X
+    x = 300;        //300으로 변경X
+    y = 400;        //400으로 변경X
+    z = "jquery";   //jquery으로 변경X
 
     document.write(x);
     document.write(y);
@@ -392,6 +392,59 @@
                     </details>
                 </div>
             </div>
+
+            <!-- 14 -->
+            <div id="sample14" class="sample">
+                <h3>14. 객체 : 데이터 저장(키와 값) : 표현 방법4</h3>
+                <p> 
+                </p>
+                <div class="script">
+<pre><code class="language.js">    const obj = [
+    {a:100, b:200},
+    {c:"javascript"}
+    ];
+
+    document.write(obj[0].a);
+    document.write(obj[0].b);
+    document.write(obj[1].c);
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample14_result"></div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- 15 -->
+            <div id="sample15" class="sample">
+                <h3>15. 객체 : 데이터 저장(키와 값) : 표현 방법4</h3>
+                <p> 
+                </p>
+                <div class="script">
+<pre><code class="language.js">    const obj = {
+    a: 100,
+    b: [200,300],
+    c: {x: 400, y:500},
+    d: "javascript"
+    }
+
+    document.write(obj.a);
+    document.write(obj.b[0]);
+    document.write(obj.b[1]);
+    document.write(obj.c,x);
+    document.write(obj.c,y);
+    document.write(obj.d);
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample15_result"></div>
+                    </details>
+                </div>
+            </div>
         </div>
 
         <div id="main_desc"></div>
@@ -469,7 +522,7 @@
                 // document.write(y,"<br>");
                 // document.write(z,"<br>");
             }
-            func()
+            func();
         
             // document.write("함수 밖<br>");
             // document.write(x,"<br>");
@@ -598,6 +651,39 @@
             // document.write(obj.c);
 
             document.querySelector(".sample13_result").innerHTML = x + "<br>" + y + "<br>" + z
+        }
+
+        //14
+        {
+            const obj = [
+                {a:100, b:200},
+                {c:"javascript"}
+                ];
+
+            // document.write(obj[0].a);
+            // document.write(obj[0].b);
+            // document.write(obj[1].c);
+
+            document.querySelector(".sample14_result").innerHTML = x + "<br>" + y + "<br>" + z
+        }
+
+        //15
+        {
+            const obj = {
+                a: 100,
+                b: [200, 300],
+                c: {x: 400, y: 500},
+                d: "javascript"
+            }
+
+            // document.write(obj.a);
+            // document.write(obj.b[0]);
+            // document.write(obj.b[1]);
+            // document.write(obj.c,x);
+            // document.write(obj.c,y);
+            // document.write(obj.d);
+
+            document.querySelector(".sample15_result").innerHTML = x + "<br>" + y + "<br>" + z
         }
     </script>
 </body>
