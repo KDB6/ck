@@ -13,4 +13,4 @@ https://kdb6.github.io/ck/javascript/index.html
 https://kdb6.github.io/ck/html/index.html   
 
 ### CSS 메인 페이지
-https://kdb6.github.io/ck/CSS/index.html   
+https://kdb6.github.io/ck/css/index.html   
