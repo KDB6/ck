@@ -93,6 +93,28 @@ body{
 .main_sample .result {
     margin-bottom: 80px;
 }
+.box {
+    background-color: #ededed;
+    padding: 10px;
+}
+.table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.table .center {
+    text-align: center;
+}
+.table tr th {
+    border: 1px solid #dedede;
+    background-color: #fff;
+    padding: 10px;
+    font-weight: normal;
+}
+.table tr td {
+    border: 1px solid #dedede;
+    padding: 10px;
+}
 @media (max-width: 800px) {
     body {
         padding: 20px;
