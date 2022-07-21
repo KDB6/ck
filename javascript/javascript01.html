@@ -504,32 +504,32 @@
                 </p>
                 <div class="script">
 <pre><code class="language.js">    const obj = {
-    a : 100,
-    b : [200, 300],
-    c : {x:400, y:500},
-    d: "javascript",
-    e: function(){
-        document.write("자바스크립트가 실행되었습니다.");
-    },
-    f : function(){
-        document.write(obj.d + "가 실행되었습니다.");   //다른 값을 넣어 불러올 수 있음
-    },
-    g : function(){
-        document.write(this.d + "가 실행되었습니다.");
+            a : 100,
+            b : [200, 300],
+            c : {x:400, y:500},
+            d: "javascript",
+            e: function(){
+                document.write("자바스크립트가 실행되었습니다.");
+            },
+            f : function(){
+                document.write(obj.d + "가 실행되었습니다.");   //다른 값을 넣어 불러올 수 있음
+            },
+            g : function(){
+                document.write(this.d + "가 실행되었습니다.");
+            }
     }
-}
 
-document.write(obj.a)
-document.write(obj.b[0])
-document.write(obj.b[1])
-document.write(obj.b)
-document.write(obj.c.x)
-document.write(obj.c.y)
-document.write(obj.c)
-document.write(obj.d)
-obj.e() //제어문 삭제
-obj.f()
-obj.g()
+    document.write(obj.a)
+    document.write(obj.b[0])
+    document.write(obj.b[1])
+    document.write(obj.b)
+    document.write(obj.c.x)
+    document.write(obj.c.y)
+    document.write(obj.c)
+    document.write(obj.d)
+    obj.e() //제어문 삭제
+    obj.f()
+    obj.g()
 </code></pre>
                 </div>
 
