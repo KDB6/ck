@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃 유형2</title>
+    <title>레이아웃 유형2 grid</title>
     <style>
         * {
             margin: 0;
@@ -45,42 +45,13 @@
         }
         /* 미디어 쿼리 */
         @media (max-width: 1300px) {
-            #wrap {
-                width: 96%;
-            }
+            
         }
         @media (max-width: 768px) {
-            #wrap {
-                width: 100%;
-            }
-            #main {
-                grid-template-areas: 
-                    "aside section"
-                    "article article"
-                ;
-                grid-template-columns: 30% 70% 100%;
-                grid-template-rows: 680px 150px;
-            }
-            #aside {
-                grid-area: aside;
-            }
-            #section {
-                grid-area: section;
-            }
-            #article {
-                grid-area: article;
-            }
+
         }
         @media (max-width: 480px) {
-            #main {
-                grid-template-areas: 
-                    "aside"
-                    "section"
-                    "article"
-                ;
-                grid-template-columns: 100%;
-                grid-template-rows: 200px 430px 150px;
-            }
+
         }
     </style>
 </head>
@@ -103,7 +74,6 @@
         layout 02_03 : flex 방식 레이아웃
         layout 02_04 : flex 방식 반응형 레이아웃
         layout 02_05 : grid 방식 레이아웃
-        layout 02_06 : grid 방식 반응형 레이아웃
      -->
 </body>
 </html>
