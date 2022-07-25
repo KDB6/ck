@@ -104,6 +104,7 @@
                         <script>
                         for( let i=0; i<100; i++){
                             document.write(i);
+                            document.write("<br>");
                         }
                         document.querySelector(".result01").innerHTML = table;
                         </script>
@@ -127,6 +128,7 @@
                         <script>
                             for( let i=1; i<=100; i++){
                             document.write(i);
+                            document.write("<br>");
                             }
 
                             document.querySelector(".result02").innerHTML = table;
@@ -151,8 +153,9 @@
                     <div class="result03">
                         <script>
                             for( let i=2; i<=100; i+=2){
-                        document.write(i);
-                        }
+                                document.write(i);
+                                document.write("<br>");
+                            }
 
                         document.querySelector(".result03").innerHTML = table;
                         </script>
@@ -185,7 +188,7 @@
                                 }
                                 if (i % 7 == 0) {
                                     document.write("<span style='color: red'>"+i+"</span>");
-                                }
+                                }                                                                  
                             }
 
                             document.querySelector(".result04").innerHTML = table;
@@ -218,6 +221,7 @@
                                 }   else {
                                     document.write("<span style='color: blue'>"+i+"</span>");
                                 }
+                                    document.write("<br>");
                             }
                             document.querySelector(".result05").innerHTML = table;
                         </script>
@@ -242,8 +246,10 @@
                     <div class="result06">
                         <script>
                             for(let i=1; i<=100; i++){
-                            if (i % 2 == 0) ? document.write("<span style='color: red'>"+i+"</span>") : document.write("<span style='color: blue'>"+i+"</span>")
+                               (i % 2 == 0) ? document.write("<span style='color: red'>"+i+"</span>") : document.write("<span style='color: blue'>"+i+"</span>")
+                               document.write("<br>");
                             }
+                            
 
                             document.querySelector(".result06").innerHTML = table;
                         </script>
@@ -286,11 +292,21 @@
             <h3 class="t_tit2">for문을 이용해서 테이블 만들기</h3>
             <p class="t_dec">중첩 for문을 이용해서 테이블을 만들 수 있습니다.</p>
             <div class="t_code">
-<pre><code code="language.js">    {
-        for(let i=1; i&lt;=100; i++){
-            if (i % 2 == 0) ? document.write("<span style='color: red'>"+i+"</span>") : document.write("<span style='color: blue'>"+i+"</span>")
-        }
-    }   
+<pre><code code="language.js">    let table = "&lt;table class='testTable'>";
+
+    table += "&lt;tr>"
+    for (let i=1; i&lt;=10; i++) {
+        table += "<tr>";
+
+            for (let j=1; j&lt;=10; j++){
+                table += "&lt;td>"+i+"&lt;/td>";
+            }
+
+            table += "&lt;/tr>";
+    }
+    table += "&lt;table>";
+
+    document.write(table);   
 </code></pre>
             </div>
             <div class="t_result">
@@ -312,7 +328,9 @@
                             for(let j=0; j<10; j++){
                                 table += "<td>1</td>";
                             }
+                            
                             table += "</tr>";
+                                
                         }
                         table += "</table>";
                         document.querySelector(".result07").innerHTML = table;
@@ -362,7 +380,7 @@
         // for문을 이용해서 1~100까지 출력 (짝수는 빨간색, 홀수는 파란색) : 조건부 연산자
         // {
         //     for(let i=1; i<=100; i++){
-        //         if (i % 2 == 0) ? document.write("<span style='color: red'>"+i+"</span>") : document.write("<span style='color: blue'>"+i+"</span>")
+        //        (i % 2 == 0) ? document.write("<span style='color: red'>"+i+"</span>") : document.write("<span style='color: blue'>"+i+"</span>")
         //     }
         // }
 
@@ -400,22 +418,22 @@
         
         // for문을 이용해서 테이블 만들기
         // {
-        //     let table = "<table class='testTable'>";
+            // let table = "<table class='testTable'>";
 
-        //     // 10번 반복
-        //     table += "<tr>"
-        //     for (let i=1; i<=10; i++) {
-        //         table += "<tr>";
+            // // 10번 반복
+            // table += "<tr>"
+            // for (let i=1; i<=10; i++) {
+            //     table += "<tr>";
 
-        //             for (let j=1; j<=10; j++){
-        //                 table += "<td>"+i+"</td>";
-        //             }
+            //         for (let j=1; j<=10; j++){
+            //             table += "<td>"+i+"</td>";
+            //         }
 
-        //             table += "</tr>";
-        //     }
-        //     table += "<table>";
+            //         table += "</tr>";
+            // }
+            // table += "<table>";
 
-        //     document.write(table);            
+            // document.write(table);            
         // }
     </script>
 </body>
