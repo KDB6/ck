@@ -203,7 +203,7 @@ body {
     color: #666;
     margin-bottom: 10px !important;
     padding: 15px 20px !important;
-    border-left: 4px solid #2043f1;
+    border-left: 4px solid #00db72;
     background-color: #f9f9f9;
 }
 .document .t_box {
@@ -232,6 +232,21 @@ body {
 .document .t_table .ce {
     text-align: center;
 }
+.document .t_iframe {
+    position: relative;
+    padding-top: 56%;
+    width: 100%;
+    height: 0;
+}
+.document .t_iframe iframe {
+    border: 1px solid rgba(0,0,0,0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /* 미디어 쿼리 */
 @media (max-width: 900px){
     #header {
