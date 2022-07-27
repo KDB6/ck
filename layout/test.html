@@ -9,7 +9,7 @@
         * {
             margin: 0;
             padding: 0;
-            color: fff;
+            color: #fff;
         }
         #wrap {
             width: 100%;
@@ -46,7 +46,7 @@
             background-color: rgba(255, 255, 255, 0.6);
             overflow: hidden;
         }
-        .iogo {
+        .logo {
             width: 300px;
             height: 100px;
             background-color: #888;
@@ -58,6 +58,11 @@
             background-color: #999;
             float: left;
         }
+        .banner{
+            width: 1200px;
+            height: 400px;
+            background-color: #666;
+        }
         .ad-top {
             width: 1200px;
             height: 200px;
@@ -65,7 +70,7 @@
         }
         .ad-bom {
             width: 1200px;
-            height: 200px;
+            height: 300px;
             background-color: #888;
         }
         .ad-box1 {
@@ -128,41 +133,43 @@
     <div id="wrap">
         <div id="header">
             <div class="container">
-                <div class="iogo" class="t_result01"></div>
-                <div class="menu"></div>
+                <div class="logo result00" ></div>
+                <div class="menu result01"></div>
             </div>
         </div>
         <div id="banner">
-            <div class="container"></div>
+            <div class="container">
+                <div class="banner result02"></div>
+            </div>
         </div>
         <div id="ad">
             <div class="container">
                 <div class="ad-top">
-                    <div class="ad-box1"></div>
-                    <div class="ad-box2"></div>
-                    <div class="ad-box3"></div>
-                    <div class="ad-box4"></div>
-                    <div class="ad-box5"></div>
-                    <div class="ad-box6"></div>
+                    <div class="ad-box1 result03"></div>
+                    <div class="ad-box2 result04"></div>
+                    <div class="ad-box3 result05"></div>
+                    <div class="ad-box4 result06"></div>
+                    <div class="ad-box5 result07"></div>
+                    <div class="ad-box6 result08"></div>
                 </div>
-                </div>
-                <div class="ad-bom"></div>
+                <div class="ad-bom result09"></div>
+            </div>
+                
             </div>
         </div>
         <div id="notice">
             <div class="container">
-                <div class="nb1"></div>
-                <div class="nb2"></div>
-                <div class="nb3"></div>
+                <div class="nb1 result10"></div>
+                <div class="nb2 result11"></div>
+                <div class="nb3 result12"></div>
             </div>
         </div>
         <div id="footer">
-            <div class="container"></div>
+            <div class="container result13"></div>
         </div>
     </div>
-</body>
     <script>
-        let arr = (로고, 로고2, 배너, 광고1, 광고2, 광고3, 광고4, 광고5, 광고6, 광고7, 공지사항1, 공지사항2, 공지사항3, 푸터);
+        const arr = ["로고", "로고2", "배너", "광고1", "광고2", "광고3", "광고4", "광고5", "광고6", "광고7", "공지사항1", "공지사항2", "공지사항3", "푸터"]
             
         document.write(arr[0]);
         document.write(arr[1]);
@@ -179,6 +186,54 @@
         document.write(arr[12]);
         document.write(arr[13]);
 
-        document.querySelector(".t_result01").innerHTML = 0;
+        document.querySelector(".result00").innerHTML = arr[0]
+        document.querySelector(".result01").innerHTML = arr[1]
+        document.querySelector(".result02").innerHTML = arr[2]
+        document.querySelector(".result03").innerHTML = arr[3]
+        document.querySelector(".result04").innerHTML = arr[4]
+        document.querySelector(".result05").innerHTML = arr[5]
+        document.querySelector(".result06").innerHTML = arr[6]
+        document.querySelector(".result07").innerHTML = arr[7]
+        document.querySelector(".result08").innerHTML = arr[8]
+        document.querySelector(".result09").innerHTML = arr[9]
+        document.querySelector(".result10").innerHTML = arr[10]
+        document.querySelector(".result11").innerHTML = arr[11]
+        document.querySelector(".result12").innerHTML = arr[12]
+        document.querySelector(".result13").innerHTML = arr[13]
     </script>
+    <script>
+        // const obj = {a:로고, b:로고2, c:배너, d:광고1, e:광고2, f:광고3, g:광고4, h:광고5, i:광고6, j:광고7, k:공지사항1, l:공지사항2, n:공지사항3, m:푸터}
+
+        // document.write(obj.a);
+        // document.write(obj.b);
+        // document.write(obj.c);
+        // document.write(obj.d);
+        // document.write(obj.e);
+        // document.write(obj.f);
+        // document.write(obj.g);
+        // document.write(obj.h);
+        // document.write(obj.i);
+        // document.write(obj.j);
+        // document.write(obj.k);
+        // document.write(obj.l);
+        // document.write(obj.n);
+        // document.write(obj.m);
+
+        // document.querySelector(".result00").innerHTML = obj[a]
+        // document.querySelector(".result01").innerHTML = obj[b]
+        // document.querySelector(".result02").innerHTML = obj[c]
+        // document.querySelector(".result03").innerHTML = obj[d]
+        // document.querySelector(".result04").innerHTML = obj[e]
+        // document.querySelector(".result05").innerHTML = obj[f]
+        // document.querySelector(".result06").innerHTML = obj[g]
+        // document.querySelector(".result07").innerHTML = obj[h]
+        // document.querySelector(".result08").innerHTML = obj[i]
+        // document.querySelector(".result09").innerHTML = obj[j]
+        // document.querySelector(".result10").innerHTML = obj[k]
+        // document.querySelector(".result11").innerHTML = obj[l]
+        // document.querySelector(".result12").innerHTML = obj[n]
+        // document.querySelector(".result13").innerHTML = obj[m]
+    </script>
+</body>
+    
 </html>
