@@ -1,12 +1,12 @@
 /* 웹폰트 */
-@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+@import url('https://webfontworld.github.io/SCoreDream/SCoreDream.css');
 @import url('https://webfontworld.github.io/tmon/Tmon.css');
 
 /* 여백 초기화 */
 * {
     margin: 0;
     padding: 0;
-    font-family: 'NexonLv1Gothic';
+    font-family: 'SCoreDream';
     font-size: 16px;
     line-height: 1.6;
 }
