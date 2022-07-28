@@ -580,274 +580,274 @@
     <script>hljs.highlightAll();</script>
 
     <script>
-        // 01
-        {
-            var x = 100;            //변수 x에 숫자 100을 저장함
-            var y = 200;            //변수 y에 숫자 200을 저장함
-            var z = "javascript";   //변수 z에 문자열 "javascript"을 저장함
+        // // 01
+        // {
+        //     var x = 100;            //변수 x에 숫자 100을 저장함
+        //     var y = 200;            //변수 y에 숫자 200을 저장함
+        //     var z = "javascript";   //변수 z에 문자열 "javascript"을 저장함
 
-            // document.write(x)
-            // document.write(y)
-            // document.write(z)
+        //     // document.write(x)
+        //     // document.write(y)
+        //     // document.write(z)
 
-            document.querySelector(".sample01_result").innerHTML = x + "<br>" + y + "<br>" + z
-        }
+        //     document.querySelector(".sample01_result").innerHTML = x + "<br>" + y + "<br>" + z
+        // }
 
-        //02
-        {
-            let x = 100;
-            let y = 200;
-            let z = "javascript";
+        // //02
+        // {
+        //     let x = 100;
+        //     let y = 200;
+        //     let z = "javascript";
 
-            x = 300;        //변수 x의 값이 100에서 300으로 변경됨
-            y = 400;        //변수 y의 값이 200에서 400으로 변경됨
-            z = "jquery";   //변수 z의 값이 "javascript"에서 "jquery"로 변경됨
+        //     x = 300;        //변수 x의 값이 100에서 300으로 변경됨
+        //     y = 400;        //변수 y의 값이 200에서 400으로 변경됨
+        //     z = "jquery";   //변수 z의 값이 "javascript"에서 "jquery"로 변경됨
 
-            // document.write(x);
-            // document.write(y);
-            // document.write(z);
+        //     document.write(x);
+        //     document.write(y);
+        //     document.write(z);
 
-            document.querySelector(".sample02_result").innerHTML = x + "<br>" + y + "<br>" + z
-        }
+        //     document.querySelector(".sample02_result").innerHTML = x + "<br>" + y + "<br>" + z
+        // }
 
-        //03
-        {
-            let x = 100;
-            let y = 200;
-            let z = "javascript";
+        // //03
+        // {
+        //     let x = 100;
+        //     let y = 200;
+        //     let z = "javascript";
 
-            x += 300;        // x = x + 300
-            y += 400;        // y = y + 400
-            z += "jquery";   // z = z + javascript
+        //     x += 300;        // x = x + 300
+        //     y += 400;        // y = y + 400
+        //     z += "jquery";   // z = z + javascript
 
-            // document.write(x);
-            // document.write(y);
-            // document.write(z);
+        //     document.write(x);
+        //     document.write(y);
+        //     document.write(z);
 
-            document.querySelector(".sample03_result").innerHTML = x + "<br>" + y + "<br>" + z
-        }
+        //     document.querySelector(".sample03_result").innerHTML = x + "<br>" + y + "<br>" + z
+        // }
 
-        //04
-        {
-            let x = 100;        //전역변수 
-            let y = 200;        //전역변수
+        // //04
+        // {
+        //     let x = 100;        //전역변수 
+        //     let y = 200;        //전역변수
 
-            function func() {
-                let x = 100;            //지역변수
-                let z = "javascript";   //지역변수
-                x = 200;                //지역 변수 100 > 200
-                y = 300;                //지역 변수 200 > 300
+        //     function func() {
+        //         let x = 100;            //지역변수
+        //         let z = "javascript";   //지역변수
+        //         x = 200;                //지역 변수 100 > 200
+        //         y = 300;                //지역 변수 200 > 300
 
-                // document.write("함수 안<br>");
-                // document.write(x,"<br>");
-                // document.write(y,"<br>");
-                // document.write(z,"<br>");
-            }
-            func();
+        //         document.write("함수 안<br>");
+        //         document.write(x,"<br>");
+        //         document.write(y,"<br>");
+        //         document.write(z,"<br>");
+        //     }
+        //     func();
 
-            // document.write("함수 밖<br>");
-            // document.write(x,"<br>");
-            // document.write(y,"<br>");
-            // document.write(z,"<br>");
-        }
+        //     document.write("함수 밖<br>");
+        //     document.write(x,"<br>");
+        //     document.write(y,"<br>");
+        //     document.write(z,"<br>");
+        // }
 
-        //05
-        {
-            const x = 100;
-            const y = 200;
-            const z = "javascript";
+        // //05
+        // {
+        //     const x = 100;
+        //     const y = 200;
+        //     const z = "javascript";
 
-            //x = 300;          //300으로 변경X
-            //y = 400;          //400으로 변경X
-            //z = "jquery";     //jquery으로 변경X
+        //     //x = 300;          //300으로 변경X
+        //     //y = 400;          //400으로 변경X
+        //     //z = "jquery";     //jquery으로 변경X
 
-            // document.write(x);
-            // document.write(y);
-            // document.write(z);
+        //     document.write(x);
+        //     document.write(y);
+        //     document.write(z);
 
-            document.querySelector(".sample05_result").innerHTML = x + "<br>" + y + "<br>" + z
-        }
+        //     document.querySelector(".sample05_result").innerHTML = x + "<br>" + y + "<br>" + z
+        // }
 
-        //06
-        {
-            const arr = new Array();
-            arr[0] = 100;
-            arr[1] = 200;
-            arr[2] = "javascript";
+        // //06
+        // {
+        //     const arr = new Array();
+        //     arr[0] = 100;
+        //     arr[1] = 200;
+        //     arr[2] = "javascript";
 
-            // document.write(arr[0]);
-            // document.write(arr[1]);
-            // document.write(arr[2]);
+        //     document.write(arr[0]);
+        //     document.write(arr[1]);
+        //     document.write(arr[2]);
 
-            document.querySelector(".sample06_result").innerHTML = x + "<br>" + y + "<br>" + z
-        }
+        //     document.querySelector(".sample06_result").innerHTML = x + "<br>" + y + "<br>" + z
+        // }
 
-        //07
-        {
-            const arr = new Array(100, 200, "javascript");
+        // //07
+        // {
+        //     const arr = new Array(100, 200, "javascript");
 
-            // document.write(arr[0]);
-            // document.write(arr[1]);
-            // document.write(arr[2]);
+        //     document.write(arr[0]);
+        //     document.write(arr[1]);
+        //     document.write(arr[2]);
 
-            document.querySelector(".sample07_result").innerHTML = x + "<br>" + y + "<br>" + z
-        }
+        //     document.querySelector(".sample07_result").innerHTML = x + "<br>" + y + "<br>" + z
+        // }
 
-        //08
-        {
-            const arr = [];
-            arr[0] = 100;
-            arr[0] = 200;
-            arr[0] = "javascript";
+        // //08
+        // {
+        //     const arr = [];
+        //     arr[0] = 100;
+        //     arr[0] = 200;
+        //     arr[0] = "javascript";
 
-            // document.write(arr[0]);
-            // document.write(arr[1]);
-            // document.write(arr[2]);
+        //     document.write(arr[0]);
+        //     document.write(arr[1]);
+        //     document.write(arr[2]);
 
-            document.querySelector(".sample08_result").innerHTML = x + "<br>" + y + "<br>" + z
-        }
+        //     document.querySelector(".sample08_result").innerHTML = x + "<br>" + y + "<br>" + z
+        // }
 
-        //09
-        {
-            const arr = [100, 200, "javascript"]
+        // //09
+        // {
+        //     const arr = [100, 200, "javascript"]
 
-            // document.write(arr[0]);
-            // document.write(arr[1]);
-            // document.write(arr[2]);
+        //     document.write(arr[0]);
+        //     document.write(arr[1]);
+        //     document.write(arr[2]);
 
-            document.querySelector(".sample09_result").innerHTML = x + "<br>" + y + "<br>" + z
-        }
+        //     document.querySelector(".sample09_result").innerHTML = x + "<br>" + y + "<br>" + z
+        // }
 
-        //10 
-        {
-            const obj = new Object();
-            obj[0] = 100;
-            obj[1] = 200;
-            obj[2] = "javascript";
+        // //10 
+        // {
+        //     const obj = new Object();
+        //     obj[0] = 100;
+        //     obj[1] = 200;
+        //     obj[2] = "javascript";
 
-            // document.write(obj[0]);
-            // document.write(obj[1]);
-            // document.write(obj[2]);
+        //     document.write(obj[0]);
+        //     document.write(obj[1]);
+        //     document.write(obj[2]);
 
-            document.querySelector(".sample10_result").innerHTML = x + "<br>" + y + "<br>" + z
-        }
+        //     document.querySelector(".sample10_result").innerHTML = x + "<br>" + y + "<br>" + z
+        // }
 
-        //11
-        {
-            const obj = new Object();
-            obj.a = 100;
-            obj.b = 200;
-            obj.c = "javascript";
+        // //11
+        // {
+        //     const obj = new Object();
+        //     obj.a = 100;
+        //     obj.b = 200;
+        //     obj.c = "javascript";
 
-            // document.write(obj.a);
-            // document.write(obj.b);
-            // document.write(obj.c);
+        //     document.write(obj.a);
+        //     document.write(obj.b);
+        //     document.write(obj.c);
 
-            document.querySelector(".sample11_result").innerHTML = x + "<br>" + y + "<br>" + z
-        }
+        //     document.querySelector(".sample11_result").innerHTML = x + "<br>" + y + "<br>" + z
+        // }
 
-        //12
-        {
-            const obj = {}
+        // //12
+        // {
+        //     const obj = {}
 
-            obj.a = 100;
-            obj.b = 200;
-            obj.c = "javascript";
+        //     obj.a = 100;
+        //     obj.b = 200;
+        //     obj.c = "javascript";
 
-            // document.write(obj.a);
-            // document.write(obj.b);
-            // document.write(obj.c);
+        //     document.write(obj.a);
+        //     document.write(obj.b);
+        //     document.write(obj.c);
 
-            document.querySelector(".sample12_result").innerHTML = x + "<br>" + y + "<br>" + z
-        }
+        //     document.querySelector(".sample12_result").innerHTML = x + "<br>" + y + "<br>" + z
+        // }
 
-        //13
-        {
-            const obj = { a: 100, b: 200, c: "javascript" }
+        // //13
+        // {
+        //     const obj = { a: 100, b: 200, c: "javascript" }
 
-            // document.write(obj.a);
-            // document.write(obj.b);
-            // document.write(obj.c);
+        //     document.write(obj.a);
+        //     document.write(obj.b);
+        //     document.write(obj.c);
 
-            document.querySelector(".sample13_result").innerHTML = x + "<br>" + y + "<br>" + z
-        }
+        //     document.querySelector(".sample13_result").innerHTML = x + "<br>" + y + "<br>" + z
+        // }
 
-        //14
-        {
-            const obj = [
-                { a: 100, b: 200 },
-                { c: "javascript" }
-            ];
+        // //14
+        // {
+        //     const obj = [
+        //         { a: 100, b: 200 },
+        //         { c: "javascript" }
+        //     ];
 
-            // document.write(obj[0].a);
-            // document.write(obj[0].b);
-            // document.write(obj[1].c);
+        //     document.write(obj[0].a);
+        //     document.write(obj[0].b);
+        //     document.write(obj[1].c);
 
-            document.querySelector(".sample14_result").innerHTML = x + "<br>" + y + "<br>" + z
-        }
+        //     document.querySelector(".sample14_result").innerHTML = x + "<br>" + y + "<br>" + z
+        // }
 
-        //15 객체 : 객체 속에 배열
-        {
-            const obj = {
-                a: 100,
-                b: [200, 300],
-                c: { x: 400, y: 500 },
-                d: "javascript"
-            }
+        // //15 객체 : 객체 속에 배열
+        // {
+        //     const obj = {
+        //         a: 100,
+        //         b: [200, 300],
+        //         c: { x: 400, y: 500 },
+        //         d: "javascript"
+        //     }
 
-            // document.write(obj.a);
-            // document.write(obj.b[0]);
-            // document.write(obj.b[1]);
-            // document.write(obj.c.x);
-            // document.write(obj.c.y);
-            // document.write(obj.d)
-        }
+        //     document.write(obj.a);
+        //     document.write(obj.b[0]);
+        //     document.write(obj.b[1]);
+        //     document.write(obj.c.x);
+        //     document.write(obj.c.y);
+        //     document.write(obj.d)
+        // }
 
-        //16 객체 : 객체 속에 변수 리액트에서 가장 많이 씀
-        {
-            const a = 100;
-            const b = 200;
-            const c = "javascript";
+        // //16 객체 : 객체 속에 변수 리액트에서 가장 많이 씀
+        // {
+        //     const a = 100;
+        //     const b = 200;
+        //     const c = "javascript";
 
-            const obj = { a, b, c }
+        //     const obj = { a, b, c }
 
-            // document.write(obj.a);
-            // document.write(obj.b);
-            // document.write(obj.c);
+        //     document.write(obj.a);
+        //     document.write(obj.b);
+        //     document.write(obj.c);
 
-            document.querySelector(".sample16_result").innerHTML = x + "<br>" + y + "<br>" + z
-        }
+        //     document.querySelector(".sample16_result").innerHTML = x + "<br>" + y + "<br>" + z
+        // }
 
-        //17 객체 : 객체 속에 함수
-        {
-            const obj = {
-                a: 100,
-                b: [200, 300],
-                c: { x: 400, y: 500 },
-                d: "javascript",
-                e: function () {
-                    document.write("자바스크립트가 실행되었습니다.");
-                },
-                f: function () {
-                    document.write(obj.d + "가 실행되었습니다.");   //다른 값을 넣어 불러올 수 있음
-                },
-                g: function () {
-                    document.write(this.d + "가 실행되었습니다.");
-                }
-            }
+        // //17 객체 : 객체 속에 함수
+        // {
+        //     const obj = {
+        //         a: 100,
+        //         b: [200, 300],
+        //         c: { x: 400, y: 500 },
+        //         d: "javascript",
+        //         e: function () {
+        //             document.write("자바스크립트가 실행되었습니다.");
+        //         },
+        //         f: function () {
+        //             document.write(obj.d + "가 실행되었습니다.");   //다른 값을 넣어 불러올 수 있음
+        //         },
+        //         g: function () {
+        //             document.write(this.d + "가 실행되었습니다.");
+        //         }
+        //     }
 
-            // document.write(obj.a)
-            // document.write(obj.b[0])
-            // document.write(obj.b[1])
-            // document.write(obj.b)
-            // document.write(obj.c.x)
-            // document.write(obj.c.y)
-            // document.write(obj.c)
-            // document.write(obj.d)
-            // obj.e() //제어문 삭제
-            // obj.f()
-            // obj.g()
-        }
+        //     document.write(obj.a)
+        //     document.write(obj.b[0])
+        //     document.write(obj.b[1])
+        //     document.write(obj.b)
+        //     document.write(obj.c.x)
+        //     document.write(obj.c.y)
+        //     document.write(obj.c)
+        //     document.write(obj.d)
+        //     obj.e() //제어문 삭제
+        //     obj.f()
+        //     obj.g()
+        // }
     </script>
 </body>
 
