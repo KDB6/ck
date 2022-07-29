@@ -52,18 +52,26 @@
 
             <hr>
 
-            <h3 class="t_tit2">전역 변수와 지역 변수 선언 위치</h3>
+            <h3 class="t_tit2">지역 변수와 전역 변수 선언 위치</h3>
             <table class="t_table">
                 <thead>
                     <tr>
-                        <th>전역 변수</th>
                         <th>지역 변수</th>
+                        <th>전역 변수</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>var 변수;<br>function 함수() {<br>}</td>
-                        <td>function 함수() {<br>var 변수;<br>}</td>
+                        <td>
+                            function 함수() {<br>
+                            &emsp;&ensp;var 변수;<br>
+                            }
+                        </td>
+                        <td>
+                            var 변수;<br>
+                            &emsp;&ensp;function 함수() {<br>
+                            }
+                        </td>              
                     </tr>
                 </tbody>
             </table><br>
