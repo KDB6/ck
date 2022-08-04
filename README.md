@@ -13,7 +13,7 @@ https://kdb6.github.io/ck/javascript/javascript02.html
 
 ### 퀴즈 이펙트 메인 페이지
 https://kdb6.github.io/ck/javascript/effect/quizeffect01.html   
-https://kdb6.github.io/ck/javascript/effect/quizffect02.html   
+https://kdb6.github.io/ck/javascript/effect/quizeffect02.html   
 
 ### HTML 메인 페이지
 https://kdb6.github.io/ck/html/index.html   
