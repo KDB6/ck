@@ -12,12 +12,13 @@
     <main id="main">
         <div class="document">
             <h2 class="t_tit">Quiz 02</h2>
-            <p class="t_desc">
+            <p class="t_desc2">
+                웹디자인기능사 필기 시험에 나오는 주관식 문제를 코딩으로 만들어 풀어보세요.<br>
                 자바스크립트를 이용해 퀴즈 형태 방식을 코딩
             </p>
 
             <div class="t_iframe" style="min-height: 500px; padding-top: 0;">
-                <iframe src="" frameborder="0"></iframe>
+                <iframe src="https://kdb6.github.io/ck/javascript/effect/quizeffect02.html" frameborder="0"></iframe>
             </div>
 
             <div class="t_link">
@@ -26,23 +27,24 @@
 
             <h3 class="t_tit2">자바스크립트</h3>
             <p class="t_desc2">
-
+                데이터 값의 입력과 상수를 사용
             </p>
             <div class="t_code">
 <pre><code code="language.js">    &lt;script>
         // 선택자
-        const quizType = document.querySelector(".quiz__type");                     // 퀴즈 종류
+        const quizType = document.querySelector(".quiz__type");                             // 퀴즈 종류
         const quizNumber = document.querySelector(".quiz__question .number");       // 퀴즈 번호
-        const quizAsk = document.querySelector(".quiz__question .ask");             // 퀴즈 질문
-        const quizConfirm = document.querySelector(".quiz__answer .confirm");       // 정답 확인 버튼
-        const quizResult = document.querySelector(".quiz__answer .result");         // 정답 결과
-        const quizInput = document.querySelector(".quiz__answer .input");           // 사용자 정답
-        const quizView = document.querySelector(".quiz__view");                     // 강아지
+        const quizAsk = document.querySelector(".quiz__question .ask");                   // 퀴즈 질문
+        const quizConfirm = document.querySelector(".quiz__answer .confirm");         // 정답 확인 버튼
+        const quizResult = document.querySelector(".quiz__answer .result");              // 정답 결과
+        const quizInput = document.querySelector(".quiz__answer .input");                // 사용자 정답
+        const quizView = document.querySelector(".quiz__view");                            // 강아지
 
         // 문제 정보
         const answerType = "웹디자인기능사";
         const answerNum = "2";
-        const answerAsk = "기업의 새로운 이념 구축에 필요한 이미지와 커뮤니케이션 시스템을 의도적, 계획적으로 만들어내는 기업이미지통합 전략은 무엇인가요?";
+        const answerAsk = "기업의 새로운 이념 구축에 필요한 이미지와 커뮤니케이션 시스템을 의도적, 
+                                         계획적으로 만들어내는 기업이미지통합 전략은 무엇인가요?";
         let answerResult = "CIP";
 
         // 문재 출력
