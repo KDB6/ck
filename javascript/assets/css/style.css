@@ -133,6 +133,7 @@ body{
 .document i::before {
     content:'';
     background-color: #EFC8B3;
+    opacity: 40%;
     width: 100%;
     height: 10px;
     position: absolute;
