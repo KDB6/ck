@@ -111,10 +111,10 @@
             {
                 answerType : "웹디자인기능사 0000년 01회",
                 answerNum : "1",
-                answerAsk : "질문",
-                answerChoice : ["1", "2", "3", "4"],
-                answerResult : "정답",
-                answerEx : "설명"
+                answerAsk : "먼셀의 표색게에서 색상을 표시하는 기호로 맞는 것은",
+                answerChoice : ["C/HV", "HC/V", "HV/C", "CV/H"],
+                answerResult : "4",
+                answerEx : "먼셀의 표색계는 색의 3속성에 의한 방법이다. H : Hue 색상, V : Value 명도, C : Chroma 채도"
             }
         ]
 
@@ -124,11 +124,14 @@
             quizType.textContent = quizInfo[0].answerType;
             quizNumber.textContent = quizInfo[0].answerNum + '. ';
             quizAsk.textContent = quizInfo[0].answerAsk;
-            quizResult.textContent = quizInfo[0].answerResult;
+            quizResult.textContent = quizInfo[0].answerEx;
 
             for(let i=0; i<4; i++) {    // 보기 출력
                 quizChoice[i].textContent = quizInfo[0].answerChoice[i]
             }
+
+            // 해설 숨기기
+            quizResult.style.display = "none";
         }
         updateQuiz();   // 함수 실행문
 
@@ -141,15 +144,19 @@
                 if(quizSelcet[i].checked == true) {     // 보기에 체크가 된 상태
                     // 체크된 번호 == 문제 번호
                     if(quizSelcet[i].value == quizInfo[0].answerResult) {
-                        alert("정답")
+                        // alert("정답")
+                        quizView.classList.add("like");
                     } else {
-                        alert("오답")
+                        // alert("오답")
+                        quizView.classList.add("dislike");
+                        quizResult.style.display = "block";
+                        quizConfirm.style.display = "none";
                     }
-                } else {
-
                 }
             }
         }
+
+        // 정답 클릭
         quizConfirm.addEventListener("click", answerQuiz);
 
     </script>

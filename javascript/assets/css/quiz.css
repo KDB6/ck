@@ -181,6 +181,7 @@ body {
 .quiz__answer .result {
     width: 100%;
     font-size: 22px;
+    line-height: 1.2;
     padding: 13px 20px;
     border: 6px ridge #cacaca;
     box-sizing: border-box;
@@ -239,7 +240,7 @@ body {
 }
 
 .quiz__selects {
-    
+    margin: 5px 0;
 }
 .quiz__selects label {
     display: flex;

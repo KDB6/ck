@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : Quiz 04</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+<body>
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">Quiz 04</h2>
+            <p class="t_desc2">
+                웹디자인기능사 필기 시험에 나오는 객관식 문제를 코딩으로 만들어 풀어보세요.<br>
+                자바스크립트를 이용해 퀴즈 형태 방식을 코딩
+            </p>
+
+            <div class="t_iframe" style="min-height: 900px; padding-top: 0;">
+                <iframe src="https://kdb6.github.io/ck/javascript/effect/quizeffect03.html" frameborder="0"></iframe>
+            </div>
+
+            <div class="t_link">
+                <a href="https://github.com/KDB6/ck/blob/main/javascript/effect/quizeffect03.html" target="_blank">원본 사이트 보기</a>
+            </div>
+
+            <h3 class="t_tit2">자바스크립트</h3>
+            <p class="t_desc2">
+                데이터 값의 입력과 for문을 사용
+            </p>
+            <div class="t_code">
+<pre><code code="language.js">    quizInfo.forEach((e, i) => {
+        quizType[i].textContent = quizInfo[i].answerType;
+        quizNumber[i].textContent = quizInfo[i].answerNum + ". ";
+        quizAsk[i].textContent = quizInfo[i].answerAsk;
+        quizResult[i].textContent = quizInfo[i].answerResult;
+    });
+</code></pre>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:ipkg7210@gmail.com">ipkg7210@gmail.com</a>
+    </footer>
+
+    <!-- //footer -->
+    <script src="../assets/css/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    </script>
+</body>
+</html>
