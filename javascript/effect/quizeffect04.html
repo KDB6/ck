@@ -37,7 +37,7 @@
                 <h2 class="quiz__question">
                     <span class="number"></span>
                     <div class="ask">
-                        쏘는
+                        
                     </div>
                 </h2>
                 <div class="quiz__view">
@@ -65,22 +65,24 @@
                 <div class="quiz__answer">
                     <div class="quiz__selects">
                         <label for="select1">
-                            <input type="radio" id="select1" name="select" value="1">
-                            <span class="choice">녹색</span>
+                            <input type="radio" id="select1" class="select" name="select" value="1">
+                            <span class="choice"></span>
                         </label>
                         <label for="select2">
-                            <input type="radio" id="select2" name="select" value="2">
-                            <span class="choice">자색</span>
+                            <input type="radio" id="select2" class="select" name="select" value="2">
+                            <span class="choice"></span>
                         </label>
                         <label for="select3">
-                            <input type="radio" id="select3" name="select" value="3">
-                            <span class="choice">오렌지색</span>
+                            <input type="radio" id="select3" class="select" name="select" value="3">
+                            <span class="choice"></span>
                         </label>
                         <label for="select4">
-                            <input type="radio" id="select4" name="select" value="4">
-                            <span class="choice">라일락</span>
+                            <input type="radio" id="select4" class="select" name="select" value="4">
+                            <span class="choice"></span>
                         </label>
                     </div>
+                    <button class="confirm">정답 확인하기</button>
+                    <div class="result"></div>
                 </div>
             </div>
         </div>
@@ -94,13 +96,62 @@
 
     <script>
         // 선택자
-        const quizType = document.querySelectorAll(".quiz__type");                     // 퀴즈 종류
-        const quizNumber = document.querySelectorAll(".quiz__question .number");       // 퀴즈 번호
-        const quizAsk = document.querySelectorAll(".quiz__question .ask");             // 퀴즈 질문
-        const quizConfirm = document.querySelectorAll(".quiz__answer .confirm");       // 정답 확인 버튼
-        const quizResult = document.querySelectorAll(".quiz__answer .result");         // 정답 결과
-        const quizInput = document.querySelectorAll(".quiz__answer .input");           // 사용자 정답
-        const quizView = document.querySelectorAll(".quiz__view");                     // 강아지
+        const quizType = document.querySelector(".quiz__type");                     // 퀴즈 종류
+        const quizNumber = document.querySelector(".quiz__question .number");       // 퀴즈 번호
+        const quizAsk = document.querySelector(".quiz__question .ask");             // 퀴즈 질문
+        const quizConfirm = document.querySelector(".quiz__answer .confirm");       // 정답 확인 버튼
+        const quizResult = document.querySelector(".quiz__answer .result");         // 정답 결과
+        const quizView = document.querySelector(".quiz__view");                     // 강아지
+        const quizSelects = document.querySelector(".quiz__selects");               // 객관식 보기
+        const quizChoice = quizSelects.querySelectorAll(".choice");                 // 객관식 보기
+        const quizSelcet = quizSelects.querySelectorAll(".select");                 // 객관식 보기
+
+        // 문제 정보
+        const quizInfo = [
+            {
+                answerType : "웹디자인기능사 0000년 01회",
+                answerNum : "1",
+                answerAsk : "질문",
+                answerChoice : ["1", "2", "3", "4"],
+                answerResult : "정답",
+                answerEx : "설명"
+            }
+        ]
+
+        // 문제 출력
+        // 함수로 출력
+        function updateQuiz() {
+            quizType.textContent = quizInfo[0].answerType;
+            quizNumber.textContent = quizInfo[0].answerNum + '. ';
+            quizAsk.textContent = quizInfo[0].answerAsk;
+            quizResult.textContent = quizInfo[0].answerResult;
+
+            for(let i=0; i<4; i++) {    // 보기 출력
+                quizChoice[i].textContent = quizInfo[0].answerChoice[i]
+            }
+        }
+        updateQuiz();   // 함수 실행문
+
+        // 정답 확인
+        function answerQuiz() {
+            // 사용자 선택 정답 == 문제 정답
+            // 사용자가 클릭한 input --> checked
+
+            for(let i=0; i<quizSelcet.length; i++) {
+                if(quizSelcet[i].checked == true) {     // 보기에 체크가 된 상태
+                    // 체크된 번호 == 문제 번호
+                    if(quizSelcet[i].value == quizInfo[0].answerResult) {
+                        alert("정답")
+                    } else {
+                        alert("오답")
+                    }
+                } else {
+
+                }
+            }
+        }
+        quizConfirm.addEventListener("click", answerQuiz);
+
     </script>
 </body>
 

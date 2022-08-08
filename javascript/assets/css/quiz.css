@@ -239,19 +239,25 @@ body {
 }
 
 .quiz__selects {
-    display: flex;
+    
 }
 .quiz__selects label {
-
+    display: flex;
 }
 .quiz__selects label input {
     position: absolute;
     left: -9999px;
 }
-.quiz__selects label span{
+.quiz__selects label span {
     font-size: 20px;
+    line-height: 1.3;
     font-family: "Cafe24Dangdanghae";
-    padding: 10px 30px 10px 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
 }
 .quiz__selects label span::before {
     content: '';
@@ -259,14 +265,17 @@ body {
     height: 30px;
     border-radius: 50%;
     background: #fff;
+    margin-right: 15px;
     display: flex;
+    flex-shrink: 0;
     box-shadow: inset 0px 0px 0px 3px #d4d4d4;
+    transition: all 0.25s;
 }
-/* .quiz__selects label input:checked + span {
-    background-color: #c0b9f5;
-} */
+.quiz__selects label input:checked + span {
+    background-color: #e1ddfa;
+}
 .quiz__selects label input:checked + span::before {
-    box-shadow: inset 0px 0px 0px 5px #c0b9f5;
+    box-shadow: inset 0px 0px 0px 8px #c0b9f5;
 }
 @keyframes wobble {
     0% {transform: translateX(0) rotate(0deg)}
