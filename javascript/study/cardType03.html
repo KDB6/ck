@@ -31,14 +31,16 @@
         &lt;div class="card__inner container">
             &lt;article class="card ">
                 &lt;img src="img/art01.jpg" alt="art">
+                &lt;a href="#" class="box">&lt;span class="ir">art&lt;/span>&lt;/a>
                 &lt;h2 class="roboto400 tit">
                     Art is a diverse range of human
-                    activity, interpretation has varied greatly throughout history
+                    activity, interpretation has varied
+                    greatly throughout history
                 &lt;/h2>
                 &lt;p class="roboto300 desc">
-                    There is no generally agreed definition of
-                    what constitutes art, and its interpretation
-                    has varied greatly throughout history and across cultures.
+                    There is no generally agreed definition of what
+                    constitutes art, and its interpretation has varied
+                    greatly throughout history and across cultures.
                     There is no generally agreed definition of what constitutes art
                 &lt;/p>
                 &lt;p class="roboto400 right">Art&lt;/p>
@@ -47,14 +49,16 @@
             &lt;/article>
             &lt;article class="card2 ">
                 &lt;img src="img/art02.jpg" alt="art">
+                &lt;a href="#" class="box">&lt;span class="ir">art&lt;/span>&lt;/a>
                 &lt;h2 class="roboto400 tit">
                     Art is a diverse range of human
-                    activity, interpretation has varied greatly throughout history
+                    activity, interpretation has varied
+                    greatly throughout history
                 &lt;/h2>
                 &lt;p class="roboto300 desc">
-                    There is no generally agreed definition of
-                    what constitutes art, and its interpretation
-                    has varied greatly throughout history and across cultures.
+                    There is no generally agreed definition of what
+                    constitutes art, and its interpretation has varied
+                    greatly throughout history and across cultures.
                     There is no generally agreed definition of what constitutes art
                 &lt;/p>
                 &lt;p class="roboto400 right">Art&lt;/p>
@@ -63,14 +67,16 @@
             &lt;/article>
             &lt;article class="card ">
                 &lt;img src="img/art03.jpg" alt="art">
+                &lt;a href="#" class="box">&lt;span class="ir">art&lt;/span>&lt;/a>
                 &lt;h2 class="roboto400 tit">
                     Art is a diverse range of human
-                    activity, interpretation has varied greatly throughout history
+                    activity, interpretation has varied
+                    greatly throughout history
                 &lt;/h2>
                 &lt;p class="roboto300 desc">
-                    There is no generally agreed definition of
-                    what constitutes art, and its interpretation
-                    has varied greatly throughout history and across cultures.
+                    There is no generally agreed definition of what
+                    constitutes art, and its interpretation has varied
+                    greatly throughout history and across cultures.
                     There is no generally agreed definition of what constitutes art
                 &lt;/p>
                 &lt;p class="roboto400 right">Art&lt;/p>
@@ -111,6 +117,7 @@
     }
     img {
         width: 100%;
+        box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.05);
     }
     .type2 {
         padding-top: 10px;
@@ -138,11 +145,12 @@
         margin-bottom: 70px;
     }
     .blue {
+        width: 1920px;
         background-color: #2254c3;
     }
 
     /* ir 효과(이미지 대체 효과 == alt)  */ /* 중요함 */
-    // 시각 장애인 분들을 위한 코드로써 ir 를 사용하여 alt로 대체
+    // 시각 장애인 분들을 위한 코드로써 alt 영역을 대체
     .ir {
         display: block;
         overflow: hidden;
@@ -204,7 +212,7 @@
         overflow: hidden;               // 해당 css 포함 밑 5줄은 줄바꿈 2줄로 제한
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 2; 
         -webkit-box-orient: vertical;
         padding-right: 20px;
     }
@@ -215,7 +223,7 @@
         overflow: hidden;               // 해당 css 포함 밑 5줄은 줄바꿈 2줄로 제한
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 2; 
         -webkit-box-orient: vertical;
         padding-right: 20px;
     }
@@ -242,7 +250,7 @@
         overflow: hidden;               // 해당 css 포함 밑 5줄은 줄바꿈 3줄로 제한
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 3; 
         -webkit-box-orient: vertical;
     }
     .card__inner .card .more {
@@ -273,6 +281,26 @@
         position: absolute;
         right: 25px;
         bottom: 25px;
+        border-radius: 5px;
+    }
+    .card__inner .card .box {
+        width: 70px;
+        height: 20px;
+        background-image: url(img/art_g.svg);
+        display: block;
+        position: absolute;
+        right: 35.7px;
+        top: 36px;
+        border-radius: 5px;
+    }
+    .card__inner .card2 .box {
+        width: 70px;
+        height: 20px;
+        background-image: url(img/art_g.svg);
+        display: block;
+        position: absolute;
+        right: 35.7px;
+        top: 36px;
         border-radius: 5px;
     }
 </code></pre>
