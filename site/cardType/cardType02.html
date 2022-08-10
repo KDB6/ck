@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카드 유형 02</title>
     <style>
-        /* fonts */
-        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');    /* 폰트 */
+        /* 폰트 */
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
 
-        .nexon {
-            font-family: 'GmarketSans';
-            font-weight: 400;
+        .gmark {
+            font-family: GmarketSans;
+            font-weight: 500;
         }
 
         /* reset */
@@ -60,209 +60,122 @@
             text-align: center;
             margin-bottom: 70px;
         }
+        .gray {
+            background-color: #f5f5f5;
+        }
 
-        /* cardType */
+        /* ir 효과(이미지 대체 효과 == alt)  */ /* 중요함 */
+        .ir {
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+        /* cardType02 */
         .card__inner {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
         }
-        .card {
+        .card__inner .card {
             width: 24%;
-            background: #fff;
-        }
-        .card__body {
-            padding: 0px;
-        }
-        .card__body .tit {
-            font-size: 24px;
-            margin-bottom: 10px;
-            margin-top: 20px;
             position: relative;
         }
-        .card__body .desc {
-            font-size: 18px;
-            line-height: 1.4;
-            color: #666;
-            margin-bottom: 20px;
-            font-weight: 300;
+        .card__inner .card:first-child {
+            margin-bottom: 50px;
         }
-        .card__body .btn {
+        .card__inner .card img {
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .card__inner .card .tit {
+            font-size: 28px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding-right: 20px;
+        }
+        .card__inner .card .desc {
+            font-size: 18px;
+            font-weight: 300;
+            color: #666;
+            line-height: 1.4;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; 
+            -webkit-box-orient: vertical;
+        }
+        .card__inner .card .more {
+            width: 24px;
+            height: 24px;
+            background-image: url(img/arrow.svg);
+            display: block;
             position: absolute;
-            top: 0;
             right: 0;
+            top: 230px;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <section id="cardType" class="card__wrap nexon section">
+    <section id="cardType02" class="card__wrap gmark section gray">
         <h2>Steady Every Wear</h2>
         <p>
-            지속적인 가치를 지닌 라이프 스타일 제품을 만들기 위해 노력합니다.<br>
+            지속적인 가치를 지닌 라이프 스타일 제품을 만들기 위해 노력합니다.
             편안하고 자연스러운 디자인으로 일상 생활에 손이 자주 가는 제품을 지향합니다.
         </p>
         <div class="card__inner container">
-            <!-- 1 -->
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/card2_1.jpg" alt="brand">
-                </figure>
-                <div class="card__body">
-                    <h3 class="tit">
-                        Brand
-                        <span aria-hidden="true" class="btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" rx="5" fill="#8BCEFF"/>
-                                <path d="M4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13L4 11ZM20.7071 12.7071C21.0976 12.3166 21.0976 11.6834 20.7071 11.2929L14.3431 4.92893C13.9526 4.53841 13.3195 4.53841 12.9289 4.92893C12.5384 5.31946 12.5384 5.95262 12.9289 6.34315L18.5858 12L12.9289 17.6569C12.5384 18.0474 12.5384 18.6805 12.9289 19.0711C13.3195 19.4616 13.9526 19.4616 14.3431 19.0711L20.7071 12.7071ZM4 13L20 13L20 11L4 11L4 13Z" fill="white"/>
-                            </svg>
-                        </span>
-                    </h3>
-                    <p class="desc">
-                        디자인뿐만 아니라 미래 세대를 위한 지속 가능성을 고려하며 컬렉션을 제작합니다.
-                    </p>
-                </div>
+                <img src="img/card_bg02_01.jpg" alt="Brand">
+                <h3 class="tit">Brand</h3>
+                <p class="desc">디자인뿐만 아니라 미래 세대를 위한 지속 가능성을 고려하며 컬렉션을 제작합니다. 지속적인 가치를 지닌 라이프 스타일 제품을 만들기 위해 노력합니다.</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
             </article>
-            <!-- 2 -->
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/card2_2.jpg" alt="brand">
-                </figure>
-                <div class="card__body">
-                    <h3 class="tit">
-                        Brand
-                        <span aria-hidden="true" class="btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" rx="5" fill="#8BCEFF"/>
-                                <path d="M4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13L4 11ZM20.7071 12.7071C21.0976 12.3166 21.0976 11.6834 20.7071 11.2929L14.3431 4.92893C13.9526 4.53841 13.3195 4.53841 12.9289 4.92893C12.5384 5.31946 12.5384 5.95262 12.9289 6.34315L18.5858 12L12.9289 17.6569C12.5384 18.0474 12.5384 18.6805 12.9289 19.0711C13.3195 19.4616 13.9526 19.4616 14.3431 19.0711L20.7071 12.7071ZM4 13L20 13L20 11L4 11L4 13Z" fill="white"/>
-                            </svg>
-                        </span>
-                    </h3>
-                    <p class="desc">
-                        디자인뿐만 아니라 미래 세대를 위한 지속 가능성을 고려하며 컬렉션을 제작합니다.
-                    </p>
-                </div>
+                <img src="img/card_bg02_02.jpg" alt="Brand">
+                <h3 class="tit">Brand</h3>
+                <p class="desc">디자인뿐만 아니라 미래 세대를 위한 지속 가능성을 고려하며 컬렉션을 제작합니다. 지속적인 가치를 지닌 라이프 스타일 제품을 만들기 위해 노력합니다.</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
             </article>
-            <!-- 3 -->
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/card2_3.jpg" alt="brand">
-                </figure>
-                <div class="card__body">
-                    <h3 class="tit">
-                        Brand
-                        <span aria-hidden="true" class="btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" rx="5" fill="#8BCEFF"/>
-                                <path d="M4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13L4 11ZM20.7071 12.7071C21.0976 12.3166 21.0976 11.6834 20.7071 11.2929L14.3431 4.92893C13.9526 4.53841 13.3195 4.53841 12.9289 4.92893C12.5384 5.31946 12.5384 5.95262 12.9289 6.34315L18.5858 12L12.9289 17.6569C12.5384 18.0474 12.5384 18.6805 12.9289 19.0711C13.3195 19.4616 13.9526 19.4616 14.3431 19.0711L20.7071 12.7071ZM4 13L20 13L20 11L4 11L4 13Z" fill="white"/>
-                            </svg>
-                        </span>
-                    </h3>
-                    <p class="desc">
-                        디자인뿐만 아니라 미래 세대를 위한 지속 가능성을 고려하며 컬렉션을 제작합니다.
-                    </p>
-                </div>
+                <img src="img/card_bg02_03.jpg" alt="Brand">
+                <h3 class="tit">Brand</h3>
+                <p class="desc">디자인뿐만 아니라 미래 세대를 위한 지속 가능성을 고려하며 컬렉션을 제작합니다. 지속적인 가치를 지닌 라이프 스타일 제품을 만들기 위해 노력합니다.</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
             </article>
-            <!-- 4 -->
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/card2_4.jpg" alt="brand">
-                </figure>
-                <div class="card__body">
-                    <h3 class="tit">
-                        Brand
-                        <span aria-hidden="true" class="btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" rx="5" fill="#8BCEFF"/>
-                                <path d="M4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13L4 11ZM20.7071 12.7071C21.0976 12.3166 21.0976 11.6834 20.7071 11.2929L14.3431 4.92893C13.9526 4.53841 13.3195 4.53841 12.9289 4.92893C12.5384 5.31946 12.5384 5.95262 12.9289 6.34315L18.5858 12L12.9289 17.6569C12.5384 18.0474 12.5384 18.6805 12.9289 19.0711C13.3195 19.4616 13.9526 19.4616 14.3431 19.0711L20.7071 12.7071ZM4 13L20 13L20 11L4 11L4 13Z" fill="white"/>
-                            </svg>
-                        </span>
-                    </h3>
-                    <p class="desc">
-                        디자인뿐만 아니라 미래 세대를 위한 지속 가능성을 고려하며 컬렉션을 제작합니다.
-                    </p>
-                </div>
+                <img src="img/card_bg02_04.jpg" alt="Brand">
+                <h3 class="tit">Brand</h3>
+                <p class="desc">디자인뿐만 아니라 미래 세대를 위한 지속 가능성을 고려하며 컬렉션을 제작합니다. 지속적인 가치를 지닌 라이프 스타일 제품을 만들기 위해 노력합니다.</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
             </article>
-        </div>
-
-        <div class="card__inner container02">
-            <!-- 2-1 -->
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/card2_5.jpg" alt="brand">
-                </figure>
-                <div class="card__body">
-                    <h3 class="tit">
-                        Brand
-                        <span aria-hidden="true" class="btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" rx="5" fill="#8BCEFF"/>
-                                <path d="M4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13L4 11ZM20.7071 12.7071C21.0976 12.3166 21.0976 11.6834 20.7071 11.2929L14.3431 4.92893C13.9526 4.53841 13.3195 4.53841 12.9289 4.92893C12.5384 5.31946 12.5384 5.95262 12.9289 6.34315L18.5858 12L12.9289 17.6569C12.5384 18.0474 12.5384 18.6805 12.9289 19.0711C13.3195 19.4616 13.9526 19.4616 14.3431 19.0711L20.7071 12.7071ZM4 13L20 13L20 11L4 11L4 13Z" fill="white"/>
-                            </svg>
-                        </span>
-                    </h3>
-                    <p class="desc">
-                        디자인뿐만 아니라 미래 세대를 위한 지속 가능성을 고려하며 컬렉션을 제작합니다.
-                    </p>
-                </div>
+                <img src="img/card_bg02_05.jpg" alt="Brand">
+                <h3 class="tit">Brand</h3>
+                <p class="desc">디자인뿐만 아니라 미래 세대를 위한 지속 가능성을 고려하며 컬렉션을 제작합니다. 지속적인 가치를 지닌 라이프 스타일 제품을 만들기 위해 노력합니다.</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
             </article>
-            <!-- 2-2 -->
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/card2_6.jpg" alt="brand">
-                </figure>
-                <div class="card__body">
-                    <h3 class="tit">
-                        Brand
-                        <span aria-hidden="true" class="btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" rx="5" fill="#8BCEFF"/>
-                                <path d="M4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13L4 11ZM20.7071 12.7071C21.0976 12.3166 21.0976 11.6834 20.7071 11.2929L14.3431 4.92893C13.9526 4.53841 13.3195 4.53841 12.9289 4.92893C12.5384 5.31946 12.5384 5.95262 12.9289 6.34315L18.5858 12L12.9289 17.6569C12.5384 18.0474 12.5384 18.6805 12.9289 19.0711C13.3195 19.4616 13.9526 19.4616 14.3431 19.0711L20.7071 12.7071ZM4 13L20 13L20 11L4 11L4 13Z" fill="white"/>
-                            </svg>
-                        </span>
-                    </h3>
-                    <p class="desc">
-                        디자인뿐만 아니라 미래 세대를 위한 지속 가능성을 고려하며 컬렉션을 제작합니다.
-                    </p>
-                </div>
+                <img src="img/card_bg02_06.jpg" alt="Brand">
+                <h3 class="tit">Brand</h3>
+                <p class="desc">디자인뿐만 아니라 미래 세대를 위한 지속 가능성을 고려하며 컬렉션을 제작합니다. 지속적인 가치를 지닌 라이프 스타일 제품을 만들기 위해 노력합니다.</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
             </article>
-            <!-- 2-3 -->
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/card2_7.jpg" alt="brand">
-                </figure>
-                <div class="card__body">
-                    <h3 class="tit">
-                        Brand
-                        <span aria-hidden="true" class="btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" rx="5" fill="#8BCEFF"/>
-                                <path d="M4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13L4 11ZM20.7071 12.7071C21.0976 12.3166 21.0976 11.6834 20.7071 11.2929L14.3431 4.92893C13.9526 4.53841 13.3195 4.53841 12.9289 4.92893C12.5384 5.31946 12.5384 5.95262 12.9289 6.34315L18.5858 12L12.9289 17.6569C12.5384 18.0474 12.5384 18.6805 12.9289 19.0711C13.3195 19.4616 13.9526 19.4616 14.3431 19.0711L20.7071 12.7071ZM4 13L20 13L20 11L4 11L4 13Z" fill="white"/>
-                            </svg>
-                        </span>
-                    </h3>
-                    <p class="desc">
-                        디자인뿐만 아니라 미래 세대를 위한 지속 가능성을 고려하며 컬렉션을 제작합니다.
-                    </p>
-                </div>
+                <img src="img/card_bg02_07.jpg" alt="Brand">
+                <h3 class="tit">Brand</h3>
+                <p class="desc">디자인뿐만 아니라 미래 세대를 위한 지속 가능성을 고려하며 컬렉션을 제작합니다. 지속적인 가치를 지닌 라이프 스타일 제품을 만들기 위해 노력합니다.</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
             </article>
-            <!-- 2-4 -->
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/card2_8.jpg" alt="brand">
-                </figure>
-                <div class="card__body">
-                    <h3 class="tit">
-                        Brand
-                        <span aria-hidden="true" class="btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" rx="5" fill="#8BCEFF"/>
-                                <path d="M4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13L4 11ZM20.7071 12.7071C21.0976 12.3166 21.0976 11.6834 20.7071 11.2929L14.3431 4.92893C13.9526 4.53841 13.3195 4.53841 12.9289 4.92893C12.5384 5.31946 12.5384 5.95262 12.9289 6.34315L18.5858 12L12.9289 17.6569C12.5384 18.0474 12.5384 18.6805 12.9289 19.0711C13.3195 19.4616 13.9526 19.4616 14.3431 19.0711L20.7071 12.7071ZM4 13L20 13L20 11L4 11L4 13Z" fill="white"/>
-                            </svg>
-                        </span>
-                    </h3>
-                    <p class="desc">
-                        디자인뿐만 아니라 미래 세대를 위한 지속 가능성을 고려하며 컬렉션을 제작합니다.
-                    </p>
-                </div>
+                <img src="img/card_bg02_08.jpg" alt="Brand">
+                <h3 class="tit">Brand</h3>
+                <p class="desc">디자인뿐만 아니라 미래 세대를 위한 지속 가능성을 고려하며 컬렉션을 제작합니다. 지속적인 가치를 지닌 라이프 스타일 제품을 만들기 위해 노력합니다.</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
             </article>
         </div>
     </section>

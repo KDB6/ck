@@ -69,6 +69,9 @@
         .card__body .tit {
             font-size: 24px;
             margin-bottom: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
         .card__body .desc {
             font-size: 18px;
@@ -76,6 +79,11 @@
             color: #666;
             margin-bottom: 20px;
             font-weight: 300;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4; 
+            -webkit-box-orient: vertical;
         }
         .card__body .btn {
 
@@ -89,7 +97,7 @@
         <div class="card__inner container">
             <article class="card">
                 <figure class="card__header">
-                    <img src="img/card_bg01.jpg" alt="포터리">
+                    <img src="img/card_bg01_01.jpg" alt="포터리">
                 </figure>
                 <div class="card__body">
                     <h3 class="tit">포터리</h3>
@@ -108,7 +116,7 @@
             </article>
             <article class="card">
                 <figure class="card__header">
-                    <img src="img/card_bg02.jpg" alt="TPO">
+                    <img src="img/card_bg01_02.jpg" alt="TPO">
                 </figure>
                 <div class="card__body">
                     <h3 class="tit">TPO</h3>
@@ -127,7 +135,7 @@
             </article>
             <article class="card">
                 <figure class="card__header">
-                    <img src="img/card_bg03.jpg" alt="원단">
+                    <img src="img/card_bg01_03.jpg" alt="원단">
                 </figure>
                 <div class="card__body">
                     <h3 class="tit">원단</h3>
