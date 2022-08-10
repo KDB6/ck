@@ -20,6 +20,7 @@ https://kdb6.github.io/ck/javascript/effect/quizeffect04.html
 ### 카드 타입 사이트 페이지
 https://kdb6.github.io/ck/site/cardType/cardType01.html   
 https://kdb6.github.io/ck/site/cardType/cardType02.html   
+https://kdb6.github.io/ck/site/cardType/cardType03.html   
 
 ### HTML 메인 페이지
 https://kdb6.github.io/ck/html/index.html   
