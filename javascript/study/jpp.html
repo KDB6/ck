@@ -35,19 +35,19 @@
                         </tr>
                     </thead>
                     <tr>
-                        <td class="ce">text1</td>
+                        <td class="ce">join('')</td>
                         <td class="ce">100200300400500</td>
                     </tr>
                     <tr>
-                        <td class="ce">text2</td>
+                        <td class="ce">join(' ')</td>
                         <td class="ce">100 200 300 400 500</td>
                     </tr>
                     <tr>
-                        <td class="ce">text3</td>
+                        <td class="ce">join('*')</td>
                         <td class="ce">100*200*300*400*500</td>
                     </tr>
                     <tr>
-                        <td class="ce">text4</td>
+                        <td class="ce">join('-')</td>
                         <td class="ce">100-200-300-400-500</td>
                     </tr>
                 </tbody>
@@ -79,7 +79,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="ce">push600</td>
+                        <td class="ce">push(600)</td>
                         <td class="ce">6</td>
                         <td class="ce">100, 200, 300, 400, 500, 600</td>
                     </tr>
@@ -93,7 +93,7 @@
                 <h3 class="t_tit2">03. 배열 메서드 : pop()</h3>
                 <p class="t_desc2">pop() 메서드는 배열에서 마지막 요소를 제거하고 그 요소를 반환한다.</p><br>
                 <div class="t_code">
-<pre><code class="language.js">    const arrNum2 = [100, 200, 300, 400, 500]
+<pre><code class="language.js">    const arrNum = [100, 200, 300, 400, 500]
     const arrPush = arrNum.pop();
 
     document.querySelector(".sample03_M1").innerHTML = "pop()";
