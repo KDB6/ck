@@ -129,26 +129,60 @@ body{
 .sample {
     margin-bottom: 50px;
 }
-.sample .table{
+.sample .table {
     margin-bottom: 10px;
 }
-.sample .table table{
+.sample .table table {
     width: 100%;
     border: 1px solid #e6e6e6;
     text-align: center;
 }
-.sample .table table tr th{
+.sample .table table tr th {
     font-weight: normal;
     background-color: #f5f5f5;
     padding: 3px;
 
 }
-.sample .table table tr td{
+.sample .table table tr td {
     border: 1px solid #e6e6e6;
-    padding: 3px;
+    padding: 6px;
 }
 .sample .table table tr td[class*="_P"] {
-    background: #000;
+    color: #fff;
+}
+.sample .table table tr td[class*="_P"]:hover {
+    color: #000;
+    cursor: help;
+}
+.sample .table table tr td[class*="_A"] {
+    color: #fff;
+}
+.sample .table table tr td[class*="_A"]:hover {
+    color: #000;
+    cursor: help;
+}
+
+@media (max-width: 800px) {
+    .sample .table {
+        overflow-x: scroll;
+    }
+    .sample .table table {
+        width: 790px;
+    }
+    .sample .table table tr td[class*="_P"] {
+        color: #fff;
+    }
+    .sample .table table tr td[class*="_P"]:hover {
+        color: #000;
+        cursor: help;
+    }
+    .sample .table table tr td[class*="_A"] {
+        color: #fff;
+    }
+    .sample .table table tr td[class*="_A"]:hover {
+        color: #000;
+        cursor: help;
+    }
 }
 
 /* 티스토리용 문서*/

@@ -56,15 +56,15 @@
         <div class="main_menu">
             <ul>
                 <li><a href="#sample01">01. 문자열 : </a></li>
-                <li><a href="#sample01">01. 문자열 : </a></li>
-                <li><a href="#sample01">01. 문자열 : </a></li>
-                <li><a href="#sample01">01. 문자열 : </a></li>
-                <li><a href="#sample01">01. 문자열 : </a></li>
-                <li><a href="#sample01">01. 문자열 : </a></li>
-                <li><a href="#sample01">01. 문자열 : </a></li>
-                <li><a href="#sample01">01. 문자열 : </a></li>
-                <li><a href="#sample01">01. 문자열 : </a></li>
-                <li><a href="#sample01">01. 문자열 : </a></li>
+                <li><a href="#sample01">02. 문자열 : </a></li>
+                <li><a href="#sample01">03. 문자열 : </a></li>
+                <li><a href="#sample01">04. 문자열 : </a></li>
+                <li><a href="#sample01">05. 문자열 : </a></li>
+                <li><a href="#sample01">06. 문자열 : </a></li>
+                <li><a href="#sample01">07. 문자열 : </a></li>
+                <li><a href="#sample01">08. 문자열 : </a></li>
+                <li><a href="#sample01">09. 문자열 : </a></li>
+                <li><a href="#sample01">10. 문자열 : </a></li>
             </ul>
         </div>
 
@@ -73,7 +73,7 @@
                 <!-- 01 -->
                 <div id="sample01" class="sample">
                     <h3>01. 문자열 : 문자열 결합 / 템플릿 문자열</h3>
-                    <p>1</p>
+                    <p>템플릿 문자열은 내장된 표현을 사용하는 문자열이다.</p>
                     <div class="table">
                         <table>
                             <colgroup>
@@ -119,7 +119,41 @@
                         </table>
                     </div>
                     <div class="script">
-<pre><code class="language.js">    1
+<pre><code class="language.js">     //01
+    const str1 = "자바스크립트";
+    const str2 = "제이쿼리";
+
+    document.querySelector(".sample01_N1").innerHTML = "1";
+    document.querySelector(".sample01_Q1").innerHTML = "자바스크립트, 제이쿼리";
+    document.querySelector(".sample01_M1").innerHTML = "문자열 결합";
+    document.querySelector(".sample01_P1").innerHTML = str1 + str2;
+
+    const num1 = 100;
+    const num2 = 200;
+
+    //02
+    document.querySelector(".sample01_N2").innerHTML = "2";
+    document.querySelector(".sample01_Q2").innerHTML = "100, 200";
+    document.querySelector(".sample01_M2").innerHTML = "숫자(number) 결합";
+    document.querySelector(".sample01_P2").innerHTML = num1 + num2;
+    // 자바스크립트 제이쿼리
+
+    //03
+    const text1 = "모던";
+    const text2 = "자바스크립트";
+    const text3 = "핵심";
+
+    document.querySelector(".sample01_N3").innerHTML = "3";
+    document.querySelector(".sample01_Q3").innerHTML = "모던, 자바스크립트, 핵심";
+    document.querySelector(".sample01_M3").innerHTML = "문자열(string) 결합";
+    document.querySelector(".sample01_P3").innerHTML = "나는 " + text1 + "(modern) " + text2 + "(javascript) " + text3 + "을 배우고 싶다";
+
+    //04
+    // 템플릿 문자열을 사용
+    document.querySelector(".sample01_N4").innerHTML = "4";
+    document.querySelector(".sample01_Q4").innerHTML = "모던, 자바스크립트, 핵심";
+    document.querySelector(".sample01_M4").innerHTML = "템플릿 문자열";
+    document.querySelector(".sample01_P4").innerHTML = `나는 ${text1}(modern) ${text2}(javascript) ${text3}을 배우고 싶다.`;
 </code></pre>
                     </div>
                 </div>
@@ -209,6 +243,23 @@
             document.querySelector(".sample01_M2").innerHTML = "숫자(number) 결합";
             document.querySelector(".sample01_P2").innerHTML = num1 + num2;
             // 자바스크립트 제이쿼리
+
+            const text1 = "모던";
+            const text2 = "자바스크립트";
+            const text3 = "핵심";
+
+            document.querySelector(".sample01_N3").innerHTML = "3";
+            document.querySelector(".sample01_Q3").innerHTML = "모던, 자바스크립트, 핵심";
+            document.querySelector(".sample01_M3").innerHTML = "문자열(string) 결합";
+            document.querySelector(".sample01_P3").innerHTML = "나는 " + text1 + "(modern) " + text2 + "(javascript) " + text3 + "을 배우고 싶다";
+        
+            // 템플릿 문자열을 사용
+            document.querySelector(".sample01_N4").innerHTML = "4";
+            document.querySelector(".sample01_Q4").innerHTML = "모던, 자바스크립트, 핵심";
+            document.querySelector(".sample01_M4").innerHTML = "템플릿 문자열";
+            document.querySelector(".sample01_P4").innerHTML = `나는 ${text1}(modern) ${text2}(javascript) ${text3}을 배우고 싶다.`;
+            
+            // 나는 모던 자바스크립트 핵심을 배우고 싶다
         }
     </script>
 
