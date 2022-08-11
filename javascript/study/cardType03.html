@@ -109,6 +109,14 @@
                 사이트를 코딩하는 데에 필요한 css의 구조를 잡아줍니다.<br>
                 h2와 p는 전체 구역에 사용돼 코드 불안정한 가능성이 있기에, 해당 요소 css만 부여되는 <i>></i>를 사용해줍니다.
             </p>
+            <p class="t_desc2">
+                <i>텍스트 줄 제한 코드</i><br>
+                overflow: hidden;<br>
+                text-overflow: ellipsis;<br>
+                display: -webkit-box;<br>
+                -webkit-line-clamp: 2;  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;// 2줄로 제한<br>
+                -webkit-box-orient: vertical;<br>
+            </p>
             <div class="t_code">
 <pre><code>    /* 폰트 */
     @import url('https://webfontworld.github.io/score/SCoreDream.css');
