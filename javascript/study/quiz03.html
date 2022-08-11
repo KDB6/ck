@@ -30,7 +30,7 @@
                 데이터 값의 입력과 for문을 사용
             </p>
             <div class="t_code">
-<pre><code code="language.js">    // 선택자
+<pre><code class="language-js">    // 선택자
     const quizType = document.querySelectorAll(".quiz__type");                             // 퀴즈 종류
     const quizNumber = document.querySelectorAll(".quiz__question .number");       // 퀴즈 번호
     const quizAsk = document.querySelectorAll(".quiz__question .ask");                   // 퀴즈 질문
@@ -108,7 +108,7 @@
 
             <h3 class="t_tit2">문제 출력 forEach 사용 방법</h3>
             <div class="t_code">
-<pre><code code="language.js">    quizInfo.forEach((e, i) => {
+<pre><code class="language-js">    quizInfo.forEach((e, i) => {
         quizType[i].textContent = quizInfo[i].answerType;
         quizNumber[i].textContent = quizInfo[i].answerNum + ". ";
         quizAsk[i].textContent = quizInfo[i].answerAsk;
@@ -119,7 +119,7 @@
 
             <h3 class="t_tit2">정답 숨기기 forEach 사용 방법</h3>
             <div class="t_code">
-<pre><code code="language.js">    quizInfo.forEach((e, i) => {
+<pre><code class="language-js">    quizInfo.forEach((e, i) => {
         quizResult[i].style.display = "none";   // 객체 값으로 출력
     });
 </code></pre>
