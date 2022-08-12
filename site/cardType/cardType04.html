@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드 유형 03</title>
+    <style>
+        /* 폰트 */
+        @import url('https://webfontworld.github.io/Noto/NotoSansKR.css');
+
+        .noto {
+            font-family: 'NotoSansKR';
+            font-weight: 500;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        img {
+            width: 100%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+        .type2 {
+            padding-top: 10px;
+        }
+
+        /* common */
+        .container01 {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+            background-color: #444;
+        }
+        .container02 {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+            background-color: #666;
+            margin-top: 500px;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section > h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section > p {
+            font-size: 22px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        /* cardType04 */
+        img {
+            right: auto;
+        }
+        #cardType04 {
+            padding: 120px 120px;
+        }
+        .card__inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .card__inner .card {
+            width: 24%;
+            position: absolute;
+        }
+        .card__inner img {
+            width: 95px;
+            height: 100px;
+        }
+        .card01 {
+            width: 1160px;
+            height: 380px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        .card01 .mainBan {
+            width: 767px;
+            height: 380px;
+            margin-right: 20px;
+            position: relative;
+        }
+        .card01 .mainBan img {
+            width: 767px;
+            height: 380px;
+        }
+        .card01 .cardTopCon {
+            width: 373px;
+            height: 380px;
+            display: flex;
+        }
+        .card01 h2 {
+            font-size: 30px;
+            line-height: 1.3;
+            margin: 10px 10px;
+        }
+        .card01 p {
+            font-size: 20px;
+            color: #fff;
+        }
+        .card02 {
+            width: 1160px;
+            height: 100px;
+        }
+        .card02 .card__footer {
+            width: 275px;
+            height: 100px;
+            margin: 40px 20px 0 0;
+            background-color: #fff;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <section id="cardType04">
+        <h2>cos</h2>
+            <div class="cardTop container01 noto">
+                <article class="card01">
+                    <div class="mainBan">
+                        <img src="img/mainBa.jpg" alt="#">
+                    </div>
+                    <div class="cardTopCon">
+                        <p class="top__p01">COS</p>
+                        <h2 class="top__h2">Our suppliers Charity partnerships</h2>
+                        <p class="top__p02">Inclusion and diversity</p>
+                    </div>
+                </article>
+            </div>
+            <div class="cardBottom container02 noto">
+                <div class="card__inner">
+                    <article class="card">
+                        <div class="card__footer">
+                            <p>ADVOCACY</p>
+                            <h3>칼레이도스코프 재단부터 하우싱 웍스까지 오랜 시간 제작</h3>
+                            <img src="img/card_bg04_01.jpg" alt="ADVOCACY">
+                        </div>
+                        <div class="card__footer">
+                            <p>COLLABORATIONS</p>
+                            <h3>특별한 의미를 담은 익스클루시브 아이템을 제작</h3>
+                            <img src="img/card_bg04_02.jpg" alt="COLLABORATIONS">
+                        </div>
+                        <div class="card__footer">
+                            <p>OUR PROGRESS</p>
+                            <h3>더 나은 미래와 목표를 향해 노력하는 과정을 확인</h3>
+                            <img src="img/card_bg04_03.jpg" alt="OUR PROGRESS">
+                        </div>
+                        <div class="card__footer">
+                            <p class="card">THE LIFE CYCLE</p>
+                            <h3>연 소재 단계부터 완성된 제품 단계까지 환경 보호</h3>
+                            <img src="img/card_bg04_04.jpg" alt="THE LIFE CYCLE">
+                        </div>
+                    </article>
+                </div>
+            </div>
+    </section>
+</body>
+</html>
