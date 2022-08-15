@@ -193,7 +193,7 @@ body{
 }
 .document i::before {
     content:'';
-    background-color: #EFC8B3;
+    background-color: #F2CB9C;
     opacity: 40%;
     width: 100%;
     height: 10px;
@@ -239,7 +239,7 @@ body{
     color: #666;
     margin-bottom: 10px !important;
     padding: 15px 20px !important;
-    border-left: 4px solid #EFC8B3;
+    border-left: 4px solid #F2CB9C;
     background-color: #f9f9f9;
 }
 .document .t_box {
@@ -286,7 +286,7 @@ body{
 .document .t_link a {
     display: block;
     width: 150px;
-    background: #EFC8B3;
+    background: #F2CB9C;
     color: #666;
     margin: 40px auto;
     border-radius: 20px;

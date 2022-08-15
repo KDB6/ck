@@ -1,45 +1,31 @@
-&lt;!DOCTYPE html>
-&lt;html lang="ko">
-&lt;head>
-    &lt;meta charset="UTF-8">
-    &lt;title>내장 함수&lt;/title>
-    &lt;script>
-        // 인코딩. 디코딩함수
-        var encodeStr = '자바스크립트';
-        console.log(encodeURIComponent(encodeStr));
-        var decodeStr = encodeURIComponent(decodeStr);
-        console.log(decodeURIComponent(decodeStr));
-        // 숫자, 유한무한 값 판별 함수
-        var num1 = '숫자';
-        if(!isNaN(num1)) {
-            console.log('숫자');
-        } else {
-            console.log('숫자아님');
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제</title>
+    <style>
+        @import url('https://webfontworld.github.io/SCoreDream/SCoreDream.css');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "SCoreDream";
         }
-        var num2 = 1 / 0;
-        if(!isFinite(num2)) {
-            console.log('유한값');
-        } else {
-            console.log('무한값');
+        h2 {
+            font-weight: normal;
         }
-        // 숫자, 문자 변환 함수
-        var num3 = '10';
-        console.log(Number(num3));
-        var num4 = '100px';
-        console.log(parseInt(num4));
-        var num5 = '33.3%';
-        console.log(parseFloat(num5));
-        var num6 = 10;
-        console.log(typeof num6);
-        onsole.log(typeof String(num6));
-        // 자바스크립트 코드 변경 함수
-        var srt1 = 'var num7 = 10';
-        var srt2 = 'var num8 = 20';
-        eval(str1);
-        eval(str2);
-        console.log(num7 + num8);
-    &lt;/script>
-&lt;/head>
-&lt;body>  
-&lt;/body>
-&lt;/html>
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    
+</body>
+</html>
