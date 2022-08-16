@@ -317,6 +317,7 @@
                     </div>
                     <div class="script">
 <pre><code class="language-js">    const str1 = "javascript reference"
+
     const cuurrentStr1 = str1.slice(0); // javascript reference
     const cuurrentStr2 = str1.slice(1); // avascript reference
     const cuurrentStr3 = str1.slice(2); // vascript reference
@@ -332,9 +333,9 @@
     const cuurrentStr13 = str1.slice(-3, -1);  // nc
     const cuurrentStr14 = str1.slice(-3, -2);  // c
     const cuurrentStr15 = str1.slice(-3, -3);  //
-
     const cuurrentStr16 = str1.slice(1, 4); // ava
     const cuurrentStr17 = str1.slice(4, 1); // ''
+
     const cuurrentStr18 = str1.substring(1, 4); // ava  // substring은 자동으로 변환해줌
     const cuurrentStr19 = str1.substring(4, 1); // ava  // substring은 자동으로 변환해줌
 
@@ -397,66 +398,29 @@
 
                 <!-- 10 -->
                 <div id="sample10" class="sample">
-                    <h3>10. indexOf</h3>
+                    <h3>10. indexOf()</h3>
                     <p>
-                        문자열에서 특 정문자의 위치를 찾고 숫자를 반영한다.
+                        문자열에서 특정 문자의 위치를 찾고 숫자를 반환하는 메서드이다.
                     </p>
                     <div class="box">
                         "문자열".index(검색값)<br>
                         "문자열".index(검색값, 위치값)
                     </div>
-                    <div class="table">
-                        <table>
-                            <colgroup>
-                                <col style="width: 5%">
-                                <col style="width: 32%">
-                                <col style="width: 22%">
-                                <col style="width: 42%">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th>번호</th>
-                                    <th>기본값</th>
-                                    <th>메서드</th>
-                                    <th>리턴값</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="sample06_N1"></td>
-                                    <td class="sample06_Q1"></td>
-                                    <td class="sample06_M1"></td>
-                                    <td class="sample06_P1"></td>
-                                </tr>
-                                <tr>
-                                    <td class="sample06_N2"></td>
-                                    <td class="sample06_Q2"></td>
-                                    <td class="sample06_M2"></td>
-                                    <td class="sample06_P2"></td>
-                                </tr>
-                                <tr>
-                                    <td class="sample06_N3"></td>
-                                    <td class="sample06_Q3"></td>
-                                    <td class="sample06_M3"></td>
-                                    <td class="sample06_P3"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
                     <div class="script">
-<pre><code class="language-js">    const str1 ="javascript refernce"
-    const currentStr1 = str1.IndexOf("javascipt")           // 00
-    const currentStr2 = str1.IndexOf("refernce")            // 11
-    const currentStr3 = str1.IndexOf("j")                         // 0
-    const currentStr4  = str1.IndexOf("a")                       // 1
-    const currentStr5 = str1.IndexOf("v")                        // 2
-    const currentStr6 = str1.IndexOf("jqeurey")              // -1
-    const currentStr8 = str1.IndexOf("javascipt", 0)       // 0
-    const currentStr9 = str1.IndexOf("javascipt", 1)       // -1
-    const currentStr10 = str1.IndexOf("refernce", 0)      // 11
-    const currentStr11 = str1.IndexOf("refernce", 1)      // 11
-    const currentStr12 = str1.IndexOf("refernce", 11)    // 11
-    const currentStr13 = str1.IndexOf("refernce", 12)    // -1
+<pre><code class="language-js">    const str1 = "javascript reference"
+    
+    const currentStr1 = str1.indexOf("javascipt")             // 00
+    const currentStr2 = str1.indexOf("reference")            // 11
+    const currentStr3 = str1.indexOf("j")                           // 0
+    const currentStr4  = str1.indexOf("a")                         // 1
+    const currentStr5 = str1.indexOf("v")                          // 2
+    const currentStr6 = str1.indexOf("jqeurey")                // -1
+    const currentStr8 = str1.indexOf("javascipt", 0)         // 0
+    const currentStr9 = str1.indexOf("javascipt", 1)         // -1
+    const currentStr10 = str1.indexOf("reference", 0)      // 11
+    const currentStr11 = str1.indexOf("reference", 1)      // 11
+    const currentStr12 = str1.indexOf("reference", 11)    // 11
+    const currentStr13 = str1.indexOf("reference", 12)    // -1
 </code></pre>
                     </div>
                 </div>
@@ -564,6 +528,7 @@
             // substr(시작위치)
             // substr(시작위치, 길이)
             const str1 = "javascript reference"
+
             const cuurrentStr1 = str1.slice(0); // javascript reference
             const cuurrentStr2 = str1.slice(1); // avascript reference
             const cuurrentStr3 = str1.slice(2); // vascript reference
@@ -579,9 +544,9 @@
             const cuurrentStr13 = str1.slice(-3, -1);  // nc
             const cuurrentStr14 = str1.slice(-3, -2);  // c
             const cuurrentStr15 = str1.slice(-3, -3);  //
-
             const cuurrentStr16 = str1.slice(1, 4); // ava
             const cuurrentStr17 = str1.slice(4, 1); // ''
+
             const cuurrentStr18 = str1.substring(1, 4); // ava  // substring은 자동으로 변환해줌
             const cuurrentStr19 = str1.substring(4, 1); // ava  // substring은 자동으로 변환해줌
 
@@ -636,19 +601,19 @@
 
         // 10
         {
-            const str1 ="javascript refernce"
-            const currentStr1 = str1.IndexOf("javascipt")          // 00
-            const currentStr2 = str1.IndexOf("refernce")           // 11
-            const currentStr3 = str1.IndexOf("j")                  // 0
-            const currentStr4  = str1.IndexOf("a")                 // 1
-            const currentStr5 = str1.IndexOf("v")                  // 2
-            const currentStr6 = str1.IndexOf("jqeurey")            // -1
-            const currentStr8 = str1.IndexOf("javascipt", 0)       // 0
-            const currentStr9 = str1.IndexOf("javascipt", 1)       // -1
-            const currentStr10 = str1.IndexOf("refernce", 0)       // 11
-            const currentStr11 = str1.IndexOf("refernce", 1)       // 11
-            const currentStr12 = str1.IndexOf("refernce", 11)      // 11
-            const currentStr13 = str1.IndexOf("refernce", 12)      // -1
+            const str1 ="javascript reference"
+            const currentStr1 = str1.indexOf("javascipt")          // 00
+            const currentStr2 = str1.indexOf("reference")           // 11
+            const currentStr3 = str1.indexOf("j")                  // 0
+            const currentStr4  = str1.indexOf("a")                 // 1
+            const currentStr5 = str1.indexOf("v")                  // 2
+            const currentStr6 = str1.indexOf("jqeurey")            // -1
+            const currentStr8 = str1.indexOf("javascipt", 0)       // 0
+            const currentStr9 = str1.indexOf("javascipt", 1)       // -1
+            const currentStr10 = str1.indexOf("reference", 0)       // 11
+            const currentStr11 = str1.indexOf("reference", 1)       // 11
+            const currentStr12 = str1.indexOf("reference", 11)      // 11
+            const currentStr13 = str1.indexOf("reference", 12)      // -1
         }
     </script>
 

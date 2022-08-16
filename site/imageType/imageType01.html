@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 유형 01</title>
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+        .nexon {
+            font-family: "NexonLv1Gothic";
+            font-weight: 400;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        img {
+            width: 100%;
+        }
+        h3 {
+            font-weight: normal;
+            font-size: 32px;
+        }
+
+        /* common */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+            min-width: 1160px;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section > h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section > p {
+            font-size: 22px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        figure > p {
+            font-size: 16px;
+        }
+
+        /* cardType */
+        .image__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        .image {
+            width: 49%;
+        }
+        .image__body {
+            padding: 24px;
+        }
+        .image .tit {
+        }
+        .image .desc {
+            line-height: 1.5;
+            color: #666;
+            font-weight: 300;
+        }
+        .image {
+            width: 570px;
+            height: 370px;
+        }
+        .image__in {
+            width: 570px;
+            height: 370px;
+        }
+        .img01 {
+            background-image: url(img/image01_01.jpg);
+            width: 570px;
+            height: 370px;
+        }
+        .img02 {
+            background-image: url(img/image01_02.jpg);
+            width: 570px;
+            height: 370px;
+        }
+        .image__in .tit {
+            color: #fff;
+            padding: 195px 0 10px 30px;
+        }
+        .image__in .desc {
+            color: #fff;
+            padding: 0px 30px 10px 30px;
+            margin-bottom: 10px;
+        }
+        .image__in a {
+            color: #fff;
+            padding: 10px 20px 10px 20px;
+            background: #6464648e;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <section id="imageType" class="image__wrap nexon section">
+        <h2>POTTERY</h2>
+        <p>‘POTTERY’, 포터리라는 이름은 도자기를 의미합니다.</p>
+
+        <div class="image__inner container">
+
+            <article class="image">
+                <div class="image__in">
+                    <div class="img01">
+                        <h3 class="tit">EV6</h3>
+                        <p class="desc">
+                            기아 EV6가 연식변경을 거친다. 관련 업계에 따르면 2023년형 EV6에는 배터리 컨디셔닝이 추가되며, 트림에 따라 고객 선호 사양이 기본 적용
+                        </p>
+                        <a class="btn">
+                            더 자세히 보기
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="image">
+                <div class="image__in">
+                    <div class="img02">
+                            <h3 class="tit">EV6</h3>
+                        <p class="desc">
+                            기아 EV6가 연식변경을 거친다. 관련 업계에 따르면 2023년형 EV6에는 배터리 컨디셔닝이 추가되며, 트림에 따라 고객 선호 사양이 기본 적용
+                        </p>
+                        <a class="btn">
+                            더 자세히 보기
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+</body>
+</html>
