@@ -58,25 +58,24 @@
                 <li><a href="#sample01">01. 문자열 : 문자열 결합 / 템플릿 문자열</a></li>
                 <li><a href="#sample02">02. 문자열 메서드 : 변경 : toUpperCase() : 문자열을 대문자로 변경 : 반환(문자열)</a></li>
                 <li><a href="#sample02">02. 문자열 메서드 : 변경 : toLowerCase() : 문자열을 소문자로 변경 : 반환(문자열)</a></li>
-
                 <li><a href="#sample03">03. 문자열 메서드 : 변경 : trim() : 문자열 앞뒤 공백 제거 : 반환(문자열) *</a></li>
                 <li><a href="#sample03">03. 문자열 메서드 : 변경 : trimStart() : 문자열 앞 공백 제거 : 반환(문자열)</a></li>
                 <li><a href="#sample03">03. 문자열 메서드 : 변경 : trimEnd() : 문자열 뒤 공백 제거 : 반환(문자열)</a></li>
-
                 <li><a href="#sample04">04. 문자열 메서드 : 변경 : slice() : 문자열에서 원하는 값을 추출 : 반환(문자열) **</a></li>
                 <li><a href="#sample04">04. 문자열 메서드 : 변경 : substring() : 문자열에서 원하는 값을 추출 : 반환(문자열)</a></li>
                 <li><a href="#sample04">04. 문자열 메서드 : 변경 : substr() : 문자열에서 원하는 값을 추출 : 반환(문자열)</a></li>
 
-                <li><a href="#sample01">06. 문자열 메서드 : 변경 : split() : 문자열에서 원하는 값을 추출 : 반환(배열) ***</a></li>
+                <li><a href="#sample01">05. 문자열 메서드 : 변경 : split() : 문자열에서 원하는 값을 추출 : 반환(배열) ***</a></li>
+
                 <li><a href="#sample01">06. 문자열 메서드 : 변경 : replace() : 문자열 변경 : 반환(문자열)</a></li>
                 <li><a href="#sample01">06. 문자열 메서드 : 변경 : replaceAll() : 문자열 변경 : 반환(문자열)</a></li>
-                <li><a href="#sample01">06. 문자열 메서드 : 변경 : concat() : 문자열 결합 : 반환(문자열)</a></li>
-                <li><a href="#sample01">06. 문자열 메서드 : 변경 : repeat() : 문자열 반복 : 반환(문자열)</a></li>
-                <li><a href="#sample01">06. 문자열 메서드 : 변경 : padStart() : 문자열 반복 : 반환(문자열)</a></li>
-                <li><a href="#sample01">06. 문자열 메서드 : 변경 : padEnd() : 문자열 반복 : 반환(문자열)</a></li>
+                <li><a href="#sample01">07. 문자열 메서드 : 변경 : concat() : 문자열 결합 : 반환(문자열)</a></li>
+                <li><a href="#sample01">08. 문자열 메서드 : 변경 : repeat() : 문자열 반복 : 반환(문자열)</a></li>
+                <li><a href="#sample01">09. 문자열 메서드 : 변경 : padStart() : 문자열 반복 : 반환(문자열)</a></li>
+                <li><a href="#sample01">09. 문자열 메서드 : 변경 : padEnd() : 문자열 반복 : 반환(문자열)</a></li>
 
-                <li><a href="#sample01">05. 문자열 메서드 : 검색 : indexOf() : 문자열 특정 문자의 위치를 찾는 것 : 반환(숫자) *</a></li>
-                <li><a href="#sample01">06. 문자열 메서드 : 검색 : lastIndexOf() : 문자열 특정 문자의 위치를 찾는 것 : 반환(숫자)</a></li>
+                <li><a href="#sample10">10. 문자열 메서드 : 검색 : indexOf() : 문자열에서 특정 문자의 위치를 찾는 것 : 반환(숫자) *</a></li>
+                <li><a href="#sample01">10. 문자열 메서드 : 검색 : lastIndexOf() : 문자열에서 특정 문자의 위치를 찾는 것 : 반환(숫자)</a></li>
                 <li><a href="#sample01">07. 문자열 메서드 : 검색 : search() : 문자열을 검색(정규식) 반환(숫자) *</a></li>
                 <li><a href="#sample01">08. 문자열 메서드 : 검색 : match() : 문자열을 검색(정규식) : 반한(배열)</a></li>
                 <li><a href="#sample01">09. 문자열 메서드 : 검색 : includes() : 문자열 포함 여부 검색 : 반환(불린) *</a></li>
@@ -307,13 +306,14 @@
                 <!-- 04 -->
                 <div id="sample04" class="sample">
                     <h3>04. slice() / substring() / substr()</h3>
-                    <p>문자열에서 원하는 값을 추출</p>
+                    <p>문자열에서 원하는 값을 추출하여 문자열로 반환</p>
                     <div class="box">
-                        // "문자열".slice(시작위치)<br>
-                        // "문자열".slice(시작위치, 끝나는위치)<br>
+                        "문자열".slice(시작위치)<br>
+                        "문자열".slice(시작위치, 끝나는위치)<br>
                         // 시작 위치의 값은 끝나는 위치 값보다 작아야 합니다.<br>
-                        // "문자열".substr(시작위치)<br>
-                        // "문자열".substr(시작위치, 길이)
+                        // substring() 시작 값이 끝나는 값보다 클 경우 두 값을 바꿔서 처리(에러 방지)<br>
+                        "문자열".substr(시작위치)<br>
+                        "문자열".substr(시작위치, 길이)
                     </div>
                     <div class="script">
 <pre><code class="language-js">    const str1 = "javascript reference"
@@ -359,8 +359,52 @@
 
                 <!-- 05 -->
                 <div id="sample05" class="sample">
-                    <h3>05. slice() /trimStart() / trimEnd()</h3>
-                    <p></p>
+                    <h3>05. split()</h3>
+                    <p>문자열에서 원하는 값을 추출하여 배열로 반환</p>
+                    <div class="box">
+                        "문자열".split(구분자);<br>
+                        "문자열".split(정규식 표현);<br>
+                        "문자열".split(구분자, 갯수);<br>
+                    </div>
+                    <div class="script">
+<pre><code class="language-js">    const str1 = "javascript reference"
+    const currentStr1 = str1.split('')       // ['j','a','v','a','s','c','r','i','p','t','','r','e','f','e','r','e','n','c','e']
+    const currentStr2 = str1.split(' ')      // ['javascript', 'reference']
+    const currentStr3 = str1.split('', 1)    // ['j']
+    const currentStr4 = str1.split('', 2)    // ['j', 'a']
+    const currentStr5 = str1.split(' ', 1)   // ['javascript']
+    const currentStr6 = str1.split(' ', 2)   // ['javascript', 'reference']
+    const currentStr7 = str1.split('j')      // ['','avascript reference']
+    const currentStr8 = str1.split('a')      // ['j', 'v', 'script reference']
+    const currentStr9 = str1.split('e')      // ['javascript r', 'f', 'r', 'nc', '']
+
+    const str2 = "java/script refer/ence"
+    const cuurrentStr10 = str2.split('/');   // ['java', 'script', 'refer', 'ence']
+
+    const str3 = "java&script&refer!ence";
+    const cuurrentStr11 = str3.split('!');      // ['java&script&refer', 'ence']
+    const cuurrentStr12 = str3.split('&');      // ['java/script', 'refer!ence']
+    const cuurrentStr13 = str3.split(/&|\!/);   // ['java', 'script', 'refer', 'ence']
+    
+    const str4 = "javascript reference";
+    const cuurrentStr14 = str4.split('').join();                // j,a,v,a,s,c,r,i,p,t, ,r,e,f,e,r,e,n,c,e
+    const cuurrentStr15 = str4.split('').join('*');             // j*a*v*a*s*c*r*i*p*t* *r*e*f*e*r*e*n*c*e
+    const cuurrentStr16 = str4.split('').reverse().join('');    // ecnerefer tpircsavaj
+    const cuurrentStr17 = str4.split('').reverse().join('^^');  // e^^c^^n^^e^^r^^e^^f^^e^^r^^ ^^t^^p^^i^^r^^c^^s^^a^^v^^a^^j
+</code></pre>
+                    </div>
+                </div>
+
+                <!-- 10 -->
+                <div id="sample10" class="sample">
+                    <h3>10. indexOf</h3>
+                    <p>
+                        문자열에서 특 정문자의 위치를 찾고 숫자를 반영한다.
+                    </p>
+                    <div class="box">
+                        "문자열".index(검색값)<br>
+                        "문자열".index(검색값, 위치값)
+                    </div>
                     <div class="table">
                         <table>
                             <colgroup>
@@ -379,36 +423,46 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="sample05_N1"></td>
-                                    <td class="sample05_Q1"></td>
-                                    <td class="sample05_M1"></td>
-                                    <td class="sample05_P1"></td>
+                                    <td class="sample06_N1"></td>
+                                    <td class="sample06_Q1"></td>
+                                    <td class="sample06_M1"></td>
+                                    <td class="sample06_P1"></td>
                                 </tr>
                                 <tr>
-                                    <td class="sample05_N2"></td>
-                                    <td class="sample05_Q2"></td>
-                                    <td class="sample05_M2"></td>
-                                    <td class="sample05_P2"></td>
+                                    <td class="sample06_N2"></td>
+                                    <td class="sample06_Q2"></td>
+                                    <td class="sample06_M2"></td>
+                                    <td class="sample06_P2"></td>
                                 </tr>
                                 <tr>
-                                    <td class="sample05_N3"></td>
-                                    <td class="sample05_Q3"></td>
-                                    <td class="sample05_M3"></td>
-                                    <td class="sample05_P3"></td>
+                                    <td class="sample06_N3"></td>
+                                    <td class="sample06_Q3"></td>
+                                    <td class="sample06_M3"></td>
+                                    <td class="sample06_P3"></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                     <div class="script">
-<pre><code class="language-js">    2
+<pre><code class="language-js">    const str1 ="javascript refernce"
+    const currentStr1 = str1.IndexOf("javascipt")           // 00
+    const currentStr2 = str1.IndexOf("refernce")            // 11
+    const currentStr3 = str1.IndexOf("j")                         // 0
+    const currentStr4  = str1.IndexOf("a")                       // 1
+    const currentStr5 = str1.IndexOf("v")                        // 2
+    const currentStr6 = str1.IndexOf("jqeurey")              // -1
+    const currentStr8 = str1.IndexOf("javascipt", 0)       // 0
+    const currentStr9 = str1.IndexOf("javascipt", 1)       // -1
+    const currentStr10 = str1.IndexOf("refernce", 0)      // 11
+    const currentStr11 = str1.IndexOf("refernce", 1)      // 11
+    const currentStr12 = str1.IndexOf("refernce", 11)    // 11
+    const currentStr13 = str1.IndexOf("refernce", 12)    // -1
 </code></pre>
                     </div>
                 </div>
 
             </div>
-
         <div id="main_desc"></div>
-
     </main>
     <!-- //main -->
 
@@ -546,8 +600,55 @@
             const cuurrentStr32 = str1.substr(-1, 1);     // e
             const cuurrentStr33 = str1.substr(-2, 2);     // ce
             const cuurrentStr34 = str1.substr(-3, 3);     // nce
+        }
 
-            console.log(cuurrentStr34);
+        // 05
+        {
+            // "문자열".split(구분자);
+            // "문자열".split(정규식 표현);
+            // "문자열".split(구분자, 갯수);
+        
+            const str1 = "javascript reference"
+            const currentStr1 = str1.split('')       // ['j','a','v','a','s','c','r','i','p','t','','r','e','f','e','r','e','n','c','e']
+            const currentStr2 = str1.split(' ')      // ['javascript', 'reference']
+            const currentStr3 = str1.split('', 1)    // ['j']
+            const currentStr4 = str1.split('', 2)    // ['j', 'a']
+            const currentStr5 = str1.split(' ', 1)   // ['javascript']
+            const currentStr6 = str1.split(' ', 2)   // ['javascript', 'reference']
+            const currentStr7 = str1.split('j')      // ['','avascript reference']
+            const currentStr8 = str1.split('a')      // ['j', 'v', 'script reference']
+            const currentStr9 = str1.split('e')      // ['javascript r', 'f', 'r', 'nc', '']
+
+            const str2 = "java/script refer/ence"
+            const cuurrentStr10 = str2.split('/');   // ['java', 'script', 'refer', 'ence']
+
+            const str3 = "java&script&refer!ence";
+            const cuurrentStr11 = str3.split('!');      // ['java&script&refer', 'ence']
+            const cuurrentStr12 = str3.split('&');      // ['java/script', 'refer!ence']
+            const cuurrentStr13 = str3.split(/&|\!/);   // ['java', 'script', 'refer', 'ence']
+            
+            const str4 = "javascript reference";
+            const cuurrentStr14 = str4.split('').join();                // j,a,v,a,s,c,r,i,p,t, ,r,e,f,e,r,e,n,c,e
+            const cuurrentStr15 = str4.split('').join('*');             // j*a*v*a*s*c*r*i*p*t* *r*e*f*e*r*e*n*c*e
+            const cuurrentStr16 = str4.split('').reverse().join('');    // ecnerefer tpircsavaj
+            const cuurrentStr17 = str4.split('').reverse().join('^^');  // e^^c^^n^^e^^r^^e^^f^^e^^r^^ ^^t^^p^^i^^r^^c^^s^^a^^v^^a^^j
+        }
+
+        // 10
+        {
+            const str1 ="javascript refernce"
+            const currentStr1 = str1.IndexOf("javascipt")          // 00
+            const currentStr2 = str1.IndexOf("refernce")           // 11
+            const currentStr3 = str1.IndexOf("j")                  // 0
+            const currentStr4  = str1.IndexOf("a")                 // 1
+            const currentStr5 = str1.IndexOf("v")                  // 2
+            const currentStr6 = str1.IndexOf("jqeurey")            // -1
+            const currentStr8 = str1.IndexOf("javascipt", 0)       // 0
+            const currentStr9 = str1.IndexOf("javascipt", 1)       // -1
+            const currentStr10 = str1.IndexOf("refernce", 0)       // 11
+            const currentStr11 = str1.IndexOf("refernce", 1)       // 11
+            const currentStr12 = str1.IndexOf("refernce", 11)      // 11
+            const currentStr13 = str1.IndexOf("refernce", 12)      // -1
         }
     </script>
 
