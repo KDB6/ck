@@ -23,30 +23,30 @@
                 "문자열".split(구분자, 갯수);
             </p>
             <div class="t_code">
-<pre><code class="language.js">    const str1 = "javascript reference"
-    const currentStr1 = str1.split('')       // ['j','a','v','a','s','c','r','i','p','t','','r','e','f','e','r','e','n','c','e']
-    const currentStr2 = str1.split(' ')      // ['javascript', 'reference']
-    const currentStr3 = str1.split('', 1)    // ['j']
-    const currentStr4 = str1.split('', 2)    // ['j', 'a']
-    const currentStr5 = str1.split(' ', 1)   // ['javascript']
-    const currentStr6 = str1.split(' ', 2)   // ['javascript', 'reference']
-    const currentStr7 = str1.split('j')      // ['','avascript reference']
-    const currentStr8 = str1.split('a')      // ['j', 'v', 'script reference']
-    const currentStr9 = str1.split('e')      // ['javascript r', 'f', 'r', 'nc', '']
+<pre><code class="language-js">    const str1 = "javascript reference"
+    const currentStr1 = str1.split('')         // ['j','a','v','a','s','c','r','i','p','t','','r','e','f','e','r','e','n','c','e']
+    const currentStr2 = str1.split(' ')        // ['javascript', 'reference']
+    const currentStr3 = str1.split('', 1)     // ['j']
+    const currentStr4 = str1.split('', 2)     // ['j', 'a']
+    const currentStr5 = str1.split(' ', 1)    // ['javascript']
+    const currentStr6 = str1.split(' ', 2)    // ['javascript', 'reference']
+    const currentStr7 = str1.split('j')        // ['','avascript reference']
+    const currentStr8 = str1.split('a')       // ['j', 'v', 'script reference']
+    const currentStr9 = str1.split('e')       // ['javascript r', 'f', 'r', 'nc', '']
 
     const str2 = "java/script refer/ence"
     const cuurrentStr10 = str2.split('/');   // ['java', 'script', 'refer', 'ence']
 
     const str3 = "java&script&refer!ence";
-    const cuurrentStr11 = str3.split('!');      // ['java&script&refer', 'ence']
-    const cuurrentStr12 = str3.split('&');      // ['java/script', 'refer!ence']
+    const cuurrentStr11 = str3.split('!');           // ['java&script&refer', 'ence']
+    const cuurrentStr12 = str3.split('&');          // ['java/script', 'refer!ence']
     const cuurrentStr13 = str3.split(/&|\!/);   // ['java', 'script', 'refer', 'ence']
     
     const str4 = "javascript reference";
-    const cuurrentStr14 = str4.split('').join();                // j,a,v,a,s,c,r,i,p,t, ,r,e,f,e,r,e,n,c,e
-    const cuurrentStr15 = str4.split('').join('*');             // j*a*v*a*s*c*r*i*p*t* *r*e*f*e*r*e*n*c*e
-    const cuurrentStr16 = str4.split('').reverse().join('');    // ecnerefer tpircsavaj
-    const cuurrentStr17 = str4.split('').reverse().join('^^');  // e^^c^^n^^e^^r^^e^^f^^e^^r^^ ^^t^^p^^i^^r^^c^^s^^a^^v^^a^^j
+    const cuurrentStr14 = str4.split('').join();                        // j,a,v,a,s,c,r,i,p,t, ,r,e,f,e,r,e,n,c,e
+    const cuurrentStr15 = str4.split('').join('*');                    // j*a*v*a*s*c*r*i*p*t* *r*e*f*e*r*e*n*c*e
+    const cuurrentStr16 = str4.split('').reverse().join('');       // ecnerefer tpircsavaj
+    const cuurrentStr17 = str4.split('').reverse().join('^^');    // e^^c^^n^^e^^r^^e^^f^^e^^r^^ ^^t^^p^^i^^r^^c^^s^^a^^v^^a^^j
 </code></pre>
             </div>
         </div>

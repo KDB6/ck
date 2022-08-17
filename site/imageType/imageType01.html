@@ -8,12 +8,10 @@
     <style>
         /* fonts */
         @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
-
         .nexon {
-            font-family: "NexonLv1Gothic";
+            font-family: 'NexonLv1Gothic';
             font-weight: 400;
         }
-
         /* reset */
         * {
             margin: 0;
@@ -26,11 +24,9 @@
         img {
             width: 100%;
         }
-        h3 {
+        h1, h2, h3, h4, h5, h6 {
             font-weight: normal;
-            font-size: 32px;
         }
-
         /* common */
         .container {
             width: 1160px;
@@ -54,96 +50,65 @@
             text-align: center;
             margin-bottom: 70px;
         }
-        figure > p {
-            font-size: 16px;
-        }
-
-        /* cardType */
+        /* imageType */
         .image__inner {
             display: flex;
             justify-content: space-between;
         }
         .image {
             width: 49%;
-        }
-        .image__body {
-            padding: 24px;
-        }
-        .image .tit {
-        }
-        .image .desc {
-            line-height: 1.5;
-            color: #666;
-            font-weight: 300;
-        }
-        .image {
-            width: 570px;
             height: 370px;
-        }
-        .image__in {
-            width: 570px;
-            height: 370px;
-        }
-        .img01 {
-            background-image: url(img/image01_01.jpg);
-            width: 570px;
-            height: 370px;
-        }
-        .img02 {
-            background-image: url(img/image01_02.jpg);
-            width: 570px;
-            height: 370px;
-        }
-        .image__in .tit {
             color: #fff;
-            padding: 195px 0 10px 30px;
+            padding: 200px 30px 30px 30px;
+            box-sizing: border-box;
         }
-        .image__in .desc {
-            color: #fff;
-            padding: 0px 30px 10px 30px;
+        .image.img1 {
+            background: url(img/image01_01.jpg) no-repeat center;
+        }
+        .image.img2 {
+            background: url(img/image01_02.jpg) no-repeat center;
+        }
+        .image__title {
+            font-size: 32px;
             margin-bottom: 10px;
         }
-        .image__in a {
+        .image__desc {
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 10px;
+            line-height: 1.5;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        .image__btn {
+            font-size: 16px;
             color: #fff;
-            padding: 10px 20px 10px 20px;
-            background: #6464648e;
-            margin-left: 30px;
+            background-color: #cdcdcd40;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+        .image__btn.yellow {
+            background-color: #cdcdcd40;
         }
     </style>
 </head>
 <body>
-    <section id="imageType" class="image__wrap nexon section">
+    <section id="imageType01" class="image__wrap nexon section">
         <h2>POTTERY</h2>
         <p>‘POTTERY’, 포터리라는 이름은 도자기를 의미합니다.</p>
-
         <div class="image__inner container">
-
-            <article class="image">
-                <div class="image__in">
-                    <div class="img01">
-                        <h3 class="tit">EV6</h3>
-                        <p class="desc">
-                            기아 EV6가 연식변경을 거친다. 관련 업계에 따르면 2023년형 EV6에는 배터리 컨디셔닝이 추가되며, 트림에 따라 고객 선호 사양이 기본 적용
-                        </p>
-                        <a class="btn">
-                            더 자세히 보기
-                        </a>
-                    </div>
-                </div>
+            <article class="image img1">
+                <h3 class="image__title">EV6</h3>
+                <p class="image__desc">기아 EV6가 연식변경을 거친다. 관련 업계에 따르면 2023년형 EV6에는 배터리 컨디셔닝이 추가되며, 트림에 따라 고객 선호 사양이 기본 적용</p>
+                <a class="image__btn" href="/" title="자세히 보기">자세히 보기</a>
             </article>
-
-            <article class="image">
-                <div class="image__in">
-                    <div class="img02">
-                            <h3 class="tit">EV6</h3>
-                        <p class="desc">
-                            기아 EV6가 연식변경을 거친다. 관련 업계에 따르면 2023년형 EV6에는 배터리 컨디셔닝이 추가되며, 트림에 따라 고객 선호 사양이 기본 적용
-                        </p>
-                        <a class="btn">
-                            더 자세히 보기
-                        </a>
-                    </div>
-                </div>
+            <article class="image img2">
+                <h3 class="image__title">EV6</h3>
+                <p class="image__desc">기아 EV6가 연식변경을 거친다. 관련 업계에 따르면 2023년형 EV6에는 배터리 컨디셔닝이 추가되며, 트림에 따라 고객 선호 사양이 기본 적용</p>
+                <a class="image__btn yellow" href="/" title="자세히 보기">자세히 보기</a>
             </article>
         </div>
     </section>
