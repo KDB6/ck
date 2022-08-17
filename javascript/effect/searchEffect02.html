@@ -42,7 +42,7 @@
             <div class="search__list">
                 <div class="css">
                     <ul>
-                        <li data-name="accent-color"><strong>accent-color</strong> : href특성을 통해 다른 페이지나 같은페이지의 위치, 파일와 그 외 다른 URL로 연결할 수 있는 하이퍼 링크를 만듭니다.</li>
+                        <li data-name="accent-color" data-type="플렉스"><strong>accent-color</strong> : href특성을 통해 다른 페이지나 같은페이지의 위치, 파일와 그 외 다른 URL로 연결할 수 있는 하이퍼 링크를 만듭니다.</li>
                         <li data-name="align-content" data-type="플렉스"><strong>align-content</strong> :  콘텐츠 아이템의 상하관계 정렬 상태를 설정</li>
                         <li data-name="align-items" data-type="플렉스"><strong>align-items</strong> : 콘텐츠 아이템의 내부 상하관계 정렬 상태를 설정</li>
                         <li data-name="align-self" data-type="플렉스"><strong>align-self</strong> : 개별적인 콘텐츠 아이템의 정렬 상태를 설정</li>
@@ -441,14 +441,10 @@
         // 선택자
         const searchBox = document.querySelector(".search__box input");         // input 박스
         const searchList = document.querySelectorAll(".search__list ul li")     // 목록 리스트
-        const searchInfo = document.querySelector(".search__info .num")          // 전체 갯수 구하기
+        const searchInfo = document.querySelector(".search__info .num")         // 전체 갯수 구하기
         
-
         // 전체 갯수 구하기
         searchInfo.textContent = searchList.length;
-
-        // searchData.textContent = 
-        // data-type 검색
 
         // 검색
         searchBox.addEventListener("keyup", () => {
@@ -456,12 +452,14 @@
             
             searchList.forEach(el => {
                 const cssName = el.dataset.name;
+                const cssType = el.dataset.type;
 
-                if(cssName.includes(searchWord)) {
-                    el.classList.add("show");
+                if(cssName.includes(searchWord) | cssType.includes(searchWord)){
+                    el.classList.remove("hide");
                 } else {
-                    el.classList.remove("show");
+                    el.classList.add("hide");
                 }
+
             });
         });
     </script>

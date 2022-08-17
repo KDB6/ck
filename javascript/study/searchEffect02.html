@@ -40,7 +40,7 @@
             &lt;div class="search__list">
                 &lt;div class="css">
                     &lt;ul>
-                        &lt;li data-name="accent-color">&lt;strong>accent-color&lt;/strong> : href특성을 통해 다른 페이지나 같은페이지의 위치, 파일와 그 외 다른 URL로 연결할 수 있는 하이퍼 링크를 만듭니다.&lt;/li>
+                        &lt;li data-name="accent-color" data-type="플렉스">&lt;strong>accent-color&lt;/strong> : href특성을 통해 다른 페이지나 같은페이지의 위치, 파일와 그 외 다른 URL로 연결할 수 있는 하이퍼 링크를 만듭니다.&lt;/li>
                         &lt;li data-name="align-content" data-type="플렉스">&lt;strong>align-content&lt;/strong> :  콘텐츠 아이템의 상하관계 정렬 상태를 설정&lt;/li>
                         &lt;li data-name="align-items" data-type="플렉스">&lt;strong>align-items&lt;/strong> : 콘텐츠 아이템의 내부 상하관계 정렬 상태를 설정&lt;/li>
                         &lt;li data-name="align-self" data-type="플렉스">&lt;strong>align-self&lt;/strong> : 개별적인 콘텐츠 아이템의 정렬 상태를 설정&lt;/li>
@@ -55,9 +55,6 @@
                         &lt;li data-name="animation-play-state" data-type="애니메이션">&lt;strong>animation-play-state&lt;/strong> : 애니메이션 진행 상태를 설정&lt;/li>
                         &lt;li data-name="animation-timeline" data-type="애니메이션">&lt;strong>animation-timeline&lt;/strong> : 애니메이션을 설명하는 하나 이상의 규칙과 이름을 설정&lt;/li>
                         &lt;li data-name="animation-timing-function" data-type="애니메이션">&lt;strong>animation-timing-function&lt;/strong> : 애니메이션 움직임의 속도를 설정&lt;/li>
-                        &lt;li data-name="appearance">&lt;strong>appearance&lt;/strong> : 운영 체제의 테마를 기반으로 하는 UI 컨트롤의 기본 모양을 제어&lt;/li>
-                        &lt;li data-name="aspect-ratio">&lt;strong>aspect-ratio&lt;/strong> : 자동 크기 및 기타 레이아웃 기능 계산에 사용되는 상자의 기본 종횡비를 설정&lt;/li>
-                    &lt;/ul>
                 &lt;/div>
             &lt;/div>
         &lt;/div>
@@ -249,23 +246,25 @@
 <pre><code class="language-js">    // 선택자
     const searchBox = document.querySelector(".search__box input");         // input 박스
     const searchList = document.querySelectorAll(".search__list ul li")     // 목록 리스트
-    const searchInfo = document.querySelector(".search_info .num")       // 전체 갯수 구하기
-
+    const searchInfo = document.querySelector(".search__info .num")         // 전체 갯수 구하기
+    
     // 전체 갯수 구하기
     searchInfo.textContent = searchList.length;
 
-    // 
+    // 검색
     searchBox.addEventListener("keyup", () => {
         const searchWord = searchBox.value;         // 사용자가 입력한 키워드
         
         searchList.forEach(el => {
             const cssName = el.dataset.name;
+            const cssType = el.dataset.type;
 
-            if(cssName.includes(searchWord)) {
-                el.classList.add("hide");
-            } else {
+            if(cssName.includes(searchWord) | cssType.includes(searchWord)){
                 el.classList.remove("hide");
+            } else {
+                el.classList.add("hide");
             }
+
         });
     });
 </code></pre>
