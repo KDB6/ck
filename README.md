@@ -35,3 +35,5 @@ https://kdb6.github.io/ck/css/index.html
 
 ### t_img
 https://kdb6.github.io/ck/img/javaimg.html
+https://kdb6.github.io/ck/css/css.jpg   
+https://kdb6.github.io/ck/css/html.jpg   
