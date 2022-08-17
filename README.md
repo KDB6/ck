@@ -34,6 +34,8 @@ https://kdb6.github.io/ck/html/alphabet.html
 https://kdb6.github.io/ck/css/index.html   
 
 ### t_img
-https://kdb6.github.io/ck/img/javaimg.html
+https://kdb6.github.io/ck/img/javaimg.html   
+https://kdb6.github.io/ck/img/css.html   
+https://kdb6.github.io/ck/img/html.html   
 https://kdb6.github.io/ck/css/css.jpg   
 https://kdb6.github.io/ck/css/html.jpg   
