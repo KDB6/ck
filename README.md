@@ -41,3 +41,4 @@ https://kdb6.github.io/ck/site/imageType/imageType02.html
 https://kdb6.github.io/ck/img/javaimg.html   
 https://kdb6.github.io/ck/img/css.html   
 https://kdb6.github.io/ck/img/html.html   
+https://kdb6.github.io/ck/img/search.html   
