@@ -243,7 +243,7 @@
                 <!-- 03 -->
                 <div id="sample03" class="sample">
                     <h3>03. trim() /trimStart() / trimEnd()</h3>
-                    <p>앞 뒤 공백을 제거합니다.</p>
+                    <p>앞 뒤 공백을 제거한다.</p>
                     <div class="table">
                         <table>
                             <colgroup>
@@ -407,8 +407,6 @@
                 <div id="sample06" class="sample">
                     <h3>06. replace() / replaceAll</h3>
                     <p>replace() 메서드는 문자열을 부분 문자로 구분하고 배열로 반환한다.</p>
-                    <div class="box">
-                    </div>
                     <div class="script">
 <pre><code class="language-js">    const str1 = "javascript reference"
     const cirrentStr1 = str1.replace("javascript", "자바스크립트")      // 자바스크립트 reference
@@ -437,9 +435,15 @@
                     <h3>07. concat()</h3>
                     <p>둘 이상이 문자열을 결합하여 반환한다.</p>
                     <div class="box">
+                        "문자열".concat(문자열, 문자열,,,,)
                     </div>
                     <div class="script">
-<pre><code class="language-js">    
+<pre><code class="language-js">    const str1 = "javascript";
+    const currentStr1 = str1.concat("reference");                           // javascriptreference
+    const currentStr2 = str1.concat(" ", "reference");                      // javascript reference
+    const currentStr3 = str1.concat(", ", "reference");                     // javascript, reference
+    const currentStr4 = str1.concat(", ", "reference", ", ", "book");       // javascript, reference, book
+    const currentStr5 = str1.concat(" ", ["reference","book"]);             // javascript reference,book
 </code></pre>
                     </div>
                 </div>
@@ -448,10 +452,11 @@
                 <div id="sample08" class="sample">
                     <h3>08. repeat()</h3>
                     <p>문자열을 복사하여, 복사한 새로운 문자열을 반환한다.</p>
-                    <div class="box">
-                    </div>
                     <div class="script">
-<pre><code class="language-js">    
+<pre><code class="language-js">    const str1 = "javascript";
+    const currentStr1 = str1.repeat(0);
+    const currentStr2 = str1.repeat(1);     // javascript
+    const currentStr3 = str1.repeat(2);     // javascriptjavascript
 </code></pre>
                     </div>
                 </div>
@@ -460,8 +465,6 @@
                 <div id="sample09" class="sample">
                     <h3>09. padStart(), padEnd()</h3>
                     <p>padStart(), padEnd() 메서드는 주어진 길이에 맞게 앞/뒤 문자열을 채우고, 새로운 문자열을 반환한다.</p>
-                    <div class="box">
-                    </div>
                     <div class="script">
 <pre><code class="language-js">    const str1 = "123"
     const currentStr1 = str1.padStart(1, "0");      // 123
@@ -493,7 +496,7 @@
 
                 <!-- 10 -->
                 <div id="sample10" class="sample">
-                    <h3>10. indexOf()</h3>
+                    <h3>10. indexOf() / lastIndexOf()</h3>
                     <p>
                         문자열에서 특정 문자의 위치를 찾고 숫자를 반환하는 메서드이다.
                     </p>
@@ -545,7 +548,14 @@
                         "문자열".includes(검색값, 위치값)
                     </div>
                     <div class="script">
-<pre><code class="language-js">    
+<pre><code class="language-js">    const str = "javascript reference";
+    const currentStr1 = str1.includes("javascript")     // true
+    const currentStr2 = str1.includes("j")              // true
+    const currentStr3 = str1.includes("b")              // flase    //포함하고 있지 않기에 false
+    const currentStr4 = str1.includes("reference")      // true
+    const currentStr5 = str1.includes("reference", 1)   // true
+    const currentStr6 = str1.includes("reference", 11)   // true
+    const currentStr7 = str1.includes("reference", 12)   // false
 </code></pre>
                     </div>
                 </div>
@@ -839,6 +849,9 @@
     
         // 11
         {
+            // "문자열".includes(검색값)
+            // "문자열".includes(검색값, 위치값)
+
             const str = "javascript reference";
             const currentStr1 = str1.includes("javascript")     // true
             const currentStr2 = str1.includes("j")              // true

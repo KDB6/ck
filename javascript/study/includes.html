@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>repeat()</title>
+    <title>inculdes()</title>
     
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/dracula.css">
@@ -15,13 +15,21 @@
 
             <!-- 01 -->
             <div id="sample01" class="sample">
-                <h3 class="t_tit2">repeat()</h3>
-                <p class="t_desc2">문자열을 복사하여, 복사한 새로운 문자열을 반환한다.</p>
+                <h3 class="t_tit2">inculdes()</h3>
+                <p class="t_desc2">문자열 포함여부를 검색하여, 불린(true, false)를 반환한다.</p>
+                <p class="t_box">
+                    "문자열".includes(검색값)<br>
+                    "문자열".includes(검색값, 위치값)
+                </p>
                 <div class="t_code">
-<pre><code class="language.js">    const str1 = "javascript";
-    const currentStr1 = str1.repeat(0);
-    const currentStr2 = str1.repeat(1);     // javascript
-    const currentStr3 = str1.repeat(2);     // javascriptjavascript
+<pre><code class="language.js">    const str = "javascript reference";
+    const currentStr1 = str1.includes("javascript")     // true
+    const currentStr2 = str1.includes("j")              // true
+    const currentStr3 = str1.includes("b")              // flase    //포함하고 있지 않기에 false
+    const currentStr4 = str1.includes("reference")      // true
+    const currentStr5 = str1.includes("reference", 1)   // true
+    const currentStr6 = str1.includes("reference", 11)   // true
+    const currentStr7 = str1.includes("reference", 12)   // false
 </code></pre>
                 </div>
             </div>
