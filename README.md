@@ -22,6 +22,10 @@ https://kdb6.github.io/ck/site/cardType/cardType01.html
 https://kdb6.github.io/ck/site/cardType/cardType02.html   
 https://kdb6.github.io/ck/site/cardType/cardType03.html   
 
+### 이미지 타입 사이트 페이지
+https://kdb6.github.io/ck/site/imageType/imageType01.html   
+https://kdb6.github.io/ck/site/imageType/imageType02.html   
+
 ### HTML 메인 페이지
 https://kdb6.github.io/ck/html/index.html   
 https://kdb6.github.io/ck/html/alphabet.html   
