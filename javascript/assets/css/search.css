@@ -27,9 +27,14 @@ li {
 }
 
 /* header */
-#header {}
+#header {
+    display: flex;
+}
+#header h1 {
+    margin: 10px;
+}
 #header nav {
-    margin: 20px;
+    margin: 10px;
 }
 #header nav li {
     display: inline;
@@ -75,7 +80,6 @@ li {
     max-width: 1400px;
     margin: 0 auto;
     border: 3px solid var(--htmlColor);
-    margin: 10px;
     border-radius: 20px;
     background-color: #f1f3f6;
     padding: 30px;
@@ -117,6 +121,21 @@ li {
 .search__list li.hide {
     display: none;
 }
+
+.search__list li.show {
+    display: block;
+}
+.search_info {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--htmlColor);
+}
+.search_info .type {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 @media (max-width: 600px) {
     .search__wrap {
         padding: 20px;
