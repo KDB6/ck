@@ -11,11 +11,22 @@ https://kdb6.github.io/ck/javascript/index.html
 https://kdb6.github.io/ck/javascript/javascript01.html   
 https://kdb6.github.io/ck/javascript/javascript02.html   
 
+### HTML 메인 페이지
+https://kdb6.github.io/ck/html/index.html   
+https://kdb6.github.io/ck/html/alphabet.html   
+
+### CSS 메인 페이지
+https://kdb6.github.io/ck/css/index.html   
+
 ### 퀴즈 이펙트 메인 페이지
 https://kdb6.github.io/ck/javascript/effect/quizeffect01.html   
 https://kdb6.github.io/ck/javascript/effect/quizeffect02.html   
 https://kdb6.github.io/ck/javascript/effect/quizeffect03.html   
 https://kdb6.github.io/ck/javascript/effect/quizeffect04.html   
+
+### 서치 이펙트 메인 페이지
+https://kdb6.github.io/ck/javascript/effect/searchEffect01.html   
+https://kdb6.github.io/ck/javascript/effect/searchEffect02.html   
 
 ### 카드 타입 사이트 페이지
 https://kdb6.github.io/ck/site/cardType/cardType01.html   
@@ -26,16 +37,7 @@ https://kdb6.github.io/ck/site/cardType/cardType03.html
 https://kdb6.github.io/ck/site/imageType/imageType01.html   
 https://kdb6.github.io/ck/site/imageType/imageType02.html   
 
-### HTML 메인 페이지
-https://kdb6.github.io/ck/html/index.html   
-https://kdb6.github.io/ck/html/alphabet.html   
-
-### CSS 메인 페이지
-https://kdb6.github.io/ck/css/index.html   
-
 ### t_img
 https://kdb6.github.io/ck/img/javaimg.html   
 https://kdb6.github.io/ck/img/css.html   
 https://kdb6.github.io/ck/img/html.html   
-https://kdb6.github.io/ck/css/css.jpg   
-https://kdb6.github.io/ck/css/html.jpg   
