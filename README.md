@@ -27,6 +27,7 @@ https://kdb6.github.io/ck/javascript/effect/quizeffect04.html
 ### 서치 이펙트 메인 페이지
 https://kdb6.github.io/ck/javascript/effect/searchEffect01.html   
 https://kdb6.github.io/ck/javascript/effect/searchEffect02.html   
+https://kdb6.github.io/ck/javascript/effect/searchEffect03.html   
 
 ### 카드 타입 사이트 페이지
 https://kdb6.github.io/ck/site/cardType/cardType01.html   
