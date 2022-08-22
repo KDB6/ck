@@ -12,7 +12,7 @@
 <body>
     <main id="main">
         <div class="document">
-            <h2 class="t_tit">서치 이펙트 02</h2>
+            <h2 class="t_tit">서치 이펙트 03</h2>
             <p class="t_desc2">
                 검색 기능을 가진 이펙트를 코딩해봤습니다.
             </p>
@@ -26,35 +26,55 @@
             <div class="t_code">
 <pre><code class="language-js">    &lt;main id="main">
         &lt;div class="search__wrap">
-            &lt;span>inCludes()를 이용하여 검색하기&lt;/span>
+            &lt;span>charAt()를 이용하여 검색하기&lt;/span>
             &lt;h1>CSS 속성 검색하기&lt;/h1>
-            
+
             &lt;div class="search__box">
                 &lt;label for="search">검색하기&lt;/label>
                 &lt;input type="text" id="search" placeholder="CSS 속성 및 유형을 입력해주세요.">
             &lt;/div>
-            &lt;div class="search_info">
-                &lt;div class="type">플렉스, 애니메이션, 백그라운드, 기타 등등 유형 별로 검색해보세요.&lt;/div>
+            &lt;div class="search__info">
+                &lt;div class="keyword">
+                    &lt;span>a&lt;/span>
+                    &lt;span>b&lt;/span>
+                    &lt;span>c&lt;/span>
+                    &lt;span>d&lt;/span>
+                    &lt;span>e&lt;/span>
+                    &lt;span>f&lt;/span>
+                    &lt;span>g&lt;/span>
+                    &lt;span>h&lt;/span>
+                    &lt;span>i&lt;/span>
+                    &lt;span>j&lt;/span>
+                    &lt;span>k&lt;/span>
+                    &lt;span>l&lt;/span>
+                    &lt;span>m&lt;/span>
+                    &lt;span>n&lt;/span>
+                    &lt;span>o&lt;/span>
+                    &lt;span>p&lt;/span>
+                    &lt;span>q&lt;/span>
+                    &lt;span>r&lt;/span>
+                    &lt;span>s&lt;/span>
+                    &lt;span>t&lt;/span>
+                    &lt;span>u&lt;/span>
+                    &lt;span>v&lt;/span>
+                    &lt;span>w&lt;/span>
+                    &lt;span>x&lt;/span>
+                    &lt;span>y&lt;/span>
+                    &lt;span>z&lt;/span>
+                &lt;/div>
                 &lt;div>전체 속성 갯수 : &lt;span class="num">0&lt;/span>&lt;/div>
             &lt;/div>
             &lt;div class="search__list">
                 &lt;div class="css">
                     &lt;ul>
-                        &lt;li data-name="accent-color" data-type="플렉스">&lt;strong>accent-color&lt;/strong> : href특성을 통해 다른 페이지나 같은페이지의 위치, 파일와 그 외 다른 URL로 연결할 수 있는 하이퍼 링크를 만듭니다.&lt;/li>
-                        &lt;li data-name="align-content" data-type="플렉스">&lt;strong>align-content&lt;/strong> :  콘텐츠 아이템의 상하관계 정렬 상태를 설정&lt;/li>
-                        &lt;li data-name="align-items" data-type="플렉스">&lt;strong>align-items&lt;/strong> : 콘텐츠 아이템의 내부 상하관계 정렬 상태를 설정&lt;/li>
-                        &lt;li data-name="align-self" data-type="플렉스">&lt;strong>align-self&lt;/strong> : 개별적인 콘텐츠 아이템의 정렬 상태를 설정&lt;/li>
-                        &lt;li data-name="all" data-type="기타">&lt;strong>all&lt;/strong> : 요소의 속성을 초기화 또는 상속을 설정&lt;/li>
-                        &lt;li data-name="animation" data-type="애니메이션">&lt;strong>animation&lt;/strong> : 애니메이션과 관련된 속성을 일괄적으로 설정&lt;/li>
-                        &lt;li data-name="animation-delay" data-type="애니메이션">&lt;strong>animation-delay&lt;/strong> : 애니메이션 지연 시간을 설정&lt;/li>
-                        &lt;li data-name="animation-direction" data-type="애니메이션">&lt;strong>animation-direction&lt;/strong> : 애니메이션 움직임 방향을 설정&lt;/li>
-                        &lt;li data-name="animation-duration" data-type="애니메이션">&lt;strong>animation-duration&lt;/strong> : 애니메이션 움직임 시간을 설정&lt;/li>
-                        &lt;li data-name="animation-fill-mode" data-type="애니메이션">&lt;strong>animation-fill-mode&lt;/strong> : 애니메이션이 끝난 후의 상태를 설정&lt;/li>
-                        &lt;li data-name="animation-iteration-count" data-type="애니메이션">&lt;strong>animation-iteration-count&lt;/strong> : 애니메이션의 반복 횟수를 설정	&lt;/li>
-                        &lt;li data-name="animation-name" data-type="애니메이션">&lt;strong>animation-name&lt;/strong> : 애니메이션 Keyframe 이름을 설정&lt;/li>
-                        &lt;li data-name="animation-play-state" data-type="애니메이션">&lt;strong>animation-play-state&lt;/strong> : 애니메이션 진행 상태를 설정&lt;/li>
-                        &lt;li data-name="animation-timeline" data-type="애니메이션">&lt;strong>animation-timeline&lt;/strong> : 애니메이션을 설명하는 하나 이상의 규칙과 이름을 설정&lt;/li>
-                        &lt;li data-name="animation-timing-function" data-type="애니메이션">&lt;strong>animation-timing-function&lt;/strong> : 애니메이션 움직임의 속도를 설정&lt;/li>
+                        &lt;li>&lt;strong>accent-color&lt;/strong> : href특성을 통해 다른 페이지나 같은페이지의 위치, 파일와 그 외 다른 URL로 연결할 수 있는 하이퍼 링크를 만듭니다.&lt;/li>
+                        &lt;li>&lt;strong>align-content&lt;/strong> :  콘텐츠 아이템의 상하관계 정렬 상태를 설정&lt;/li>
+                        &lt;li>&lt;strong>align-items&lt;/strong> : 콘텐츠 아이템의 내부 상하관계 정렬 상태를 설정&lt;/li>
+                        .
+                        .
+                        .
+                        &lt;li>&lt;strong>z-index&lt;/strong> : 위치 지정 요소와, 그 자손 또는 하위 플렉스 아이템의 Z축 순서를 지정&lt;/li>
+                    &lt;/ul>
                 &lt;/div>
             &lt;/div>
         &lt;/div>
@@ -204,6 +224,21 @@
         text-align: center;
         margin-bottom: 10px;
     }
+    .search__info .keyword {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .search__info .keyword span {
+        border: 2px solid var(--htmlColor);
+        border-radius: 50px;
+        padding: 10px;
+        display: inline-block;
+    }
+    .search__info .keyword span:hover {
+        background-color: var(--htmlColor);
+        color: #fff;
+        cursor: pointer;
+    }
 
     @media (max-width: 600px) {
         .search__wrap {
@@ -245,8 +280,8 @@
             <div class="t_code">
 <pre><code class="language-js">    // 선택자
     const searchBox = document.querySelector(".search__box input");         // input 박스
-    const searchList = document.querySelectorAll(".search__list ul li")           // 목록 리스트
-    const searchInfo = document.querySelector(".search__info .num")          // 전체 갯수 구하기
+    const searchList = document.querySelectorAll(".search__list ul li")     // 목록 리스트
+    const searchInfo = document.querySelector(".search__info .num")         // 전체 갯수 구하기
     
     // 전체 갯수 구하기
     searchInfo.textContent = searchList.length;
@@ -269,7 +304,7 @@
     });
 </code></pre>
                 <div class="t_link">
-                    <a href="https://github.com/KDB6/ck/blob/main/javascript/effect/searchEffect02.html" target="_blank">코드 원본 보기</a>
+                    <a href="https://github.com/KDB6/ck/blob/main/javascript/effect/searchEffect03.html" target="_blank">코드 원본 보기</a>
                 </div>
             </div>
 
@@ -277,11 +312,11 @@
 
             <h3 class="t_tit2">결과물</h3>
             <div class="t_iframe" style="min-height: 920px; padding-top: 0;">
-                <iframe src="https://kdb6.github.io/ck/javascript/effect/searchEffect02.html" frameborder="0"></iframe>
+                <iframe src="https://kdb6.github.io/ck/javascript/effect/searchEffect03.html" frameborder="0"></iframe>
             </div>
     
             <div class="t_link">
-                <a href="https://kdb6.github.io/ck/javascript/effect/searchEffect02.html" target="_blank">원본 사이트 보기</a>
+                <a href="https://kdb6.github.io/ck/javascript/effect/searchEffect03.html" target="_blank">원본 사이트 보기</a>
             </div>
 
         </div>

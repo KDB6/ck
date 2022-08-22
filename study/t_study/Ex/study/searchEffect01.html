@@ -196,13 +196,13 @@
     .search__list li.show {
         display: block;
     }
-    .search_info {
+    .search__info {
         text-align: center;
         margin-bottom: 30px;
         padding-bottom: 10px;
         border-bottom: 2px solid var(--htmlColor);
     }
-    .search_info .type {
+    .search__info .type {
         text-align: center;
         margin-bottom: 10px;
     }
@@ -247,8 +247,8 @@
             <div class="t_code">
 <pre><code class="language-js">    // 선택자
     const searchBox = document.querySelector(".search__box input");         // input 박스
-    const searchList = document.querySelectorAll(".search__list ul li")     // 목록 리스트
-    const searchInfo = document.querySelector(".search_info .num")       // 전체 갯수 구하기
+    const searchList = document.querySelectorAll(".search__list ul li")           // 목록 리스트
+    const searchInfo = document.querySelector(".search_info .num")            // 전체 갯수 구하기
 
     // 전체 갯수 구하기
     searchInfo.textContent = searchList.length;
