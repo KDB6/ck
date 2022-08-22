@@ -498,10 +498,10 @@
                 answerNum : "35",
                 answerAsk : "웹 문서의 바탕에 배경을 지정하려 할 경우에 어떤 태크 안에 삽입해야 하는가?",
                 answerChoice : {
-                    1: "<body>",
-                    2: "<table>",
-                    3: "<title>",
-                    4: "<b>"
+                    1: "body",
+                    2: "table",
+                    3: "title",
+                    4: "b"
                 },
                 answerResult : "1",
                 answerEx : "문서의 바탕은 <body> 항목에 넣어야 합니다."
@@ -829,7 +829,7 @@
                     4: "경쟁사가 갖고 있지 않은 독특한 경쟁 요소를 확보한다."
                 },
                 answerResult : "3",
-                answerEx : "모방 : 똑 같이 적용하는 것. 특허 침해가 될 수 있다."
+                answerEx : "모방 : 똑같이 적용하는 것. 특허 침해가 될 수 있다."
             }
         ];
 
@@ -845,10 +845,8 @@
                 <div class="quiz">
                 <span class="quiz__type">${question.answerType}</span>
                 <h2 class="quiz__question">
-                    <span class="number">${question.answerNum}. </span>
-                    <div class="ask">
-                        ${question.answerAsk}
-                    </div>
+                    <span class="number">${question.answerNum}</span>
+                    <div class="ask">${question.answerAsk}</div>
                 </h2>
                 <div class="quiz__view">
                     <div class="true">정답입니다.</div>
@@ -905,7 +903,7 @@
 
             quizWrap.innerHTML = exam.join('')
         }
-        updateQuiz()
+        updateQuiz();
         
         //정답 확인
         function answerQuiz(){
