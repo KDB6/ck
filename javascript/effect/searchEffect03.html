@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>검색 이펙트 02</title>
+    <title>검색 이펙트 03</title>
 
     <link rel="stylesheet" href="../assets/css/search.css">
 
@@ -16,8 +16,8 @@
         <nav>
             <ul>
                 <li><a href="searchEffect01.html">1</a></li>
-                <li class="active"><a href="searchEffect02.html">2</a></li>
-                <li><a href="searchEffect03.html">3</a></li>
+                <li><a href="searchEffect02.html">2</a></li>
+                <li class="active"><a href="searchEffect03.html">3</a></li>
                 <li><a href="searchEffect04.html">4</a></li>
                 <li><a href="searchEffect05.html">5</a></li>
                 <li><a href="searchEffect06.html">6</a></li>
@@ -28,7 +28,7 @@
 
     <main id="main">
         <div class="search__wrap">
-            <span>inCludes()를 이용하여 검색하기</span>
+            <span>charAt()를 이용하여 검색하기</span>
             <h1>CSS 속성 검색하기</h1>
             
             <div class="search__box">
@@ -36,18 +36,45 @@
                 <input type="text" id="search" placeholder="CSS 속성 및 유형을 입력해주세요.">
             </div>
             <div class="search__info">
-                <div class="type">플렉스, 애니메이션, 백그라운드, 기타 등등 유형 별로 검색해보세요.</div>
+                <div class="keyword">
+                    <span>a</span>
+                    <span>b</span>
+                    <span>c</span>
+                    <span>d</span>
+                    <span>e</span>
+                    <span>f</span>
+                    <span>g</span>
+                    <span>h</span>
+                    <span>i</span>
+                    <span>j</span>
+                    <span>k</span>
+                    <span>l</span>
+                    <span>m</span>
+                    <span>n</span>
+                    <span>o</span>
+                    <span>p</span>
+                    <span>q</span>
+                    <span>r</span>
+                    <span>s</span>
+                    <span>t</span>
+                    <span>u</span>
+                    <span>v</span>
+                    <span>w</span>
+                    <span>x</span>
+                    <span>y</span>
+                    <span>z</span>
+                </div>
                 <div>전체 속성 갯수 : <span class="num">0</span></div>
             </div>
             <div class="search__list">
                 <div class="css">
                     <ul>
-                        <li data-name="accent-color" data-type="플렉스"><strong>accent-color</strong> : href특성을 통해 다른 페이지나 같은페이지의 위치, 파일와 그 외 다른 URL로 연결할 수 있는 하이퍼 링크를 만듭니다.</li>
-                        <li data-name="align-content" data-type="플렉스"><strong>align-content</strong> :  콘텐츠 아이템의 상하관계 정렬 상태를 설정</li>
-                        <li data-name="align-items" data-type="플렉스"><strong>align-items</strong> : 콘텐츠 아이템의 내부 상하관계 정렬 상태를 설정</li>
-                        <li data-name="align-self" data-type="플렉스"><strong>align-self</strong> : 개별적인 콘텐츠 아이템의 정렬 상태를 설정</li>
-                        <li data-name="all" data-type="기타"><strong>all</strong> : 요소의 속성을 초기화 또는 상속을 설정</li>
-                        <li data-name="animation" data-type="애니메이션"><strong>animation</strong> : 애니메이션과 관련된 속성을 일괄적으로 설정</li>
+                        <li><strong>accent-color</strong> : href특성을 통해 다른 페이지나 같은페이지의 위치, 파일와 그 외 다른 URL로 연결할 수 있는 하이퍼 링크를 만듭니다.</li>
+                        <li><strong>align-content</strong> :  콘텐츠 아이템의 상하관계 정렬 상태를 설정</li>
+                        <li><strong>align-items</strong> : 콘텐츠 아이템의 내부 상하관계 정렬 상태를 설정</li>
+                        <li><strong>align-self</strong> : 개별적인 콘텐츠 아이템의 정렬 상태를 설정</li>
+                        <li><strong>all</strong> : 요소의 속성을 초기화 또는 상속을 설정</li>
+                        <li><strong>animation</strong> : 애니메이션과 관련된 속성을 일괄적으로 설정</li>
                         <li data-name="animation-delay" data-type="애니메이션"><strong>animation-delay</strong> : 애니메이션 지연 시간을 설정</li>
                         <li data-name="animation-direction" data-type="애니메이션"><strong>animation-direction</strong> : 애니메이션 움직임 방향을 설정</li>
                         <li data-name="animation-duration" data-type="애니메이션"><strong>animation-duration</strong> : 애니메이션 움직임 시간을 설정</li>
@@ -439,29 +466,32 @@
 
     <script>
         // 선택자
-        const searchBox = document.querySelector(".search__box input");         // input 박스
-        const searchList = document.querySelectorAll(".search__list ul li")     // 목록 리스트
-        const searchInfo = document.querySelector(".search__info .num")         // 전체 갯수 구하기
-        
+        const searchKeyword = document.querySelectorAll(".search__info .keyword span");    // 알파벳
+        const searchList = document.querySelectorAll(".search__list ul li")             // 목록 리스트
+        const searchInfo = document.querySelector(".search__info .num")                 // 전체 갯수 구하기
+    
         // 전체 갯수 구하기
         searchInfo.textContent = searchList.length;
 
-        // 검색
-        searchBox.addEventListener("keyup", () => {
-            const searchWord = searchBox.value;         // 사용자가 입력한 키워드
-            
-            searchList.forEach(el => {
-                const cssType = el.dataset.type;                        // CSS 유형 모든 값
-                const cssName = el.querySelector("strong").innerText    // CSS 속성 모든 값
-                console.log(cssName)
+        searchKeyword.forEach(el => {
+            el.addEventListener("click", () => {
+                const searchWord = el.innerText;    // 사용자가 클릭한 알파벳
 
-                if(cssName.includes(searchWord) || cssType.includes(searchWord)){
-                    el.classList.remove("hide");
-                } else {
-                    el.classList.add("hide");
-                }
-            });
-        });
+                console.log(searchWord)
+
+                searchList.forEach(el => {
+                    const cssName = el.querySelector("strong").innerText;   // CSS 속성 텍스트
+                    // console.log(cssName)
+
+                    // 알파벳 첫 글자 == CSS 속성 첫 글자
+                    if(searchWord.charAt(0) === cssName.charAt(0)) {
+                        el.classList.remove("hide");
+                    } else {
+                        el.classList.add("hide");
+                    }
+                })
+            })
+        })
     </script>
 </body>
 </html>
