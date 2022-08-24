@@ -106,11 +106,11 @@
     //정답 확인
     function answerQuiz(){
         const quizSelects = document.querySelectorAll(".quiz__selects");    //보기
-        const quizView = document.querySelectorAll(".quiz__view");          //강아지
+        const quizView = document.querySelectorAll(".quiz__view");            //강아지
         //사용자가 체크한 라디오 박스  == 문제 정답
         quizInfo.forEach((question, number) => {
-            const quizSelectsWrap = quizSelects[number];                    //전체 보기 박스
-            const userSelector = `input[name=select${number}]:checked`;         //사용자가 클린한 라디오 박스
+            const quizSelectsWrap = quizSelects[number];                             //전체 보기 박스
+            const userSelector = `input[name=select${number}]:checked`;   //사용자가 클린한 라디오 박스
             const userAnswer = (quizSelectsWrap.querySelector(userSelector) || {}).value
             const quizView = document.querySelectorAll(".quiz__view");
             console.log(quizSelects)
