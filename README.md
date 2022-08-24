@@ -19,12 +19,12 @@ https://kdb6.github.io/ck/html/alphabet.html
 https://kdb6.github.io/ck/css/index.html   
 
 ### 퀴즈 이펙트 메인 페이지
-https://kdb6.github.io/ck/javascript/effect/quizeffect01.html   
-https://kdb6.github.io/ck/javascript/effect/quizeffect02.html   
-https://kdb6.github.io/ck/javascript/effect/quizeffect03.html   
-https://kdb6.github.io/ck/javascript/effect/quizeffect04.html   
-https://kdb6.github.io/ck/javascript/effect/quizeffect05.html   
-https://kdb6.github.io/ck/javascript/effect/quizeffect06.html   
+https://kdb6.github.io/ck/javascript/effect/quizEffect01.html   
+https://kdb6.github.io/ck/javascript/effect/quizEffect02.html   
+https://kdb6.github.io/ck/javascript/effect/quizEffect03.html   
+https://kdb6.github.io/ck/javascript/effect/quizEffect04.html   
+https://kdb6.github.io/ck/javascript/effect/quizEffect05.html   
+https://kdb6.github.io/ck/javascript/effect/quizEffect06.html   
 
 ### 서치 이펙트 메인 페이지
 https://kdb6.github.io/ck/javascript/effect/searchEffect01.html   
