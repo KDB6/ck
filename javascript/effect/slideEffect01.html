@@ -34,10 +34,7 @@
     <!-- footer -->
     <footer id="footer">
         <div class="modal__wrap">
-            <div class="modal__btn">
-                <label for="btn">소스 보기</label>
-                <input class="btn" type="checkbox" id="btn" name="btn" />
-            </div>
+            <div class="modal__btn">소스 보기</div>
             <div class="modal__cont">
                 <div class="modal__box">
                         <div class="title">
@@ -215,6 +212,12 @@
                             </div>
                         </div>
                 </div>
+                <div class="modal__close">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </div>
             </div>
         </div>
     </footer>
@@ -225,6 +228,18 @@
     </script>
     
     <script>
+        // 모달
+        const modalBtn = document.querySelector(".modal__btn");
+        const modalClose = document.querySelector(".modal__close")
+        const modalCont = document.querySelector(".modal__cont");
+
+        modalBtn.addEventListener("click", () => {
+            modalCont.classList.add("show");
+        });
+        modalClose.addEventListener("click", () => {
+            modalCont.classList.add("hide");
+        })
+
         // 탭 메뉴
         const tabBtn = document.querySelectorAll(".modal__box .tabs > div");
         const tabCont = document.querySelectorAll(".modal__box .cont > div");
