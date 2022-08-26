@@ -142,6 +142,33 @@ body{
     padding: 10px;
 }
 
+/* intro_menu */
+.intro_menu {
+    position: absolute;
+    top: 10%;
+    left: 12.5%;
+    transform: translate(-50%, -50%);
+    padding: 2vw;
+    border-radius: 1.5vw;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+.intro_menu li a {
+    color: #fff;
+}
+@media (max-width: 600px) {
+    .intro_menu {
+        width: 90%;
+        padding: 14px;
+    }
+    .intro_menu li {
+        font-size: 16px;
+    }
+    .intro_menu li a {
+        font-size: 16px;
+    }
+}
 /* sample */
 .sample {
     margin-bottom: 50px;
