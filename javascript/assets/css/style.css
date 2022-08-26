@@ -48,8 +48,11 @@ body{
 
 /* 헤더 영역 */
 #header h1 a {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 700;
+    background: linear-gradient(to left, #FF9482, #7D77FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .header_nav ul li {
     display: inline;
@@ -85,6 +88,13 @@ body{
     border-radius: 40px;
 }
 
+/* container */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
 /* 메인 샘플 */
 .main_sample {
     margin-top: 40px;
@@ -100,7 +110,14 @@ body{
     color: #666;
 }
 .main_sample .result {
+    margin-top: 10px;
     margin-bottom: 80px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(243, 243, 243);
+}
+.main_sample summary {
+
 }
 .box {
     background-color: #ededed;
