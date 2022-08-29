@@ -31,6 +31,11 @@ https://kdb6.github.io/ck/javascript/effect/searchEffect01.html
 https://kdb6.github.io/ck/javascript/effect/searchEffect02.html   
 https://kdb6.github.io/ck/javascript/effect/searchEffect03.html   
 
+### 슬라이드 이펙트 메인 페이지
+https://kdb6.github.io/ck/javascript/effect/sliderEffect01.html   
+https://kdb6.github.io/ck/javascript/effect/sliderEffect02.html   
+https://kdb6.github.io/ck/javascript/effect/sliderEffect03.html   
+
 ### 카드 타입 사이트 페이지
 https://kdb6.github.io/ck/site/cardType/cardType01.html   
 https://kdb6.github.io/ck/site/cardType/cardType02.html   
