@@ -76,6 +76,20 @@ a {
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(81, 47, 136);
 }
+
+/* layout */
+#header {
+    z-index: 2000;
+}
+#main {
+    position: relative;
+    z-index: 1000;
+}
+#footer {
+    position: relative;
+    z-index: 3000;
+}
+
 /* header */
 #header {
     position: absolute;
@@ -106,6 +120,7 @@ a {
     font-size: 14px;
 }
 #header li.active a {
+    background: #fff;
     color: #3b3d63;
 }
 
@@ -296,12 +311,12 @@ a {
     100% {transform: scaleX(0) scaleY(0.001);}
 }
 @keyframes opacityOut {
-    0%   {transform: scale(0)}
-    100% {transform: scale(1)}
+    0%   {transform: opacity(0)}
+    100% {transform: opacity(1)}
 }
 @keyframes opacityIn {
-    0%   {transform: scale(0)}
-    100% {transform: scale(1)}
+    0%   {transform: opacity(0)}
+    100% {transform: opacity(1)}
 }
 @keyframes zoomOut {
     0%   {transform: scale(0)}
