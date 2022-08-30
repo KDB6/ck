@@ -14,7 +14,7 @@
         <div class="document">
             <h2 class="t_tit">jQuery</h2>
             <p class="t_desc2">
-                제이쿼리란, 자바스크립트 언어를 간편하게 사용할 수 있도록 단순화시킨 <i>오픈 소스 기반</i>의 자바스크립트 라이브러리입니다.<br>
+                제이쿼리란, 자바스크립트 언어를 간편하게 사용할 수 있도록 단순화시킨 <i>오픈 소스 기반</i>의 자바스크립트 라이브러리입니다.
                 제이쿼리를 이용하면 <i>문서 객체 모델(DOM)</i>과 이벤트에 관한 처리를 손쉽게 구현할 수 있습니다.
             </p>
             <p class="t_box">
@@ -25,6 +25,51 @@
                 4. AJAX의 사용이 쉽다.
             </p>
 
+            <h3 class="t_tit2">기본 형식</h3>
+            <p class="t_desc2">
+                jQuery는 기본적으로 $(document) .readt()로 시작하며, ready()는 jQuery 이벤트로 앞에서 학습한 자바스크립트의 load 이벤트와 유사한 기능을 가지고 있다.
+                기본 형식과 축약 형식 두 가지가 있습니다.
+            </p>
+            <details>
+                <summary>코드 보기</summary>
+                <div class="t_code">
+<pre><code class="language.js">    // 기본 형식
+    &lt;!DOCTYPE html>
+    &lt;html lang="en">
+    &lt;head>
+        &lt;meta charset="UTF-8">
+        &lt;title>jQuery 기본 형식&lt;/title>
+        &lt;script src="jquery-3.3.1.min.js">&lt;/script>
+        &lt;script>
+            $(document).ready(function() {
+                실행문;
+            });
+        &lt;/script>
+    &lt;/head>
+    &lt;body>
+    &lt;/body>
+    &lt;/html>
+    
+    // 축약 형식
+    &lt;!DOCTYPE html>
+    &lt;html lang="en">
+    &lt;head>
+        &lt;meta charset="UTF-8">
+        &lt;title>jQuery Migrate Plugin&lt;/title>
+        &lt;script src="jquery-3.3.1.min.js">&lt;/script>
+        &lt;script>
+            $(function() {
+                실행문;
+            });
+        &lt;/script>
+    &lt;/head>
+    &lt;body>
+    &lt;/body>
+    &lt;/html>
+</code></pre>
+            </div>
+            </details><br>
+
             <h3 class="t_tit2">선택자</h3>
             <p class="t_desc2">jQuery는 선택지가 두 가지가 있습니다.</p>
             <p class="t_box">
@@ -34,16 +79,83 @@
                 두번째. jQurey() 팩토리함수<br>
                 $()함수와 같은 기능을 하지만 타 언어에서 $ 키워드를 사용하는 경우가 있으며, 이 때 중복을 피하기 위해 지원하는 래퍼입니다. 
             </p>
+            <table class="t_table" style="margin-bottom: 10px; margin-top: 10px;">
+                <thead>
+                    <tr>
+                        <th class="ce">선택자 종류</th>
+                        <th class="ce" colspan="2">설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce">태그 선택자</td>
+                        <td class="ce">$("p")</td>
+                        <td>p 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">id 선택자</td>
+                        <td class="ce">$("#gnb")</td>
+                        <td>#gnb 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">class 선택자</td>
+                        <td class="ce">#("logo")</td>
+                        <td>.logo 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">자식 선택자</td>
+                        <td class="ce">$("#gnb>ul>li")</td>
+                        <td>#gnb의 자식 요소의 자식 요소 li를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">하위 선택자</td>
+                        <td class="ce">#("#gnb ul")</td>
+                        <td>#gnb의 하위에 있는 모든 ul요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">인접 선택자</td>
+                        <td class="ce">$("#visual + #content")</td>
+                        <td>#visual 다음에 오는 #content 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">형제 선택자</td>
+                        <td class="ce">$("#visual ~ #footer")</td>
+                        <td>#visual의 형제 요소 #footer를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">종속 선택자</td>
+                        <td class="ce">#("div,util")</td>
+                        <td>div 요소 중 class가 util인 요소를 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">그룹 선택자</td>
+                        <td class="ce">$(".left, .right, #banner")</td>
+                        <td>.left .right #banner 요소들을 선택합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">전체 선택자</td>
+                        <td class="ce">$("*")</td>
+                        <td>모든 요소를 선택합니다.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="codepen" data-height="500" data-default-tab="js,result" data-slug-hash="PoRMmBE" data-user="kdb6" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+              <span>See the Pen <a href="https://codepen.io/kdb6/pen/PoRMmBE">
+              Untitled</a> by KDB6 (<a href="https://codepen.io/kdb6">@kdb6</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
             <h3 class="t_tit2">사용 방법</h3>
-            <p class="t_desc">사용 방법은 jQuery에서 라이브러리를 가져와서 사용할 수 있습니다.</p>
+            <p class="t_desc2">사용 방법은 jQuery에서 라이브러리를 가져와서 사용할 수 있습니다.</p>
             <p class="t_box">
                 &lt;script src="js/jquery.js">&lt;/script><br>
                 &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">&lt;/script><br>
                 &lt;script src="http://code.jquery.com/jquery-latest.js">&lt;/script>
             </p>
-
-            <div class="t_code">
+            <details>
+                <summary>코드 보기</summary>
+                <div class="t_code">
 <pre><code class="language-js">    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">&lt;/script>
     &lt;script>
         let currentIndex = 0;
@@ -62,6 +174,8 @@
     &lt;/script>
 </code></pre>
             </div>
+            </details><br>
+            
             <h3 class="t_tit2">결과물</h3>
             <p class="t_desc">jQuery를 이용해 슬라이드 애니메이션을 만든 결과물입니다.</p>
             <div class="t_iframe" style="min-height: 920px; padding-top: 0;">
