@@ -46,6 +46,9 @@ https://kdb6.github.io/ck/site/imageType/imageType01.html
 https://kdb6.github.io/ck/site/imageType/imageType02.html   
 https://kdb6.github.io/ck/site/imageType/imageType03.html   
 
+### 텍스트 타입 사이트 페이지
+https://kdb6.github.io/ck/site/textType/textType01.html   
+
 ### t_img
 https://kdb6.github.io/ck/img/javaimg.html   
 https://kdb6.github.io/ck/img/css.html   
