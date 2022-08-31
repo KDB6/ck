@@ -50,6 +50,12 @@ https://kdb6.github.io/ck/site/imageType/imageType03.html
 https://kdb6.github.io/ck/site/textType/textType01.html   
 https://kdb6.github.io/ck/site/textType/textType02.html   
 https://kdb6.github.io/ck/site/textType/textType03.html   
+https://kdb6.github.io/ck/site/textType/img/Dribbble.svg   
+https://kdb6.github.io/ck/site/textType/img/Discord.svg   
+https://kdb6.github.io/ck/site/textType/img/Facebook.svg   
+https://kdb6.github.io/ck/site/textType/img/Instagram.svg   
+https://kdb6.github.io/ck/site/textType/img/Twiiter.svg   
+https://kdb6.github.io/ck/site/textType/img/YouTube.svg   
 
 ### t_img
 https://kdb6.github.io/ck/img/javaimg.html   
