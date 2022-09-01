@@ -57,6 +57,12 @@ https://kdb6.github.io/ck/site/textType/img/Instagram.svg
 https://kdb6.github.io/ck/site/textType/img/Twiiter.svg   
 https://kdb6.github.io/ck/site/textType/img/YouTube.svg   
 
+### 헤더 타입 사이트 페이지
+https://kdb6.github.io/ck/site/headerType/headerType01.html   
+
+### 이미지 텍스트 타입 사이트 페이지
+https://kdb6.github.io/ck/site/imgTypeText/imgText01.html   
+
 ### t_img
 https://kdb6.github.io/ck/img/javaimg.html   
 https://kdb6.github.io/ck/img/css.html   
