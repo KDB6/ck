@@ -465,10 +465,49 @@
                 display: none;
             }
         }
+        
+        .link {
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            z-index: 10000;
+        }
+        .link li {
+            list-style: none;
+            display: inline;
+        }
+        .link li a {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            display: inline-block;
+            text-decoration: none;
+            border: 1px solid #0057d9;
+            background: #000;
+            color: #fff;
+            text-transform: uppercase;
+            font-family: "SCoreDream";
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .link li a:hover {
+            background: #000;
+            color: #0066ff;
+        }
     </style>
 </head>
 
 <body>
+    <div class="link">
+        <ul>
+            <li><a href="https://ipkg7210.tistory.com/">t</a></li>
+            <li><a href="https://github.com/KDB6/ck">g</a></li>
+            <li><a href="https://github1s.com/KDB6/ck">v</a></li>
+        </ul>
+    </div>
+
     <main>
         <div class="dog">
             <div class="wrap">
