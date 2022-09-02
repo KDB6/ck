@@ -33,6 +33,7 @@ body{
 #header {
     border-bottom: 1px dashed #DCDCDC;
     padding-bottom: 40px;
+    text-align: center;
 }
 #main {
     padding: 40px 0;
@@ -44,6 +45,12 @@ body{
 }
 #footer a:hover {
     text-decoration: underline;
+}
+
+/* summary */
+summary::marker {
+    color: #666;
+    border-radius: 2px;
 }
 
 /* 헤더 영역 */
@@ -58,18 +65,21 @@ body{
     display: inline;
 }
 .header_nav ul li.active a {
-    background-color: #000;
+    background-color: #afbeff;
     color: #fff;
 }
 .header_nav ul li a {
-    border:  1px solid #222;
+    border:  1px solid #e6e6e6;
     padding: 8px 25px;
     display: inline-block;
     margin-bottom: 7px;
+    border-radius: 3px;
+    color: #666;
 }
 .header_nav ul li a:hover{
- background-color: #000;
+ background-color: #afbeff;
  color: #fff;
+ transition: all 0.5s ease;
 }
 .header_nav .study {
     margin-top: 10px;
@@ -95,6 +105,11 @@ body{
     margin: 0 auto;
 }
 
+/* main_menu */
+.main_menu ul li a:hover {
+    text-decoration: underline;
+}
+
 /* 메인 샘플 */
 .main_sample {
     margin-top: 40px;
@@ -115,9 +130,6 @@ body{
     padding: 10px;
     border-radius: 5px;
     background-color: rgb(243, 243, 243);
-}
-.main_sample summary {
-
 }
 .box {
     background-color: #ededed;
