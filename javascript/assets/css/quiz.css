@@ -93,7 +93,7 @@ body {
     background: #fff;
 }
 
-#footer {
+#footer .mail{
     background: #fff;
     text-align: center;
     padding: 20px;
@@ -122,6 +122,14 @@ body {
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 150px;
+    flex-wrap: wrap;
+}
+.quiz__wrap02 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 220px;
     flex-wrap: wrap;
 }
 
