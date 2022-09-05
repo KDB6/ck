@@ -45,7 +45,7 @@ https://kdb6.github.io/ck/site/headerType/headerType01.html
 ### 배너 타입 사이트 페이지
 https://kdb6.github.io/ck/site/bannerType/bannerType01.html   
 
-### 배너 타입 사이트 페이지
+### 슬라이드 타입 사이트 페이지
 https://kdb6.github.io/ck/site/sliderType/sliderType01.html   
 
 ### 카드 타입 사이트 페이지
