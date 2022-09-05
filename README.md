@@ -1,9 +1,9 @@
 # coding
 
-### 메인 페이지 net
+### 메인 페이지 netlify
 https://kdb6.netlify.app   
 
-### 메인 페이지 git
+### 메인 페이지 github
 https://kdb6.github.io/ck/index.html   
 
 ### 자기 소개 페이지
