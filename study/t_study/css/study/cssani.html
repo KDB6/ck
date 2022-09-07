@@ -21,7 +21,7 @@
             <p class="t_desc2" style="margin-top: 45px;">
                 Animation : name | duration | timing-function | delay | iteration | direction | fill-mode | play-state
             </p>
-            <table class="table">
+            <table class="t_table">
                 <thead>
                     <tr>
                         <th>종류</th>
@@ -68,7 +68,7 @@
             <p class="t_desc2">
                 Transtion : property | durtion | timing-function | delay
             </p>
-            <table class="table">
+            <table class="t_table">
                 <thead>
                     <tr>
                         <th>종류</th>
@@ -99,7 +99,7 @@
             <p class="t_desc2">
                 Timing-function의 종류와 예시를 나타낸 표입니다.
             </p>
-            <table class="table">
+            <table class="t_table">
                 <thead>
                     <tr>
                         <th>종류</th>
@@ -146,7 +146,6 @@
                 </tbody>
             </table>
 
-            <h3 class="t_tit2">timing-function</h3>
             <div class="t_code">
 <pre><code class="language-js">    .timing1.show {animation: move 2s 1 linear;}
     .timing2.show {animation: move 2s 1 ease;}
@@ -162,7 +161,6 @@
 </code></pre>
             </div>
 
-            <h3 class="t_tit2">timing-function</h3>
             <div class="t_code">
 <pre><code class="language-js">    .timing6.show {animation: move 4s 1 step-start;}
     .timing7.show {animation: move 4s 1 step-end;}
@@ -173,7 +171,6 @@
 </code></pre>
             </div>
 
-            <h3 class="t_tit2">cubic-bezier</h3>
             <div class="t_code">
 <pre><code class="language-js">    .timing12.show {animation: move 3s 2 cubic-bezier(0,.71,0,1);}
     .timing13.show {animation: move 3s 2 cubic-bezier(0,.71,1,-0.28);}
@@ -184,7 +181,6 @@
 </code></pre>
             </div>
 
-            <h3 class="t_tit2">animation-delay</h3>
             <div class="t_code">
 <pre><code class="language-js">    .timing17.show {animation: move 3s 0.1s 2 ease;}
     .timing18.show {animation: move 3s 0.2s 2 ease;}
@@ -193,7 +189,6 @@
 </code></pre>
             </div>
 
-            <h3 class="t_tit2">animation-iteration-count</h3>
             <div class="t_code">
 <pre><code class="language-js">    .timing21.show {animation: move 1s 1 ease;}
     .timing22.show {animation: move 1s 2 ease;}
@@ -202,7 +197,6 @@
 </code></pre>
             </div>
 
-            <h3 class="t_tit2">animation-direction</h3>
             <div class="t_code">
 <pre><code class="language-js">    .timing25.normal {animation: move2 4s 5 ease normal;}
     .timing26.reverse {animation: move2 4s 5 ease reverse;}
@@ -211,7 +205,6 @@
 </code></pre>
             </div>
 
-            <h3 class="t_tit2">animation-fill-mode</h3>
             <div class="t_code">
 <pre><code class="language-js">    .timing26.show {animation: move3 3s 1 ease; animation-fill-mode: none;}
     .timing27.show {animation: move3 3s 1 ease; animation-fill-mode: forwards;}
@@ -224,14 +217,12 @@
 </code></pre>
             </div>
 
-            <h3 class="t_tit2">animation-play-state</h3>
             <div class="t_code">
 <pre><code class="language-js">    .timing30.running {animation: move2 4s 100 ease; animation-play-state: running;}
     .timing30.paused {animation: move2 4s 100 ease; animation-play-state: paused;}
 </code></pre>
             </div>
 
-            <h3 class="t_tit2">Animatine.css</h3>
             <div class="t_code">
 <pre><code class="language-js">    .timing.bg9 {display: flex; justify-content: space-between; min-height: 400px;}
     .timing.bg9 > div.ani1 {animation: slideOutRight 1s ease;}
