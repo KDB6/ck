@@ -83,3 +83,5 @@ https://kdb6.github.io/ck/img/javaimg.html
 https://kdb6.github.io/ck/img/css.html   
 https://kdb6.github.io/ck/img/html.html   
 https://kdb6.github.io/ck/img/search.html   
+https://kdb6.github.io/ck/img/ani1.html   
+
