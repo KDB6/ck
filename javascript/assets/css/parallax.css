@@ -20,20 +20,6 @@ a {
 li {
     list-style: none;
 }
-::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-::-webkit-scrollbar-track {
-    background: #000;
-}
-::-webkit-scrollbar-thumb {
-    background: rgb(62, 31, 112);
-    border-radius: 30px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: rgb(81, 47, 136);
-}
 
 /* layout */
 #header {
@@ -93,6 +79,20 @@ li {
     border-radius: 40px;
     padding: 10px 30px;
     font-size: 14px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #000;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(62, 31, 112);
+    border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(81, 47, 136);
 }
 
 /* modal__wrap */
@@ -259,6 +259,18 @@ li {
 }
 .modal__cont.show.hide .modal__close {
     animation: opacityIn 0.5s ease backwards;
+}
+
+.modal__box ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+.modal__box ::-webkit-scrollbar-track {
+    background: #000;
+}
+.modal__box ::-webkit-scrollbar-thumb {
+    background: rgb(62, 31, 112);
+    border-radius: 30px;
 }
 @keyframes foldOut {
     0%   {transform: scaleX(0) scaleY(0.001);}
