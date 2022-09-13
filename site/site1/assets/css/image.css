@@ -43,3 +43,13 @@
 .image__btn.yellow {
     background-color: #cdcdcd40;
 }
+
+@media (max-width: 800px) {
+    .image__inner {
+        display: block;
+        margin-left: 125px;
+    }
+    .image.img1 {
+        margin-bottom: 20px;
+    }
+}

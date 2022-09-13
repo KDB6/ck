@@ -5,7 +5,7 @@
     position: relative;
 }
 .slider__img {
-    background: url(../img/slider_bg02.jpg) no-repeat center / cover;
+    background: url(../img/slider_bg01.jpg) no-repeat center / cover;
 }
 .slider__img .desc {
     width: 1160px;
@@ -83,4 +83,22 @@
 }
 .slider__dot a.stop {
     background-position: -60px -70px;
+}
+
+@media (max-width: 800px) {
+    .slider__img .desc span {
+        font-size: 16px;
+    }
+    .slider__img .desc h3 {
+        font-size: 70px;
+    }
+    .slider__img .desc p {
+        font-size: 20px;
+    }
+    .slider__arrow a.left {
+        display: none;
+    }
+    .slider__arrow a.right {
+        display: none;
+    }
 }

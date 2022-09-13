@@ -72,3 +72,20 @@
     text-underline-position: under;
     color: #666;
 }
+
+@media (max-width: 800px) {
+    .container {
+        min-width: 800px;
+        padding: 0;
+    }
+    .text__inner {
+        width: 800px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .text {
+        width: 350px;
+        margin-bottom: 0%;
+        padding: 30px;
+    }
+}
