@@ -56,9 +56,12 @@
     color: #fff;
 }
 
-@media (max-width:800px) {
+@media (max-width:768px) {
     .header__inner {
-        width: 800px;
+        width: 768px;
+    }
+    .header__menu {
+        width: 500px;
     }
     .header__logo {
         display: none;

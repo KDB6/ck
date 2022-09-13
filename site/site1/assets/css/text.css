@@ -73,13 +73,13 @@
     color: #666;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     .container {
-        min-width: 800px;
+        min-width: 768px;
         padding: 0;
     }
     .text__inner {
-        width: 800px;
+        width: 768px;
         flex-wrap: wrap;
         justify-content: center;
     }

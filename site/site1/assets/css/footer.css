@@ -24,16 +24,16 @@
     line-height: 1.5;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     .footer__inner {
-        margin-left: 20px;
+        margin-left: 25px;
     }
     .footer__menu {
-        width: 800px;
+        width: 768px;
         display: flex;
         margin-bottom: 20px;
     }
     .footer__right {
-        width: 760px;
+        width: 720px;
     }
 }

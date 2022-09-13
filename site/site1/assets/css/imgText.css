@@ -83,14 +83,14 @@
     background: url(../img/imgText_bg02.jpg) no-repeat center;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     .imgText__inner {
         min-width: 800px;
         display: block;
     }
     .imgText__txt {
-        margin-left: 29px;
-        min-width: 800px;
+        margin-left: 15px;
+        min-width: 768px;
         margin-bottom: 20px;
     }
     .imgText__txt ul li {
@@ -98,6 +98,6 @@
         list-style: none;
     }
     .imgText__all {
-        margin-left: 29px;
+        margin-left: 15px;
     }
 }
