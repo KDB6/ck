@@ -21,7 +21,6 @@
 
                 이번 시간에는 MySQL에 쓰이는 몇 가지의 데이터 베이스를 알아보겠습니다.
             </p>
-        </div>
 
         <hr>
 
@@ -170,6 +169,23 @@
 </code></pre>
         </div>
 
+        <p class="t_box">
+            email중에 naver 텍스트를 포함하고 있는 경우
+        </p>
+        <div class="t_code">
+<pre><code class="language-js">    mysql> SELECT * FROM member WHERE youEmail LIKE '%naver%';
+    +------------+------------------------+---------+---------+----------+---------+
+    | myMemberID | youEmail               | youName | youPass | youBirth | regTime |
+    +------------+------------------------+---------+---------+----------+---------+
+    |          2 | webstoryboy@naver.com  | 황상연  | 1234    | 19990303 | 1234567 |
+    |          3 | thdtjdgml415@naver.com | 송성희  | 1234    | 19970415 | 1234567 |
+    |          4 | mo0647@naver.com       | 김민정  | 1234    | 19970530 | 1234567 |
+    +------------+------------------------+---------+---------+----------+---------+
+    11 rows in set (0.00 sec)
+</code></pre>
+        </div>
+        
+        </div>
     </main>
     
     <script src="../css/js/highlight.min.js"></script>
