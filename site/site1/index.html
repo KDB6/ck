@@ -140,6 +140,7 @@
                             </div>
                         </div></div>
                     </div>
+                    <div class="swiper-pagination"></div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
@@ -380,10 +381,17 @@
     <script src="assets/js/swiper.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            // autoplay: {
+            //     delay: 4000,
+            // },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
         });
     </script>
 
