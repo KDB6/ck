@@ -21,6 +21,9 @@
 .image__title {
     font-size: 32px;
     margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .image__desc {
     font-size: 16px;
@@ -44,12 +47,24 @@
     background-color: #cdcdcd40;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
+
+}
+@media (max-width: 600px) {
     .image__inner {
-        display: block;
-        margin-left: 100px;
+        flex-direction: column;
     }
-    .image.img1 {
+    .image {
+        width: 100%;
+        padding: 205px 20px 20px 20px;
+    }
+    .image:first-child {
         margin-bottom: 20px;
+    }
+    .image__title {
+        font-size: 24px;
+    }
+    .image__desc {
+        font-size: 16px;
     }
 }
