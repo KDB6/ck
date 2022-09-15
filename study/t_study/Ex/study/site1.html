@@ -20,6 +20,9 @@
             </p>
 
             <h3 class="t_tit2">headerType</h3>
+            <p class="t_box">
+                기본적인 구성으로 코드를 짜주고, 반응형 작업도 해줍니다.
+            </p>
             <details>
                 <summary>코드 보기</summary>
                 <div class="t_code">
@@ -43,10 +46,73 @@
         &lt;/div>
     &lt;/section>
 </code></pre>
+<pre><code class="language-js">    .header__inner {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #ccc;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: #fff;
+        backdrop-filter: blur(10px);
+        z-index: 10000;
+    }
+    .header__logo {
+        width: 20%;
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .header__logo em {
+        font-size: 18px;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .header__menu {
+        width: 60%;
+        text-align: center;
+    }
+    .header__menu li {
+        display: inline;
+    }
+    .header__menu li a {
+        padding: 13px 30px;
+        margin: 0 5px;
+        transition: background-color 0.3s;
+    }
+    .header__menu li a:hover {
+        background-color: #f1f1f1;
+        border-radius: 5px;
+    }
+    .header__member {
+        width: 20%;
+        text-align: right;
+    }
+    .header__member a {
+        font-size: 16px;
+        border: 1px solid #000;
+        padding: 10px 30px;
+        border-radius: 50px;
+    }
+    .header__member a:hover {
+        background-color: #000;
+        color: #fff;
+    }
+</code></pre>
                 </div>
             </details>
 
             <h3 class="t_tit2">sliderType</h3>
+            <p class="t_box">
+                기존에 있던 슬라이드 코드는 놔두고 이번에는 swiper에 demos slide를 사용했습니다.<br>
+                css에 있던 기존 slider의 코드는 놔두며, 새로운 swiper의 css코드를 짜줍니다.<br>
+                우선 순위가 중요시되는 것들은 <i>!important</i>를 사용해줍니다.
+            </p>
             <details>
                 <summary>코드 보기</summary>
                 <div class="t_code">
@@ -127,10 +193,195 @@
         &lt;/div>
     &lt;/section>
 </code></pre>
+<pre><code class="language-js">    .slider__inner {
+        /* margin-top: 70px; */
+    }
+    .slider {
+        position: relative;
+    }
+    .slider__img {
+        background: url(../img/slider_bg01.jpg) no-repeat center / cover;
+    }
+    .slider__img .desc {
+        width: 1160px;
+        margin: 0 auto;
+        padding: 100px 20px;
+    }
+    .slider__img .desc span {
+        font-size: 16px;
+        background-color: #fff;
+        padding: 1px 14px 0 14px;
+        border-radius: 30px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+    .slider__img .desc h3 {
+        font-size: 110px;
+        font-weight: 300;
+        line-height: 1;
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        margin-left: -8px;
+    }
+    .slider__img .desc p {
+        font-size: 20px;
+        font-weight: 300;
+        color: #fff;
+        line-height: 1.35;
+        margin-bottom: 130px;
+    }
+    .slider__img .desc .btn {}
+    .slider__img .desc .btn a {
+        font-size: 16px;
+        background-color: #fff;
+        padding: 11px 50px;
+        display: inline-block;
+    }
+    .slider__img .desc .btn a.black {
+        background: #000;
+        color: #fff;
+    }
+    .slider__arrow a {
+        position: absolute;
+        top: 50%;
+        width: 30px;
+        height: 56px;
+        background-image: url(../img/slider_icon.svg);
+    }
+    .slider__arrow a.left {
+        left: 20px;
+    }
+    .slider__arrow a.right {
+        right: 20px;
+        background-position: -50px 0;
+    }
+    .slider__dot {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 25px;
+    }
+    .slider__dot a {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background-image: url(../img/slider_icon.svg);
+        background-position: -20px -70px;
+    }
+    .slider__dot a.active {
+        background-position: 0 -70px;
+    }
+    .slider__dot a.play {
+        background-position: -40px -70px;
+    }
+    .slider__dot a.stop {
+        background-position: -60px -70px;
+    }   
+
+    /* swiper */
+    .swiper-slide {
+        background: url(../img/slider_bg01.jpg) no-repeat center / cover;
+    }
+    .swiper-slide .desc {
+        width: 1160px;
+        margin: 0 auto;
+        padding: 100px 20px;
+        box-sizing: border-box;
+    }
+    .swiper-slide .desc span {
+        font-size: 16px;
+        background-color: #fff;
+        padding: 1px 14px 0 14px;
+        border-radius: 30px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+    .swiper-slide .desc h3 {
+        font-size: 110px;
+        font-weight: 300;
+        line-height: 1;
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        margin-left: -8px;
+    }
+    .swiper-slide .desc p {
+        font-size: 20px;
+        font-weight: 300;
+        color: #fff;
+        line-height: 1.35;
+        margin-bottom: 130px;
+    }
+    .swiper-slide .desc .btn {}
+    .swiper-slide .desc .btn a {
+        font-size: 16px;
+        background-color: #fff;
+        padding: 11px 50px;
+        display: inline-block;
+    }
+    .swiper-slide .desc .btn a.black {
+        background: #000;
+        color: #fff;
+    }
+    .swiper-button-next, .swiper-button-prev {
+        width: 25px !important;
+        height: 50px !important;
+        background: url(../img/slider_icon.svg);
+    }
+    .swiper-button-next {
+        background-position: -55px 0;
+    }
+    .swiper-button-next::after, .swiper-button-prev::after {
+        opacity: 0;
+    }   
+
+    .swiper-pagination-bullet {
+        width: 16px !important;
+        height: 16px !important;
+        background-image: url(../img/slider_icon.svg) !important;
+        background-position: -20px -70px !important;
+        background-color: transparent !important;
+        opacity: 1 !important;
+    }
+    .swiper-pagination-bullet-active {
+        background-position: 0px -70px !important;
+    }   
+
+    @media (max-width: 960px) {
+        .swiper-slide .desc {
+            width: 100%;
+            text-align: center;
+        }
+        .swiper-slide .desc h3 {
+            font-size: 70px;
+        }
+    }
+    @media (max-width: 600px) {
+        .swiper-slide .desc {
+            padding: 80px 0;
+        }
+        .swiper-slide .desc h3 {
+            font-size: 40px;
+        }
+        .swiper-slide .desc p {
+            font-size: 16px;
+            margin-bottom: 50px;
+        }
+        .swiper-slide .desc .btn a {
+            padding: 10px 25px;
+        }
+    }
+</code></pre>
                 </div>
             </details>
 
             <h3 class="t_tit2">imageType</h3>
+            <p class="t_box">
+                기본적인 구성으로 코드를 짜주고, 반응형 작업도 해줍니다.
+            </p>
             <details>
                 <summary>코드 보기</summary>
                 <div class="t_code">
@@ -154,10 +405,84 @@
         &lt;/div>
     &lt;/section>
 </code></pre>
+<pre><code class="language-js">    #imageType {
+        background-color: #f9f9f9;
+    }
+    .image__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    .image {
+        width: 49%;
+        height: 370px;
+        color: #fff;
+        padding: 200px 30px 30px 30px;
+        box-sizing: border-box;
+    }
+    .image.img1 {
+        background: url(../img/image01_01.jpg) no-repeat center;
+    }
+    .image.img2 {
+        background: url(../img/image01_02.jpg) no-repeat center;
+    }
+    .image__title {
+        font-size: 32px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .image__desc {
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 10px;
+        line-height: 1.5;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .image__btn {
+        font-size: 16px;
+        color: #fff;
+        background-color: #cdcdcd40;
+        padding: 10px 20px;
+        display: inline-block;
+    }
+    .image__btn.yellow {
+        background-color: #cdcdcd40;
+    }
+
+    @media (max-width: 960px) {
+
+    }
+    @media (max-width: 600px) {
+        .image__inner {
+            flex-direction: column;
+        }
+        .image {
+            width: 100%;
+            padding: 205px 20px 20px 20px;
+        }
+        .image:first-child {
+            margin-bottom: 20px;
+        }
+        .image__title {
+            font-size: 24px;
+        }
+        .image__desc {
+            font-size: 16px;
+        }
+    }
+</code></pre>
                 </div>
             </details>
 
             <h3 class="t_tit2">imgTextType</h3>
+            <p class="t_box">
+                기본적인 구성으로 코드를 짜주고, 반응형 작업도 해줍니다.
+            </p>
             <details>
                 <summary>코드 보기</summary>
                 <div class="t_code">
@@ -186,10 +511,140 @@
         &lt;/div>
     &lt;/section>
 </code></pre>
+<pre><code class="language-js">    .imgText__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    .imgText__inner > div {
+        width: 32%;
+        height: 500px;
+    }
+    .imgText__txt {
+        width: 32%;
+    }
+    .imgText__txt span {
+        font-size: 16px;
+        color: #666;
+        text-decoration: underline;
+        text-underline-position: under;
+        margin-bottom: 20px;
+        display: block;
+    }
+    .imgText__txt p {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.5;
+        color: #666;
+        margin-bottom: 10px;
+    }
+    .imgText__txt h3 {
+        font-size: 50px;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+    .imgText__txt ul li{
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.6;
+        margin-left: 20px;
+        color: #666;
+    }
+    .imgText__txt ul li a {
+        color: #666;
+    }
+    .imgText__txt ul li::before {
+        content: '';
+        width: 5px;
+        height: 3px;
+        border-radius: 50%;
+        position: absolute;
+        left: 5px;
+        top: 9px;
+    }
+    .imgText__img{
+        border-radius: 10px;
+        position: relative;
+    }
+    .imgText__img a {
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
+        background-color: #64646470;
+        color: #fff;
+        font-size: 18px;
+        padding: 10px 30px;
+        border-radius: 30px;
+        display: inline-block;
+    }
+    .imgText__img a.blue {
+        background-color: #44444470;
+    }
+    .imgText__img.img1 {
+        background: url(../img/imgText_bg01.jpg) no-repeat center;
+    }
+    .imgText__img.img2 {
+        background: url(../img/imgText_bg02.jpg) no-repeat center;
+    }
+
+    @media (max-width: 960px) {
+        .imgText__inner {
+            flex-wrap: wrap;
+        }
+        .imgText__txt h3 {
+            font-size: 40px;
+        }
+        .imgText__txt p {
+            margin-bottom: 60px;
+        }
+        .imgText__inner > div.imgText__txt {
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+        .imgText__inner > div.imgText__txt ul {
+            display: none;
+        }
+        .imgText__inner > div.imgText__img {
+            width: 49%;
+        }
+        .imgText__img a {
+            left: 11%;
+            bottom: 5%;
+        }
+    }
+    @media (max-width: 600px) {
+        .imgText__txt span {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .imgText__txt h3 {
+            font-size: 30px;
+        }
+        .imgText__txt p {
+            margin-bottom: 50px;
+            font-size: 16px;
+        }
+        .imgText__inner > div.imgText__img {
+            width: 100%;
+            height: 300px;
+        }
+        .imgText__inner > div.imgText__img.img1 {
+            margin-bottom: 20px;
+        }
+        .imgText__img a {
+            left: 5%;
+            bottom: 5%;
+        }
+    }
+</code></pre>
                 </div>
             </details>
 
             <h3 class="t_tit2">cardType</h3>
+            <p class="t_box">
+                기본적인 구성으로 코드를 짜주고, 반응형 작업도 해줍니다.<br>
+                타블렛과 모바일 형태에 맞는 레이아웃 구성으로 카드 반응영을 작업해줍니다.
+            </p>
             <details>
                 <summary>코드 보기</summary>
                 <div class="t_code">
@@ -259,10 +714,74 @@
         &lt;/div>
     &lt;/section>
 </code></pre>
+<pre><code class="language-js">    #cardType {
+        background-color: #f9f9f9;
+    }
+    .card__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    .card {
+        width: 32%;
+        background: #f5f5f5;
+    }
+    .card__body {
+        padding: 24px;
+    }
+    .card__body .tit {
+        font-size: 24px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .card__body .desc {
+        font-size: 18px;
+        line-height: 1.4;
+        color: #666;
+        margin-bottom: 20px;
+        font-weight: 300;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4; 
+        -webkit-box-orient: vertical;
+    }
+
+    @media (max-width: 960px) {
+        .card__inner {
+            flex-wrap: wrap;
+        }
+        .card {
+            width: 49%;
+        }
+        .card:last-child {
+            display: none;
+        }
+    }
+    @media (max-width: 600px) {
+        .card {
+            width: 100%;
+        }
+        .card:first-child {
+            margin-bottom: 20px;
+        }
+        .card__body {
+            padding: 20px;
+        }
+        .card__body .desc {
+            font-size: 16px;
+        }
+    }
+</code></pre>
                 </div>
             </details>
 
             <h3 class="t_tit2">bannerType</h3>
+            <p class="t_box">
+                기본적인 구성으로 코드를 짜주고, 반응형 작업도 해줍니다.<br>
+                딱히 해줄게 없는 효자 타입
+            </p>
             <details>
                 <summary>코드 보기</summary>
                 <div class="t_code">
@@ -278,10 +797,66 @@
         &lt;/div>
     &lt;/section>
 </code></pre>
+<pre><code class="language-js">    .banner__inner {
+        background-image: url(../img/banner_bg01.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        padding: 120px 0;
+        color: #fff;
+    }
+    .banner__inner .title {
+        font-size: 50px;
+        line-height: 1;
+        font-weight: 300;
+        margin-bottom: 40px;
+    }
+    .banner__inner .desc {
+        font-size: 24px;
+        line-height: 1.5;
+        font-weight: 300;
+        margin-bottom: 70px;
+    }
+    .banner__inner .desc a {
+        color: #fff;
+        display: block;
+    }
+    .banner__inner .desc a:hover {
+        text-decoration: underline;
+    }
+    .banner__inner .small {
+        font-size: 16px;
+        text-decoration: underline;
+    }
+
+    @media (max-width: 960px) {
+        .banner__inner {
+            padding: 100px 0;
+        }
+    }
+    @media (max-width: 600px) {
+        .banner__inner {
+            padding: 80px 0;
+        }
+        .banner__inner .title {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .banner__inner .desc {
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+    }
+</code></pre>
                 </div>
             </details>
 
             <h3 class="t_tit2">textType</h3>
+            <p class="t_box">
+                기본적인 구성으로 코드를 짜주고, 반응형 작업도 해줍니다.<br>
+                또한, 아이콘의 형태를 넣을 때는 이미지 스프라이트를 사용해줍니다.
+            </p>
             <details>
                 <summary>코드 보기</summary>
                 <div class="t_code">
@@ -322,10 +897,112 @@
         &lt;/div>
     &lt;/section>
 </code></pre>
+<pre><code class="language-js">    #textType {
+        background-color: #f9f9f9;
+    }
+    .text__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .text {
+        width: 32%;
+        margin-bottom: 2%;
+        padding: 20px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        transition: background 0.4s;
+    }
+    .text:hover {
+        background: #f5f5f5;
+    }
+    .text__title {
+        font-size: 24px;
+        line-height: 1;
+        margin-bottom: 10px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        position: relative;
+        padding-top: 75px;
+    }
+    .text__desc {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.4;
+        margin-bottom: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; 
+        -webkit-box-orient: vertical;
+    }
+
+    .text__title::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 60px;
+        height: 60px;
+        background: url(../img/text_icon.svg);
+    }
+    .text.t1 .text__title::before {
+        background-position: 0 0;
+    }
+    .text.t2 .text__title::before {
+        background-position: -60px 0;
+    }
+    .text.t3 .text__title::before {
+        background-position: -120px 0;
+    }
+    .text.t4 .text__title::before {
+        background-position: -180px 0;
+    }
+    .text.t5 .text__title::before {
+        background-position: -240px 0;
+    }
+    .text.t6 .text__title::before {
+        background-position: -300px 0;
+    }
+    .text__btn {
+        font-size: 16px;
+        line-height: 1;
+        text-decoration: underline;
+        text-underline-position: under;
+        color: #666;
+    }
+
+    @media (max-width: 960px) {
+        .text {
+            width: 49%;
+            background: #f5f5f5;
+        }
+    }
+    @media (max-width: 600px) {
+        .text__title {
+            font-size: 24px;
+        }
+        .text__desc {
+            font-size: 16px;
+        }
+    }
+    @media (max-width: 480px) {
+        .text {
+            width: 100%;
+        }
+        .text .desc {
+            font-size: 16px;
+        }
+    }
+</code></pre>
                 </div>
             </details>
 
             <h3 class="t_tit2">footerType</h3>
+            <p class="t_box">
+                기본적인 구성으로 코드를 짜주고, 반응형 작업도 해줍니다.<br>
+                여러 내용이 더 필요하지만, 우선 간단한 내용만 적어줍니다~
+            </p>
             <details>
                 <summary>코드 보기</summary>
                 <div class="t_code">
@@ -359,8 +1036,56 @@
         &lt;/div>
     &lt;/section>
 </code></pre>
+<pre><code class="language-js">    .footer__menu {
+        display: flex;
+        margin-bottom: 70px;
+        text-align: center;
+    }
+    .footer__menu > div {
+        width: 16%;
+    }
+    .footer__menu > div h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .footer__menu li {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 10px;
+        display: block;
+    }
+    .footer__right {
+        border-top: 1px solid #d9d9d9;
+        text-align: center;
+        padding-top: 40px;
+        color: #666;
+        line-height: 1.5;
+    }
+
+    @media (max-width: 960px ) {
+        .footer__menu {
+            display: none;
+        }
+        .footer__right {
+            padding-top: 0;
+            border-top: 0;
+        }
+        .footer__wrap {
+            padding: 40px 0;
+        }
+    }
+</code></pre>
                 </div>
             </details>
+
+            <h3 class="t_tit2">완성 직전 사이트</h3>
+            <div class="t_iframe" style="min-height: 920px; padding-top: 0;">
+                <iframe src="https://kdb6.github.io/ck/site/site1/index.html" frameborder="0"></iframe>
+            </div>
+    
+            <div class="t_link">
+                <a href="https://kdb6.github.io/ck/site/site1/index.html" target="_blank">원본 사이트 보기</a>
+            </div>
 
         </div>
     </main>
