@@ -30,7 +30,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/swiper.css">
 </head>
-<body>
+<body class="fixed">
     <div id="skip">
         <a href="#">헤더 영역 바로가기</a>
         <a href="#">슬라이드 영역 바로가기</a>
@@ -419,8 +419,26 @@
         });
 
         btnHam.addEventListener("click", () => {
+            document.body.classList.toggle("fixed");
             btnHam.classList.toggle("active");
             btnMenu.classList.toggle("active");
+        });
+
+        // btnMenuList.forEach((list) => {
+        //     list.addEventListener("click", () => {
+        //         document.body.classList.remove("fixed");
+        //         btnMenu.classList.remove("active");;
+        //         btnHam.classList.remove("active");
+        //     });
+        // });
+
+        window.addEventListener("resize", () => {
+            let width = window.innerWidth();
+            if(width > 1300) {
+                document.body.classList.remove("fixed");
+                btnMenu.classList.remove("active");;
+                btnHam.classList.remove("active");
+            }
         });
     </script>
 
@@ -439,14 +457,14 @@
         //     });
         // });
 
-        // document.querySelectorAll("#headerType ul li a").forEach(li => {
-        //     li.addEventListener("click", (e) => {
-        //         e.preventDefault();
-        //         document.querySelector(li.getAttribute("href")).scrollIntoView({
-        //             behavior: "smooth"
-        //         });
-        //     })
-        // })
+        document.querySelectorAll("#headerType ul li a").forEach(li => {
+            li.addEventListener("click", (e) => {
+                e.preventDefault();
+                document.querySelector(li.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                });
+            })
+        })
     </script>
 </body>
 </html>

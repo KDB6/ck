@@ -66,10 +66,10 @@
 }
 .header__ham span {
     display: block;
-    background: #000;
+    background: #ccc;
     width: 30px;
     height: 2px;
-    border-radius: 3px;
+    border-radius: 5px;
     margin-left: 10px;
     margin-top: 5px;
     transition: 0.25s margin 0.25s, 0.25s transform;
@@ -125,5 +125,7 @@
 }
 @media (max-width: 600px) {
     .header__logo {}
-    .header__member {}
+    .header__member {
+        margin-right: 65px;
+    }
 }
