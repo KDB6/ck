@@ -48,7 +48,7 @@
             <div class="header__logo">
                 <a href="#">Pottery<em></em></a>
             </div>
-            <div class="header__menu">
+            <div class="header__menu overlay">
                 <ul>
                     <li class="active"><a href="#headerType">Header</a></li>
                     <li><a href="#sliderType">22AW Lookbook</a></li>
@@ -402,7 +402,8 @@
 
         const btnStop = document.querySelector(".swiper-button-stop");
         const btnStart = document.querySelector(".swiper-button-play");
-        const btnHam = document.querySelector(".header__ham")
+        const btnHam = document.querySelector(".header__ham");
+        const btnMenu = document.querySelector(".header__menu")
 
         btnStart.style.display = "none";
         
@@ -418,8 +419,9 @@
         });
 
         btnHam.addEventListener("click", () => {
-            btnHam.classList.toggle("active")
-        })
+            btnHam.classList.toggle("active");
+            btnMenu.classList.toggle("active");
+        });
     </script>
 
     <script>
