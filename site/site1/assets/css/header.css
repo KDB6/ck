@@ -126,6 +126,5 @@
 @media (max-width: 600px) {
     .header__logo {}
     .header__member {
-        margin-right: 65px;
     }
 }

@@ -57,6 +57,12 @@ textarea {
     font-family: 'NexonLv1Gothic', 'ScoreDream';
 }
 
+/* 가로 모드 초기화 */
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
 /* 링크 초기화 */
 a {
     text-decoration: none;
