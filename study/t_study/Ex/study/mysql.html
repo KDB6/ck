@@ -132,7 +132,7 @@
         <h4 class="t_tit3">데이터 입력하기</h4>
         <p class="t_box">INSERT INTO 테이블 이름(필드명) VALUE(데이터);</p>
         <div class="t_code">
-<pre><code class="language-js">    INSERT INTO member(youEmail, youName, youPass, youBirth, regTime) VALUES('ipkg7210@gmail.com', '김다빈', '1234', '19990303', '1234567');
+<pre><code class="language-js">    INSERT INTO member(youEmail, youName, youPass, youBirth, regTime) VALUES('webstoryboy@naver.com', '황상연', '1234', '19990303', '1234567');
 </code></pre>
         </div>
 
@@ -146,24 +146,23 @@
     +------------+--------------------------+---------+---------+----------+---------+
     | myMemberID | youEmail                 | youName | youPass | youBirth | regTime |
     +------------+--------------------------+---------+---------+----------+---------+
-    |          1 | ipkg7210@gmail.com       | 김다빈  | 1234    | 19990303 | 1234567 |
-    |          2 | webstoryboy@naver.com    | 황상연  | 1234    | 19990303 | 1234567 |
-    |          3 | thdtjdgml415@naver.com   | 송성희  | 1234    | 19970415 | 1234567 |
-    |          4 | mo0647@naver.com         | 김민정  | 1234    | 19970530 | 1234567 |
+    |          1 | webstoryboy@naver.com    | 황상연  | 1234    | 19990303 | 1234567 |
+    |          2 | thdtjdgml415@naver.com   | 송성희  | 1234    | 19970415 | 1234567 |
+    |          3 | mo0647@naver.com         | 김민정  | 1234    | 19970530 | 1234567 |
     +------------+--------------------------+---------+---------+----------+---------+
     19 rows in set (0.00 sec)
 </code></pre>
         </div>
 
         <p class="t_box">
-            myMemberID가 4번인 경우
+            myMemberID가 3번인 경우
         </p>
         <div class="t_code">
-<pre><code class="language-js">    mysql> SELECT * FROM member WHERE myMemberID = 6;
+<pre><code class="language-js">    mysql> SELECT * FROM member WHERE myMemberID = 3;
     +------------+-------------------+---------+---------+----------+---------+
     | myMemberID | youEmail          | youName | youPass | youBirth | regTime |
     +------------+-------------------+---------+---------+----------+---------+
-    |          4 | mo0647@naver.com  | 김민정  | 1234    | 19970530 | 1234567 |
+    |          3 | mo0647@naver.com  | 김민정  | 1234    | 19970530 | 1234567 |
     +------------+-------------------+---------+---------+----------+---------+
     1 row in set (0.01 sec)
 </code></pre>
