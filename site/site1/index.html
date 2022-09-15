@@ -29,10 +29,6 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/swiper.css">
-
-    <style>
-        #headerType {display: none;}
-    </style>
 </head>
 <body>
     <div id="skip">
@@ -63,6 +59,11 @@
             </div>
             <div class="header__member">
                 <a href="#">Login</a>
+            </div>
+            <div class="header__ham">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </section>
@@ -141,6 +142,10 @@
                         </div></div>
                     </div>
                     <div class="swiper-pagination"></div>
+                    <div class="swiper-button">
+                        <div class="swiper-button-play"><span class="ir">play</span></div>
+                        <div class="swiper-button-stop"><span class="ir">stop</span></div>
+                    </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
@@ -385,39 +390,61 @@
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
-            // autoplay: {
-            //     delay: 4000,
-            // },
+            autoplay: {
+                delay: 2000,
+            },
             pagination: {
                 el: '.swiper-pagination',
                 type: 'bullets',
+                clickable: true,
             },
         });
+
+        const btnStop = document.querySelector(".swiper-button-stop");
+        const btnStart = document.querySelector(".swiper-button-play");
+        const btnHam = document.querySelector(".header__ham")
+
+        btnStart.style.display = "none";
+        
+        btnStop.addEventListener("click", () => {
+            swiper.autoplay.stop();
+            btnStart.style.display = "block";
+            btnStop.style.display = "none";
+        });
+        btnStart.addEventListener("click", () => {
+            swiper.autoplay.start();
+            btnStop.style.display = "block";
+            btnStart.style.display = "none";
+        });
+
+        btnHam.addEventListener("click", () => {
+            btnHam.classList.toggle("active")
+        })
     </script>
 
     <script>
-        window.addEventListener("scroll", () => {
-            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+        // window.addEventListener("scroll", () => {
+        //     let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
 
-            // forEach
-            document.querySelectorAll("section").forEach((element, index) => {
-                if(scrollTop >= element.offsetTop -2) {
-                    document.querySelectorAll(".header__menu ul li").forEach(li => {
-                        li.classList.remove("active");
-                    });
-                    document.querySelector(".header__menu ul li:nth-child("+(index+1)+")").classList.add("active");
-                }
-            });
-        });
+        //     // forEach
+        //     document.querySelectorAll("section").forEach((element, index) => {
+        //         if(scrollTop >= element.offsetTop -2) {
+        //             document.querySelectorAll(".header__menu ul li").forEach(li => {
+        //                 li.classList.remove("active");
+        //             });
+        //             document.querySelector(".header__menu ul li:nth-child("+(index+1)+")").classList.add("active");
+        //         }
+        //     });
+        // });
 
-        document.querySelectorAll("#headerType ul li a").forEach(li => {
-            li.addEventListener("click", (e) => {
-                e.preventDefault();
-                document.querySelector(li.getAttribute("href")).scrollIntoView({
-                    behavior: "smooth"
-                });
-            })
-        })
+        // document.querySelectorAll("#headerType ul li a").forEach(li => {
+        //     li.addEventListener("click", (e) => {
+        //         e.preventDefault();
+        //         document.querySelector(li.getAttribute("href")).scrollIntoView({
+        //             behavior: "smooth"
+        //         });
+        //     })
+        // })
     </script>
 </body>
 </html>
