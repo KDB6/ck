@@ -57,6 +57,30 @@
         height: 225px;
         }
     }
+
+    .slider__btn a {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        background: rgba(0,0,0,0.4);
+        text-align: center;
+        line-height: 48px;
+        transition: all 0.2s;
+        display: block;
+        color: #fff;
+    }
+    .slider__btn a:hover {
+        border-radius: 50%;
+        background: #3b3d6350;
+    }
+    .slider__btn a.prev{
+        left: 0;
+    }
+    .slider__btn a.next{
+        right: 0;
+    }
     </style>
 </head>
 <body class="img04 jeju">
@@ -82,16 +106,16 @@
             <div class="slider__wrap">
                 <div class="slider__img">
                     <div class="slider__inner">
-                        <div class="slider" role="group" aria-label="1/5"><img src="../assets/img/slide01.jpg" alt="이미지1"></div>
-                        <div class="slider" role="group" aria-label="2/5"><img src="../assets/img/slide02.jpg" alt="이미지2"></div>
-                        <div class="slider" role="group" aria-label="3/5"><img src="../assets/img/slide03.jpg" alt="이미지3"></div>
-                        <div class="slider" role="group" aria-label="4/5"><img src="../assets/img/slide04.jpg" alt="이미지4"></div>
-                        <div class="slider" role="group" aria-label="5/5"><img src="../assets/img/slide05.jpg" alt="이미지5"></div>
+                        <div class="slider"><img src="../assets/img/slide01.jpg" alt="이미지1"></div>
+                        <div class="slider"><img src="../assets/img/slide02.jpg" alt="이미지2"></div>
+                        <div class="slider"><img src="../assets/img/slide03.jpg" alt="이미지3"></div>
+                        <div class="slider"><img src="../assets/img/slide04.jpg" alt="이미지4"></div>
+                        <div class="slider"><img src="../assets/img/slide05.jpg" alt="이미지5"></div>
                     </div>
                 </div>
                 <div class="slider__btn">
-                    <a href="#" class="prev" role="button" aria-label="왼쪽 이미지">prev</a>
-                    <a href="#" class="next" role="button" aria-label="오른쪽 이미지">next</a>
+                    <a href="#" class="prev">prev</a>
+                    <a href="#" class="next">next</a>
                 </div>
             </div>
         </section>
@@ -194,7 +218,7 @@
     </script>
 
     <script>
-
+        
     </script>
     
 </body>
