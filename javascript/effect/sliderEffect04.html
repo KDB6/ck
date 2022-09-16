@@ -237,10 +237,17 @@
             currentIndex = num;
         }
 
+        function beforeSlider(num) {
+            sliderInner.style.transition = "all 400ms";
+            sliderInner.style.transform = "translateX("+ -sliderWidth * num +"px)";
+            currentIndex = num;
+        }
+
         // 왼쪽 버튼 클릭
         sliderBtnPrev.addEventListener("click", () => {
             let prevIndex = (currentIndex - 1) % sliderCount
-            gotoSlider(prevIndex);
+            beforeSlider(prevIndex);
+            // 4 3 2 1 0
         });
 
         // 오른쪽 버튼 클릭
