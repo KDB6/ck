@@ -123,8 +123,3 @@
         display: block;
     }
 }
-@media (max-width: 600px) {
-    .header__logo {}
-    .header__member {
-    }
-}
