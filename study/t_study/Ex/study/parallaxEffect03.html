@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>페럴랙스 이펙트 02</title>
+    <title>페럴랙스 이펙트 03</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/dracula.css">
 </head>
 <body>
     <main id="main">
         <div class="document">
-            <h2 class="t_tit">페럴랙스 이펙트 02</h2>
+            <h2 class="t_tit">페럴랙스 이펙트 03</h2>
             <p class="t_desc2">
                 이번 시간에는 페럴랙스 형태를 가진 이펙트를 코딩해봤습니다.
             </p>
@@ -25,13 +25,13 @@
             <div class="t_code">
             <details>
                 <summary>코드보기</summary>
-<pre><code class="language-js">    &lt;header id="header">
-        &lt;h1>Javascript Mouse Effect02&lt;/h1>
-        &lt;p>패럴렉스 이펙트 - 사이드 메뉴&lt;/p>
+<pre><code class="language-js">    &&lt;header id="header">
+        &lt;h1>Javascript Mouse Effect03&lt;/h1>
+        &lt;p>패럴렉스 이펙트 - 숨김 메뉴&lt;/p>
         &lt;ul>
             &lt;li>&lt;a href="parallaxEffect01.html">1&lt;/a>&lt;/li>
-            &lt;li class="active">&lt;a href="parallaxEffect02.html">2&lt;/a>&lt;/li>
-            &lt;li>&lt;a href="parallaxEffect03.html">3&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="parallaxEffect02.html">2&lt;/a>&lt;/li>
+            &lt;li class="active">&lt;a href="parallaxEffect03.html">3&lt;/a>&lt;/li>
             &lt;li>&lt;a href="parallaxEffect04.html">4&lt;/a>&lt;/li>
             &lt;li>&lt;a href="parallaxEffect05.html">5&lt;/a>&lt;/li>
             &lt;li>&lt;a href="parallaxEffect06.html">6&lt;/a>&lt;/li>
@@ -39,22 +39,26 @@
         &lt;/ul>
     &lt;/header>
     &lt;!-- //header -->
-    
-    &lt;nav id="parallax__dot">
+
+    &lt;nav id="parallax__nav" class="show">
         &lt;ul>
-            &lt;li class="active">&lt;a href="#section1">&lt;span>메뉴1&lt;/span>&lt;/a>&lt;/li>
-            &lt;li>&lt;a href="#section2">&lt;span>메뉴2&lt;/span>&lt;/a>&lt;/li>
-            &lt;li>&lt;a href="#section3">&lt;span>메뉴3&lt;/span>&lt;/a>&lt;/li>
-            &lt;li>&lt;a href="#section4">&lt;span>메뉴4&lt;/span>&lt;/a>&lt;/li>
-            &lt;li>&lt;a href="#section5">&lt;span>메뉴5&lt;/span>&lt;/a>&lt;/li>
-            &lt;li>&lt;a href="#section6">&lt;span>메뉴6&lt;/span>&lt;/a>&lt;/li>
-            &lt;li>&lt;a href="#section7">&lt;span>메뉴7&lt;/span>&lt;/a>&lt;/li>
-            &lt;li>&lt;a href="#section8">&lt;span>메뉴8&lt;/span>&lt;/a>&lt;/li>
-            &lt;li>&lt;a href="#section9">&lt;span>메뉴9&lt;/span>&lt;/a>&lt;/li>
+            &lt;li class="active">&lt;a href="#section1">메뉴1&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#section2">메뉴2&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#section3">메뉴3&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#section4">메뉴4&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#section5">메뉴5&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#section6">메뉴6&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#section7">메뉴7&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#section8">메뉴8&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#section9">메뉴9&lt;/a>&lt;/li>
         &lt;/ul>
     &lt;/nav>
     &lt;!-- //nav -->
-    
+
+    &lt;div id="parallax__top">
+        Top
+    &lt;/div>
+
     &lt;main id="parallax__cont">
         &lt;div id="contents">
             &lt;!-- section1 -->
@@ -66,7 +70,7 @@
                 &lt;/figure>
                 &lt;p class="content__item__desc">니 인생은 너가 바꾸는거다.&lt;/p>
             &lt;/section>
-    
+
             &lt;!-- section2 -->
             &lt;section id="section2" class="content__item">
                 &lt;span class="content__item__num">02&lt;/span>
@@ -76,7 +80,7 @@
                 &lt;/figure>
                 &lt;p class="content__item__desc">남 탓 하기 전에 너 자신을 봐라.&lt;/p>
             &lt;/section>
-    
+
             &lt;!-- section3 -->
             &lt;section id="section3" class="content__item">
                 &lt;span class="content__item__num">03&lt;/span>
@@ -86,7 +90,7 @@
                 &lt;/figure>
                 &lt;p class="content__item__desc">알면서도 안하고 가만히 있으면 거지가 되면 된다.&lt;/p>
             &lt;/section>
-    
+
             &lt;!-- section4 -->
             &lt;section id="section4" class="content__item">
                 &lt;span class="content__item__num">04&lt;/span>
@@ -96,7 +100,7 @@
                 &lt;/figure>
                 &lt;p class="content__item__desc">남들은 너한테 큰 관심이 없다.&lt;/p>
             &lt;/section>
-    
+
             &lt;!-- section5 -->
             &lt;section id="section5" class="content__item">
                 &lt;span class="content__item__num">05&lt;/span>
@@ -106,7 +110,7 @@
                 &lt;/figure>
                 &lt;p class="content__item__desc">너 혼자 알아서 해라.&lt;/p>
             &lt;/section>
-    
+
             &lt;!-- section6 -->
             &lt;section id="section6" class="content__item">
                 &lt;span class="content__item__num">06&lt;/span>
@@ -116,7 +120,7 @@
                 &lt;/figure>
                 &lt;p class="content__item__desc">돈이 세상에 다는 아니지만 세상은 돈으로 굴러간다.&lt;/p>
             &lt;/section>
-    
+
             &lt;!-- section7 -->
             &lt;section id="section7" class="content__item">
                 &lt;span class="content__item__num">07&lt;/span>
@@ -126,7 +130,7 @@
                 &lt;/figure>
                 &lt;p class="content__item__desc">사회는 널 기다려주지 않는다.&lt;/p>
             &lt;/section>
-    
+
             &lt;!-- section8 -->
             &lt;section id="section8" class="content__item">
                 &lt;span class="content__item__num">08&lt;/span>
@@ -136,7 +140,7 @@
                 &lt;/figure>
                 &lt;p class="content__item__desc">힘 없는 정의는 무능이다.&lt;/p>
             &lt;/section>
-    
+
             &lt;!-- section9 -->
             &lt;section id="section9" class="content__item">
                 &lt;span class="content__item__num">09&lt;/span>
@@ -151,11 +155,6 @@
         &lt;/section>
     &lt;/main>
     &lt;!-- //main -->
-    
-    &lt;aside id="parallax__info">
-        &lt;div class="scroll">scrollTop : &lt;span>0&lt;/span>px&lt;/div>
-    &lt;/aside>
-    &lt;!-- aside -->
 </code></pre>
             </details>
             </div>
@@ -172,11 +171,15 @@
     #parallax__nav {
         position: fixed;
         right: 20px;
-        top: 20px;
+        top: -200px;
         z-index: 2000;
         background-color: rgba(0, 0, 0, 0.4);
         padding: 20px 30px;
         border-radius: 50px;
+        transition: top, .4s ease;
+    }
+    #parallax__nav.show {
+        top: 20px;
     }
     #parallax__nav li {
         display: inline;
@@ -306,44 +309,6 @@
     .parallax__info li, .scrollTop {
         line-height: 1.4;
     }
-    #parallax__dot {
-        position: fixed;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 10000;
-        background-color: #00000040;
-        padding: 20px 10px;
-        border-radius: 30px;
-    }
-    #parallax__dot li {
-        position: relative;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        margin: 12px 8px;
-        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
-        transition: box-shadow 0.2s ease;
-    }
-    #parallax__dot li a {
-        background: #fff;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-radius: 50%;
-        transition: transform 0.2s ease;
-    }
-    #parallax__dot li span {
-        display: none;
-    }
-    #parallax__dot li.active {
-        box-shadow: 0 0 0 2px rgba(255, 255, 255, 1);
-    }
-    #parallax__dot li.active a {
-        transform: scale(0.4);
-    }
 
     @media (max-width: 800px) {
         #parallax__cont {
@@ -377,16 +342,39 @@
             bottom: 10px;
         }
     }
+    #parallax__top {
+        position: fixed;
+        left: 50%;
+        bottom: -220px;
+        z-index: 10000;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background: rgba(0,0,0,0.4);
+        text-align: center;
+        line-height: 40px;
+        color: #fff;
+        border-radius: 50%;
+        padding: 0px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    #parallax__top.show {
+        bottom: 5px;
+    }
+    #parallax__top:hover {
+        background: #fff;
+        color: #000;
+    }
 </code></pre>
             </div>
             </details>
 
             <h3 class="t_tit2">script</h3>
             <p class="t_desc2">
-                노가다성이 느껴지는 코드 작성을 하지 않기 위해서 forEach문을 사용해주며,<br>
-                forEach 사용 방법은 #parallax__dot의 값들을 불러오기 위해 querySelectorAll사용해주고, el을 지정해줍니다.<br>
-                그리고 출력 값을 정해준 뒤, classList를 사용해서 active시에 각각의 content__item로 이동하도록 만듭니다.<br>
-                scrollTop의 값을 알기 위해 scrollTop, scrollY, document.documentElement.scrollTop메서드를 사용해줍니다.<br>
+                위 메뉴 네비는 if문을 사용해 scrollTop 값이 0보단 높을시에 메뉴가 나오게하며,<br>
+                밑에 top버튼은 해당 scrollTop과 브라우저 높이가 문제 전체 높이보다 크면 드러나게 한다.
+                 
             </p>
             <p class="t_box">
                 scrollTop은 개별적으로 사용하는 방법이 있지만, || 를 이용해 여러가지를 한번에 사용할 수도 있다.<br>
@@ -396,31 +384,30 @@
             <details>
                 <summary>코드 보기</summary>
             <div class="t_code">
-<pre><code class="language-js">    document.querySelectorAll("#parallax__dot a").forEach(el => {
-        el.addEventListener("click", e => {
-            e.preventDefault();
-
-            document.querySelector(el.getAttribute("href")).scrollIntoView({behavior: "smooth"});
-        })
-    });
-
-    window.addEventListener("scroll", () => {
+<pre><code class="language-js">    window.addEventListener("scroll", () => {
         let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
 
-        document.querySelector("#parallax__info span").innerText = Math.floor(scrollTop);
+        if(scrollTop > 0) {
+            document.querySelector("#parallax__nav").classList.add("show");
+        } else {
+            document.querySelector("#parallax__nav").classList.remove("show");
+        }
 
-        document.querySelectorAll(".content__item").forEach((e,i) => {
-            if(scrollTop >= e.offsetTop -10) {
-                document.querySelectorAll("#parallax__dot li").forEach(li => {
-                    li.classList.remove("active");
-                })
-                document.querySelector("#parallax__dot li:nth-child("+(i+1)+")").classList.add("active")
-            }
-        })
-    })
+        if(scrollTop + window.innerHeight >= document.body.scrollHeight) {     // 문서 전체 높이 - 브라우저 높이
+            document.querySelector("#parallax__top").classList.add("show");
+        } else {
+            document.querySelector("#parallax__top").classList.remove("show");
+        }
+
+        document.querySelector("#parallax__info span").innerText = Math.ceil(scrollTop);
+    });
+
+    document.querySelector("#parallax__top").addEventListener("click", () => {
+        window.scrollTo({left: 0, top: 0, behavior: "smooth"})
+    });
 </code></pre>
                 <div class="t_link">
-                    <a href="https://github.com/KDB6/ck/blob/main/javascript/effect/parallaxEffect02.html" target="_blank">코드 원본 보기</a>
+                    <a href="https://github.com/KDB6/ck/blob/main/javascript/effect/parallaxEffect03.html" target="_blank">코드 원본 보기</a>
                 </div>
             </div>
             </details>
@@ -429,11 +416,11 @@
 
             <h3 class="t_tit2">결과물</h3>
             <div class="t_iframe" style="min-height: 800px; padding-top: 0;">
-                <iframe src="https://kdb6.github.io/ck/javascript/effect/parallaxEffect02.html" frameborder="0"></iframe>
+                <iframe src="https://kdb6.github.io/ck/javascript/effect/parallaxEffect03.html" frameborder="0"></iframe>
             </div>
     
             <div class="t_link">
-                <a href="https://kdb6.github.io/ck/javascript/effect/parallaxEffect02.html" target="_blank">원본 사이트 보기</a>
+                <a href="https://kdb6.github.io/ck/javascript/effect/parallaxEffect03.html" target="_blank">원본 사이트 보기</a>
             </div>
 
         </div>

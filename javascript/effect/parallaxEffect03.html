@@ -457,7 +457,7 @@
                 document.querySelector("#parallax__nav").classList.remove("show");
             }
 
-            if(scrollTop > document.documentElement.scrollTop - window.innerheight) {     // 문서 전체 높이 - 브라우저 높이
+            if(scrollTop + window.innerHeight >= document.body.scrollHeight) {     // 문서 전체 높이 - 브라우저 높이
                 document.querySelector("#parallax__top").classList.add("show");
             } else {
                 document.querySelector("#parallax__top").classList.remove("show");
