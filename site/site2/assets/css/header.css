@@ -1,0 +1,54 @@
+#headerType {
+    background: #dabbee10;
+    padding: 15px 0;
+}
+.header__inner {}
+.header__h2 {
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+}
+.header__nav {
+    text-align: center;
+    margin-top: 15px;
+}
+.header__nav li {
+    font-size: 16px;
+    display: inline;
+    padding: 20px 0;
+}
+.header__nav li a {
+    padding: 0 80px;
+}
+
+/* media */
+@media (max-width: 1300px){
+    .header__menu {
+        position: fixed;
+        right: -100%;
+        top: 69px;
+        background: #fff;
+        width: 50%;
+        height: 100vh;
+        padding: 20px;
+        text-align: right;
+        transition: right 0.4s ease-in;
+    }
+    .header__menu li {
+        display: block;
+        margin: 20px;
+    }
+    .header__menu li a {
+        padding: 10px;
+        white-space: nowrap;
+    }
+    .header__menu.active {
+        right: 0;
+    }
+    .header__member {
+        margin-right: 50px;
+    }
+    .header__ham {
+        display: block;
+    }
+}

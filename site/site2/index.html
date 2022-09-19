@@ -20,17 +20,18 @@
     <!-- CSS(섹션별) -->
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/slider.css">
-    <link rel="stylesheet" href="assets/css/image.css">
+    <!-- <link rel="stylesheet" href="assets/css/image.css">
     <link rel="stylesheet" href="assets/css/imgText.css">
     <link rel="stylesheet" href="assets/css/card.css">
     <link rel="stylesheet" href="assets/css/banner.css">
     <link rel="stylesheet" href="assets/css/text.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/footer.css"> -->
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/swiper.css">
 </head>
 <body>
+    <!-- skip -->
     <div id="skip">
         <a href="#">헤더 영역 바로가기</a>
         <a href="#">슬라이드 영역 바로가기</a>
@@ -41,20 +42,72 @@
         <a href="#">텍스트 영역 바로가기</a>
         <a href="#">푸터 영역 바로가기</a>
     </div>
-    <!-- //skip -->
 
+    <!-- header -->
     <header id="headerType" class="header_wrap score">
-        <div class="header__inner">
-            <nav>
+        <div class="header__inner container">
+            <h2 class="header__h2"><a href="#">SNOW</a></h2>
+            <nav class="header__nav">
                 <ul>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
+                    <li><a href="#">one</a></li>
+                    <li><a href="#">two</a></li>
+                    <li><a href="#">three</a></li>
+                    <li><a href="#">four</a></li>
+                    <li><a href="#">five</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
+    <!-- slider -->
+    <slider id="sliderType" class="slider__wrap score">
+        <h2 class="blind">슬라이드</h2>
+        <div class="slider_inner">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="desc">
+                                <h3>SNOW</h3>
+                                <p>
+                                    Snow Is Beautiful
+                                </p>
+                                <div class="btn">
+                                    <a href="#">MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="desc">
+                                <h3>SNOW</h3>
+                                <p>
+                                    Snow Is Beautiful
+                                </p>
+                                <div class="btn">
+                                    <a href="#">MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="desc">
+                                <h3>SNOW</h3>
+                                <p>
+                                    Snow Is Beautiful
+                                </p>
+                                <div class="btn">
+                                    <a href="#">MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button">
+                        <div class="swiper-button-play"><span class="ir">play</span></div>
+                        <div class="swiper-button-stop"><span class="ir">stop</span></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+        </div>
+    </slider>
 </body>
 </html>
