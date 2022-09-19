@@ -23,32 +23,12 @@
 
 /* media */
 @media (max-width: 1300px){
-    .header__menu {
-        position: fixed;
-        right: -100%;
-        top: 69px;
-        background: #fff;
-        width: 50%;
-        height: 100vh;
-        padding: 20px;
-        text-align: right;
-        transition: right 0.4s ease-in;
+    .header__h2 {
+        font-size: 24px;
     }
-    .header__menu li {
-        display: block;
-        margin: 20px;
-    }
-    .header__menu li a {
-        padding: 10px;
-        white-space: nowrap;
-    }
-    .header__menu.active {
-        right: 0;
-    }
-    .header__member {
-        margin-right: 50px;
-    }
-    .header__ham {
-        display: block;
+    .header__nav li a {
+        font-size: 16px;
+        display: inline;
+        padding: 0 20px;
     }
 }
