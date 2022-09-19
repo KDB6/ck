@@ -151,6 +151,14 @@
             btnMenu.classList.toggle("active");
         });
 
+        // btnMenuList.forEach((list) => {
+        //     list.addEventListener("click", () => {
+        //         document.body.classList.remove("fixed");
+        //         btnMenu.classList.remove("active");;
+        //         btnHam.classList.remove("active");
+        //     });
+        // });
+
         window.addEventListener("resize", () => {
             let width = window.innerWidth();
             if(width > 1300) {
@@ -159,7 +167,9 @@
                 btnHam.classList.remove("active");
             }
         });
+    </script>
 
+    <script>
         document.querySelectorAll("#headerType ul li a").forEach(li => {
             li.addEventListener("click", (e) => {
                 e.preventDefault();
