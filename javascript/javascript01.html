@@ -9,6 +9,34 @@
 
     <link rel="stylesheet" href="assets/css/dracula.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        #parallax__top {
+            position: fixed;
+            left: 50%;
+            bottom: -220px;
+            z-index: 10000;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            color: #666;
+            border-radius: 50%;
+            border: 1px solid #666;
+            padding: 0px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        #parallax__top.show {
+            bottom: 5px;
+        }
+        #parallax__top:hover {
+            background: #afbeff;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+    </style>
 </head>
 
 <body>
@@ -66,6 +94,10 @@
                 <li><a href="#sample16">16. 객체 : 데이터 저장(키와 값) : 표현 방법7</a></li>
                 <li><a href="#sample17">17. 객체 : 데이터 저장(키와 값) : 표현 방법8</a></li>
             </ul>
+            </div>
+
+            <div id="parallax__top">
+                Top
             </div>
 
             <div class="main_sample">
@@ -637,6 +669,22 @@
     <script>hljs.highlightAll();</script>
 
     <script>
+        window.addEventListener("scroll", () => {
+            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+
+            if(scrollTop + window.innerHeight >= document.body.scrollHeight) {
+                document.querySelector("#parallax__top").classList.add("show");
+            } else {
+                document.querySelector("#parallax__top").classList.remove("show");
+            }
+
+            document.querySelector("#parallax__info span").innerText = Math.ceil(scrollTop);
+        });
+
+        document.querySelector("#parallax__top").addEventListener("click", () => {
+            window.scrollTo({left: 0, top: 0, behavior: "smooth"})
+        });
+
         // // 01
         // {
             // var x = 100;            //변수 x에 숫자 100을 저장함
