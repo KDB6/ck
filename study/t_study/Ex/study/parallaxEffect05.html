@@ -321,7 +321,11 @@
                 2. 공통요소 클래스인 content__item에 querySelectorAll를 사용하고 forEach문을 사용해줍니다.<br>
                 각 효과를 줄 클래스들을 정한 후에 마찬가지로 상수로써 이름을 정해준 뒤 요소를 지정해줍니다.<br><br>
 
-                3. 
+                3. offset 1~3을 지정해 줄 시에는 scrollTop만 존재하면 이미지가 전체가 내려가므로<br>
+                scrollTop에 item.offsetTop을 빼주어 해당 섹션에 도달했을 시에 초기화 해줍니다.<br><br>
+
+                4. GSAP를 사용해주어 어떤 위치 도달할 지에 대하여 스크립트를 작성해줍니다.<br>
+                ease에는 GSAP가 만들어둔 여러 효과들을 한 가지 정하여 적용해줍니다.
             </p>
             <p class="t_box">
                 scrollTo의 좌표 값을 지정해주는 법은 개별적으로 사용하는 방법이 있지만, || 를 이용해 여러가지를 한번에 사용할 수도 있다.
@@ -332,21 +336,21 @@
 <pre><code class="language-js">    function scroll() {
         let scrollTop = window.pageYoffset || document.documentElement.scrollTop;
 
-        document.querySelector("#parallax__info span").innerText = Math.ceil(scrollTop);
+        document.querySelector("#parallax__info span").innerText = Math.ceil(scrollTop);    // 1
 
-        document.querySelectorAll(".content__item").forEach(item => {
+        document.querySelectorAll(".content__item").forEach(item => {    // 2
             const target1 = item.querySelector(".content__item__img");
             const target2 = item.querySelector(".content__item__desc");
             const target3 = item.querySelector(".content__item__num");
 
-            let offset1 = (scrollTop - item.offsetTop) * 0.1;
+            let offset1 = (scrollTop - item.offsetTop) * 0.05;    // 3
             let offset2 = (scrollTop - item.offsetTop) * 0.15;
             let offset3 = (scrollTop - item.offsetTop) * 0.2;
 
             // target1.style.transform = `translateY(${offset1}px)`;
             // target2.style.transform = `translateX(${offset2}px)`;
 
-            gsap.to(target1, {duration: .3, y: offset1, ease: "power4.out"})
+            gsap.to(target1, {duration: .3, y: offset1, ease: "power4.out"})    //4
             gsap.to(target2, {duration: .3, y: offset2})
             gsap.to(target3, {duration: .3, y: offset3, ease: "expo.out"})
         })
