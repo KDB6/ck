@@ -193,7 +193,6 @@ body{
 }
 
 /* 티스토리용 문서*/
-
 .document i {
     font-style: normal;
     position: relative;
@@ -215,7 +214,7 @@ body{
     margin-top: 45px;
 }
 .document .t_tit {
-    font-size: 30px;
+    font-size: 26px;
     line-height: 1.6;
     margin-bottom: 5px;
     font-weight: 400;
@@ -240,13 +239,13 @@ body{
 .document .t_desc {
     font-size: 15px;
     line-height: 1.6;
-    color: #666;
+    color: #757575;
     margin-bottom: 10px !important;
 }
 .document .t_desc2 {
     font-size: 15px;
     line-height: 1.6;
-    color: #666;
+    color: #757575;
     margin-bottom: 10px !important;
     padding: 10px 20px !important;
     border-left: 3px solid #B8BED8;
@@ -257,7 +256,7 @@ body{
     padding: 20px !important;
     background-color: #f9f9f9;
     margin-bottom: 10px;
-    color: #666;
+    color: #757575;
     border-radius: 5px;
 }
 .document .t_table {
@@ -274,7 +273,7 @@ body{
     border: 1px solid #dcdcdc;
     font-weight: normal;
     padding: 8px 10px;
-    color: #666
+    color: #757575;
 }
 .document .t_table .ce {
     text-align: center;
@@ -297,19 +296,24 @@ body{
 .document .t_link a {
     display: block;
     width: 150px;
-    background: #F2CB9C;
-    color: #666;
-    margin: 40px auto;
-    border-radius: 20px;
+    background: #B8BED8;
+    color: #fff;
+    margin: 30px auto;
+    border-radius: 10px;
     text-align: center;
-    padding: 10px;
-    transition: all 0.3s;
+    padding: 5px 5px;
+    transition: all 0.5s;
 }
 .document .t_link a:hover {
-    color: #fff;
+    color: #B8BED8;
+    background-color: #B8BED840;
+    transform: scale(105%);
+}
+.document summary {
+    color: #757575;
 }
 .document summary::marker {
-    color: #757575;
+    color: #B8BED8;
 }
 
 @media (max-width: 800px) {

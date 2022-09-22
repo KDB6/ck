@@ -1,6 +1,5 @@
 /* 웹폰트 */
 @import url('https://webfontworld.github.io/SCoreDream/SCoreDream.css');
-@import url('https://webfontworld.github.io/tmon/Tmon.css');
 
 /* 여백 초기화 */
 * {
@@ -27,33 +26,17 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
 
-/* 기울기 초기화 */
-em, i {
-    font-style: normal;
+/* 모든 페이지 레이아웃 */
+body{
+    padding: 40px;
 }
-
-/* 테이블 초기화 */
-table {
-    width: 100%;
-    border-spacing: 0;
-    border-collapse: collapse;
-}
-
-/* 레이아웃 */
-body {
-    background-color: #f5f5f5;
-}
-
 #header {
-    border-bottom: 1px solid #000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    border-bottom: 1px dashed #DCDCDC;
+    padding-bottom: 40px;
 }
 #main {
-    padding: 20px;
-    max-width: 1300px;
-    margin: 0 auto; /* 가운데 정렬 */  
+    padding: 40px 0;
+    border-bottom: 1px dashed #DCDCDC;
 }
 #footer {
     padding: 40px 0;
@@ -64,101 +47,160 @@ body {
 }
 
 /* 헤더 영역 */
-#header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 10000;
-    backdrop-filter: blur(10px);
-    padding: 14px 20px 5px 20px;
-    box-sizing: border-box;
+#header h1 a {
+    font-size: 60px;
+    font-weight: 700;
 }
-#header h1 a{
-    font-size: 36px;
-    font-weight: 500;
-}
-#header span{
-    color: #666;
-    padding-top: 20px;
-}
-
-/* 메인 영역 */
-.main_header {}
-.main_header h2{
-    font-size: 80px;
-    text-align: center;
-    padding: 10% 10% 5% 10%;
-    font-family: 'tmon';
-}
-.main_header h2 em {
-    font-size: 80px;
-    color: #00DB72;
-    font-family: 'tmon';
-}
-
-.main_menu {}
-
-.main_menu li{
+.header_nav ul li {
     display: inline;
 }
-.main_menu li a{
-    background-color: #00DB72;
-    padding: 5px 15px;
-    display: inline-block;
-    color: #fff;
-    margin-bottom: 5px;
-}
-.main_menu li.active a{
+.header_nav ul li.active a {
     background-color: #000;
     color: #fff;
 }
+.header_nav ul li a {
+    border:  1px solid #222;
+    padding: 8px 25px;
+    display: inline-block;
+    margin-bottom: 7px;
+}
+.header_nav ul li a:hover{
+ background-color: #000;
+ color: #fff;
+}
+.header_nav .study {
+    margin-top: 10px;
+}
+.header_nav .study li{}
+.header_nav .study li a{
+    border-radius: 50px;
+    padding: 6px 30px;
+    background-color: #000;
+    color: #fff;
+}
+.header_nav .effect {
+    margin-top: 10px;
+}
+.header_nav .effect li a {
+    border-radius: 40px;
+}
 
-.main_refer {
-    border: 1px solid #000;
-    padding: 30px;
-    background-color: #fff;
-    margin-top: 20px;
+/* 메인 샘플 */
+.main_sample {
+    margin-top: 40px;
+    border-top: 1px dashed #dcdcdc;
+    padding-top: 40px;
 }
-.main_refer .table {
-    text-align: center;
+.main_sample h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
 }
-.main_refer .table table {
-    width: 100%;
-    border: 1px solid #cdcdcd
+.main_sample p {
+    margin-bottom: 10px;
+    color: #666;
 }
-.main_refer .table table tr th {
-    background-color: #f5f5f5;
-    font-weight: normal;
+.main_sample .result {
+    margin-bottom: 80px;
 }
-.main_refer .table table tr th,
-.main_refer .table table tr td {
-    border: 1px solid #cdcdcd;
+.box {
+    background-color: #ededed;
     padding: 10px;
 }
-.main_refer .table table tr td span {
-    font-size: 16px;
-    line-height: 1.6;
+.table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
 }
-.main_refer .table table tr td:nth-child(3) {
-    text-align: left;
+.table .center {
+    text-align: center;
 }
-.main_refer .table table tr:hover {
-    background-color: #d7ffec;
+.table tr th {
+    border: 1px solid #dedede;
+    background-color: #fff;
+    padding: 10px;
+    font-weight: normal;
 }
-.main_refer .table table tr a:hover {
-    text-decoration: underline;
+.table tr td {
+    border: 1px solid #dedede;
+    padding: 10px;
 }
-.document {
-    border: 1px;
+
+/* sample */
+.sample {
+    margin-bottom: 50px;
 }
+.sample .table {
+    margin-bottom: 10px;
+}
+.sample .table table {
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    text-align: center;
+}
+.sample .table table tr th {
+    font-weight: normal;
+    background-color: #f5f5f5;
+    padding: 3px;
+
+}
+.sample .table table tr td {
+    border: 1px solid #e6e6e6;
+    padding: 6px;
+}
+.sample .table table tr td[class*="_P"] {
+    color: #fff;
+}
+.sample .table table tr td[class*="_P"]:hover {
+    color: #000;
+    cursor: help;
+}
+.sample .table table tr td[class*="_A"] {
+    color: #fff;
+}
+.sample .table table tr td[class*="_A"]:hover {
+    color: #000;
+    cursor: help;
+}
+.sample .box {
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+@media (max-width: 800px) {
+    .sample .table {
+        overflow-x: scroll;
+    }
+    .sample .table table {
+        width: 790px;
+    }
+    .sample .table table tr td[class*="_P"] {
+        color: #fff;
+    }
+    .sample .table table tr td[class*="_P"]:hover {
+        color: #000;
+        cursor: help;
+    }
+    .sample .table table tr td[class*="_A"] {
+        color: #fff;
+    }
+    .sample .table table tr td[class*="_A"]:hover {
+        color: #000;
+        cursor: help;
+    }
+}
+
+/* 티스토리용 문서*/
 .document i {
     font-style: normal;
     position: relative;
 }
 .document i::before {
     content:'';
-    background-color: #2141df62;
+    background-color: #B8BED8;
+    opacity: 40%;
     width: 100%;
     height: 10px;
     position: absolute;
@@ -168,14 +210,15 @@ body {
 }
 .document hr {
     border: 0;
-    border-top: 1px dashed #dcdcdc;
+    border-top: 1px dashed #B8BED8;
     margin-top: 45px;
 }
 .document .t_tit {
-    font-size: 30px;
+    font-size: 26px;
     line-height: 1.6;
     margin-bottom: 5px;
     font-weight: 400;
+    color: #505050;
 }
 .document .t_tit2 {
     font-size: 22px;
@@ -183,6 +226,7 @@ body {
     margin-top: 50px;
     margin-bottom: 5px;
     font-weight: 400;
+    color: #606060;
 }
 .document .t_tit3 {
     font-size: 16px;
@@ -190,27 +234,29 @@ body {
     margin-top: 0px;
     margin-bottom: 5px;
     font-weight: 400;
+    color: #606060;
 }
 .document .t_desc {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.6;
-    color: #666;
+    color: #757575;
     margin-bottom: 10px !important;
 }
 .document .t_desc2 {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.6;
-    color: #666;
+    color: #757575;
     margin-bottom: 10px !important;
-    padding: 15px 20px !important;
-    border-left: 4px solid #00db72;
-    background-color: #f9f9f9;
+    padding: 10px 20px !important;
+    border-left: 3px solid #B8BED8;
+    /* background-color: #f9f9f9;
+    border-radius: 20px; */
 }
 .document .t_box {
     padding: 20px !important;
     background-color: #f9f9f9;
     margin-bottom: 10px;
-    color: #666;
+    color: #757575;
     border-radius: 5px;
 }
 .document .t_table {
@@ -227,11 +273,12 @@ body {
     border: 1px solid #dcdcdc;
     font-weight: normal;
     padding: 8px 10px;
-    color: #666
+    color: #757575;
 }
 .document .t_table .ce {
     text-align: center;
 }
+
 .document .t_iframe {
     position: relative;
     padding-top: 56%;
@@ -246,40 +293,31 @@ body {
     width: 100%;
     height: 100%;
 }
-
-/* 미디어 쿼리 */
-@media (max-width: 900px){
-    #header {
-        display: none;
-    }
-    .main_header h2{
-        font-size: 40px;
-        padding: 40px;
-    }
-    .main_header h2 em{
-        font-size: 40px;
-    }
-    .main_refer{
-        border: 0;
-        padding: 0;
-    }
-    .main_refer .table{
-        overflow: auto;
-    }
+.document .t_link a {
+    display: block;
+    width: 150px;
+    background: #B8BED8;
+    color: #fff;
+    margin: 30px auto;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px 5px;
+    transition: all 0.5s;
 }
-    .main_refer .table table{
-        min-width: 900px;
-    }
-    .main_refer .table table tr th,
-    .main_refer .table table tr td{
-        font-size: 14px;
-    }     
-@media (max-width: 460px){
-    .main_header h2{
-        font-size: 30px;
+.document .t_link a:hover {
+    color: #B8BED8;
+    background-color: #B8BED840;
+    transform: scale(105%);
+}
+.document summary {
+    color: #757575;
+}
+.document summary::marker {
+    color: #B8BED8;
+}
+
+@media (max-width: 800px) {
+    body {
         padding: 20px;
-    }
-    .main_header h2 em{
-        font-size: 30px;
     }
 }
