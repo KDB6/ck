@@ -200,7 +200,7 @@ body{
 }
 .document i::before {
     content:'';
-    background-color: #F2CB9C;
+    background-color: #B8BED8;
     opacity: 40%;
     width: 100%;
     height: 10px;
@@ -211,7 +211,7 @@ body{
 }
 .document hr {
     border: 0;
-    border-top: 1px dashed #dcdcdc;
+    border-top: 1px dashed #B8BED8;
     margin-top: 45px;
 }
 .document .t_tit {
@@ -219,6 +219,7 @@ body{
     line-height: 1.6;
     margin-bottom: 5px;
     font-weight: 400;
+    color: #505050;
 }
 .document .t_tit2 {
     font-size: 22px;
@@ -226,6 +227,7 @@ body{
     margin-top: 50px;
     margin-bottom: 5px;
     font-weight: 400;
+    color: #606060;
 }
 .document .t_tit3 {
     font-size: 16px;
@@ -233,21 +235,23 @@ body{
     margin-top: 0px;
     margin-bottom: 5px;
     font-weight: 400;
+    color: #606060;
 }
 .document .t_desc {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.6;
     color: #666;
     margin-bottom: 10px !important;
 }
 .document .t_desc2 {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.6;
     color: #666;
     margin-bottom: 10px !important;
-    padding: 15px 20px !important;
-    border-left: 4px solid #F2CB9C;
-    background-color: #f9f9f9;
+    padding: 10px 20px !important;
+    border-left: 3px solid #B8BED8;
+    /* background-color: #f9f9f9;
+    border-radius: 20px; */
 }
 .document .t_box {
     padding: 20px !important;
@@ -303,6 +307,9 @@ body{
 }
 .document .t_link a:hover {
     color: #fff;
+}
+.document summary::marker {
+    color: #757575;
 }
 
 @media (max-width: 800px) {
