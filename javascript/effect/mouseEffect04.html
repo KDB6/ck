@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>마우스 이펙트 03</title>
+    <title>마우스 이펙트 04</title>
     <link rel="stylesheet" href="../assets/css/mouse.css">
     <link rel="stylesheet" href="../assets/css/dracula.css">
 
@@ -19,61 +19,59 @@
             color: #fff;
             overflow: hidden;
             flex-direction: column;
-            cursor: none;
+            /* cursor: none; */
         }
-        .mouse__wrap p {
-            font-size: 2vw;
-            line-height: 2;
-            font-weight: 300;
+        .mouse__wrap figure {
+            width: 50vw;
+            height: 50vh;
+            background: #ccc;
+            position: relative;
+            transition: transform 500ms ease;
         }
-        .mouse__wrap p:last-child {
-            font-size: 3vw;
-            font-weight: 300;
+        .mouse__wrap figure img {
+            position: absolute;
+            left: -5%;
+            top: -5%;
+            width: 110%;
+            height: 110%;
+            object-fit: cover;
         }
-        .mouse__wrap p span {
-                border-bottom: 0.15vw dashed #666;
-                color: #b0aaff;
-            }
-        @media(max-width: 800px) {
-            .mouse__wrap p {
-                padding: 0 20px;
-                font-size: 20px;
-                line-height: 1.5;
-                text-align: center;
-                margin-bottom: 10px;
-            }
-            .mouse__wrap p:last-child {
-                font-size: 40px;
-                line-height: 1.2;
-                text-align: center;
-                word-break: keep-all;
-            }
+        .mouse__wrap figure:hover {
+            transform: scale(1.025);
+        }
+        .mouse__wrap figure figcaption {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 16px;
+            white-space: nowrap;
+            line-height: 1.4;
         }
         .mouse__cursor {
             position: absolute;
             left: 0;
             top: 0;
-            width: 200px;
-            height: 200px;
-            z-index: -1;
+            width: 20px;
+            height: 20px;
+            background: #fff;
             border-radius: 50%;
-            background-image: url(../assets/img/slide04.jpg);
-            background-size: cover;
-            background-position: center center;
-            background-attachment: fixed;
-            border: 5px solid #fff;
+            z-index: 1000;
+            user-select: none;
+            pointer-events: none;
         }
     </style>
 </head>
-<body class="jeju img04">
+<body class="jeju img05">
     <header id="header">
-        <h1>Javascript Mouse Effect03</h1>
-        <p>마우스 이펙트 - 조명 효과</p>
+        <h1>Javascript Mouse Effect04</h1>
+        <p>마우스 이펙트 - 이미지 효과</p>
         <ul>
             <li><a href="mouseEffect01.html">1</a></li>
             <li><a href="mouseEffect02.html">2</a></li>
-            <li class="active"><a href="mouseEffect03.html">3</a></li>
-            <li><a href="mouseEffect04.html">4</a></li>
+            <li><a href="mouseEffect03.html">3</a></li>
+            <li class="active"><a href="mouseEffect04.html">4</a></li>
             <li><a href="mouseEffect05.html">5</a></li>
             <li><a href="mouseEffect06.html">6</a></li>
             <li><a href="mouseEffect07.html">7</a></li>
@@ -85,8 +83,13 @@
         <section id="mouseType">
             <div class="mouse__cursor"></div>
             <div class="mouse__wrap">
-                <p><span class="style1">Justice</span> without <span class="style2">power</span> is <span class="style3">incompetence.</span></p>
-                <p><span class="style4">힘</span> 없는 <span class="style5">정의</span>는 <span class="style6">무능</span>이다.</p>
+                <figure>
+                    <img src="../assets/img/slide05.jpg" alt="이미지">
+                    <figcaption>
+                        <p>Look at yourself before blaming others</p>
+                        <p>남 탓 하기 전에 너 자신을 봐라.</p>
+                    </figcaption>
+                </figure>
             </div>
         </section>
     </main>
@@ -189,32 +192,7 @@
     </script>
 
     <script>
-        const cursor = document.querySelector(".mouse__cursor");
 
-        // const circleW = cursor.offsetWidth;    // 200
-        // const circleH = cursor.offsetHeight;   // 200
-        // const circle1 = cursor.clientWidth;    // 190 : 보더 값 제외
-
-        const circle = cursor.getBoundingClientRect();
-        console.log(circle);
-            // const DOMRect = {
-            //     x: 0,
-            //     y: 0,
-            //     bottom: 200,
-            //     height: 200,
-            //     left: 0,
-            //     right: 200,
-            //     top: 0,
-            //     width: 200
-            // }
-
-        window.addEventListener("mousemove", (e) => {
-            gsap.to(cursor, {
-                duration: 0.5,
-                left: e.pageX - circle.width/2,
-                top: e.pageY - circle.height/2
-            });
-        });
     </script>
 </body>
 </html>
