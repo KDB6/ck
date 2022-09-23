@@ -105,14 +105,14 @@
 
         /* slider */
         .sliderWrap {
-            margin-top: 60px;
+            margin-top: 25px;
             width: 700px;
             height: 400px;
-            width: 100%;
+            height: 100%;
             align-items: center;
             display: flex;
             justify-content: center;
-            margin-left: 50px;
+            margin-left: 70px;
         }
         .sliderImg {
             width: 700px;
@@ -123,8 +123,8 @@
         .sliderInner {
             display: flex;
             flex-wrap: wrap;
-            width: 3500px;  
-            height: 400px;
+            width: 700px;  
+            height: 2000px;
         }
         .slider {
             position: relative;
@@ -303,6 +303,7 @@
             height: 100px;
             background-color: #EDF2F8;
             margin-top: 50px;
+            margin-bottom: 60px;
         }
         .footer__all {
             display: flex;
@@ -478,7 +479,7 @@
 
         let sliderCount = slider.length;
         let sliderClone = sliderInner.firstElementChild.cloneNode(true);
-        let sliderWidth = sliderImg.offsetWidth;
+        let sliderHeight = sliderImg.offsetHeight;
         let currentIndex = 0;
         
         sliderInner.appendChild(sliderClone);
@@ -487,11 +488,11 @@
 
             currentIndex++;
             sliderInner.style.transition = "all 0.6s";
-            sliderInner.style.transform = "translateX(-"+ sliderWidth * currentIndex +"px)";
+            sliderInner.style.transform = "translateY(-"+ sliderHeight * currentIndex +"px)";
             
             if(currentIndex == sliderCount) {
                 setTimeout(() => {
-                    sliderInner.style.transform = "translateX(0px)";
+                    sliderInner.style.transform = "translateY(0px)";
                     sliderInner.style.transition = "0s";
                 }, 700);
                 currentIndex = 0;
@@ -502,11 +503,24 @@
 
     <script>
         // tab
-        
+        const tab = document.querySelector(".cardh22");
+
+        let tabC = tab
+
+        tabC.forEach(() => {
+            tabC.addEventListener(".click", () => {
+                
+            })
+        })
     </script>
 
     <script>
         // popup
+        const con01C = document.querySelector(".con__box01");
+        const con02C = document.querySelector(".con__box02");
+        const con03C = document.querySelector(".con__box03");
+
+        
     </script>
 </body>
 </html>
