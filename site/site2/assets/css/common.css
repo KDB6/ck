@@ -79,8 +79,12 @@
 }
 
 /*  폰트 */
+.gmark {
+    font-family: "GmarketSans";
+    font-weight: 400;
+}
 .nexon {
-    font-family: "NexonLv1Gothic";
+    font-family: 'NexonLv1Gothic';
     font-weight: 400;
 }
 
