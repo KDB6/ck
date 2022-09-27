@@ -139,41 +139,41 @@
                         </table>
                     </div>
                     <div class="script">
-<pre><code class="language-js">     //01
-    const str1 = "자바스크립트";
-    const str2 = "제이쿼리";
+<pre><code class="language-js">//01
+const str1 = "자바스크립트";
+const str2 = "제이쿼리";
 
-    document.querySelector(".sample01_N1").innerHTML = "1";
-    document.querySelector(".sample01_Q1").innerHTML = "자바스크립트, 제이쿼리";
-    document.querySelector(".sample01_M1").innerHTML = "문자열 결합";
-    document.querySelector(".sample01_P1").innerHTML = str1 + str2;
+document.querySelector(".sample01_N1").innerHTML = "1";
+document.querySelector(".sample01_Q1").innerHTML = "자바스크립트, 제이쿼리";
+document.querySelector(".sample01_M1").innerHTML = "문자열 결합";
+document.querySelector(".sample01_P1").innerHTML = str1 + str2;
 
-    const num1 = 100;
-    const num2 = 200;
+const num1 = 100;
+const num2 = 200;
 
-    //02
-    document.querySelector(".sample01_N2").innerHTML = "2";
-    document.querySelector(".sample01_Q2").innerHTML = "100, 200";
-    document.querySelector(".sample01_M2").innerHTML = "숫자(number) 결합";
-    document.querySelector(".sample01_P2").innerHTML = num1 + num2;
-    // 자바스크립트 제이쿼리
+//02
+document.querySelector(".sample01_N2").innerHTML = "2";
+document.querySelector(".sample01_Q2").innerHTML = "100, 200";
+document.querySelector(".sample01_M2").innerHTML = "숫자(number) 결합";
+document.querySelector(".sample01_P2").innerHTML = num1 + num2;
+// 자바스크립트 제이쿼리
 
-    //03
-    const text1 = "모던";
-    const text2 = "자바스크립트";
-    const text3 = "핵심";
+//03
+const text1 = "모던";
+const text2 = "자바스크립트";
+const text3 = "핵심";
 
-    document.querySelector(".sample01_N3").innerHTML = "3";
-    document.querySelector(".sample01_Q3").innerHTML = "모던, 자바스크립트, 핵심";
-    document.querySelector(".sample01_M3").innerHTML = "문자열(string) 결합";
-    document.querySelector(".sample01_P3").innerHTML = "나는 " + text1 + "(modern) " + text2 + "(javascript) " + text3 + "을 배우고 싶다";
+document.querySelector(".sample01_N3").innerHTML = "3";
+document.querySelector(".sample01_Q3").innerHTML = "모던, 자바스크립트, 핵심";
+document.querySelector(".sample01_M3").innerHTML = "문자열(string) 결합";
+document.querySelector(".sample01_P3").innerHTML = "나는 " + text1 + "(modern) " + text2 + "(javascript) " + text3 + "을 배우고 싶다";
 
-    //04
-    // 템플릿 문자열을 사용
-    document.querySelector(".sample01_N4").innerHTML = "4";
-    document.querySelector(".sample01_Q4").innerHTML = "모던, 자바스크립트, 핵심";
-    document.querySelector(".sample01_M4").innerHTML = "템플릿 문자열";
-    document.querySelector(".sample01_P4").innerHTML = `나는 ${text1}(modern) ${text2}(javascript) ${text3}을 배우고 싶다.`;
+//04
+// 템플릿 문자열을 사용
+document.querySelector(".sample01_N4").innerHTML = "4";
+document.querySelector(".sample01_Q4").innerHTML = "모던, 자바스크립트, 핵심";
+document.querySelector(".sample01_M4").innerHTML = "템플릿 문자열";
+document.querySelector(".sample01_P4").innerHTML = `나는 ${text1}(modern) ${text2}(javascript) ${text3}을 배우고 싶다.`;
 </code></pre>
                     </div>
                 </div>
@@ -215,21 +215,21 @@
                         </table>
                     </div>
                     <div class="script">
-<pre><code class="language-js">    const str1 = "javascript";
-    const currentStr1 = str1.toUpperCase();
+<pre><code class="language-js">const str1 = "javascript";
+const currentStr1 = str1.toUpperCase();
 
-    document.querySelector(".sample02_N1").innerHTML = "1";
-    document.querySelector(".sample02_Q1").innerHTML = "javascript";
-    document.querySelector(".sample02_M1").innerHTML = "toUpperCase";
-    document.querySelector(".sample02_P1").innerHTML = currentStr1;
+document.querySelector(".sample02_N1").innerHTML = "1";
+document.querySelector(".sample02_Q1").innerHTML = "javascript";
+document.querySelector(".sample02_M1").innerHTML = "toUpperCase";
+document.querySelector(".sample02_P1").innerHTML = currentStr1;
 
-    const str2 = "JAVASCRIPT";
-    const currentStr2 = str1.toLowerCase();
+const str2 = "JAVASCRIPT";
+const currentStr2 = str1.toLowerCase();
 
-    document.querySelector(".sample02_N2").innerHTML = "2";
-    document.querySelector(".sample02_Q2").innerHTML = "JAVASCRIPT";
-    document.querySelector(".sample02_M2").innerHTML = "toLowerCase";
-    document.querySelector(".sample02_P2").innerHTML = currentStr2;
+document.querySelector(".sample02_N2").innerHTML = "2";
+document.querySelector(".sample02_Q2").innerHTML = "JAVASCRIPT";
+document.querySelector(".sample02_M2").innerHTML = "toLowerCase";
+document.querySelector(".sample02_P2").innerHTML = currentStr2;
 </code></pre>
                     </div>
                 </div>
@@ -277,29 +277,29 @@
                         </table>
                     </div>
                     <div class="script">
-<pre><code class="language-js">    const str1 = "       javascript      "
-    const currentStr1 = str1.trim();
+<pre><code class="language-js">const str1 = "       javascript      "
+const currentStr1 = str1.trim();
 
-    document.querySelector(".sample03_N1").innerHTML = "1";
-    document.querySelector(".sample03_Q1").innerHTML = "javascript";
-    document.querySelector(".sample03_M1").innerHTML = "trim";
-    document.querySelector(".sample03_P1").innerHTML = currentStr1;
-    
-    const str2 = "       javascript      "
-    const currentStr2 = str2.trimStart();
+document.querySelector(".sample03_N1").innerHTML = "1";
+document.querySelector(".sample03_Q1").innerHTML = "javascript";
+document.querySelector(".sample03_M1").innerHTML = "trim";
+document.querySelector(".sample03_P1").innerHTML = currentStr1;
 
-    document.querySelector(".sample03_N2").innerHTML = "2";
-    document.querySelector(".sample03_Q2").innerHTML = "str2";
-    document.querySelector(".sample03_M2").innerHTML = "trimStart";
-    document.querySelector(".sample03_P2").innerHTML = currentStr2;
+const str2 = "       javascript      "
+const currentStr2 = str2.trimStart();
 
-    const str3 = "       javascript      "
-    const currentStr3 = str3.trimEnd();
+document.querySelector(".sample03_N2").innerHTML = "2";
+document.querySelector(".sample03_Q2").innerHTML = "str2";
+document.querySelector(".sample03_M2").innerHTML = "trimStart";
+document.querySelector(".sample03_P2").innerHTML = currentStr2;
 
-    document.querySelector(".sample03_N3").innerHTML = "3";
-    document.querySelector(".sample03_Q3").innerHTML = "str3";
-    document.querySelector(".sample03_M3").innerHTML = "trimEnd";
-    document.querySelector(".sample03_P3").innerHTML = currentStr3;
+const str3 = "       javascript      "
+const currentStr3 = str3.trimEnd();
+
+document.querySelector(".sample03_N3").innerHTML = "3";
+document.querySelector(".sample03_Q3").innerHTML = "str3";
+document.querySelector(".sample03_M3").innerHTML = "trimEnd";
+document.querySelector(".sample03_P3").innerHTML = currentStr3;
 </code></pre>
                     </div>
                 </div>
@@ -317,44 +317,44 @@
                         "문자열".substr(시작위치, 길이)
                     </div>
                     <div class="script">
-<pre><code class="language-js">    const str1 = "javascript reference"
+<pre><code class="language-js">const str1 = "javascript reference"
 
-    const cuurrentStr1 = str1.slice(0);                  // javascript reference
-    const cuurrentStr2 = str1.slice(1);                  // avascript reference
-    const cuurrentStr3 = str1.slice(2);                  // vascript reference
-    const cuurrentStr4 = str1.slice(0, 1);              // j
-    const cuurrentStr5 = str1.slice(0, 2);              // ja
-    const cuurrentStr6 = str1.slice(0, 3);              // jav
-    const cuurrentStr7 = str1.slice(1, 2);              // a 
-    const cuurrentStr8 = str1.slice(1, 3);              // av
-    const cuurrentStr9 = str1.slice(1, 4);              // ava
-    const cuurrentStr10 = str1.slice(-1);               // e
-    const cuurrentStr11 = str1.slice(-2);               // ce
-    const cuurrentStr12 = str1.slice(-3);               // nce
-    const cuurrentStr13 = str1.slice(-3, -1);          // nc
-    const cuurrentStr14 = str1.slice(-3, -2);          // c
-    const cuurrentStr15 = str1.slice(-3, -3);          //
-    const cuurrentStr16 = str1.slice(1, 4);             // ava
-    const cuurrentStr17 = str1.slice(4, 1);             // ''
+const cuurrentStr1 = str1.slice(0);                  // javascript reference
+const cuurrentStr2 = str1.slice(1);                  // avascript reference
+const cuurrentStr3 = str1.slice(2);                  // vascript reference
+const cuurrentStr4 = str1.slice(0, 1);              // j
+const cuurrentStr5 = str1.slice(0, 2);              // ja
+const cuurrentStr6 = str1.slice(0, 3);              // jav
+const cuurrentStr7 = str1.slice(1, 2);              // a 
+const cuurrentStr8 = str1.slice(1, 3);              // av
+const cuurrentStr9 = str1.slice(1, 4);              // ava
+const cuurrentStr10 = str1.slice(-1);               // e
+const cuurrentStr11 = str1.slice(-2);               // ce
+const cuurrentStr12 = str1.slice(-3);               // nce
+const cuurrentStr13 = str1.slice(-3, -1);          // nc
+const cuurrentStr14 = str1.slice(-3, -2);          // c
+const cuurrentStr15 = str1.slice(-3, -3);          //
+const cuurrentStr16 = str1.slice(1, 4);             // ava
+const cuurrentStr17 = str1.slice(4, 1);             // ''
 
-    const cuurrentStr18 = str1.substring(1, 4);      // ava  // substring은 자동으로 변환해줌
-    const cuurrentStr19 = str1.substring(4, 1);      // ava  // substring은 자동으로 변환해줌
+const cuurrentStr18 = str1.substring(1, 4);      // ava  // substring은 자동으로 변환해줌
+const cuurrentStr19 = str1.substring(4, 1);      // ava  // substring은 자동으로 변환해줌
 
-    const cuurrentStr20 = str1.substr(0);               // javascript reference
-    const cuurrentStr21 = str1.substr(1);               // avascript reference
-    const cuurrentStr22 = str1.substr(2);               // avascript reference
-    const cuurrentStr23 = str1.substr(0, 1);           // j
-    const cuurrentStr24 = str1.substr(0, 2);           // ja
-    const cuurrentStr25 = str1.substr(0, 3);           // jav
-    const cuurrentStr26 = str1.substr(1, 2);           // av
-    const cuurrentStr27 = str1.substr(1, 3);           // ava
-    const cuurrentStr28 = str1.substr(1, 4);           // avas
-    const cuurrentStr29 = str1.substr(-1);             // e
-    const cuurrentStr30 = str1.substr(-2);             // ce
-    const cuurrentStr31 = str1.substr(-3);             // nce
-    const cuurrentStr32 = str1.substr(-1, 1);         // e
-    const cuurrentStr33 = str1.substr(-2, 2);         // ce
-    const cuurrentStr34 = str1.substr(-3, 3);         // nce
+const cuurrentStr20 = str1.substr(0);               // javascript reference
+const cuurrentStr21 = str1.substr(1);               // avascript reference
+const cuurrentStr22 = str1.substr(2);               // avascript reference
+const cuurrentStr23 = str1.substr(0, 1);           // j
+const cuurrentStr24 = str1.substr(0, 2);           // ja
+const cuurrentStr25 = str1.substr(0, 3);           // jav
+const cuurrentStr26 = str1.substr(1, 2);           // av
+const cuurrentStr27 = str1.substr(1, 3);           // ava
+const cuurrentStr28 = str1.substr(1, 4);           // avas
+const cuurrentStr29 = str1.substr(-1);             // e
+const cuurrentStr30 = str1.substr(-2);             // ce
+const cuurrentStr31 = str1.substr(-3);             // nce
+const cuurrentStr32 = str1.substr(-1, 1);         // e
+const cuurrentStr33 = str1.substr(-2, 2);         // ce
+const cuurrentStr34 = str1.substr(-3, 3);         // nce
 </code></pre>
                     </div>
                 </div>
@@ -369,30 +369,30 @@
                         "문자열".split(구분자, 갯수);<br>
                     </div>
                     <div class="script">
-<pre><code class="language-js">    const str1 = "javascript reference"
-    const currentStr1 = str1.split('')                                  // ['j','a','v','a','s','c','r','i','p','t','','r','e','f','e','r','e','n','c','e']
-    const currentStr2 = str1.split(' ')                                 // ['javascript', 'reference']
-    const currentStr3 = str1.split('', 1)                              // ['j']
-    const currentStr4 = str1.split('', 2)                              // ['j', 'a']
-    const currentStr5 = str1.split(' ', 1)                             // ['javascript']
-    const currentStr6 = str1.split(' ', 2)                             // ['javascript', 'reference']
-    const currentStr7 = str1.split('j')                                 // ['','avascript reference']
-    const currentStr8 = str1.split('a')                                // ['j', 'v', 'script reference']
-    const currentStr9 = str1.split('e')                                // ['javascript r', 'f', 'r', 'nc', '']
+<pre><code class="language-js">const str1 = "javascript reference"
+const currentStr1 = str1.split('')                                  // ['j','a','v','a','s','c','r','i','p','t','','r','e','f','e','r','e','n','c','e']
+const currentStr2 = str1.split(' ')                                 // ['javascript', 'reference']
+const currentStr3 = str1.split('', 1)                              // ['j']
+const currentStr4 = str1.split('', 2)                              // ['j', 'a']
+const currentStr5 = str1.split(' ', 1)                             // ['javascript']
+const currentStr6 = str1.split(' ', 2)                             // ['javascript', 'reference']
+const currentStr7 = str1.split('j')                                 // ['','avascript reference']
+const currentStr8 = str1.split('a')                                // ['j', 'v', 'script reference']
+const currentStr9 = str1.split('e')                                // ['javascript r', 'f', 'r', 'nc', '']
 
-    const str2 = "java/script refer/ence"
-    const cuurrentStr10 = str2.split('/');                            // ['java', 'script', 'refer', 'ence']
+const str2 = "java/script refer/ence"
+const cuurrentStr10 = str2.split('/');                            // ['java', 'script', 'refer', 'ence']
 
-    const str3 = "java&script&refer!ence";
-    const cuurrentStr11 = str3.split('!');                             // ['java&script&refer', 'ence']
-    const cuurrentStr12 = str3.split('&');                            // ['java/script', 'refer!ence']
-    const cuurrentStr13 = str3.split(/&|\!/);                     // ['java', 'script', 'refer', 'ence']
-    
-    const str4 = "javascript reference";
-    const cuurrentStr14 = str4.split('').join();                     // j,a,v,a,s,c,r,i,p,t, ,r,e,f,e,r,e,n,c,e
-    const cuurrentStr15 = str4.split('').join('*');                  // j*a*v*a*s*c*r*i*p*t* *r*e*f*e*r*e*n*c*e
-    const cuurrentStr16 = str4.split('').reverse().join('');    // ecnerefer tpircsavaj
-    const cuurrentStr17 = str4.split('').reverse().join('^^'); // e^^c^^n^^e^^r^^e^^f^^e^^r^^ ^^t^^p^^i^^r^^c^^s^^a^^v^^a^^j
+const str3 = "java&script&refer!ence";
+const cuurrentStr11 = str3.split('!');                             // ['java&script&refer', 'ence']
+const cuurrentStr12 = str3.split('&');                            // ['java/script', 'refer!ence']
+const cuurrentStr13 = str3.split(/&|\!/);                     // ['java', 'script', 'refer', 'ence']
+
+const str4 = "javascript reference";
+const cuurrentStr14 = str4.split('').join();                     // j,a,v,a,s,c,r,i,p,t, ,r,e,f,e,r,e,n,c,e
+const cuurrentStr15 = str4.split('').join('*');                  // j*a*v*a*s*c*r*i*p*t* *r*e*f*e*r*e*n*c*e
+const cuurrentStr16 = str4.split('').reverse().join('');    // ecnerefer tpircsavaj
+const cuurrentStr17 = str4.split('').reverse().join('^^'); // e^^c^^n^^e^^r^^e^^f^^e^^r^^ ^^t^^p^^i^^r^^c^^s^^a^^v^^a^^j
 </code></pre>
                     </div>
                 </div>
@@ -402,24 +402,24 @@
                     <h3>06. replace() / replaceAll</h3>
                     <p>replace() 메서드는 문자열을 부분 문자로 구분하고 배열로 반환한다.</p>
                     <div class="script">
-<pre><code class="language-js">    const str1 = "javascript reference"
-    const cirrentStr1 = str1.replace("javascript", "자바스크립트")         // 자바스크립트 reference
-    const cirrentStr2 = str1.replace("j", "J")                                          // Javascript reference
-    const cirrentStr3 = str1.replace("e", "E")                                         // Javascript rEference
-    const cirrentStr4 = str1.replaceAll("e", "E")                                     // Javascript rEfErEncE
-    const cirrentStr5 = str1.replaceAll(/e/g, "E")                                   // Javascript rEfErEncE
-    const cirrentStr6 = str1.replaceAll(/e/gi, "E")                                  // Javascript rEfErEncE
+<pre><code class="language-js">const str1 = "javascript reference"
+const cirrentStr1 = str1.replace("javascript", "자바스크립트")         // 자바스크립트 reference
+const cirrentStr2 = str1.replace("j", "J")                                          // Javascript reference
+const cirrentStr3 = str1.replace("e", "E")                                         // Javascript rEference
+const cirrentStr4 = str1.replaceAll("e", "E")                                     // Javascript rEfErEncE
+const cirrentStr5 = str1.replaceAll(/e/g, "E")                                   // Javascript rEfErEncE
+const cirrentStr6 = str1.replaceAll(/e/gi, "E")                                  // Javascript rEfErEncE
 
-    const str2 = "https://www.naver.com/img01.jpg";
-    const cirrentStr7 = str2.replace("img01", "img02")
+const str2 = "https://www.naver.com/img01.jpg";
+const cirrentStr7 = str2.replace("img01", "img02")
 
-    const str3 = "010-2000-1000";
-    const cirrentStr8 = str3.replace("-","")                                             // 0102000-1000
-    const cirrentStr9 = str3.replaceAll("-","")                                         // 01020001000
-    const cirrentStr10 = str3.replaceAll(/-/g,"")                                     // 01020001000
-    const cirrentStr11 = str3.replaceAll(/-/g," ")                                    // 010 2000 1000
-    const cirrentStr12 = str3.replaceAll("-","*")                                      // 010*2000*1000
-    const cirrentStr13 = str3.replaceAll(/[1,2]/g, "*")                            // 010*2000*1000
+const str3 = "010-2000-1000";
+const cirrentStr8 = str3.replace("-","")                                             // 0102000-1000
+const cirrentStr9 = str3.replaceAll("-","")                                         // 01020001000
+const cirrentStr10 = str3.replaceAll(/-/g,"")                                     // 01020001000
+const cirrentStr11 = str3.replaceAll(/-/g," ")                                    // 010 2000 1000
+const cirrentStr12 = str3.replaceAll("-","*")                                      // 010*2000*1000
+const cirrentStr13 = str3.replaceAll(/[1,2]/g, "*")                            // 010*2000*1000
 </code></pre>
                     </div>
                 </div>
@@ -432,12 +432,12 @@
                         "문자열".concat(문자열, 문자열,,,,)
                     </div>
                     <div class="script">
-<pre><code class="language-js">    const str1 = "javascript";
-    const currentStr1 = str1.concat("reference");                                   // javascriptreference
-    const currentStr2 = str1.concat(" ", "reference");                             // javascript reference
-    const currentStr3 = str1.concat(", ", "reference");                            // javascript, reference
-    const currentStr4 = str1.concat(", ", "reference", ", ", "book");         // javascript, reference, book
-    const currentStr5 = str1.concat(" ", ["reference","book"]);               // javascript reference,book
+<pre><code class="language-js">const str1 = "javascript";
+const currentStr1 = str1.concat("reference");                                   // javascriptreference
+const currentStr2 = str1.concat(" ", "reference");                             // javascript reference
+const currentStr3 = str1.concat(", ", "reference");                            // javascript, reference
+const currentStr4 = str1.concat(", ", "reference", ", ", "book");         // javascript, reference, book
+const currentStr5 = str1.concat(" ", ["reference","book"]);               // javascript reference,book
 </code></pre>
                     </div>
                 </div>
