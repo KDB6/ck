@@ -1921,6 +1921,54 @@ document.querySelector(".sample14_P3").innerHTML = result3;
             document.querySelector(".sample14_M3").innerHTML = "[...text3].map(el => el)";
             document.querySelector(".sample14_P3").innerHTML = result3;
         }
+    
+        // mission
+        {
+            // 01
+            const number = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+            const num = number.filter(el => el <= 500);
+            document.write(num)
+
+            document.write("<br>")
+
+            // 02
+            const number2 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+            const num2 = number2.slice(3, 5);
+            document.write(num2)
+
+            document.write("<br>")
+
+            const number7 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+            const num7 = number7.slice(-6, -4);
+            document.write(num7)
+
+            document.write("<br>")
+
+            // 03
+            const number3 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+            const num3 = number3.splice(3,2);
+            document.write(num3)
+
+            document.write("<br>")
+
+            const number8 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+            const num8 = number8.splice(-6, 2);
+            document.write(num8)
+
+            document.write("<br>")
+
+            // 04
+            const number4 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+            const num4 = number4.find(e => e === 400);
+            document.write(num4)
+
+            document.write("<br>")
+
+            // 05
+            const number5 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+            const num5 = number5[4]
+            document.write(num5)
+        }
     </script>
 </body>
 </html>
