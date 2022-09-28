@@ -114,6 +114,9 @@ li {
     border-radius: 50px;
     font-size: 20px;
 }
+.search__list {
+    margin-top: 50px;
+}
 .search__list li {
     text-align: left;
     line-height: 1.7;
@@ -125,10 +128,31 @@ li {
 .search__list li.show {
     display: block;
 }
+.search__list span {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid var(--htmlColor);
+    border-radius: 50px;
+    margin: 5px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.search__list span:hover {
+    background-color: var(--htmlColor);
+    color: #fff;
+}
 .search__info {
     text-align: center;
     margin-bottom: 30px;
     padding-bottom: 10px;
+    border-bottom: 2px solid var(--htmlColor);
+}
+.search__info2 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    text-align: right;
     border-bottom: 2px solid var(--htmlColor);
 }
 .search__info .type {
@@ -149,6 +173,29 @@ li {
     background-color: var(--htmlColor);
     color: #fff;
     cursor: pointer;
+}
+
+.search__desc {
+    border-bottom: 1px solid var(--htmlColor);
+    border-bottom-style: dashed;
+    padding: 10px 40px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='11' cy='11' r='8' stroke='%23223547' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.5 16.958L21.5 21.958' stroke='%23223547' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 5px 10px;
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+    font-weight: 500;
+}
+
+.search__desc2 {
+    border-bottom: 1px solid var(--htmlColor);
+    border-bottom-style: dashed;
+    padding: 10px 40px;
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+    font-weight: 500;
 }
 
 @media (max-width: 600px) {
