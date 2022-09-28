@@ -254,7 +254,7 @@
             imgMove.style.transform = "perspective(600px) rotateX("+ softPageY +"deg) rotateY("+ -softPageX +"deg)";
 
             // 커서
-            gsap.to(".mouse__cursor", {duration: .3, left: mousePageX - 50, top: mousePageY - 50})
+            gsap.to(".mouse__cursor", {duration: .3, left: mousePageX - 25, top: mousePageY - 25})
 
             // 출력
             document.querySelector(".mousePageX").textContent = mousePageX;

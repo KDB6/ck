@@ -148,16 +148,17 @@
 
             <h3 class="t_tit2">SCRIPT</h3>
             <p class="t_desc2">
-                스크립트는 언제나 비슷한 형태이며, 구성만 다르게 구조를 짜봤습니다. 이번에도 역시 gsap를 사용했습니다.<br><br>
+                이번 스크립트는 좌표를 중심적으로 짜봤습니다.<br><br>
 
-                1. 우선 첫 번째는 <i>mouse__cursor</i>를 요소로써 선택자로 잡아주고. cursor로 잡아준 요소를 전체적인<br>
-                크기와 위치를 알 수 있는 <i>getBoundingClientRect</i>메서드를 함께 사용해주어 또 다른 <i>cursorRect</i> 요소를 잡아줍니다.<br>
-                2. 이미지 안에만 마우스 이펙트 스크립트 적용을 위해 <i>.mouse__wrap figure</i>에 요소를 잡아주고 이벤트 메서드로 <i>mousemove</i> 적용해줍니다.<br>
-                3. 그리고 앞서 마우스 이펙트 : 조명 효과에서 사용한 gsap를 동일하게 사용하며, 값만 변경해줍니다.<br>
-                4. 마우스 좌표 값은 <i>e.pageX</i>와 <i>e.pageY</i>로 구해줍니다. 좌표값을 가운데로 초기화 시켜주기 위해 브라우저 가로값과 높이 값을 반으로 나눠주고<br>
-                지정해둔 요소인 <i>mousePageX</i>와 <i>mousePageY</i>로 빼줍니다.<br>
-                5. 이미지 움직이는 스크립트는 2번과 3번이랑 같은 형식으로 진행해주며, 좌표 값에 표시를 출력하기 위해 mouse__info에 지정한 각 클래스들을 출력을 해줍니다.
+                1. 마우스의 좌표 값은 앞선 다른 마우스 이펙트과 마찬가지로 똑같이 써줍니다.<br>
+                2. 마찬가지로 마우스 좌표의 중앙 기준점을 다른 마우스 이펙트와 같은 형식으로 써줍니다.<br>
+                3. 이젠 마우스의 움직임을 <i>미친듯이</i> 따라가는.. 것들의 움직임의 제한을 줘야합니다..<br>
+                4. 우선 해당 주석 : 이미지 움직이기와 같이 요소를 잡아주고 해당 값에 스타일을 지정해주며, 언제든 해당 값만 넣으면 변할 수 있도록 설정해줍니다.<br>
+                5. 첫 번째로 이젠.. 각 좌표 값을 정해줘야 하는데, maxPageX / Y의 움직임을 제한을 주기위해 <i>Math.max / min()</i> 함수를 사용해줍니다.<br>
+                6. 두 번째는 anglePageX / Y에다가 maxPageX / Y의 <i>0.1</i>만 곱해주는 형식으로 대입하여 각도의 제한을 줍니다.<br>
+                7. 마지막으로 언제나 사용하던 gsap를 사용하여 기존 마우스 커서 스타일을 대체해줍니다.
             </p>
+            <p class="t_box"><i>123546</i></p>
             <details>
                 <summary>SCRIPT CODE</summary>
             <div class="t_code">
@@ -188,7 +189,7 @@
     imgMove.style.transform = "perspective(600px) rotateX("+ softPageY +"deg) rotateY("+ -softPageX +"deg)";
 
     // 커서
-    gsap.to(".mouse__cursor", {duration: .3, left: mousePageX - 50, top: mousePageY - 50})
+    gsap.to(".mouse__cursor", {duration: .3, left: mousePageX - 25, top: mousePageY - 25})
 
     // 출력
     document.querySelector(".mousePageX").textContent = mousePageX;

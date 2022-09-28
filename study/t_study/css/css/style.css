@@ -254,9 +254,9 @@ body{
 }
 .document .t_box {
     padding: 20px !important;
-    background-color: #f9f9f9;
+    background-color: #B8BED8;
     margin-bottom: 10px;
-    color: #757575;
+    color: #fff;
     border-radius: 5px;
 }
 .document .t_table {
