@@ -819,6 +819,14 @@
             searchDesc2.innerHTML += `${desc}`
         });
 
+        function findProperty(searchDesc) {
+            const targetDesc = cssProperty.find((data) => data.desc === searchDesc);
+            
+            searchList.addEventListener(".click", () => {
+                searchBox.innerText = `${desc}`;
+            });
+        }
+
 
         // 내가 작성한 것
         // if(targetData) {
