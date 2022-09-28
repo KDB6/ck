@@ -821,14 +821,15 @@
         };
 
         // 버튼 클릭 시 설명
-        const searchFind = cssProperty.desc
+        function findProperty(searchData) {
+        const searchFind = cssProperty.find((data) => data.desc === searchData);
 
-        searchList.addEventListener("click", () => {
-            searchDesc2.innerText = searchFind
+        searchList.addEventListener("click", (data) => {
             if(searchDesc) {
-                searchFind.innerText = searchList
+                searchFind.innerText = 스바;
             }
         });
+    };
 
         // function findProperty(searchDesc) {
         //     const targetDesc = cssProperty.find((data) => data.desc === searchDesc);
