@@ -787,10 +787,11 @@
         ];
         
         const searchList = document.querySelector(".search__list");
+        const searchListS = document.querySelectorAll(".search__list span");
         const searchNum = document.querySelector(".search__info2 .num");
         const searchBox = document.querySelector(".search__box input");
-        const searchDesc = document.querySelector(".search__desc")
-        const searchDesc2 = document.querySelector(".search__desc span")
+        const searchDesc = document.querySelector(".search__desc");
+        const searchDesc2 = document.querySelector(".search__desc .desc");
 
         // 출력하기
         cssProperty.map((element, index) => {
@@ -820,18 +821,22 @@
         };
 
         // 버튼 클릭 시 설명
+        const searchFind = cssProperty.desc
 
-        searchList.addEventListener(("click"), () => {
-            searchDesc2.innerHTML += `${desc}`
+        searchList.addEventListener("click", () => {
+            searchDesc2.innerText = searchFind
+            if(searchDesc) {
+                searchFind.innerText = searchList
+            }
         });
 
-        function findProperty(searchDesc) {
-            const targetDesc = cssProperty.find((data) => data.desc === searchDesc);
+        // function findProperty(searchDesc) {
+        //     const targetDesc = cssProperty.find((data) => data.desc === searchDesc);
             
-            searchList.addEventListener(".click", () => {
-                searchBox.innerText = `${desc}`;
-            });
-        }
+        //     searchList.addEventListener(".click", () => {
+        //         searchBox.innerText = `${desc}`;
+        //     });
+        // }
 
 
         // 내가 작성한 것

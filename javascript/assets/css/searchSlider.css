@@ -37,9 +37,9 @@ body {
 .modal__wrap {}
 .modal__btn {
     font-weight: 700;
-    color: #4b4b4b;
-    border: 2px solid #4b4b4b;
-    margin-bottom: 50px;
+    color: #223547;
+    border: 2px solid #223547;
+    margin: 0 112px 0 0;
     border-radius: 3px;
     display: inline-block;
     padding: 10px 20px;
@@ -50,7 +50,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 .modal__btn:hover {
-    background-color: #666;
+    background-color: #223547;
     color: #fff;
 }
 .modal__cont {
