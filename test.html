@@ -8,12 +8,17 @@
 </head>
 <body>
     <script>
+        
         // 01
         const num = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "k"];    //b d f h k (4가지)
-        
-        for(i = 0; i < num.length; i = 2) {
+            
+        for(i = 1; i <= num.length; i += 2) {
             console.log(num[i])
         }
+
+        const result = num.slice(1,2) + num.slice(3,4) + num.slice(5,6) + num.slice(7,8) + num.slice(9,10);
+        console.log(result);
+        
     </script>
 </body>
 </html>
