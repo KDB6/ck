@@ -18,6 +18,14 @@
 
         const result = num.slice(1,2) + num.slice(3,4) + num.slice(5,6) + num.slice(7,8) + num.slice(9,10);
         console.log(result);
+
+        const result2 = num.filter(el => el === num[1]) + num.filter(el => el === num[3]) + num.filter(el => el === num[5]) + num.filter(el => el === num[7]) + num.filter(el => el === num[9]);
+        console.log(result2)
+
+
+        const result3 = num.find(e => e === "b") + num.find(e => e === "d") + num.find(e => e === "f") + num.find(e => e === "h") + num.find(e => e === "k");
+        console.log(result3);
+        
         
     </script>
 </body>
