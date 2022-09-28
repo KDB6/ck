@@ -5,24 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>마우스 이펙트 04</title>
+    <title>마우스 이펙트 05</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/dracula.css">
 </head>
 <body>
     <main id="main">
         <div class="document">
-            <h2 class="t_tit">마우스 이펙트 : 이미지 효과</h2>
+            <h2 class="t_tit">마우스 이펙트 : 기울기 효과 / 글씨 반전 효과</h2>
             <p class="t_desc2">
                 이번에는 마우스에 이미지 효과를 넣은 이펙트를 코딩해봤습니다.
             </p>
 
             <h3 class="t_tit2">HTML</h3>
             <p class="t_desc2">
-                HTML 코드는 딱히 어려운 건 없습니다.<br>
+                HTML 코드는 뭐.. 다른 것들과 거의 비슷하죠..? 추가적인 mouse__info의 좌표 값만 따로 몇 개만 추가하시면 됩니다.<br>
                 각 CSS로 이용할 클래스 이름 지정과 스크립트에 이용할 클래스 이름<i>mouse__cursor</i> 미리 지정해둡니다.<br>
                 또한, 현재 마우스 좌표 값을 스크립트 적용하기 위해 <i>mouse__info</i> 클래스에 각각에 좌표 값에 맞는 클래스를 따로 지정해줍니다.<br>
-                명언은..여러분이 평소에 가진 가치관을 기준으로...?
+                글은..여러분이 평소에 가진 가치관을 기준으로...?
             </p>
             <details>
                 <summary>HTML CODE</summary>
@@ -31,13 +31,15 @@
     &lt;section id="mouseType">
         &lt;div class="mouse__cursor">&lt;/div>
         &lt;div class="mouse__wrap">
-            &lt;figure>
-                &lt;img src="../assets/img/slide05.jpg" alt="이미지">
+            &lt;div class="mouse__img">
+                &lt;figure>
+                    &lt;img src="../assets/img/slide02.jpg" alt="이미지">
+                &lt;/figure>
                 &lt;figcaption>
-                    &lt;p>Look at yourself before blaming others&lt;/p>
-                    &lt;p>남 탓 하기 전에 너 자신을 봐라.&lt;/p>
+                    &lt;p>Do it yourself.&lt;/p>
+                    &lt;p>너 혼자 알아서 해라.&lt;/p>
                 &lt;/figcaption>
-            &lt;/figure>
+            &lt;/div>
         &lt;/div>
     &lt;/section>
 
@@ -47,6 +49,10 @@
             &lt;li>mousePageY : &lt;span class="mousePageY">0&lt;/span>px&lt;/li>
             &lt;li>centerPageX : &lt;span class="centerPageX">0&lt;/span>px&lt;/li>
             &lt;li>centerPageY : &lt;span class="centerPageY">0&lt;/span>px&lt;/li>
+            &lt;li>maxPageX : &lt;span class="maxPageX">0&lt;/span>px&lt;/li>
+            &lt;li>maxPageY : &lt;span class="maxPageY">0&lt;/span>px&lt;/li>
+            &lt;li>anglePageX : &lt;span class="anglePageX">0&lt;/span>px&lt;/li>
+            &lt;li>anglePageY : &lt;span class="anglePageY">0&lt;/span>px&lt;/li>
         &lt;/ul>
     &lt;/div>
 &lt;/main>
@@ -56,63 +62,76 @@
 
             <h3 class="t_tit2">CSS</h3>
             <p class="t_desc2">
-                이번 CSS 코드는 언제나 마우스 이펙트 1~2번과 같이 크게 변화가 없으며,<br>
-                원하는 디자인으로 구성했고, 기본적인 반응형도 해주었습니다.
+                이번 CSS는 3d 효과 느낌을 주기 위해 공간감을 추가해주는 <i>preserve-3d</i>을 사용했습니다.<br>
+                해당 preserve-3d를 주면 <i>자식 요소</i>에 <i>3D</i>효과를 추가해주는 기능이 있습니다.<br>
+                3D효과를 추가 해줬다면 또 다른 위치 값을 줘야하기에 mouse__img에 따로 공간감을 더 주기 위해 <i>perspective</i>를 사용해줍니다.<br>
+                또한, 따로 글에도 마찬가지로 3D효과를 위해 <i>translate3d</i>를 추가해서 사용해줍니다.
             </p>
             <details>
                 <summary>CSS CODE</summary>
             <div class="t_code">
 <pre><code class="language.js">/* mouseType */
 .mouse__wrap {
-    width: 100%;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
-    overflow: hidden;
     flex-direction: column;
-}
-.mouse__wrap figure {
-    width: 50vw;
-    height: 50vh;
-    position: relative;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
     overflow: hidden;
-    transition: transform 500ms ease;
     cursor: none;
 }
-.mouse__wrap figure img {
-    position: absolute;
-    left: -5%;
-    top: -5%;
-    width: 110%;
-    height: 110%;
-    object-fit: cover;
+.mouse__wrap figure {
+    width: 40vw;
 }
-.mouse__wrap figure:hover {
-    transform: scale(1.025);
+.mouse__img {
+    transform: perspective(600px) rotateX(0deg) rotateY(0deg);
+    transform-style: preserve-3d;
+    will-change: transform;
 }
-.mouse__wrap figure figcaption {
+.mouse__img figure {
+    width: 50vw;
+    position: relative;
+}
+.mouse__img figure::before {
+    content: '';
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 16px;
-    white-space: nowrap;
-    line-height: 1.4;
+    left: 5%;
+    bottom: -20px;
+    width: 90%;
+    height: 40px;
+    background: url(../assets/img/slide02.jpg) center no-repeat;
+    background-size: 100% 40px;
+    filter: blur(15px) grayscale(50%);
+    z-index: -1;
+    opacity: 0.4;
 }
 .mouse__cursor {
     position: absolute;
     left: 0;
     top: 0;
-    width: 20px;
-    height: 20px;
-    background: #fff;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+    background: #fff;
     z-index: 1000;
-    user-select: none;
     pointer-events: none;
+    user-select: none;
+    opacity: 0.7;
+    mix-blend-mode: difference;
+}
+.mouse__img figcaption {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 1vw;
+    line-height: 1.6;
+    transform: translate3d(-50%, -50%, 150px);
+    padding: 1vw;
+    white-space: nowrap;
+    text-align: center;
+    background: #00000040;
 }
 .mouse__info {
     position: absolute;
@@ -142,64 +161,64 @@
             <details>
                 <summary>SCRIPT CODE</summary>
             <div class="t_code">
-<pre><code class="language-js">const cursor = document.querySelector(".mouse__cursor");
-const cursorRect = cursor.getBoundingClientRect();
-
-document.querySelector(".mouse__wrap figure").addEventListener("mousemove", (e) => {
-    // 커서
-    gsap.to(cursor, {
-        duration: .5,
-        left: e.pageX - cursorRect.width/2,
-        top: e.pageY - cursorRect.height/2
-    });
-
-    // 마우스 좌표 값
+<pre><code class="language-js">const mouseMove = (e) => {
+    // 마우스 좌표값
     let mousePageX = e.pageX;
     let mousePageY = e.pageY;
 
-    // 전체 가로
-    // window.innerWidth;      // 1920 : 브라우저 크기
-    // window.outerWidth;      // 1920 : 브라우저 크기(스크롤 바 포함)
-    // window.screen.width;    // 1920 : 화면 크기
+    // 마우스 좌표 기준점을 가운데로 변경
+    let centerPageX = window.innerWidth / 2 - mousePageX;
+    let centerPageY = window.innerHeight / 2 - mousePageY;
 
-    // 마우스 좌표 값 가운테로 초기화
-    // 전체 길이/2 - 마우스 좌표값 == 0
-    let centerPageX = window.innerWidth/2 - mousePageX;
-    let centerPageY = window.innerHeight/2 - mousePageY;
+    // 최소값 -100 최대값 100   // 중요
+    let maxPageX = Math.max(-200, Math.min(100, centerPageX));
+    let maxPageY = Math.max(-200, Math.min(100, centerPageY));
 
+    // 각도 줄이는 설정
+    let anglePageX = maxPageX * 0.1;
+    let anglePageY = maxPageY * 0.1;
+
+    // 부드럽게 설정
+    let softPageX = 0, softPageY = 0;
+    softPageX += (anglePageX - softPageX) * 0.4;
+    softPageY += (anglePageY - softPageY) * 0.4;
+    
     // 이미지 움직이기
-    const imgMove = document.querySelector(".mouse__wrap figure img");
-    // imgMove.style.transform = "translate("+ centerPageX/20 +"px, "+ centerPageY/20 +"px)";
+    const imgMove = document.querySelector(".mouse__img");
+    imgMove.style.transform = "perspective(600px) rotateX("+ softPageY +"deg) rotateY("+ -softPageX +"deg)";
 
-    gsap.to(imgMove, {
-        duration: 0.3,
-        x: centerPageX/20,
-        y: centerPageY/20
-    })
+    // 커서
+    gsap.to(".mouse__cursor", {duration: .3, left: mousePageX - 50, top: mousePageY - 50})
 
     // 출력
     document.querySelector(".mousePageX").textContent = mousePageX;
     document.querySelector(".mousePageY").textContent = mousePageY;
     document.querySelector(".centerPageX").textContent = centerPageX;
     document.querySelector(".centerPageY").textContent = centerPageY;
-});
+    document.querySelector(".maxPageX").textContent = maxPageX;
+    document.querySelector(".maxPageY").textContent = maxPageY;
+    document.querySelector(".anglePageX").textContent = Math.round(anglePageX);
+    document.querySelector(".anglePageY").textContent = Math.round(anglePageY);
+};
+
+window.addEventListener("mousemove", mouseMove);
 </code></pre>
             </div>
             </details>
 
             <div class="t_link">
-                <a href="https://github.com/KDB6/ck/blob/main/javascript/effect/mouseEffect04.html" target="_blank">CODE GO</a>
+                <a href="https://github.com/KDB6/ck/blob/main/javascript/effect/mouseEffect05.html" target="_blank">CODE GO</a>
             </div>
 
             <br><br>
 
             <h3 class="t_tit2">결과물</h3>
             <div class="t_iframe" style="min-height: 920px; padding-top: 0;">
-                <iframe src="https://kdb6.github.io/ck/javascript/effect/mouseEffect04.html" frameborder="0"></iframe>
+                <iframe src="https://kdb6.github.io/ck/javascript/effect/mouseEffect05.html" frameborder="0"></iframe>
             </div>
     
             <div class="t_link">
-                <a href="https://kdb6.github.io/ck/javascript/effect/mouseEffect04.html" target="_blank">SITE GO</a>
+                <a href="https://kdb6.github.io/ck/javascript/effect/mouseEffect05.html" target="_blank">SITE GO</a>
             </div>
 
         </div>
