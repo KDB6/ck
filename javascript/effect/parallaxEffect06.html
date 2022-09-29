@@ -467,7 +467,7 @@
 
             document.querySelectorAll("content__item").forEach(item => {
                 if(scrollTop >= item.offsetTop) {
-                    item.querySelectorAll(",split span").forEach((span, index) => {
+                    item.querySelectorAll(".split span").forEach((span, index) => {
                         span.classList.add("show")
                     })
                 }
