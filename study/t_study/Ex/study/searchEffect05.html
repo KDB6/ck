@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>서치 이펙트 04</title>
+    <title>서치 이펙트 05</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/dracula.css">
 </head>
 <body>
     <main id="main">
         <div class="document">
-            <h2 class="t_tit">검색 이펙트 : find()</h2>
+            <h2 class="t_tit">검색 이펙트 : filter()</h2>
             <p class="t_desc2">
                 알파벳을 클릭하면 해당 알파벳이 앞자리에 포함된 속성이 나오도록 해보겠습니다.
             </p>
@@ -27,16 +27,24 @@
             <div class="t_code">
 <pre><code class="language-js">&lt;main id="main">
     &lt;div class="search__wrap">
-        &lt;span>find()를 이용하여 속성을 검색하면 설명 보여주기&lt;/span>
+        &lt;span>filter()를 이용하여 속성의 중요도 보여주기&lt;/span>
         &lt;h1>CSS 속성 검색하기&lt;/h1>
-        
-        &lt;div class="search__box">
-            &lt;label for="search">검색하기&lt;/label>
-            &lt;input type="text" id="search" placeholder="CSS 속성 및 유형을 입력해주세요.">
-        &lt;/div>
 
-        &lt;div class="search__desc">
-            &lt;div class="desc">검색한 단어의 설명이 나옵니다.&lt;/div>
+        &lt;div class="search__click">
+            &lt;ul>
+                &lt;li data-star="0">&lt;a href="#">☆☆☆☆☆&lt;/a>&lt;/li>
+                &lt;li data-star="1">&lt;a href="#">★☆☆☆☆&lt;/a>&lt;/li>
+                &lt;li data-star="2">&lt;a href="#">★★☆☆☆&lt;/a>&lt;/li>
+                &lt;li data-star="3">&lt;a href="#">★★★☆☆&lt;/a>&lt;/li>
+                &lt;li data-star="4">&lt;a href="#">★★★★☆&lt;/a>&lt;/li>
+                &lt;li data-star="5">&lt;a href="#">★★★★★&lt;/a>&lt;/li>
+            &lt;/ul>
+            &lt;ul>
+                &lt;li>&lt;a href="#">1개 이상&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#">2개 이상&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#">3개 이상&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#">4개 이상&lt;/a>&lt;/li>
+            &lt;/ul>
         &lt;/div>
 
         &lt;div class="search__info2">
@@ -44,7 +52,9 @@
         &lt;/div>
 
         &lt;div class="search__list">
-            
+            &lt;ul class="line">
+
+            &lt;/ul>
         &lt;/div>
     &lt;/div>
 &lt;/main>
@@ -725,64 +735,47 @@ footer a:hover {
             <details>
                 <summary>SCRIPT CODE</summary>
             <div class="t_code">
-<pre><code class="language-js">const searchList = document.querySelector(".search__list");
-const searchListS = document.querySelectorAll(".search__list span");
-const searchNum = document.querySelector(".search__info2 .num");
-const searchBox = document.querySelector(".search__box input");
-const searchDesc = document.querySelector(".search__desc");
-const searchDesc2 = document.querySelector(".search__desc .desc");
+<pre><code class="language-js">const searchList = document.querySelector(".search__list ul");
+const searchClick = document.querySelectorAll(".search__click ul li");
+const searchStar = document.querySelectorAll(".search__click ul li data-star");
 
 // 출력하기
-cssProperty.map((element, index) => {
-    searchList.innerHTML += `<span>${element.name}</span>`;
-    
-    searchNum.innerText = index + 1 ;   // 전체 갯수 구하기
-})
-
-// 입력하기
-searchBox.addEventListener("keyup", () => {
-    const searchWord = searchBox.value;
-    console.log(searchWord)
-    findProperty(searchWord);
-    
-});
-
-// 클릭하기
-document.querySelectorAll(".search__list span").forEach(span => {
-    span.addEventListener("click", () => {
-        const clickWord = span.innerText;
-        findProperty(clickWord);
-    })
-})
-
-// 속성찾기
-function findProperty(searchData) {
-    const targetData = cssProperty.find((data) => data.name === searchData);
-
-    if(targetData == null) {
-        searchDesc.textContent = "해당 속성은 존재하지 않습니다. 다시 검색해주세요.";
-        return;    // 종류의 의미를 가지기도 한다.
+function updataList(list) {
+    listCSS = "";
+    for(const data of list) {
+        listCSS += `<li><strong>${data.name}</strong> : ${data.desc} <em>${data.star}</em></li>`;
     };
 
-    searchDesc.textContent = targetData.desc;
+    searchList.innerHTML = listCSS;
 };
+updataList(cssProperty);
+
+// 클릭하기
+searchClick.forEach(star => {
+    star.addEventListener("click", () => {
+        const target = star.dataset.star;   // data 속성 값 가져오기
+        const filterList = cssProperty.filter(data => data.star == target);
+
+        updataList(filterList);
+    });
+});
 </code></pre>
             </div>
             </details>
 
             <div class="t_link">
-                <a href="https://github.com/KDB6/ck/blob/main/javascript/effect/searchEffect04.html" target="_blank">CODE GO</a>
+                <a href="https://github.com/KDB6/ck/blob/main/javascript/effect/searchEffect05.html" target="_blank">CODE GO</a>
             </div>
 
             <br><br>
 
             <h3 class="t_tit2">RESULT</h3>
             <div class="t_iframe" style="min-height: 920px; padding-top: 0;">
-                <iframe src="https://kdb6.github.io/ck/javascript/effect/searchEffect04.html" frameborder="0"></iframe>
+                <iframe src="https://kdb6.github.io/ck/javascript/effect/searchEffect05.html" frameborder="0"></iframe>
             </div>
     
             <div class="t_link">
-                <a href="https://kdb6.github.io/ck/javascript/effect/searchEffect04.html" target="_blank">SITE GO</a>
+                <a href="https://kdb6.github.io/ck/javascript/effect/searchEffect05.html" target="_blank">SITE GO</a>
             </div>
 
         </div>
