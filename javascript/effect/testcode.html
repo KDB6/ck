@@ -1,0 +1,32 @@
+// const searchList = document.querySelector(".search__list ul");
+// const searchClick = document.querySelectorAll(".search__click ul li");
+// const searchStar = document.querySelectorAll(".search__click ul li data-star");
+// const searchNum = document.querySelectorAll(".search__info2 .num");
+// // let count = 0;
+
+// searchNum.innerHTML = cssProperty.length;
+
+// // 출력하기
+// function updataList(list) {
+//     listCSS = "";
+//     for(const data of list) {
+//         listCSS += `<li><strong>${data.name}</strong> : ${data.desc} <em>${data.star}</em></li>`;
+//     };
+
+//     searchList.innerHTML = listCSS;
+// };
+// updataList(cssProperty);
+
+// // 클릭하기
+// searchClick.forEach(star => {
+//     star.addEventListener("click", () => {
+//         const target = star.dataset.star;   // data 속성 값 가져오기
+//         const filterList = cssProperty.filter(data => data.star == target);
+//         const filterList2 = cssProperty.filter(data => data.star >= target);
+//         count = filterList.length
+//         count = filterList2.length
+//         document.querySelector(".num").innerHTML = count;
+
+//         updataList(filterList);
+//     });
+// });

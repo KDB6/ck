@@ -75,8 +75,12 @@
 
             document.write("<br>")
 
-            const result2 = num.push()
-            document.write(result2);
+            document.write(...num[4],...num[5])
+
+            document.write("<br>")
+
+            const result2 = num.filter(el => el === "e" || el === "f")
+            document.write(result2)
         }
     </script>
 </body>

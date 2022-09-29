@@ -21,7 +21,6 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            z-index: -1;
         }
         .mouse__text {
             position: absolute;
@@ -70,10 +69,10 @@
             user-select: none;
             pointer-events: none;
         }
-        .mouse__cursor.style1 {
-            background-color: #dddddd30;
-            border-color: #5e5b88;
+        .mouse__cursor.style {
             transform: scale(5);
+            transition: transform 0.2s;
+            mix-blend-mode: difference;
         }
     </style>
 </head>
@@ -105,12 +104,12 @@
                         <div class="line">
                             <div class="left">
                                 <div class="spanWrap">
-                                    <span class="spanSlow style1">one two</span>
+                                    <span class="spanSlow">one two</span>
                                 </div>
                             </div>
                             <div class="right">
                                 <div class="spanWrap">
-                                    <span class="spanSlow style1">one two</span>
+                                    <span class="spanSlow">one two</span>
                                 </div>
                             </div>
                         </div>
@@ -118,12 +117,12 @@
                         <div class="line">
                             <div class="left">
                                 <div class="spanWrap">
-                                    <span class="spanFast style1">three four</span>
+                                    <span class="spanFast">three four</span>
                                 </div>
                             </div>
                             <div class="right">
                                 <div class="spanWrap">
-                                    <span class="spanFast style1">three four</span>
+                                    <span class="spanFast">three four</span>
                                 </div>
                             </div>
                         </div>
@@ -131,12 +130,12 @@
                         <div class="line">
                             <div class="left">
                                 <div class="spanWrap">
-                                    <span class="spanSlow style1">five six</span>
+                                    <span class="spanSlow">five six</span>
                                 </div>
                             </div>
                             <div class="right">
                                 <div class="spanWrap">
-                                    <span class="spanSlow style1">five six</span>
+                                    <span class="spanSlow">five six</span>
                                 </div>
                             </div>
                         </div>
@@ -144,12 +143,12 @@
                         <div class="line">
                             <div class="left">
                                 <div class="spanWrap">
-                                    <span class="spanFast style1">seven eight</span>
+                                    <span class="spanFast">seven eight</span>
                                 </div>
                             </div>
                             <div class="right">
                                 <div class="spanWrap">
-                                    <span class="spanFast style1">seven eight</span>
+                                    <span class="spanFast">seven eight</span>
                                 </div>
                             </div>
                         </div>
@@ -266,6 +265,22 @@
             gsap.to(".mouse__cursor", {duration: 0.3, left: e.pageX - 5, top: e.pageY - 5});
         }
         window.addEventListener("mousemove", mouseMove);
+
+
+        // 마우스 오버시
+        const mouseHover = document.querySelectorAll(".mouse__text span");
+        const mouse = document.querySelector(".mouse__cursor");
+
+        mouseHover.forEach((e) => {
+            
+            e.addEventListener("mouseover", ()=>{
+                mouse.classList.add("style");
+            });
+            
+            e.addEventListener("mouseout", ()=>{
+                mouse.classList.remove("style");
+            });
+        });
 
         // 마우스 커서가 글씨 위에 올라가면 원의 크기가 5배 정도 크게 작업.. 글씨 반전효과 추가
     </script>
