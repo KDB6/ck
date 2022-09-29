@@ -808,6 +808,14 @@
             
         });
 
+        // 클릭하기
+        document.querySelectorAll(".search__list span").forEach(span => {
+            span.addEventListener("click", () => {
+                const clickWord = span.innerText;
+                findProperty(clickWord);
+            })
+        })
+
         // 속성찾기
         function findProperty(searchData) {
             const targetData = cssProperty.find((data) => data.name === searchData);
@@ -820,17 +828,6 @@
             searchDesc.textContent = targetData.desc;
         };
 
-        // 버튼 클릭 시 설명
-        function findProperty(searchData) {
-        const searchFind = cssProperty.find((data) => data.desc === searchData);
-
-        searchList.addEventListener("click", (data) => {
-            if(searchDesc) {
-                searchFind.innerText = 스바;
-            }
-        });
-    };
-
         // function findProperty(searchDesc) {
         //     const targetDesc = cssProperty.find((data) => data.desc === searchDesc);
             
@@ -839,13 +836,23 @@
         //     });
         // }
 
-
         // 내가 작성한 것
         // if(targetData) {
         //     searchDesc.innerText = targetData.desc;
         // } else{
         //     searchDesc.innerText = `검색을 해주세요.`
         // }
+
+        // // 버튼 클릭 시 설명
+        // function findProperty(searchData) {
+        //     const searchFind = cssProperty.find((data) => data.desc === searchData);
+
+        //     searchList.addEventListener("click", (data) => {
+        //         if(searchDesc) {
+        //             searchFind.innerText = 스바;
+        //         }
+        //     });
+        // };          
     </script>
 </body>
 </html>
