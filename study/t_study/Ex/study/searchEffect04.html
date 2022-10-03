@@ -746,7 +746,7 @@ const searchDesc2 = document.querySelector(".search__desc .desc");
 
 // 출력하기
 cssProperty.map((element, index) => {
-    searchList.innerHTML += `<span>${element.name}</span>`;
+    searchList.innerHTML += `&lt;span>${element.name}&lt;/span>`;
     
     searchNum.innerText = index + 1 ;   // 전체 갯수 구하기
 })

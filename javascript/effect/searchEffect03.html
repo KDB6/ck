@@ -823,11 +823,7 @@
         searchKeyword.forEach(el => {
             el.addEventListener("click", () => {
                 const searchWord = el.innerText;    // 사용자가 클릭한 알파벳
-
-                searchInfo.innerHTML = "전체 갯수는 " + searchList.length + "개 입니다."
-
-                console.log(searchWord);
-
+                
                 searchList.forEach(el => {
                     const cssName = el.querySelector("strong").innerText;   // CSS 속성 텍스트
                     // console.log(cssName)
@@ -844,7 +840,7 @@
                 count = 0;
 
                 searchAll.addEventListener("click", () => {
-                    searchAll = searchInfo.length
+                    const searchAll = el.innerText;
                 })
             });
         });

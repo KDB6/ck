@@ -181,13 +181,29 @@
             <div class="t_code">
 <pre><code class="language-js">const mouseMove = (e) => {
     let positionSlow = (e.pageX - (window.innerWidth/2)) * 0.1;
-    let positionSlow = (e.pageX - (window.innerWidth/2)) * 0.2;
+    let positionFast = (e.pageX - (window.innerWidth/2)) * 0.2;
 
     gsap.to(".spanSlow", {duration: 0.4, x: positionSlow});
     gsap.to(".spanFast", {duration: 0.4, x: -positionFast});
     gsap.to(".mouse__cursor", {duration: 0.3, left: e.pageX - 5, top: e.pageY - 5});
 }
 window.addEventListener("mousemove", mouseMove);
+
+
+// 마우스 오버시
+const mouseHover = document.querySelectorAll(".mouse__text span");
+const mouse = document.querySelector(".mouse__cursor");
+
+mouseHover.forEach((e) => {
+    
+    e.addEventListener("mouseover", ()=>{
+        mouse.classList.add("style");
+    });
+    
+    e.addEventListener("mouseout", ()=>{
+        mouse.classList.remove("style");
+    });
+});
 </code></pre>
             </div>
             </details>

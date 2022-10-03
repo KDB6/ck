@@ -343,13 +343,15 @@ function scroll() {
 
     document.querySelector("#parallax__info .scroll").innerText = Math.round(scrollTop);
 
-    document.querySelectorAll("content__item").forEach(item => {
+    document.querySelectorAll(".content__item").forEach(item => {
         if(scrollTop >= item.offsetTop) {
             item.querySelectorAll(".split span").forEach((span, index) => {
-                span.classList.add("show")
+                span.classList.add("show");
+                span.style.transitionDelay = `${index * 50}ms`
             })
         }
     })
+
     requestAnimationFrame(scroll);
 }
 scroll();

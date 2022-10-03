@@ -745,26 +745,43 @@ footer a:hover {
             <div class="t_code">
 <pre><code class="language-js">const searchList = document.querySelector(".search__list ul");
 const searchClick = document.querySelectorAll(".search__click ul li");
-const searchStar = document.querySelectorAll(".search__click ul li data-star");
+const searchStar = document.querySelectorAll(".search__click ul li a")
+const searchNum = document.querySelector(".search__info2 .num");
+
+let count=0;
+
+// searchNum.innerHTML = cssProperty.length;
 
 // 출력하기
-function updataList(list) {
-    listCSS = "";
-    for(const data of list) {
-        listCSS += `<li><strong>${data.name}</strong> : ${data.desc} <em>${data.star}</em></li>`;
-    };
+function updateList(list){
 
+    listCSS = "";
+
+    for(const data of list){
+        starList = searchStar[data.star].innerHTML;
+        count++;
+
+        listCSS += `&lt;li>&lt;strong>${data.name}&lt;/strong> : ${data.desc} &lt;em>${starList}&lt;/em>&lt;/li>`;
+    }
     searchList.innerHTML = listCSS;
-};
-updataList(cssProperty);
+
+    searchNum.innerHTML = count;
+    count = 0;
+}
+updateList(cssProperty);
 
 // 클릭하기
 searchClick.forEach(star => {
     star.addEventListener("click", () => {
-        const target = star.dataset.star;   // data 속성 값 가져오기
-        const filterList = cssProperty.filter(data => data.star == target);
 
-        updataList(filterList);
+        const target = star.dataset.star;
+        const target2 = star.dataset.starnum;
+
+        const filterList = cssProperty.filter(data => data.star == target || data.star >= target2);
+        
+        searchNum.innerHTML = filterList.length;
+
+        updateList(filterList);
     });
 });
 </code></pre>
