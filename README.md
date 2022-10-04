@@ -89,4 +89,4 @@ https://kdb6.github.io/ck/img/search.html
 https://kdb6.github.io/ck/img/ani1.html   
 
 ### 자체 문제 제작
-https://kdb6.github.ic/ck/test/javascriptTest05.html   
+https://kdb6.github.io/ck/test/javascriptTest05.html   
