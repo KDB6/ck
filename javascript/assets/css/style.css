@@ -54,12 +54,16 @@ summary::marker {
 }
 
 /* 헤더 영역 */
+#header h1 {
+    margin-bottom: 10px;
+}
 #header h1 a {
     font-size: 50px;
     font-weight: 700;
-    background: linear-gradient(to left, #FF9482, #7D77FF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #a1b2ff;
+    /* background: linear-gradient(to left, #FF9482, #7D77FF); */
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
 }
 .header_nav ul li {
     display: inline;
