@@ -239,14 +239,11 @@
 
         .style2.split span {
             opacity: 0;
-            transition: all 0.3s ease-in-out;
-            transform: translateY(50px);
             display: inline-block;
             min-width: 1vw;
         }
         .style2.split span.show {
-            opacity: 1;
-            transform: translateY(0);
+            animation: fadeInTopRight 0.5s 1 ease-in forwards;
         }
 
         .style3.split span {
@@ -279,6 +276,56 @@
             animation: fadeInDownBig 0.5s 1 ease-in forwards;
         }
 
+        .style6.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+        }
+        .style6.split span.show {
+            animation: backInLeft 0.5s 1 ease-in forwards;
+        }
+
+        .style7.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+        }
+        .style7.split span.show {
+            animation: zoomOut 0.5s 1 ease-in forwards;
+        }
+
+        .style8.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+        }
+        .style8.split span.show {
+            animation: flipInY 0.5s 1 ease-in forwards;
+        }
+
+        .style9.split span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+        }
+        .style9.split span.show {
+            animation: rollIn 0.5s 1 ease-in forwards;
+        }
+
+        .animate__fadeInTopLeft {
+            animation-name: fadeInTopLeft;
+            }
+                @keyframes fadeInTopRight {
+                from {
+                    opacity: 0;
+                    transform: translate3d(100%, -100%, 0);
+                }
+                to {
+                    opacity: 1;
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+
         @keyframes wobble {
             from {transform: translate3d(0, 0, 0); opacity: 0;}
             15% {transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);}
@@ -290,7 +337,6 @@
         }
 
         .animate__fadeInDown {
-            -webkit-animation-name: fadeInDown;
             animation-name: fadeInDown;
         }
         @keyframes fadeInDownBig {
@@ -303,6 +349,91 @@
                 transform: translate3d(0, 0, 0);
             }
         }
+
+        .animate__backInDown {
+        animation-name: backInDown;
+        }
+            @keyframes backInLeft {
+            0% {
+                transform: translateX(-2000px) scale(0.7);
+                opacity: 0.7;
+            }
+
+            50% {
+                transform: translateX(0px) scale(0.7);
+                opacity: 0.7;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .animate__zoomInUp {
+            -webkit-animation-name: zoomInUp;
+            animation-name: zoomInUp;
+            }
+                @keyframes zoomOut {
+                0% {
+                    opacity: 1;
+                }
+
+                50% {
+                    opacity: 1;
+                    transform: scale3d(0.3, 0.3, 0.3);
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+        .animate__flipInX {
+            backface-visibility: visible !important;
+            animation-name: flipInX;
+            }
+                @keyframes flipInY {
+                0% {
+                    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+                    animation-timing-function: ease-in;
+                    opacity: 0;
+                }
+
+                40% {
+                    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+                    animation-timing-function: ease-in;
+                }
+
+                60% {
+                    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+                    opacity: 1;
+                }
+
+                80% {
+                    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+                }
+
+                100% {
+                    transform: perspective(400px);
+                    opacity: 1;
+                }
+            }
+
+            .animate__jackInTheBox {
+                animation-name: jackInTheBox;
+                }
+                    @keyframes rollIn {
+                    from {
+                        opacity: 0;
+                        transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+                    }
+
+                    to {
+                        opacity: 1;
+                        transform: translate3d(0, 0, 0);
+                    }
+                }
     </style>
 </head>
 <body>
@@ -370,7 +501,7 @@
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc split">너 혼자 알아서 해라.</p>
+                <p class="content__item__desc split style5">너 혼자 알아서 해라.</p>
             </section>
 
             <!-- section6 -->
@@ -380,7 +511,7 @@
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc split">돈이 세상에 다는 아니지만 세상은 돈으로 굴러간다.</p>
+                <p class="content__item__desc split style6">돈이 세상에 다는 아니지만 세상은 돈으로 굴러간다.</p>
             </section>
 
             <!-- section7 -->
@@ -390,7 +521,7 @@
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc split">사회는 널 기다려주지 않는다.</p>
+                <p class="content__item__desc split style7">사회는 널 기다려주지 않는다.</p>
             </section>
 
             <!-- section8 -->
@@ -400,7 +531,7 @@
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc split">힘 없는 정의는 무능이다.</p>
+                <p class="content__item__desc split style8">힘 없는 정의는 무능이다.</p>
             </section>
 
             <!-- section9 -->
@@ -410,7 +541,7 @@
                 <figure class="content__item__imgWrap">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc split">객관적으로 너 자신을 봐라</p>
+                <p class="content__item__desc split style9">객관적으로 너 자신을 봐라</p>
             </section>
         </div>
         <section id="parallaxType">

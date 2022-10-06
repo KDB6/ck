@@ -303,7 +303,7 @@
                 <figure class="content__item__imgWrap reveal">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc reveal"><span>니 인생은 너가 바꾸는거다.</span></p>
+                <p class="content__item__desc reveal">니 인생은 너가 바꾸는거다.</p>
             </section>
 
             <!-- section2 -->
@@ -313,7 +313,7 @@
                 <figure class="content__item__imgWrap reveal reveal-RTL">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc reveal" data-delay="500"><span>남 탓 하기 전에 너 자신을 봐라.</span></p>
+                <p class="content__item__desc reveal" data-delay="500">남 탓 하기 전에 너 자신을 봐라.</p>
             </section>
 
             <!-- section3 -->
@@ -323,7 +323,7 @@
                 <figure class="content__item__imgWrap reveal reveal-TTB">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc reveal"><span>알면서도 안하고 가만히 있으면 거지가 되면 된다.</span></p>
+                <p class="content__item__desc reveal">알면서도 안하고 가만히 있으면 거지가 되면 된다.</p>
             </section>
 
             <!-- section4 -->
@@ -333,7 +333,7 @@
                 <figure class="content__item__imgWrap reveal reveal-BTT">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc reveal" data-delay="500"><span>남들은 너한테 큰 관심이 없다.</span></p>
+                <p class="content__item__desc reveal" data-delay="500">남들은 너한테 큰 관심이 없다.</p>
             </section>
 
             <!-- section5 -->
@@ -343,7 +343,7 @@
                 <figure class="content__item__imgWrap reveal reveal-TWO" data-delay="1500">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc reveal"><span>너 혼자 알아서 해라.</span></p>
+                <p class="content__item__desc reveal">너 혼자 알아서 해라.</p>
             </section>
 
             <!-- section6 -->
@@ -353,7 +353,7 @@
                 <figure class="content__item__imgWrap reveal reveal-TWO reveal-RTL">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc reveal"><span>돈이 세상에 다는 아니지만 세상은 돈으로 굴러간다.</span></p>
+                <p class="content__item__desc reveal">돈이 세상에 다는 아니지만 세상은 돈으로 굴러간다.</p>
             </section>
 
             <!-- section7 -->
@@ -363,7 +363,7 @@
                 <figure class="content__item__imgWrap reveal reveal-TWO reveal-TTB">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc reveal"><span>사회는 널 기다려주지 않는다.</span></p>
+                <p class="content__item__desc reveal">사회는 널 기다려주지 않는다.</p>
             </section>
 
             <!-- section8 -->
@@ -373,7 +373,7 @@
                 <figure class="content__item__imgWrap reveal reveal-TWO reveal-BTT">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc reveal"><span>힘 없는 정의는 무능이다.</span></p>
+                <p class="content__item__desc reveal">힘 없는 정의는 무능이다.</p>
             </section>
 
             <!-- section9 -->
@@ -494,7 +494,15 @@
     </script>
 
     <script>
-        // reveal 클래스 자식에 글씨만 있다면, 가상으로 span 태그를 만들어서 넣어주셈
+        const reveal = document.querySelectorAll(".reveal");
+
+            reveal.forEach(e => {
+            const splitSpan = e.innerText;
+
+                if(splitSpan) {
+                    e.innerHTML = "<span>" + splitSpan + "</span>";
+                };
+            });
 
         function scroll() {
             let scrollTop = window.scrollY;
