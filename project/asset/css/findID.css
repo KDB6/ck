@@ -1,0 +1,71 @@
+#header {
+    width: 100%;
+    height: 150px;
+    background-color: #d5d5d5;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#header li {
+    display: inline-block;
+}
+
+
+.certify_method  p {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+.method_choice {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.certify_method {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #757575;
+}
+.method {
+    width: 100px;
+    height: 100px;
+    padding: 35px 35px 35px 35px;
+    border: 1px solid #6CC4B3;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.method:hover {
+    background-color: rgba(108, 196, 179, 0.1);
+}
+.method img {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+}
+.method figcaption {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 90px;
+    color: #757575;
+
+}
+.certify_method span {
+    color: #505050;
+}
+
+.certify_confirm {
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    color: #757575;
+    background-color: #f5f5f5;
+}
