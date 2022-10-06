@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 팝업</title>
+
+    <!-- 공통 CSS -->
+    <link rel="stylesheet" href="../asset/css/reset.css">
+    <link rel="stylesheet" href="../asset/css/common.css">
+    <link rel="stylesheet" href="../asset/css/idPassCommon.css">
+    
+    <!-- 아이디찾기 CSS -->
+    <link rel="stylesheet" href="../asset/css/emailVerification.css">
+
+
+
+    <style>
+        .inner_height {
+            /* min-height: 715px; */
+        }
+        .emailVerifi {
+            width: 100%;
+        }
+        .emailVerifi p {
+            font-size: 20px;
+            color: #757575;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .emailVerifi h5 {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        .input__style {
+            display: block;
+            padding: 13px 20px;
+            width: 90.5%;
+            border-radius: 10px;
+            font-size: 20px;
+            background-color: #f5f5f5;
+            border: 0;
+        }
+        .input__style:focus {
+            outline: 1px solid #6CC4B3;
+        }
+        .input__style::placeholder {
+            color: #757575;
+        }
+        .first_input > .input__style {
+            margin-bottom: 15px;
+        }
+        .second_input > .input__style {
+            margin-bottom: 35px;
+        }
+
+        .searchIdBox {
+            width: 100%;
+            border-bottom: 1px dashed #6CC4B3;
+            padding-bottom: 30px;
+            margin-bottom: 20px;
+        }
+        .searchIdBox h5 {
+            font-size: 20px;
+        }
+        .searchIdBox > div {
+            text-align: center;
+        }
+        .confirm__btn {
+            display: block;
+            padding: 13px 3rem;
+            margin: 30px auto 0px auto;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .go_login {
+            text-align: center;
+            margin-top: -40px;
+        }
+        .go_login a {
+            padding: 10px 3.3rem;
+            border-radius: 10px;
+            background-color: #F5F5F5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login__popup score">
+        <div class="login__inner inner_height">
+            <div class="login__header">
+                <h3>I.D/P.W 찾기</h3>
+            </div>
+            <div class="tab_menu">
+                <span class="id active">ID</span> <em>|</em> <span class="pass">Password</span>
+                <div class="search_contents">
+                    <h4 class="user_search">아이디 찾기</h4>
+                    <div class="emailVerifi">
+                        <p>소중한 아이디를 기억해주세요!</p>
+                        <h5>이메일 인증</h5>
+                        <form action="" name="" method="post">
+                            <fieldset>
+                                <legend class="blind">이메일 인증</legend>
+                                <div class="first_input">
+                                    <label for="youEmail" class="blind">이메일</label>
+                                    <input type="text" name="youEmail" id="youEmail" placeholder="이메일을 입력해주세요." class="input__style style1" required>
+                                </div>
+                                <div class="second_input">
+                                    <label for="inputNumber" class="blind">인증번호</label>
+                                    <input type="text" name="inputNumber" id="inputNumber" placeholder="인증번호를 입력해주세요." class="input__style" required>
+                                </div>
+                                <div class="searchIdBox close">
+                                    <h5>ID</h5>
+                                    <div class="input__style">귀하의 아이디는 <span class="youID">000</span>입니다.</div>
+                                </div>
+                                <button type="submit" class="confirm__btn">인증하기</button>
+                            </fieldset>
+                        </form>
+                        <div class="go_login close">
+                            <a href="loginpopup.html">로그인</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="close_btn">
+                <svg width="25" height="25" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z" fill="#D5D5D5"/>
+                    <path d="M5.33334 4.66675L14.6667 15.3334" stroke="white" stroke-linecap="round"/>
+                    <path d="M14.6667 4.66675L5.33333 15.3334" stroke="white" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- 모달 및 탭메뉴 -->
+    <script src="../asset/js/tab_modal.js"></script>
+
+    <script>
+        const confirmBtn = document.querySelector(".confirm__btn");
+        const searchIdBox = document.querySelector(".searchIdBox");
+        const go_login = document.querySelector(".go_login");
+
+
+        //php로 전송 성공시 아래 이벤트 메서드 실행되도록 하기
+        confirmBtn.addEventListener("click", () => {
+            confirmBtn.classList.add("close");
+            searchIdBox.classList.remove("close");
+            go_login.classList.remove("close");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            confirmBtn.classList.remove("close");
+            searchIdBox.classList.add("close");
+            go_login.classList.add("close");
+        });
+    </script>
+
+</body>
+</html>
