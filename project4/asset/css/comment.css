@@ -1,6 +1,8 @@
 #comment {
     margin-top: 70px;
     margin-bottom: 50px;
+    padding-bottom: 70px;
+    border-bottom: 1px dashed #6cc4b3;
 }
 ​#comment > h2 {
     color: #6cc4b3;
