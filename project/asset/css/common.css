@@ -19,7 +19,7 @@
 
 .container {
     width: 100%;
-    max-width: 1160px;
+    max-width: 1360px;
     padding: 20px;
     margin: 0 auto;
     box-sizing: border-box;
@@ -57,32 +57,8 @@
     margin-bottom: 20px;
 }
 
-/* @media (max-width: 960px) {
-    .section {
-        padding: 100px 0;
-    }
-    .section > h2 {
-        font-size: 40px;
-    }
-    .section > p {
-        font-size: 18px;
-        margin-bottom: 60px;
-    }
-}
-@media (max-width: 600px) {
-    .section {
-        padding: 80px 0;
-    }
-    .section > h2 {
-        font-size: 30px;
-    }
-    .section > p {
-        font-size: 16px;
-        margin-bottom: 50px;
-    }
-} */
-
 /* 폰트 */
+
 .nexon {
     font-family: "NexonLv1Gothic";
     font-weight: 400;
@@ -92,8 +68,7 @@
     font-weight: 500;
 }
 .score {
-    font-family: 'SCoreDream';
-    font-weight: 400;
+    font-family: "SCoreDream";
 }
 
 /* 배경 */
@@ -103,6 +78,11 @@
 
 .skyBlue {
     background-color: #f6f8fd;
+}
+
+/* table */
+table {
+    font-family: "SCoreDream";
 }
 
 /* fixed */
