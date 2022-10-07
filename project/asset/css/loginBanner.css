@@ -1,0 +1,30 @@
+.lB__inner {
+    margin-top: 140px;
+    padding: 0 450px;
+    display: flex;
+    font-size: 20px;
+    line-height: 60px;
+    flex-wrap: nowrap;
+}
+.lB__inner figure {
+    display: flex;
+    flex-wrap: nowrap;
+    color: #6cc4b3;
+    margin-right: 60px;
+}
+.lB__inner img {
+    width: 60px;
+    height: 60px;
+    margin-right: 13px;
+}
+.Myprofile {
+    display: flex;
+    font-size: 16px;
+}
+.Myprofile > p {
+    margin-right: 20px;
+    color: #757575;
+    box-sizing: border-box;
+    text-decoration: underline 1px dashed #6cc4b3;
+    text-underline-position: under;
+}
