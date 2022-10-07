@@ -23,7 +23,7 @@
     appearance: none;
 }
 .board_ranking {
-    margin-top: 50px;
+    margin: 20px 0 70px 0;
 }
 .board_ranking h3 {
     padding-bottom: 5px;
@@ -53,7 +53,10 @@
     width: 100%;
     margin-top: 30px;
 }
-.borad__table {
+
+
+
+.board__table {
     width: 100%;
     padding: 20px;
     margin-top: 0 50px 0 0;
@@ -62,16 +65,31 @@
 .table {
     width: 100%;
 }
-.table tr td:first-child {
+.table tr {
+
+}
+.table tr td {
+    text-align: center;
+    border-bottom: 1px dashed #6cc4b3;
+}
+.table tr td:nth-child(2) {
     text-align-last: left;
+    width: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.table tr:last-child td {
+    border-bottom: none;
 }
 .table thead {
     color: #6cc4b3;
     font-size: 16px;
     margin-bottom: 20px;
 }
+
 .borad__table td {
-    padding: 10px 5px;
+    padding: 13px 5px;
 }
 .borad__pages {
     margin: 40px 0;
@@ -101,4 +119,16 @@
     font-size: 15px;
     color: #6cc4b3;
     background-color: #fff;
+}
+.board_write {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 5px 20px;
+    border: 1px solid rgb(108, 196, 179);
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+.board_write:hover {
+    background-color: rgba(108, 196, 179, 0.1);
 }

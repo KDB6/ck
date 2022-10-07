@@ -56,7 +56,9 @@ textarea {
     font-family: "GmarketSans", "AppleSDGothicNeo-Regular", "Malgun Gothic",
         "맑은 고딕", dotum, 돋움;
 }
-
+tr th {
+    font-weight: normal;
+}
 /* 링크 초기화 */
 a {
     text-decoration: none;
