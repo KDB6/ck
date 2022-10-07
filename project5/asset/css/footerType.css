@@ -1,0 +1,10 @@
+/* footer */
+.footer {
+    margin-top: 50px;
+    background-color: #ccc;
+    height: 200px;
+}
+.footer h5 {
+    text-align: center;
+    font-size: 50px;
+}

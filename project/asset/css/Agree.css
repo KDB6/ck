@@ -26,6 +26,10 @@
     font-size: 20px;
     margin-bottom: 10px;
 }
+.check {
+    padding: 20px;
+    background-color: #ccc;
+}
 .agree__inner .desc {
     background-color: #f5f5f5;
     padding: 20px;
