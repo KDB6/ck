@@ -1,5 +1,5 @@
 .inner_height {
-    max-height: 520px;
+    min-height: 517px;
 }
 
 /* 아이디 찾기 */
@@ -24,6 +24,7 @@
     font-size: 16px;
     text-align: center;
     margin-bottom: 10px;
+    color: #757575;
 }
 .input__style {
     display: block;
@@ -35,7 +36,7 @@
     border: 0;
 }
 .input__style:focus {
-    outline: 1px solid #6CC4B3;
+    outline: none;
 }
 .input__style::placeholder {
     color: #757575;
@@ -43,7 +44,10 @@
 .first_input > .input__style {
     margin-bottom: 10px;
 }
-
+input:required {
+    font-family: 'SCoreDream';
+    color: #505050;
+}
 
 .searchIdBox {
     width: 100%;

@@ -11,7 +11,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 15px;
     border: 1px solid #6CC4B3;
     color: #505050;
 }
@@ -23,14 +23,14 @@
 .login__header h3 {
     text-align: center;
     font-size: 24px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     color: #505050;
 }
 .login__header h3 > a {
     color: #505050;
 }
 .tab_menu {
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 }
 .tab_menu em {
     color: #6CC4B3;
@@ -65,7 +65,7 @@
     border-bottom: 1px dashed #6CC4B3;
     border-style: dashed 20px;
     padding-bottom: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 9px;
     color: #757575;
 }
 input::placeholder {

@@ -9,7 +9,6 @@ body {
 .login__popup {
     margin: 0 auto;
     width: 380px;
-    /* height: 593px; */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -17,13 +16,11 @@ body {
 }
 .login__inner {
     width: 380px;
-    /* height: 593px; */
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 30px;
     box-sizing: border-box;
     position: relative;
-    border: 1px solid #e1e1e1;
 }
 .login__header h3 {
     text-align: center;
@@ -36,12 +33,12 @@ body {
 }
 .login__welcome > h3 {
     color: #757575;
-    margin-bottom: 39px;
+    margin-bottom: 5px;
     font-size: 16px;
     text-align: center;
 }
 .login__welcome figure {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
 }
 .login__welcome figure > img {
     width: 320px;
@@ -57,9 +54,11 @@ body {
     border: 0;
     box-sizing: border-box;
     border-radius: 10px;
-
 }
-.login__contents .input__style::placeholder {
+.login__contents .placeholder:hover {
+    border: 0;
+}
+.login__contents .password::placeholder {
     font-size: 16px;
     color: #757575;
 }
@@ -67,7 +66,7 @@ body {
     margin-bottom: 10px;
 }
 .text_input div:last-child .input__style {
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 .login__contents .input__button {
     border-radius: 10px;
@@ -93,7 +92,7 @@ input[type="checkbox"] + label {
     display: inline-block;
     position: relative;
     cursor: pointer;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 input[type="checkbox"] + label::after {
     content:'✔';
@@ -112,7 +111,13 @@ input[id="loginBox"]:checked + label::after {
 .login__contents .btn {
     display: flex;
     justify-content: space-between;
-
+}
+.input__style:focus {
+    outline: none;
+}
+input:required {
+    font-family: 'SCoreDream';
+    color: #505050;
 }
 .btn_login {
     width: 48%;

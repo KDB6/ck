@@ -18,6 +18,7 @@
     font-size: 16px;
     text-align: center;
     margin-bottom: 10px;
+    padding-top: 11px;
 }
 .certify_method {
     font-size: 25px;
@@ -43,7 +44,7 @@
     transition: all 0.3s ease;
 }
 .method:hover {
-    background-color: rgba(108, 196, 179, 0.1);
+    background-color: rgba(247, 255, 253, 0.8);
 }
 .method img {
     width: 60px;
@@ -61,13 +62,14 @@
 
 }
 .method.method_choice {
-    background-color: rgba(108, 196, 179, 0.1);
+    background-color: rgba(247, 255, 253, 0.8);
 }
 .certify_confirm {
     font-size: 20px;
     text-align: center;
-    color: #c3c3c3;
+    color: #505050;
     transform: translateY(18px);
+    margin-bottom: 20px;
 }
 
 .certify_confirm a {

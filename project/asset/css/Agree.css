@@ -9,11 +9,11 @@
 .agree__inner {
     width: 380px;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 30px;
     box-sizing: border-box;
     position: relative;
-    border: 1px solid #505050;
+    border: 1px solid #6CC4B3;
 }
 .agree__header h2 {
     font-size: 24px;
@@ -32,7 +32,7 @@
     height: 110px;
     margin-bottom: 20px;
     position: relative;
-
+    border-radius: 10px;
 }
 .agree__inner .desc .desc_in {
     color: #757575;
@@ -51,7 +51,8 @@
 
 }
 .agree__inner .desc li {
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 300;
 }
 .agree__inner ::-webkit-scrollbar {
     width: 2px;
@@ -74,14 +75,14 @@ input[type="checkbox"] {
 }
 input[type="checkbox"] + label {
     padding: 0 0 0 30px;
-    font-size: 20px;
+    font-size: 16px;
     display: inline-block;
     position: relative;
     cursor: pointer;
 }
 input[type="checkbox"] + label::after {
     content:'✔';
-    font-size: 22px;
+    font-size: 18px;
     color: #757575;
     width: 30px;
     height: 30px;
@@ -120,7 +121,7 @@ input[id="agreeCheckAll"]:checked + label::after {
 }
 .confirm_btn {
     width: 50%;
-    color: #c5c5c5;
+    color: #505050;
 }
 .confirm_btn a {
     font-size: 16px;
