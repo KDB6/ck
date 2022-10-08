@@ -8,8 +8,8 @@
 
     <link rel="stylesheet" href="../../asset/css/common.css">
     <link rel="stylesheet" href="../../asset/css/reset.css">
-    <link rel="stylesheet" href="../../asset/css/idPassCommon.css">
-    <link rel="stylesheet" href="../../asset/css/login.css">
+    <link rel="stylesheet" href="../../asset/css/login/idPassCommon.css">
+    <link rel="stylesheet" href="../../asset/css/login/login.css">
 </head>
 <body>
     <div class="login_btn">로그인</div>
@@ -28,7 +28,7 @@
                 <form name="login" action="loginSave.php" method="POST">
                     <fieldset>
                         <legend class="blind">로그인 입력폼</legend>
-                        <div>
+                        <div class="text_input">
                             <div>
                                 <label class="blind" for="youEmail">이메일</label>
                                 <input type="email" name="youEmail" id="youEmail" placeholder="아이디를 입력해주세요." class="input__style" required>
@@ -46,7 +46,7 @@
                             <div class="btn_login">
                                 <button>Login</button>
                             </div>
-                            <div class="btb_kakao">
+                            <div class="btn_kakao">
                                 <a href="#">KaKao Login</a>            
                             </div>
                         </div>
@@ -69,21 +69,14 @@
         </div>
     </div>
 
+    <script src="../../asset/js/close_modal.js"></script>
     <script>
-        const loginPopup = document.querySelector(".login__popup");
         const loginBtn = document.querySelector(".login_btn");
-        const close_btn = document.querySelector(".close_btn");
     
         loginBtn.addEventListener("click", () => {
             loginPopup.classList.remove("close");
             loginPopup.classList.add(".show")
             loginPopup.classList.remove(".hide")
-        });
-
-        close_btn.addEventListener("click", () => {
-            loginPopup.classList.add("close");
-            loginPopup.classList.remove(".show")
-            loginPopup.classList.add(".hide")
         });
     </script>
 </body>

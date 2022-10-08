@@ -25,11 +25,11 @@
     margin-bottom: 20px;
     color: #757575;
 }
-.method_choice {
+.search_choice {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px dashed #6CC4B3;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 .method {
     width: 72px;
@@ -66,5 +66,10 @@
 .certify_confirm {
     font-size: 20px;
     text-align: center;
+    color: #c3c3c3;
+    transform: translateY(18px);
+}
+
+.certify_confirm a {
     color: #505050;
 }
