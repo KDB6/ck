@@ -76,9 +76,7 @@
 .table tr td:nth-child(2) {
     text-align-last: left;
     width: 11px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 18px;
 }
 .table tr:last-child td {
     border-bottom: none;
@@ -93,11 +91,11 @@
 }
 .borad__table td {
     margin-top: 30px;
-    padding: 13px 5px;
+    padding: 20px 5px;
     color: #505050;
 }
 .borad__pages {
-    margin: 40px 0;
+    margin: 70px 0 20px 0;
 }
 .borad__pages ul {
     text-align: center;
@@ -119,7 +117,7 @@
 }
 .search-txt {
     width: 300px;
-    height: 35px;
+    height: 30px;
     border-radius: 20px;
     padding-left: 20px;
     border: 1px solid #6cc4b3;
@@ -133,10 +131,20 @@
 .board_write {
     position: absolute;
     right: 0;
-    bottom: 0;
-    padding: 5px 20px;
-    border: 1px solid #505050;
+    bottom: 1px;
+    padding: 3px 16px;
+    border: 1px solid #6cc4b3;
     border-radius: 20px;
     transition: all 0.3s;
+    color: #6cc4b3;
+}
+#searchOption1:focus {
+    outline: none;
+}
+.search-txt:focus {
+    outline: none;
+}
+input:required {
+    font-family: 'SCoreDream';
     color: #505050;
 }

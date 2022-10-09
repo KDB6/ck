@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>게시판</title>
+    <title>게시판 메인</title>
 
     <link rel="stylesheet" href="../../asset/css/reset.css">
     <link rel="stylesheet" href="../../asset/css/common.css">
-    <link rel="stylesheet" href="../../asset/css/header.css">
     <link rel="stylesheet" href="../../asset/css/font.css">
 
+    <link rel="stylesheet" href="../../asset/css/header.css">
     <link rel="stylesheet" href="../../asset/css/loginBanner.css">
     <link rel="stylesheet" href="../../asset/css/boardType.css">
     <link rel="stylesheet" href="../../asset/css/imageType.css">
@@ -30,7 +30,7 @@
                     <li><a href="#">disease</a></li>
                     <li><a href="#">community</a></li>
                     <li><a href="#">pet shop</a></li>
-                    <li class="login"><a href="#">LOGIN</a></li>
+                    <li class="login"><a href="#">LOGOUT</a></li>
                 </ul>
             </nav>                
         </div>
@@ -58,7 +58,7 @@
             <h2>COMMUNITY</h2>
             <p>위니멀 커뮤니티에서 다양한 사람들과 좋은 정보를 나눠보세요!</p>
             <figure>
-                <img src="../../asset/img/img01.jpg" alt="">
+                <img src="../../asset/img/mainBanner.jpg" alt="">
             </figure>
         </div>
 
@@ -68,7 +68,7 @@
         <div class="board__inner">
             <div class="Option">
                 <select name="searchOption" id="searchOption1">
-                    <option value="Category">Category</option>
+                    <option value="Category">CATEGORY</option>
                 </select>
                 <select name="searchOption" id="searchOption2">
                     <option value="Date">날짜선택</option>
@@ -77,7 +77,7 @@
             <div class="board_ranking">
                 <h3>BEST Ranking</h3>
                 <div class="ranking__inner">
-                    <span class="weekBest">주간 인기글</a></span><em>|</em><span class="MonthBest">월간 인기글</span>
+                    <span class="weekBest">주간 인기글</a></span><span class="MonthBest">월간 인기글</span>
                     <table>
                         <colgroup>
                             <col style="width: 80%">
@@ -208,7 +208,7 @@
             <div class="search__box">
                 <form action="." method="post">
                     <fieldset>
-                        <input class="search-txt" type="text" placeholder="검색어를 입력해주세요.">
+                        <input class="search-txt" type="text" placeholder="검색어를 입력해주세요." required>
                         <button class="search-btn" type="submit">SEARCH</button>
                         <a href="#" class="board_write">글쓰기</a>
                     </fieldset>
