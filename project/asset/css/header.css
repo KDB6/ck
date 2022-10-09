@@ -6,11 +6,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 280px;
+    padding: 0 310px;
     box-sizing: border-box;
 }
 .header__logo {
     font-size: 30px;
+    padding-left: 7px;
 }
 .header__logo a {
     color: #6cc4b3;
@@ -24,6 +25,9 @@
     width: 80%;
     text-align: right;
     padding-top: 20px;
+}
+.header__menu ul {
+    margin-left: 100px;
 }
 .header__menu li {
     display: inline;
@@ -41,6 +45,7 @@
 }
 .header__menu .login a {
     font-size: 14px;
+    padding-right: 0;
 }
 .header__menu li a:hover {
     color: #6cc4b3;

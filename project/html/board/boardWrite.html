@@ -18,24 +18,25 @@
     <link rel="stylesheet" href="../../asset/css/footerType.css">
 </head>
 
-<body>
-    <header id="headerType" class="header__wrap">
-        <div class="header__inner">
-            <div class="header__logo">
-                <a href="#">winimal</a>
-            </div>
-            <nav class="header__menu">
-                <ul>
-                    <li><a href="#">A.hopsital</a></li>
-                    <li><a href="#">disease</a></li>
-                    <li><a href="#">community</a></li>
-                    <li><a href="#">pet shop</a></li>
-                    <li class="login"><a href="#">LOGIN</a></li>
-                </ul>
-            </nav>                
+<header id="headerType" class="header__wrap">
+    <div class="header__inner">
+        <div class="header__logo">
+            <a href="#">winimal</a>
         </div>
-    </header>
-    
+        <nav class="header__menu">
+            <ul>
+                <li><a href="#">A.hopsital</a></li>
+                <li><a href="#">disease</a></li>
+                <li><a href="#">community</a></li>
+                <li><a href="#">pet shop</a></li>
+                <li class="login"><a href="#">LOGIN</a></li>
+            </ul>
+        </nav>                
+    </div>
+</header>
+
+<body>
+
     <section id="loginBanner" class="loginBanner">
         <h2 class="blind">로그인 배너</h2>
         <div class="lB__inner">
@@ -59,13 +60,14 @@
             <p>좋은 글로 여러 정보를 나눠주세요!</p>
         </div>
     </section>
+
     <section id="boardWrite">
         <div class="board__wrap container">
             <h3>제목 :</h3>
             <div class="board__write">                
                 <div class="Option">
                     <select name="searchOption" id="searchOption1" class="Write__option">
-                        <option value="Category">Category</option>
+                        <option value="Category">CATEGORY</option>
                     </select>
                     <select name="searchOption" id="searchOption2" class="Write__option">
                         <option value="Date">파일첨부</option>
@@ -96,7 +98,12 @@
     </section>
 
 </body>
+
 <footer id="footer" class="footer">
-    <h5>푸터일시다</h5>
+    <h2>
+        winimal Copyright 2022. All Rights Reserved
+        <button><a href="">문의하기</a></button>
+    </h2>
 </footer>
+
 </html>

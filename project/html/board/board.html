@@ -18,24 +18,25 @@
 
 </head>
 
-<body>
-    <header id="headerType" class="header__wrap">
-        <div class="header__inner">
-            <div class="header__logo">
-                <a href="#">winimal</a>
-            </div>
-            <nav class="header__menu">
-                <ul>
-                    <li><a href="#">A.hopsital</a></li>
-                    <li><a href="#">disease</a></li>
-                    <li><a href="#">community</a></li>
-                    <li><a href="#">pet shop</a></li>
-                    <li class="login"><a href="#">LOGOUT</a></li>
-                </ul>
-            </nav>                
+<header id="headerType" class="header__wrap">
+    <div class="header__inner">
+        <div class="header__logo">
+            <a href="#">winimal</a>
         </div>
-    </header>
-    
+        <nav class="header__menu">
+            <ul>
+                <li><a href="#">A.hopsital</a></li>
+                <li><a href="#">disease</a></li>
+                <li><a href="#">community</a></li>
+                <li><a href="#">pet shop</a></li>
+                <li class="login"><a href="#">LOGOUT</a></li>
+            </ul>
+        </nav>                
+    </div>
+</header>
+
+<body>
+
     <section id="loginBanner" class="loginBanner">
         <h2 class="blind">dd</h2>
         <div class="lB__inner">
@@ -216,9 +217,14 @@
               </div>
         </div>
     </section>
+    
 </body>
+
 <footer id="footer" class="footer">
-    <h5>푸터일시다</h5>
+    <h2>
+        winimal Copyright 2022. All Rights Reserved
+        <button><a href="">문의하기</a></button>
+    </h2>
 </footer>
 
 <script>
@@ -230,4 +236,5 @@
         e.innerHTML = tableContents;
     });
 </script>
+
 </html>
