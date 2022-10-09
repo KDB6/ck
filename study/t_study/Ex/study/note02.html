@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오답노트 01</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dracula.css">
+</head>
+<body>
+    <main id="main">
+        <div class="document">
+
+            <h2 class="t_tit">오답 노트... 두 번째 이야기</h2>
+            <p class="t_desc2">나의 오답 노트 작성.. 여기 있는 것들은 대체로 이해가 가지만 좀 만 변형해서 나온다면 어떨까나..?(땀 좀 흘리겠습니다..)</p>
+
+            <hr>
+
+            <h3 class="t_tit2">첫 번째 문제</h3>
+            <div class="t_code">
+<pre><code class="language-js">function solution(a,b,c) {
+    let answer="YES", max;
+    let tot = a + b + c;
+
+    if(a > b) max = a;
+    else max = b;
+    if(c > max) max = c;
+    if(tot - max &lt;= max) answer = "NO";
+
+    return answer;
+}
+
+console.log(solution(13, 33, 17));
+</code></pre>
+            </div>
+            <p class="t_desc2">
+                첫 문제 부터 틀렸습니다..
+            </p>
+
+            <h3 class="t_tit2">두 번째 문제</h3>
+            <div class="t_code">
+<pre><code class="language-js">function solution(n) {
+    let answer;
+    answer = Math.ceil(n/12);
+    return answer;
+}
+
+console.log(solution(178));
+</code></pre>
+            </div>
+
+            <h3 class="t_tit2">세 번째 문제</h3>
+            <div class="t_code">
+<pre><code class="language-js">function solution(arr) {
+    let answer = [];
+    let sum = 0, min = 1000;
+    for(let x of arr) {
+        if(x % 2 ===1) {
+            sum += x;
+            if(x &lt; min) min = x;
+        }
+    }
+    answer.push(sum);
+    answer.push(min);
+    return answer;
+}
+
+arr = [12, 77, 38, 41, 53, 92, 85];
+console.log(solution(arr));
+</code></pre>
+            </div>
+
+            <h3 class="t_tit2">네 번째 문제</h3>
+            <div class="t_code">
+<pre><code class="language-js">function solution(arr) {
+    let answer = arr;
+    let sum = answer.reduce((a,b) => a + b, 0);
+    for(let i=0; i&lt;8; i++) {
+        for(let j=i+1; j&lt;9; j++) {
+            if((sum - (answer[i] + answer[j])) == 100) {
+                answer.splice(j, 1);
+                answer.splice(i, 1);
+            }
+        }
+    }
+    return answer;
+}
+
+let arr = [20, 7, 23, 19, 10, 15, 25, 8, 13];
+console.log(solution(arr));
+</code></pre>
+            </div>
+
+            <h3 class="t_tit2">다섯 번째 문제</h3>
+            <div class="t_code">
+<pre><code class="language-js">function solution(s, t) {
+    let answer = s.split(t).length;
+    return answer-1;
+}
+
+let str = "javascript react vue";
+console.log(solution(str, 'a'));
+</code></pre>
+            </div>
+
+            <h3 class="t_tit2">여섯 번째 문제</h3>
+            <div class="t_code">
+<pre><code class="language-js">function solution(s) {
+    let answer = "";
+    for(let x of s) {
+        if(x === x.toUpperCase()) answer += x.toLowerCase();
+        else answer += x.toUpperCase();
+    }
+    return answer;
+}
+console.log(solution(StuDY));
+</code></pre>
+            </div>
+
+            <h3 class="t_tit2">일곱 번째 문제</h3>
+            <div class="t_code">
+<pre><code class="language-js">function solution(s) {
+    let answer = "", max = Number.MIN_SAFE_INTEGER;
+    for(let x of s) {
+        if(x.length > max) {
+            max = x.length;
+            answer = x;
+        }
+    }
+    return answer;
+}
+let str = ["teacher", "time", "student", "beautiful", "good"];
+console.log(solution(str));
+</code></pre>
+            </div>
+
+            <h3 class="t_tit2">여덟 번째 문제</h3>
+            <div class="t_code">
+<pre><code class="language-js">function solution(s) {
+    let answer;
+    let mid = Math.floor(s.length/2)
+
+    if(s.length%2===1) answer = s.solution(mid, mid-1);
+    else answer = s.subString(mid-1, mid+1);
+
+    return answer;
+}
+console.log(solution("study"));
+</code></pre>
+            </div>
+
+            <h3 class="t_tit2">아홉 번째 문제</h3>
+            <div class="t_code">
+<pre><code class="language-js">function solution(s) {
+    let answer = "";
+    for(let i=0; i&lt;s.length;  i++) {
+        if(s.indexOf(s[i]) === i) answer+=s[i];
+    }
+    return answer;
+}
+console.log(solution("ksekkset"));
+</code></pre>
+            </div>
+
+            <h3 class="t_tit2">열 번째 문제</h3>
+            <div class="t_code">
+<pre><code class="language-js">function solution(s) {
+    let answer;
+    answer = s.filter(function(v,i) {
+        return s.indexOf(v) === i;
+    });
+    return answer;
+}
+let str = ["good", "time", "good", "time", "student"];
+console.log(solution(str));
+</code></pre>
+            </div>
+            
+            <h3 class="t_tit2">열한 번째 문제</h3>
+            <div class="t_code">
+<pre><code class="language-js">function solution(s) {
+    let answer;
+    let stack = [];
+    for(let x of s) {
+        if(x === ')') {
+            while(stack.pop() !== '(');
+        }
+        else stack.push(x);
+    }
+    answer = stack.join('');
+    return answer;
+}
+
+let str = "(A(BC)D)EF(G(H)(IJ)K)LM(N)";
+console.log(solution(str));
+</code></pre>
+            </div>
+
+            <h3 class="t_tit2">열두 번째 문제</h3>
+            <div class="t_code">
+<pre><code class="language-js">function solution(n, k) {
+    let answer;
+    let queue = Array.from({length : n}, (v, i) => i+1);
+    while(queue.length) {
+        for(let i=1; i&lt;k; i++) queue.push(queue.shift());
+        queue.shift();
+        if(queue.length === 1) answer = queue.shift();
+    }
+    return answer;
+}
+
+console.log(solution(8, 3));
+</code></pre>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="../css/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>
