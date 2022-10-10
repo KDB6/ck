@@ -31,7 +31,13 @@
                 <li><a href="#">pet shop</a></li>
                 <li class="login"><a href="#">LOGOUT</a></li>
             </ul>
-        </nav>                
+        </nav>
+        <div class="ham_menu">
+            <input type="checkbox">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>                
     </div>
 </header>
 
@@ -234,6 +240,15 @@
         let tableContents = e.innerText;
         tableContents = "<a href=#'>" + tableContents + "</a>";
         e.innerHTML = tableContents;
+    });
+
+    const btnHam = document.querySelector(".ham_menu");
+    const btnMenu = document.querySelector(".header__menu");
+    const btnMenuList = btnMenu.querySelectorAll("ul li a")
+
+    btnHam.addEventListener("click", () => {
+        btnHam.classList.toggle("active");
+        btnMenu.classList.toggle("active");
     });
 </script>
 
