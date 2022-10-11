@@ -12,44 +12,54 @@
 
     <link rel="stylesheet" href="../../asset/css/header.css">
     <link rel="stylesheet" href="../../asset/css/loginBanner.css">
-    <link rel="stylesheet" href="../../asset/css/boardTypeTest.css">
+    <link rel="stylesheet" href="../../asset/css/boardType.css">
     <link rel="stylesheet" href="../../asset/css/imageType.css">
     <link rel="stylesheet" href="../../asset/css/footerType.css">
 
 </head>
 
-<header id="headerType" class="header__wrap">
-    <div class="header__inner">
-        <div class="header__logo">
-            <a href="#">winimal</a>
-        </div>
-        <nav class="header__menu">
-            <ul>
-                <li><a href="#">A.hopsital</a></li>
-                <li><a href="#">disease</a></li>
-                <li><a href="#">community</a></li>
-                <li><a href="#">pet shop</a></li>
-                <li class="login"><a href="#">LOGOUT</a></li>
-            </ul>
-        </nav>                
-    </div>
-</header>
+
 
 <body>
+    <header id="headerType" class="header__wrap">
+        <div class="header__inner container">
+            <div class="header__logo">
+                <a href="#">winimal</a>
+            </div>
+            <nav class="header__menu">
+                <ul>
+                    <li><a href="#">A.hopsital</a></li>
+                    <li><a href="#">disease</a></li>
+                    <li><a href="#">community</a></li>
+                    <li><a href="#">pet shop</a></li>
+                    <li class="login"><a href="#">LOGOUT</a></li>
+                </ul>
+            </nav>
+            <div class="ham_menu">
+                <input type="checkbox">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>                
+        </div>
+    </header>
 
     <section id="loginBanner" class="loginBanner">
         <h2 class="blind">dd</h2>
         <div class="lB__inner">
             <figure class="MyprofileL">
                 <img src="../../asset/img/profile.png" alt="프로필">
-                <p>누군가님 어서오세요!</p>
+                <figcaption>누군가님 어서오세요!</figcaption>
+                <a href="#">LOGOUT</a>
             </figure>            
             <div class="Myprofile">
-                <p>최근 접속 기록 : 00/ 00/ 00</p>
-                <p>나의 정보</p>
-                <p>나의 반려견</p>
-                <p>나의 글 : 00개</p>
-                <p>댓글 수 : 00개</p>
+                <ul>
+                    <li>최근 접속 기록 : 00/ 00/ 00</li>
+                    <li><a href="#">나의 정보</a></li>
+                    <li><a href="#">나의 반려견</a></li>
+                    <li>나의 글 : 00개</li>
+                    <li>댓글 수 : 00개</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -87,10 +97,10 @@
             <div class="board_ranking">
                 <h3>BEST Ranking</h3>
                 <div class="ranking__inner">
-                    <span class="weekBest">주간 인기글</a></span><span class="MonthBest">월간 인기글</span>
-                    <table>
+                    <span class="weekBest active">주간 인기글</span><span class="MonthBest">월간 인기글</span>
+                    <table class="weekTable">
                         <colgroup>
-                            <col style="width: 80%">
+                            <col style="width: 80%;">
                             <col style="width: 10%; text-align: right;">
                             <col style="width: 10%; text-align: right;">
                         </colgroup>
@@ -108,6 +118,28 @@
                             <td>제라드가 더 좋지않나요?</td>
                             <td>김다빈 님</td>
                             <td>2022 / 10 / 08</td>
+                        </tr>
+                    </table>
+                    <table class="monthTable close">
+                        <colgroup>
+                            <col style="width: 80%">
+                            <col style="width: 10%; text-align: right;">
+                            <col style="width: 10%; text-align: right;">
+                        </colgroup>
+                        <tr class="board_ranking_tr">
+                            <td>홀란드 득점왕 갱신할듯</td>
+                            <td>이영환 님</td>
+                            <td>2022 / 09 / 08</td>
+                        </tr>
+                        <tr class="board_ranking_tr">
+                            <td>고양이는 배부르데요</td>
+                            <td>문병내 님</td>
+                            <td>2022 / 09 / 08</td>
+                        </tr>
+                        <tr class="board_ranking_tr">
+                            <td>리버풀 개망함</td>
+                            <td>김다빈 님</td>
+                            <td>2022 / 09 / 08</td>
                         </tr>
                     </table>
                 </div>
@@ -236,6 +268,7 @@
     </h2>
 </footer>
 
+<script src="../../asset/js/header_hamburger.js"></script>
 <script>
     //date 오늘 날짜 출력
     const now = new Date();
@@ -249,14 +282,45 @@
     console.log("오늘: " + getYmd10());  // 오늘 날짜 출력됨 
 
 
+    // 인기글 탭메뉴
+    const tabMenuWeek = document.querySelector(".weekBest");
+    const tabMenuMonth = document.querySelector(".MonthBest");
+    const weekTable = document.querySelector(".weekTable");
+    const monthTable = document.querySelector(".monthTable");
+
+    tabMenuMonth.addEventListener("click", () => {
+        tabMenuMonth.classList.add("active");
+        tabMenuWeek.classList.remove("active");
+        monthTable.classList.remove("close");
+        weekTable.classList.add("close");
+    });
+
+    tabMenuWeek.addEventListener("click", () => {
+        tabMenuWeek.classList.add("active");
+        tabMenuMonth.classList.remove("active");
+        weekTable.classList.remove("close");
+        monthTable.classList.add("close");
+    });
+
+
     // 게시판 링크 부여
-    const tableTitle = document.querySelectorAll(".main_table_body tr td:nth-child(2)");
+    const tableTitle = document.querySelectorAll("table tr td:nth-child(2)");
 
     tableTitle.forEach((e, i) => {
         let tableContents = e.innerText;
         tableContents = "<a href=#'>" + tableContents + "</a>";
         e.innerHTML = tableContents;
     });
+
+
+    //게시판 글쓴이 p태그 부여
+    // const tableUsername = document.querySelectorAll(".main_table_body tr td:nth-child(3)");
+
+    // tableUsername.forEach((e, i) => {
+    //     let tableborder = e.innerText;
+    //     tableborder = "<p>" + tableborder + "</p>";
+    //     e.innerHTML = tableborder;
+    // });
 </script>
 
 </html>

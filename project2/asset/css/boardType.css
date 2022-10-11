@@ -10,12 +10,12 @@
     justify-content: center;
 }
 .Option_category {
-    width: 325px;
-    padding: 3px 20px;
+    width: 300px;
+    padding: 0px 20px;
     font-family: inherit;
     border: 1px solid #6cc4b3;
     border-radius: 25px;
-    font-size: 20px;
+    font-size: 18px;
     color: #6cc4b3;
     display: flex;
 }
@@ -37,7 +37,7 @@
     background: url(../img/arrow.svg) no-repeat 95% 50%;
     border: none;
     font-family: inherit;
-    font-size: 20px;
+    font-size: 18px;
     color: #6cc4b3;
     cursor: pointer;
 }
@@ -46,7 +46,7 @@
 }
 .Option_category select option {
     font-family: inherit;
-    font-size: 20px;
+    font-size: 18px;
     color: #6cc4b3;
 }
 #searchOption2 {
@@ -55,7 +55,7 @@
     background: url(../img/arrow.svg) no-repeat 95% 50%;
     border: none;
     font-family: inherit;
-    font-size: 20px;
+    font-size: 18px;
     color: #6cc4b3;
     cursor: pointer;
 }
@@ -75,6 +75,7 @@ input[type="date"]:focus {
 /* 테이블 공통 */
 table tbody tr td:nth-child(2) a {
     color: #505050;
+    font-size: 16px;
 }
 
 
@@ -123,16 +124,21 @@ table tbody tr td:nth-child(2) a {
     line-height: 25px;
 }
 .board_ranking_tr:first-child td {
-    padding-top: 1px;
+    padding-top: 5px;
+    font-size: 18px;
+    text-align: left;
 } 
 .board_ranking_tr:last-child td {
-    padding-bottom: 1px;
+    padding-top: 10px;
+    font-size: 18px;
+    text-align: left;
 }
 .ranking__inner > table tr td {
     font-size: 18px;
     font-weight: 400;
-    padding: 3px 0;
-    text-align: center;
+    padding-top: 10px;
+    text-align: left;
+    font-size: 18px;
 }
 .ranking__inner > table tr td:nth-child(2) {
     font-size: 16px;
@@ -140,7 +146,6 @@ table tbody tr td:nth-child(2) a {
 }
 .ranking__inner > table tr td:nth-child(3) {
     font-size: 16px;
-    border-left: 1px solid #505050;
 
 }
 
