@@ -211,7 +211,7 @@ table tbody tr td:nth-child(2) a {
     /* border-left: 1px solid #505050; */
 }
 .table tr:last-child td {
-    /* border-bottom: none; */
+    border-bottom: none;
 }
 .borad__table td a {
     color: #505050;
