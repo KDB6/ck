@@ -10,34 +10,38 @@
     justify-content: center;
 }
 .Option_category {
-    width: 300px;
-    padding: 0px 20px;
+    width: 340px;
+    padding-left: 20px;
     font-family: inherit;
     border: 1px solid #6cc4b3;
     border-radius: 25px;
-    font-size: 18px;
+    font-size: 16px;
     color: #6cc4b3;
     display: flex;
 }
-.Option_category:first-child {
+.Option_category {
     margin-right: 20px;
 }
 .Option_category p {
     width: 40%;
+}
+.Option_category > p {
+    border-right: 1px dashed #6cc4b3;
+    padding-left: 21.5px;
 }
 .Option_category p em {
     margin-left: 20px;
 }
 .Option_category select  {
     width: 60%;
-    margin-left: 20px;
+    margin-left: 17px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: url(../img/arrow.svg) no-repeat 95% 50%;
+    background: url(../../img/arrow.svg) no-repeat 90% 50%;
     border: none;
     font-family: inherit;
-    font-size: 18px;
+    font-size: 16px;
     color: #6cc4b3;
     cursor: pointer;
 }
@@ -46,16 +50,20 @@
 }
 .Option_category select option {
     font-family: inherit;
-    font-size: 18px;
+    font-size: 16px;
     color: #6cc4b3;
 }
+.searchOption option {
+    
+}
 #searchOption2 {
-    width: 65%;
+    width: 80%;
     appearance: none;
-    background: url(../img/arrow.svg) no-repeat 95% 50%;
+    padding-left: 18px;
+    background: url(../../img/arrow.svg) no-repeat 91% 50%;
     border: none;
     font-family: inherit;
-    font-size: 18px;
+    font-size: 16px;
     color: #6cc4b3;
     cursor: pointer;
 }
@@ -125,20 +133,19 @@ table tbody tr td:nth-child(2) a {
 }
 .board_ranking_tr:first-child td {
     padding-top: 5px;
-    font-size: 18px;
+    font-size: 16px;
     text-align: left;
 } 
 .board_ranking_tr:last-child td {
     padding-top: 10px;
-    font-size: 18px;
+    font-size: 16px;
     text-align: left;
 }
 .ranking__inner > table tr td {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     padding-top: 10px;
     text-align: left;
-    font-size: 18px;
 }
 .ranking__inner > table tr td:nth-child(2) {
     font-size: 16px;

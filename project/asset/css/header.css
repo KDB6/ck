@@ -6,12 +6,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 295px;
     box-sizing: border-box;
 }
 .header__logo {
     font-size: 30px;
-    padding-left: 7px;
+    /* padding-left: 7px; */
+    z-index: 1000;
 }
 .header__logo a {
     color: #6cc4b3;
@@ -27,7 +27,7 @@
     padding-top: 20px;
 }
 .header__menu ul {
-    margin-left: 100px;
+    /* margin-left: 100px; */
 }
 .header__menu li {
     display: inline;
@@ -36,8 +36,7 @@
 .header__menu li a {
     font-weight: 400;
     font-size: 20px;
-    padding: 0px 20px;
-    margin: 0 5px;
+    padding: 0px 25px;
     color: #757575;
 }
 .header__menu .login {
@@ -64,18 +63,19 @@
 }
 .ham_menu {
     position: absolute !important;
-    top: 50%;
+    top: 70px;
     right: -40px;
     display: block;
     width: 40px;
-    height: 10px;
+    height: 36px;
     position: relative;
     cursor: pointer;
+    z-index: 1000;
 }
 .ham_menu div {
     position: absolute;
     right: 0;
-    height: 2px;
+    height: 4px;
     border-radius: 2px;
     background: #6CC4B3;
     transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6), width 0.2s ease 0.2s;
@@ -86,18 +86,18 @@
 .ham_menu input + div {
     top: 50%;
     left: 0;
-    margin: -1px 0 0 0;
+    margin: -2px 0 0 0;
     width: 40px;
     transform-origin: 50% 50%;
 }
 .ham_menu input + div + div {
-    top: -10px;
+    top: 2px;
     left: 0;
-    width: 24px;
+    width: 20px;
     transform-origin: 0 50%;
 }
 .ham_menu input + div + div + div {
-    bottom: -10px;
+    bottom: 2px;
     right: 0;
     width: 28px;
     transform-origin: 100% 50%;
@@ -108,12 +108,12 @@
     transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s;
 }
 .ham_menu.active input + div + div {
-    width: 20px;
+    width: 19px;
     transform: translate(6px, 0) rotate(45deg);
     transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s, width 0.2s ease;
 }
 .ham_menu.active input + div + div + div {
-    width: 20px;
+    width: 19px;
     transform: translate(-6px, 0) rotate(45deg);
     transition: transform 0.45s cubic-bezier(0.9, -0.6, 0.3, 1.6) 0.1s, width 0.2s ease;
 }
@@ -121,6 +121,12 @@
 
 /* media */
 @media (max-width: 1300px) {
+
+}
+@media (max-width: 1024px) {
+    .header__inner {
+        justify-content: center;
+    }
     .header__ham {
         display: block;
     }
@@ -187,6 +193,16 @@
     }
     .ham_menu {
         right: 40px;
-        top: 76px;
+        top: 70px;
+    }
+}
+@media (max-width: 768px) {
+    .header__inner {
+        justify-content: space-between;
+    }
+}
+@media (max-width: 480px) {
+    .header__inner {
+        justify-content: space-between;
     }
 }

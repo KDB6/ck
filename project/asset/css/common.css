@@ -20,6 +20,7 @@
 body {
     font-family: 'SCoreDream';
     font-weight: 400;
+    overflow-x: hidden;
 }
 input::placeholder {
     font-family: 'SCoreDream';
@@ -150,4 +151,12 @@ body.fixed {
 }
 .mt70 {
     margin-top: 70px !important;
+}
+
+
+@media (max-width: 1200px){
+    body {
+        width: 96%;
+        box-sizing: border-box;
+    }
 }

@@ -28,13 +28,21 @@
     margin-right: 20px;
     width: 300px;
     border: 1px solid #6cc4b3;
+    background: url(../../img/arrow.svg) no-repeat 93.5% 50%;
     border-radius: 25px;
     font-size: 16px;
     color: #6cc4b3;
-    padding: 2px 15px;
-    /* -webkit-appearance: none;
+    padding: 2px 20px;
+    -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none; */
+    appearance: none;
+}
+.Write__option {
+    font-family: 'SCoreDream';
+    font-weight: 400;
+}
+.Write__option:focus {
+    outline: none;
 }
 .button {
     border: 1px solid #6cc4b3;

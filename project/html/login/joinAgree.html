@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="../../asset/css/reset.css">
     <link rel="stylesheet" href="../../asset/css/common.css">
     <link rel="stylesheet" href="../../asset/css/font.css">
-    <link rel="stylesheet" href="../../asset/css/idPassCommon.css">
+    <link rel="stylesheet" href="../../asset/css/login/idPassCommon.css">
 
     <!-- 약관 동의 CSS -->
-    <link rel="stylesheet" href="../../asset/css/Agree.css">
+    <link rel="stylesheet" href="../../asset/css/login/Agree.css">
 </head>
 <body>
     <div class="agree__popup">            
@@ -117,13 +117,13 @@
         // 각각 개별적으로 전부 선택시 전체 동의 on 하나라도 아닐시 off
         checkArray.forEach((e, i) => {
             checkArray[i].addEventListener("click", () => {
-                    if(checkArray[0].checked == true && checkArray[1].checked == true && checkArray[2].checked == true){
-                        checkAll.checked = true;
-                    } else if(checkArray[0].checked == false || checkArray[1].checked == false || checkArray[2].checked == false){
-                        checkAll.checked = false;
-                    }
-                        confirmButton();
-                });
+                if(checkArray[0].checked == true && checkArray[1].checked == true && checkArray[2].checked == true){
+                    checkAll.checked = true;
+                } else if(checkArray[0].checked == false || checkArray[1].checked == false || checkArray[2].checked == false){
+                    checkAll.checked = false;
+                }
+                    confirmButton();
+            });
         });
 
         // 1번과 2번이 on일시 확인 버튼 활성화, 아니면 비활성화

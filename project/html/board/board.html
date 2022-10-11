@@ -11,15 +11,14 @@
     <link rel="stylesheet" href="../../asset/css/font.css">
 
     <link rel="stylesheet" href="../../asset/css/header.css">
-    <link rel="stylesheet" href="../../asset/css/loginBanner.css">
-    <link rel="stylesheet" href="../../asset/css/boardType.css">
-    <link rel="stylesheet" href="../../asset/css/imageType.css">
-    <link rel="stylesheet" href="../../asset/css/footerType.css">
-
+    <link rel="stylesheet" href="../../asset/css/board/boardLoginBanner.css">
+    <link rel="stylesheet" href="../../asset/css/board/boardType.css">
+    <link rel="stylesheet" href="../../asset/css/board/boardImageType.css">
+    <link rel="stylesheet" href="../../asset/css/footer.css">
 </head>
 
-<header id="headerType" class="header__wrap">
-    <div class="header__inner">
+<header id="header" class="header__wrap">
+    <div class="header__inner container">
         <div class="header__logo">
             <a href="#">winimal</a>
         </div>
@@ -42,25 +41,28 @@
 </header>
 
 <body>
-
-    <section id="loginBanner" class="loginBanner">
+    
+    <section id="boardLoginBanner" class="loginBanner">
         <h2 class="blind">dd</h2>
         <div class="lB__inner">
             <figure class="MyprofileL">
                 <img src="../../asset/img/profile.png" alt="프로필">
-                <p>누군가님 어서오세요!</p>
+                <figcaption>누군가님 어서오세요!</figcaption>
+                <a href="#">LOGOUT</a>
             </figure>            
             <div class="Myprofile">
-                <p>최근 접속 기록 : 00/ 00/ 00</p>
-                <p>나의 정보</p>
-                <p>나의 반려견</p>
-                <p>나의 글 : 00개</p>
-                <p>댓글 수 : 00개</p>
+                <ul>
+                    <li>최근 접속 기록 : 00/ 00/ 00</li>
+                    <li><a href="#">나의 정보</a></li>
+                    <li><a href="#">나의 반려견</a></li>
+                    <li>나의 글 : 00개</li>
+                    <li>댓글 수 : 00개</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section id="imageType" class="imageType">
+    <section id="boardImageType" class="imageType">
         <div class="imageType__inner">
             <h2>COMMUNITY</h2>
             <p>위니멀 커뮤니티에서 다양한 사람들과 좋은 정보를 나눠보세요!</p>
@@ -74,18 +76,27 @@
     <section id="boardType" class="boardType container">
         <div class="board__inner">
             <div class="Option">
-                <select name="searchOption" id="searchOption1">
-                    <option value="Category">CATEGORY</option>
-                </select>
-                <select name="searchOption" id="searchOption2">
-                    <option value="Date">날짜선택</option>
-                </select>
+                <div class="Option_category">
+                    <p>CATEGORY</p>
+                    <select name="searchOption" id="searchOption1" class="searchOption">
+                        <option value="Category1">CATEGORY01</option>
+                        <option value="Category2">CATEGORY02</option>
+                        <option value="Category3">CATEGORY03</option>
+                    </select>
+                </div>
+                <div class="Option_category">
+                    <p>날짜선택</p>
+                    <!-- <select type="date" name="searchOption" id="searchOption2" class="searchOption">
+                        <option value="Date"></option>
+                    </select> -->
+                    <input type="date" name="searchOption" id="searchOption2" class="searchOption" value="2022-01-01">
+                </div>
             </div>
             <div class="board_ranking">
                 <h3>BEST Ranking</h3>
                 <div class="ranking__inner">
-                    <span class="weekBest">주간 인기글</a></span><span class="MonthBest">월간 인기글</span>
-                    <table>
+                    <span class="weekBest active">주간 인기글</span><span class="MonthBest">월간 인기글</span>
+                    <table class="weekTable">
                         <colgroup>
                             <col style="width: 80%;">
                             <col style="width: 10%; text-align: right;">
@@ -105,6 +116,28 @@
                             <td>제라드가 더 좋지않나요?</td>
                             <td>김다빈 님</td>
                             <td>2022 / 10 / 08</td>
+                        </tr>
+                    </table>
+                    <table class="monthTable close">
+                        <colgroup>
+                            <col style="width: 80%">
+                            <col style="width: 10%; text-align: right;">
+                            <col style="width: 10%; text-align: right;">
+                        </colgroup>
+                        <tr class="board_ranking_tr">
+                            <td>홀란드 득점왕 갱신할듯</td>
+                            <td>이영환 님</td>
+                            <td>2022 / 09 / 08</td>
+                        </tr>
+                        <tr class="board_ranking_tr">
+                            <td>고양이는 배부르데요</td>
+                            <td>문병내 님</td>
+                            <td>2022 / 09 / 08</td>
+                        </tr>
+                        <tr class="board_ranking_tr">
+                            <td>리버풀 개망함</td>
+                            <td>김다빈 님</td>
+                            <td>2022 / 09 / 08</td>
                         </tr>
                     </table>
                 </div>
@@ -138,63 +171,63 @@
                         <tr>
                             <td>2</td>
                             <td>강아지가 보고싶어요 </td>
-                            <td>우모래</td>
+                            <td>김다빈</td>
                             <td>2022-09-16</td>
                             <td>11</td>
                         </tr>
                         <tr>
                             <td>3</td>
                             <td>고양이보단 강아지가 나은거같아요</td>
-                            <td>가슴동</td>
+                            <td>문병내</td>
                             <td>2022-09-16</td>
                             <td>1</td>
                         </tr>
                         <tr>
                             <td>4</td>
                             <td>요즘 강아지 털갈이가..</td>
-                            <td>사장님</td>
+                            <td>이승욱</td>
                             <td>2022-09-16</td>
                             <td>3</td>
                         </tr>
                         <tr>
                             <td>5</td>
                             <td>강아지가 이상해요 요즘</td>
-                            <td>언사소</td>
+                            <td>아름이</td>
                             <td>2022-09-16</td>
                             <td>2</td>
                         </tr>
                         <tr>
                             <td>6</td>
                             <td>님들 이거 왜이런거임?</td>
-                            <td>꺼펑이</td>
+                            <td>김아로</td>
                             <td>2022-09-16</td>
                             <td>4</td>
                         </tr>
                         <tr>
                             <td>7</td>
                             <td>아.. 집에가고싶다..</td>
-                            <td>정벽처</td>
+                            <td>루아</td>
                             <td>2022-09-16</td>
                             <td>14</td>
                         </tr>
                         <tr>
                             <td>8</td>
                             <td>강아지보단 고양이가 더 좋은거같아요</td>
-                            <td>서렬등</td>
+                            <td>유리</td>
                             <td>2022-09-16</td>
                             <td>16</td>
                         </tr>
                         <tr>
                             <td>9</td>
                             <td>요즘 어떤 강아지들이 인기많나요??</td>
-                            <td>흰여로</td>
+                            <td>김로아</td>
                             <td>2022-09-16</td>
                             <td>12</td>
                         </tr>
                         <tr>
                             <td>10</td>
                             <td>우리 강아지 상태좀 봐주세요!!</td>
-                            <td>뽈란드</td>
+                            <td>박서림</td>
                             <td>2022-09-16</td>
                             <td>34</td>
                         </tr>
@@ -233,8 +266,43 @@
     </h2>
 </footer>
 
+<script src="../../asset/js/header_hamburger.js"></script>
 <script>
-    const tableTitle = document.querySelectorAll(".main_table_body tr td:nth-child(2)");
+    //date 오늘 날짜 출력
+    const now = new Date();
+    // yyyy-mm-dd 포맷 날짜 생성
+    function getYmd10() {     
+        var d = new Date();
+        return d.getFullYear() + "-" + ((d.getMonth()+1)>9 ? (d.getMonth()+1).toString() : "0"+(d.getMonth()+1)) + "-" + (d.getDate()>9 ? d.getDate().toString() : "0"+d.getDate().toString());
+    }
+    var myElement = document.getElementById("searchOption2");
+    myElement.value = getYmd10();
+    console.log("오늘: " + getYmd10());  // 오늘 날짜 출력됨 
+
+
+    // 인기글 탭메뉴
+    const tabMenuWeek = document.querySelector(".weekBest");
+    const tabMenuMonth = document.querySelector(".MonthBest");
+    const weekTable = document.querySelector(".weekTable");
+    const monthTable = document.querySelector(".monthTable");
+
+    tabMenuMonth.addEventListener("click", () => {
+        tabMenuMonth.classList.add("active");
+        tabMenuWeek.classList.remove("active");
+        monthTable.classList.remove("close");
+        weekTable.classList.add("close");
+    });
+
+    tabMenuWeek.addEventListener("click", () => {
+        tabMenuWeek.classList.add("active");
+        tabMenuMonth.classList.remove("active");
+        weekTable.classList.remove("close");
+        monthTable.classList.add("close");
+    });
+
+
+    // 게시판 링크 부여
+    const tableTitle = document.querySelectorAll("table tr td:nth-child(2)");
 
     tableTitle.forEach((e, i) => {
         let tableContents = e.innerText;
@@ -242,14 +310,15 @@
         e.innerHTML = tableContents;
     });
 
-    const btnHam = document.querySelector(".ham_menu");
-    const btnMenu = document.querySelector(".header__menu");
-    const btnMenuList = btnMenu.querySelectorAll("ul li a")
 
-    btnHam.addEventListener("click", () => {
-        btnHam.classList.toggle("active");
-        btnMenu.classList.toggle("active");
-    });
+    //게시판 글쓴이 p태그 부여
+    // const tableUsername = document.querySelectorAll(".main_table_body tr td:nth-child(3)");
+
+    // tableUsername.forEach((e, i) => {
+    //     let tableborder = e.innerText;
+    //     tableborder = "<p>" + tableborder + "</p>";
+    //     e.innerHTML = tableborder;
+    // });
 </script>
 
 </html>

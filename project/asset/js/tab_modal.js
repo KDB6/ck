@@ -18,8 +18,8 @@ tabMenuId.addEventListener("click", () => {
 
     ConfirmBtn = ConfirmBtn.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]|[a-z]/gi, "").trim();
     certifyConfirm.innerHTML = ConfirmBtn;
-
 });
+
 tabMenuPass.addEventListener("click", () => {
     tabMenuPass.classList.add("active");
     tabMenuId.classList.remove("active");
