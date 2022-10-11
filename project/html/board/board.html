@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,47 +10,49 @@
     <link rel="stylesheet" href="../../asset/css/reset.css">
     <link rel="stylesheet" href="../../asset/css/common.css">
     <link rel="stylesheet" href="../../asset/css/font.css">
-
     <link rel="stylesheet" href="../../asset/css/header.css">
+    <link rel="stylesheet" href="../../asset/css/footer.css">
+
     <link rel="stylesheet" href="../../asset/css/board/boardLoginBanner.css">
     <link rel="stylesheet" href="../../asset/css/board/boardType.css">
     <link rel="stylesheet" href="../../asset/css/board/boardImageType.css">
-    <link rel="stylesheet" href="../../asset/css/footer.css">
+
 </head>
 
-<header id="header" class="header__wrap">
-    <div class="header__inner container">
-        <div class="header__logo">
-            <a href="#">winimal</a>
-        </div>
-        <nav class="header__menu">
-            <ul>
-                <li><a href="#">A.hopsital</a></li>
-                <li><a href="#">disease</a></li>
-                <li><a href="#">community</a></li>
-                <li><a href="#">pet shop</a></li>
-                <li class="login"><a href="#">LOGOUT</a></li>
-            </ul>
-        </nav>
-        <div class="ham_menu">
-            <input type="checkbox">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>                
-    </div>
-</header>
+
 
 <body>
-    
-    <section id="boardLoginBanner" class="loginBanner">
-        <h2 class="blind">dd</h2>
+    <header id="headerType" class="header__wrap">
+        <div class="header__inner container">
+            <div class="header__logo">
+                <a href="#">winimal</a>
+            </div>
+            <nav class="header__menu">
+                <ul>
+                    <li><a href="#">A.hopsital</a></li>
+                    <li><a href="#">disease</a></li>
+                    <li><a href="#">community</a></li>
+                    <li><a href="#">pet shop</a></li>
+                    <li class="login"><a href="#">LOGOUT</a></li>
+                </ul>
+            </nav>
+            <div class="ham_menu">
+                <input type="checkbox">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+
+    <section id="loginBanner" class="loginBanner">
+        <h2 class="blind">loginBanner</h2>
         <div class="lB__inner">
             <figure class="MyprofileL">
                 <img src="../../asset/img/profile.png" alt="프로필">
                 <figcaption>누군가님 어서오세요!</figcaption>
                 <a href="#">LOGOUT</a>
-            </figure>            
+            </figure>
             <div class="Myprofile">
                 <ul>
                     <li>최근 접속 기록 : 00/ 00/ 00</li>
@@ -62,7 +65,7 @@
         </div>
     </section>
 
-    <section id="boardImageType" class="imageType">
+    <section id="imageType" class="imageType">
         <div class="imageType__inner">
             <h2>COMMUNITY</h2>
             <p>위니멀 커뮤니티에서 다양한 사람들과 좋은 정보를 나눠보세요!</p>
@@ -85,10 +88,7 @@
                     </select>
                 </div>
                 <div class="Option_category">
-                    <p>날짜선택</p>
-                    <!-- <select type="date" name="searchOption" id="searchOption2" class="searchOption">
-                        <option value="Date"></option>
-                    </select> -->
+                    <p>날짜 선택</p>
                     <input type="date" name="searchOption" id="searchOption2" class="searchOption" value="2022-01-01">
                 </div>
             </div>
@@ -98,45 +98,45 @@
                     <span class="weekBest active">주간 인기글</span><span class="MonthBest">월간 인기글</span>
                     <table class="weekTable">
                         <colgroup>
-                            <col style="width: 80%;">
-                            <col style="width: 10%; text-align: right;">
-                            <col style="width: 10%; text-align: right;">
+                            <col class="bestTableCol">
+                            <col class="bestTableCol">
+                            <col class="bestTableCol">
                         </colgroup>
                         <tr class="board_ranking_tr">
-                            <td>홀란드는 진짜 전설이다 ㄷㄷ</td>
-                            <td>이영환 님</td>
+                            <td>울 강아지 넘 이뻐여!</td>
+                            <td>이영환</td>
                             <td>2022 / 10 / 08</td>
                         </tr>
                         <tr class="board_ranking_tr">
-                            <td>아니 우리 강아지 배고프다는데요</td>
-                            <td>문병내 님</td>
+                            <td>저희 아지가 밥을 잘 안먹네요..</td>
+                            <td>문병내</td>
                             <td>2022 / 10 / 08</td>
                         </tr>
                         <tr class="board_ranking_tr">
-                            <td>제라드가 더 좋지않나요?</td>
-                            <td>김다빈 님</td>
+                            <td>이 제품은 어떤가요?</td>
+                            <td>김다빈</td>
                             <td>2022 / 10 / 08</td>
                         </tr>
                     </table>
                     <table class="monthTable close">
                         <colgroup>
-                            <col style="width: 80%">
-                            <col style="width: 10%; text-align: right;">
-                            <col style="width: 10%; text-align: right;">
+                            <col class="bestTableCol">
+                            <col class="bestTableCol">
+                            <col class="bestTableCol">
                         </colgroup>
                         <tr class="board_ranking_tr">
-                            <td>홀란드 득점왕 갱신할듯</td>
-                            <td>이영환 님</td>
+                            <td>울 고양이도 넘 이뻐여!</td>
+                            <td>이영환</td>
                             <td>2022 / 09 / 08</td>
                         </tr>
                         <tr class="board_ranking_tr">
-                            <td>고양이는 배부르데요</td>
-                            <td>문병내 님</td>
+                            <td>저희 냥이가 밥을 잘 안먹네요..</td>
+                            <td>문병내</td>
                             <td>2022 / 09 / 08</td>
                         </tr>
                         <tr class="board_ranking_tr">
-                            <td>리버풀 개망함</td>
-                            <td>김다빈 님</td>
+                            <td>이 간식은 어떤가요?</td>
+                            <td>김다빈</td>
                             <td>2022 / 09 / 08</td>
                         </tr>
                     </table>
@@ -145,11 +145,11 @@
             <div class="borad__table">
                 <table class="table">
                     <colgroup>
-                        <col style="width: 7%">
-                        <col style="width: 66%">
-                        <col style="width: 9%">
-                        <col style="width: 14%">
-                        <col style="width: 5%">
+                        <col class="mainTableCol">
+                        <col class="mainTableCol">
+                        <col class="mainTableCol">
+                        <col class="mainTableCol">
+                        <col class="mainTableCol">
                     </colgroup>
                     <thead>
                         <tr>
@@ -163,14 +163,14 @@
                     <tbody class="main_table_body">
                         <tr>
                             <td>1</td>
-                            <td>미국강아지 어떤가요?</td>
-                            <td>이영환</td>
+                            <td>해당 종은 어떤가요?</td>
+                            <td>이영아</td>
                             <td>2022-09-16</td>
                             <td>10</td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>강아지가 보고싶어요 </td>
+                            <td>강아지가 보고싶어요..</td>
                             <td>김다빈</td>
                             <td>2022-09-16</td>
                             <td>11</td>
@@ -232,7 +232,7 @@
                             <td>34</td>
                         </tr>
                     </tbody>
-                </table>                
+                </table>
             </div>
             <div class="borad__pages">
                 <ul>
@@ -253,10 +253,10 @@
                         <a href="#" class="board_write">글쓰기</a>
                     </fieldset>
                 </form>
-              </div>
+            </div>
         </div>
     </section>
-    
+
 </body>
 
 <footer id="footer" class="footer">
@@ -271,9 +271,9 @@
     //date 오늘 날짜 출력
     const now = new Date();
     // yyyy-mm-dd 포맷 날짜 생성
-    function getYmd10() {     
+    function getYmd10() {
         var d = new Date();
-        return d.getFullYear() + "-" + ((d.getMonth()+1)>9 ? (d.getMonth()+1).toString() : "0"+(d.getMonth()+1)) + "-" + (d.getDate()>9 ? d.getDate().toString() : "0"+d.getDate().toString());
+        return d.getFullYear() + "-" + ((d.getMonth() + 1) > 9 ? (d.getMonth() + 1).toString() : "0" + (d.getMonth() + 1)) + "-" + (d.getDate() > 9 ? d.getDate().toString() : "0" + d.getDate().toString());
     }
     var myElement = document.getElementById("searchOption2");
     myElement.value = getYmd10();
@@ -302,7 +302,7 @@
 
 
     // 게시판 링크 부여
-    const tableTitle = document.querySelectorAll("table tr td:nth-child(2)");
+    const tableTitle = document.querySelectorAll("table tr td:first-child");
 
     tableTitle.forEach((e, i) => {
         let tableContents = e.innerText;
