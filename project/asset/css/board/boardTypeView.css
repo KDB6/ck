@@ -70,13 +70,11 @@ input[type="date"]:focus {
     outline: none;
 }
 
-
 /* 테이블 공통 */
 table tbody tr td:nth-child(2) a {
     color: #505050;
     font-size: 16px;
 }
-
 
 /* 인기글 테이블*/
 .board_ranking {
@@ -149,8 +147,6 @@ table tbody tr td:nth-child(2) a {
     padding-right: 20px;
 }
 
-
-
 /* 메인 테이블 */
 .board__table {
     width: 100%;
@@ -174,11 +170,6 @@ table tbody tr td:nth-child(2) a {
 .mainTableCol:nth-child(5){
     width: 60px;
 }
-
-
-
-
-
 
 .table thead {
     color: #6cc4b3;
@@ -216,9 +207,6 @@ table tbody tr td:nth-child(2) a {
     text-align: center;
 }
 
-
-
-
 .main_table_body tr td:nth-child(3) p {
     /* border-left: 1px solid #505050; */
 }
@@ -229,11 +217,6 @@ table tbody tr td:nth-child(2) a {
     color: #505050;
     font-size: 18px;
 }
-
-
-
-
-
 
 .borad__pages {
     margin: 70px 0 20px 0;
@@ -301,7 +284,6 @@ input:required {
 .close {
     display: none;
 }
-
 
 @media (max-width: 1200px){
     
@@ -385,10 +367,8 @@ input:required {
         left: 80px;
     }
 
-
     .table {
         border-top: 1px solid #6CC4B3;
-
     }
     .table thead {
         display: none;
@@ -417,12 +397,9 @@ input:required {
         display: none;
     }
     
-
     .borad__pages {
         margin-top: 30px;
     }
-
-
 
     #searchOption2 {
         font-size: 0.9rem;
@@ -431,8 +408,6 @@ input:required {
         bottom: 48px;
         font-size: 0.9rem;
     }
-
-
 }
 @media (max-width: 480px){
     .board_write {
