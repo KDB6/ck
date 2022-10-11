@@ -24,7 +24,7 @@
     margin-right: 20px;
 }
 .Option select {
-    margin-top: 22px;
+    margin-top: 25px;
     margin-right: 20px;
     width: 300px;
     border: 1px solid #6cc4b3;
@@ -59,6 +59,7 @@
     width: 20%;
     display: flex;
     overflow: hidden;
+    border-radius: 10px;
 }
 .board__contents {
     height: 500px;

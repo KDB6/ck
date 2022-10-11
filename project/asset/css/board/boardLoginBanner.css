@@ -1,4 +1,4 @@
-#loginBanner {
+#boardLoginBanner {
     font-family: 'SCoreDream';
     width: 100%;
     margin: 0 auto;
@@ -52,7 +52,7 @@
 }
 
 @media (max-width: 1200px){
-    #loginBanner {
+    #boardLoginBanner {
         width: 96%;
     }
 }

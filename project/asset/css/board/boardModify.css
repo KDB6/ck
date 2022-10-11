@@ -1,4 +1,4 @@
-.board__write {
+.board__modify {
     display: flex;
     justify-content: space-between;
     margin-bottom: 48px;
@@ -56,6 +56,7 @@
     width: 20%;
     display: flex;
     overflow: hidden;
+    border-radius: 10px;
 }
 .board__contents {
     height: 500px;

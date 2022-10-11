@@ -12,13 +12,14 @@
 
     <link rel="stylesheet" href="../../asset/css/header.css">
     <link rel="stylesheet" href="../../asset/css/board/boardLoginBanner.css">
+    <link rel="stylesheet" href="../../asset/css/board/boardImageType.css">
     <link rel="stylesheet" href="../../asset/css/board/boardView.css">
     <link rel="stylesheet" href="../../asset/css/board/boardComment.css">
-    <link rel="stylesheet" href="../../asset/css/board/boardImageType.css">
-    <link rel="stylesheet" href="../../asset/css/board/boardViewType.css">
+    <link rel="stylesheet" href="../../asset/css/board/boardTypeView.css">
     <link rel="stylesheet" href="../../asset/css/footer.css">
 </head>
 
+<!-- header -->
 <header id="header" class="header__wrap">
     <div class="header__inner container">
         <div class="header__logo">
@@ -41,9 +42,11 @@
         </div>                
     </div>
 </header>
+<!-- //header -->
 
 <body>
 
+    <!-- boardLoginBanner -->
     <section id="boardLoginBanner" class="loginBanner">
         <h2 class="blind">dd</h2>
         <div class="lB__inner">
@@ -63,14 +66,18 @@
             </div>
         </div>
     </section>
+    <!-- //boardLoginBanner -->
 
+    <!-- boardImageType -->
     <section id="boardImageType" class="imageType">
         <div class="imageType__inner">
             <h2>COMMUNITY</h2>
             <p>좋은 글에는 좋은 댓글을 달아주세요!</p>
         </div>
     </section>
+    <!-- //boardImageType -->
 
+    <!-- boardView -->
     <section id="boardView">
         <div class="view__inner container">
             <div class="view__top">
@@ -111,7 +118,9 @@
             </div>
         </div>
     </section>
+    <!-- //boardView -->
 
+    <!-- boardComment -->
     <section id="boardComment" class="container">
         <h2 class="comment__h2">COMMENT</h2>
         <table>
@@ -170,18 +179,19 @@
             </tbody>
         </table>
     </section>
+    <!-- //boardComment -->
 
-    <section id="boardType" class="boardType container">
+    <!-- boardTypeView -->
+    <section id="boardTypeView" class="boardTypeView container">
         <div class="board__inner">
-            
             <div class="borad__table">
                 <table class="table">
                     <colgroup>
-                        <col style="width: 7%">
-                        <col style="width: 66%">
-                        <col style="width: 9%">
-                        <col style="width: 14%">
-                        <col style="width: 5%">
+                        <col class="mainTableCol">
+                        <col class="mainTableCol">
+                        <col class="mainTableCol">
+                        <col class="mainTableCol">
+                        <col class="mainTableCol">
                     </colgroup>
                     <thead>
                         <tr>
@@ -192,79 +202,79 @@
                             <th>조회수</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="main_table_body">
                         <tr>
                             <td>1</td>
-                            <td>미국강아지 어떤가요?</td>
-                            <td>이영환</td>
+                            <td>해당 종은 어떤가요?</td>
+                            <td>이영아</td>
                             <td>2022-09-16</td>
                             <td>10</td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>강아지가 보고싶어요 </td>
-                            <td>우모래</td>
+                            <td>강아지가 보고싶어요..</td>
+                            <td>김다빈</td>
                             <td>2022-09-16</td>
                             <td>11</td>
                         </tr>
                         <tr>
                             <td>3</td>
                             <td>고양이보단 강아지가 나은거같아요</td>
-                            <td>가슴동</td>
+                            <td>문병내</td>
                             <td>2022-09-16</td>
                             <td>1</td>
                         </tr>
                         <tr>
                             <td>4</td>
                             <td>요즘 강아지 털갈이가..</td>
-                            <td>사장님</td>
+                            <td>이승욱</td>
                             <td>2022-09-16</td>
                             <td>3</td>
                         </tr>
                         <tr>
                             <td>5</td>
                             <td>강아지가 이상해요 요즘</td>
-                            <td>언사소</td>
+                            <td>아름이</td>
                             <td>2022-09-16</td>
                             <td>2</td>
                         </tr>
                         <tr>
                             <td>6</td>
                             <td>님들 이거 왜이런거임?</td>
-                            <td>꺼펑이</td>
+                            <td>김아로</td>
                             <td>2022-09-16</td>
                             <td>4</td>
                         </tr>
                         <tr>
                             <td>7</td>
                             <td>아.. 집에가고싶다..</td>
-                            <td>정벽처</td>
+                            <td>루아</td>
                             <td>2022-09-16</td>
                             <td>14</td>
                         </tr>
                         <tr>
                             <td>8</td>
                             <td>강아지보단 고양이가 더 좋은거같아요</td>
-                            <td>서렬등</td>
+                            <td>유리</td>
                             <td>2022-09-16</td>
                             <td>16</td>
                         </tr>
                         <tr>
                             <td>9</td>
                             <td>요즘 어떤 강아지들이 인기많나요??</td>
-                            <td>흰여로</td>
+                            <td>김로아</td>
                             <td>2022-09-16</td>
                             <td>12</td>
                         </tr>
                         <tr>
                             <td>10</td>
                             <td>우리 강아지 상태좀 봐주세요!!</td>
-                            <td>뽈란드</td>
+                            <td>박서림</td>
                             <td>2022-09-16</td>
                             <td>34</td>
                         </tr>
                     </tbody>
-                </table>                
+                </table>
             </div>
             <div class="borad__pages">
                 <ul>
@@ -275,7 +285,7 @@
                     <li><a href="#">4</a></li>
                     <li><a href="#">5</a></li>
                     <li><a href="#">&gt;</a></li>
-                </ul>                    
+                </ul>
             </div>
             <div class="search__box">
                 <form action="." method="post">
@@ -285,18 +295,21 @@
                         <a href="#" class="board_write">글쓰기</a>
                     </fieldset>
                 </form>
-              </div>
+            </div>
         </div>
     </section>
+    <!-- //boardTypeView -->
     
 </body>
 
+<!-- footer -->
 <footer id="footer" class="footer">
     <h2>
         winimal Copyright 2022. All Rights Reserved
         <button><a href="">문의하기</a></button>
     </h2>
 </footer>
+<!-- //footer -->
 
 <script src="../../asset/js/header_hamburger.js"></script>
 

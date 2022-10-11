@@ -10,42 +10,43 @@
     <link rel="stylesheet" href="../../asset/css/reset.css">
     <link rel="stylesheet" href="../../asset/css/common.css">
     <link rel="stylesheet" href="../../asset/css/font.css">
+    
     <link rel="stylesheet" href="../../asset/css/header.css">
-    <link rel="stylesheet" href="../../asset/css/footer.css">
-
     <link rel="stylesheet" href="../../asset/css/board/boardLoginBanner.css">
-    <link rel="stylesheet" href="../../asset/css/board/boardType.css">
     <link rel="stylesheet" href="../../asset/css/board/boardImageType.css">
-
+    <link rel="stylesheet" href="../../asset/css/board/boardType.css">
+    <link rel="stylesheet" href="../../asset/css/footer.css">
 </head>
 
-
+<!-- header -->
+<header id="headerType" class="header__wrap">
+    <div class="header__inner container">
+        <div class="header__logo">
+            <a href="#">winimal</a>
+        </div>
+        <nav class="header__menu">
+            <ul>
+                <li><a href="#">A.hopsital</a></li>
+                <li><a href="#">disease</a></li>
+                <li><a href="#">community</a></li>
+                <li><a href="#">pet shop</a></li>
+                <li class="login"><a href="#">LOGOUT</a></li>
+            </ul>
+        </nav>
+        <div class="ham_menu">
+            <input type="checkbox">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</header>
+<!-- //header -->
 
 <body>
-    <header id="headerType" class="header__wrap">
-        <div class="header__inner container">
-            <div class="header__logo">
-                <a href="#">winimal</a>
-            </div>
-            <nav class="header__menu">
-                <ul>
-                    <li><a href="#">A.hopsital</a></li>
-                    <li><a href="#">disease</a></li>
-                    <li><a href="#">community</a></li>
-                    <li><a href="#">pet shop</a></li>
-                    <li class="login"><a href="#">LOGOUT</a></li>
-                </ul>
-            </nav>
-            <div class="ham_menu">
-                <input type="checkbox">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-    </header>
 
-    <section id="loginBanner" class="loginBanner">
+    <!-- boardLoginBanner -->
+    <section id="boardLoginBanner" class="loginBanner">
         <h2 class="blind">loginBanner</h2>
         <div class="lB__inner">
             <figure class="MyprofileL">
@@ -64,8 +65,10 @@
             </div>
         </div>
     </section>
+    <!-- //boardLoginBanner -->
 
-    <section id="imageType" class="imageType">
+    <!-- boardImageType -->
+    <section id="boardImageType" class="imageType">
         <div class="imageType__inner">
             <h2>COMMUNITY</h2>
             <p>위니멀 커뮤니티에서 다양한 사람들과 좋은 정보를 나눠보세요!</p>
@@ -75,7 +78,9 @@
         </div>
 
     </section>
+    <!-- //boardImageType -->
 
+    <!-- boardType -->
     <section id="boardType" class="boardType container">
         <div class="board__inner">
             <div class="Option">
@@ -256,15 +261,18 @@
             </div>
         </div>
     </section>
+    <!-- //boardType -->
 
 </body>
 
+<!-- footer -->
 <footer id="footer" class="footer">
     <h2>
         winimal Copyright 2022. All Rights Reserved
         <button><a href="">문의하기</a></button>
     </h2>
 </footer>
+<!-- //footer -->
 
 <script src="../../asset/js/header_hamburger.js"></script>
 <script>
