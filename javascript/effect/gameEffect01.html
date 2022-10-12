@@ -10,6 +10,87 @@
     <link rel="stylesheet" href="../assets/css/game.css">
 </head>
 <body>
-    
+
+    <!-- header -->
+    <header id="header">
+        <h1>GAME</h1>
+        <div class="time"></div>
+    </header>
+
+    <!-- main -->
+    <main id="main">
+        <div class="icon_box">
+            <div class="icon01">
+                <img src="../assets/img/music.png" alt="">
+                <span>MUSIC</span>
+            </div>
+            <div class="icon02">
+                <img src="../assets/img/mouse.svg" alt="">
+                <span>MOUSE</span>
+            </div>
+            <div class="icon03">
+                <img src="../assets/img/six.svg" alt="">
+                <span>SIX</span>
+            </div>
+            <div class="icon04">
+                <img src="../assets/img/folderMusic.svg" alt="">
+                <span>MOVIE</span>
+            </div>
+            <div class="icon05">
+                <img src="../assets/img/folderAudio.svg" alt="">
+                <span>AUDIO</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="agent">GAME OVER</div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(".icon01").draggable();
+        $(".icon02").draggable();
+        $(".icon03").draggable();
+        $(".icon04").draggable();
+        $(".icon05").draggable();
+
+        function printTime() {
+            const clock = document.querySelector(".time");
+            const now = new Date();
+            const nowTime = now.getFullYear() + "YEAR" + " " + (now.getMonth()+1) + "." + now.getDate() + " / " + now.getHours() + "." + now.getMinutes();
+            
+            clock.innerText = nowTime;
+            setTimeout("printTime()", 1000);
+        }
+        function printAgent() {
+            const agent = document.querySelector(".agent");
+            const os = navigator.userAgent.toLocaleLowerCase();
+
+            // agent.innerText = os;
+
+            if(os.indexOf("window") >= 0) {
+                agent.innerText = "현재 윈도우 사용 중, 화면 크기 " + screen.width + " * " + screen.height;
+                document.querySelector("body").classList.add("window");
+            } else if(ps.indexOf("macintosh") >=0) {
+                agent.innerText = "현재 맥을 사용 중"
+                document.querySelector("body").classList.add("macintosh");
+            } else if(ps.indexOf("iphone") >=0) {
+                agent.innerText = "현재 아이폰을 사용 중"
+                document.querySelector("body").classList.add("iphone");
+            } else if(ps.indexOf("android") >=0) {
+                agent.innerText = "현재 안드로이드를 사용 중"
+                document.querySelector("body").classList.add("android");
+            }
+        }
+
+        window.onload = function() {
+            printTime();
+            printAgent();
+        }
+    </script>
 </body>
 </html>
