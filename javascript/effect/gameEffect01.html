@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="../assets/css/bg.css">
     <link rel="stylesheet" href="../assets/css/game.css">
+    <link rel="stylesheet" href="../assets/css/music.css">
 </head>
 <body>
 
@@ -21,23 +22,23 @@
     <main id="main">
         <div class="icon_box">
             <div class="icon01">
-                <img src="../assets/img/music.png" alt="">
-                <span>MUSIC</span>
-            </div>
-            <div class="icon02">
-                <img src="../assets/img/mouse.svg" alt="">
-                <span>MOUSE</span>
-            </div>
-            <div class="icon03">
-                <img src="../assets/img/six.svg" alt="">
+                <img src="../assets/img/music/six.svg" alt="">
                 <span>SIX</span>
             </div>
+            <div class="icon02">
+                <img src="../assets/img/music/folder1.svg" alt="">
+                <span>shop</span>
+            </div>
+            <div class="icon03">
+                <img src="../assets/img/music/folderFile.svg" alt="">
+                <span>FILE</span>
+            </div>
             <div class="icon04">
-                <img src="../assets/img/folderMusic.svg" alt="">
+                <img src="../assets/img/music/folderMusic.svg" alt="">
                 <span>MOVIE</span>
             </div>
             <div class="icon05">
-                <img src="../assets/img/folderAudio.svg" alt="">
+                <img src="../assets/img/music/folderAudio.svg" alt="">
                 <span>AUDIO</span>
             </div>
         </div>
@@ -48,10 +49,69 @@
         <div class="agent">GAME OVER</div>
     </footer>
 
+    <!-- music player -->
+    <div class="muisc__wrap">
+        <div class="music__inner">
+            <div class="music__header">
+                <div></div>
+                <h2>MUSIC PALYER</h2>
+                <div></div>
+            </div>
+            <div class="music__contents">
+                <div class="music__view">
+                    <div class="img">
+                        <img src="../assets/img/music/music__bg01.png" alt="">
+                    </div>
+                    <div class="title">
+                        <h3>LAKEY INSPIRED</h3>
+                        <p>Blue Boi</p>
+                    </div>
+                </div>
+                <div class="music__control">
+                    <div class="progress">
+                        <div class="bar">
+                            <audio id="main__audio" src="../assets/music/music__audio01.mp3"></audio>
+                        </div>
+                        <div class="timer">
+                            <span class="current">00 : 00</span>
+                            <span class="duration">04 : 00</span>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <i title="전체 반복" class="repeat" id="control__repeat"></i>
+                        <i title="이전곡 반복" class="prev" id="control__prev"></i>
+                        <i title="재생" class="play" id="control__play"></i>
+                        <i title="다음곡 재생" class="next" id="control__next"></i>
+                        <i title="재생 목록" class="list" id="control__list"></i>
+
+                        <!-- <i title="한곡 반복" class="repeat__one"></i> -->
+                        <!-- <i title="랜덤 반복" class="shuffle"></i> -->
+                        <!-- <i title="정지" class="stop"></i> -->
+                    </div>
+                </div>
+            </div>
+            <div class="music__footer">
+                <div class="music__list">
+                    <h3><span class="list"></span>뮤직리스트</h3>
+                    <ul>
+                        <!-- <li>
+                            <strong>제목</strong>
+                            <em>아티스트</em>
+                            <span>재생 시간</span>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="../assets/js/music.js"></script>
+    
     <script>
+        $(".muisc__wrap").draggable();
         $(".icon01").draggable();
         $(".icon02").draggable();
         $(".icon03").draggable();
@@ -61,7 +121,7 @@
         function printTime() {
             const clock = document.querySelector(".time");
             const now = new Date();
-            const nowTime = now.getFullYear() + "YEAR" + " " + (now.getMonth()+1) + "." + now.getDate() + " / " + now.getHours() + "." + now.getMinutes();
+            const nowTime = now.getFullYear() + "YEAR" + " " + (now.getMonth()+1) + "." + now.getDate() + " / " + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
             
             clock.innerText = nowTime;
             setTimeout("printTime()", 1000);
