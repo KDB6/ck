@@ -18,26 +18,35 @@
         <div class="time"></div>
     </header>
 
+    <!-- mouse -->
+    <div class="mouse__cursor">
+        <img src="../assets/img/music/mouse.svg" alt="마우스">
+    </div>
+
     <!-- main -->
     <main id="main">
         <div class="icon_box">
             <div class="icon01">
+                <img src="../assets/img/music/star.svg" alt="">
+                <span>STAR</span>
+            </div>
+            <div class="icon02">
                 <img src="../assets/img/music/six.svg" alt="">
                 <span>SIX</span>
             </div>
-            <div class="icon02">
-                <img src="../assets/img/music/folder1.svg" alt="">
+            <div class="icon03">
+                <img src="../assets/img/music/foldershop.svg" alt="">
                 <span>shop</span>
             </div>
-            <div class="icon03">
+            <div class="icon04">
                 <img src="../assets/img/music/folderFile.svg" alt="">
                 <span>FILE</span>
             </div>
-            <div class="icon04">
+            <div class="icon05">
                 <img src="../assets/img/music/folderMusic.svg" alt="">
                 <span>MOVIE</span>
             </div>
-            <div class="icon05">
+            <div class="icon06">
                 <img src="../assets/img/music/folderAudio.svg" alt="">
                 <span>AUDIO</span>
             </div>
@@ -92,7 +101,7 @@
             </div>
             <div class="music__footer">
                 <div class="music__list">
-                    <h3><span class="list"></span>뮤직리스트</h3>
+                    <h3><span class="list"></span>MUSIC LIST</h3>
                     <ul>
                         <!-- <li>
                             <strong>제목</strong>
@@ -105,23 +114,71 @@
         </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="../assets/js/gsap.min.js"></script>
     <script src="../assets/js/music.js"></script>
     
     <script>
+        const cursor = document.querySelector(".mouse__cursor");
+
+        window.addEventListener("mousemove", (e) => {
+            cursor.style.left = e.clientX - 12 + "px";
+            cursor.style.top = e.clientY - 8 + "px";
+        });
+
         $(".muisc__wrap").draggable();
-        $(".icon01").draggable();
-        $(".icon02").draggable();
-        $(".icon03").draggable();
-        $(".icon04").draggable();
-        $(".icon05").draggable();
+
+        $(".icon01").draggable({
+            drag : function() {
+                $(".mouse__cursor img").attr("src","../assets/img/music/star.svg")
+            }
+        });
+        $(".icon02").draggable({
+            drag : function() {
+                $(".mouse__cursor img").attr("src","../assets/img/music/six.svg")
+            }
+        });
+        $(".icon03").draggable({
+            drag : function() {
+                $(".mouse__cursor img").attr("src","../assets/img/music/foldershop.svg")
+            }
+        });
+        $(".icon04").draggable({
+            drag : function() {
+                $(".mouse__cursor img").attr("src","../assets/img/music/folderFile.svg")
+            }
+        });
+        $(".icon05").draggable({
+            drag : function() {
+                $(".mouse__cursor img").attr("src","../assets/img/music/folderMusic.svg")
+            }
+        });
+        $(".icon06").draggable({
+            drag : function() {
+                $(".mouse__cursor img").attr("src","../assets/img/music/folderAudio.svg")
+            }
+        });
 
         function printTime() {
             const clock = document.querySelector(".time");
             const now = new Date();
-            const nowTime = now.getFullYear() + "YEAR" + " " + (now.getMonth()+1) + "." + now.getDate() + " / " + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+
+            let getHours = now.getHours();
+            if(getHours > 12) {
+                getHours = getHours - 12;
+            } if(getHours < 10) {
+                getHours = `0${getHours}`;
+            }
+            let getMinutes = now.getMinutes();
+            if(getMinutes < 10) {
+                getMinutes = `0${getMinutes}`;
+            }
+            let getSeconds = now.getSeconds();
+            if(getSeconds < 10) {
+                getSeconds = `0${getSeconds}`;
+            }
+            const nowTime = now.getFullYear() + "YEAR" + " " + (now.getMonth()+1) + "." + now.getDate() + " / " + `${getHours}` + ":" + `${getMinutes}` + ":" + `${getSeconds}`;
             
             clock.innerText = nowTime;
             setTimeout("printTime()", 1000);
@@ -129,8 +186,6 @@
         function printAgent() {
             const agent = document.querySelector(".agent");
             const os = navigator.userAgent.toLocaleLowerCase();
-
-            // agent.innerText = os;
 
             if(os.indexOf("window") >= 0) {
                 agent.innerText = "현재 윈도우 사용 중, 화면 크기 " + screen.width + " * " + screen.height;

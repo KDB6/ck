@@ -32,6 +32,16 @@ body {
     color: #fff;
     margin-top: 6px;
 }
+/* mouseType */
+.mouse__cursor {
+    position: absolute;
+}
+.mouse__cursor img {
+    width: 32px;
+    height: 32px;
+    user-select: none;
+    pointer-events: none;
+}
 
 .icon01 {
     position: absolute;
@@ -115,6 +125,24 @@ body {
     width: 100%;
 }
 .icon05 span {
+    display: block;
+    color: #586BB1;
+    font-size: 14px;
+    padding: 1px 0;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.icon06 {
+    position: absolute;
+    left: 30px;
+    top: 550px;
+    width: 54px;
+}
+.icon06 img {
+    width: 100%;
+}
+.icon06 span {
     display: block;
     color: #586BB1;
     font-size: 14px;
