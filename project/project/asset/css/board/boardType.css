@@ -1,5 +1,5 @@
 .board__inner {
-    border-top: 1px dashed #6cc4b3;
+    margin-top: 10px;
 }
 
 /* 카테고리 및 날짜 선택 */
@@ -407,7 +407,11 @@ input:required {
     .table tr td:nth-child(5){
         display: none;
     }
+<<<<<<<< HEAD:project/project/asset/css/board/boardType.css
 
+========
+    
+>>>>>>>> 9b2ee794cfccfe260bfecce6dfe27a59fb69a37d:project/project/asset/css/board/boardTypeView.css
     .borad__pages {
         margin-top: 30px;
     }

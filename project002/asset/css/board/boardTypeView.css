@@ -176,11 +176,22 @@ table tbody tr td:nth-child(2) a {
     font-size: 16px;
     margin-bottom: 20px;
 }
+<<<<<<< HEAD:project002/asset/css/board/boardTypeView.css
 .table tr td {
     border-bottom: 1px dashed #6cc4b3;
     color: #505050;
     padding: 20px 0;
 }
+=======
+.board_ranking_tr td > a{
+    color: #505050;
+}
+.table tr td {
+    border-bottom: 1px dashed #6cc4b3;
+    color: #505050;
+    padding: 20px 0;
+}
+>>>>>>> 9b2ee794cfccfe260bfecce6dfe27a59fb69a37d:project/asset/css/board/boardType.css
 .table tr th:nth-child(1),
 .table tr td:nth-child(1){
     padding-right: 15px;
@@ -215,7 +226,7 @@ table tbody tr td:nth-child(2) a {
 }
 .borad__table td a {
     color: #505050;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .borad__pages {
@@ -342,16 +353,36 @@ input:required {
         font-size: 0.9rem !important;
     }
     .Option_category:last-child p {
+<<<<<<< HEAD:project002/asset/css/board/boardTypeView.css
         padding-right: 26px;
     } 
 
+=======
+        padding-right: 21px;
+        padding-left: 5px;
+    } 
+    #searchOption2 {
+        padding-left: 20px;
+        background: url(../../img/arrow.svg) no-repeat 91.5% 50%;
+    }
+>>>>>>> 9b2ee794cfccfe260bfecce6dfe27a59fb69a37d:project/asset/css/board/boardType.css
     .board_ranking_tr {
         position: relative;
         display: flex;
     }
+<<<<<<< HEAD:project002/asset/css/board/boardTypeView.css
     .bestTableCol:nth-child(1){
         max-width: auto;
         width: 100%;
+=======
+    .board_ranking_tr > td a {
+        color: #505050;
+    }
+    .bestTableCol:nth-child(1){
+        max-width: auto;
+        width: 100%;
+        color: #505050;
+>>>>>>> 9b2ee794cfccfe260bfecce6dfe27a59fb69a37d:project/asset/css/board/boardType.css
     }
     .board_ranking_tr td:nth-child(1){
         margin-bottom: 15px;
@@ -377,7 +408,11 @@ input:required {
         position: relative;
     }
     .table tr td {
+<<<<<<< HEAD:project002/asset/css/board/boardTypeView.css
         padding: 7px 0 20px 0;
+=======
+        padding: 7px 0 27px 0;
+>>>>>>> 9b2ee794cfccfe260bfecce6dfe27a59fb69a37d:project/asset/css/board/boardType.css
     }
     .table tr td:nth-child(2){
         width: 100%;
@@ -387,7 +422,11 @@ input:required {
         position: absolute;
         left: 28px;
         top: 24px;
+<<<<<<< HEAD:project002/asset/css/board/boardTypeView.css
         font-size: 13px;
+=======
+        font-size: 12px;
+>>>>>>> 9b2ee794cfccfe260bfecce6dfe27a59fb69a37d:project/asset/css/board/boardType.css
         border: none;
     }
     .table tr td:nth-child(4){
@@ -396,7 +435,11 @@ input:required {
     .table tr td:nth-child(5){
         display: none;
     }
+<<<<<<< HEAD:project002/asset/css/board/boardTypeView.css
     
+=======
+
+>>>>>>> 9b2ee794cfccfe260bfecce6dfe27a59fb69a37d:project/asset/css/board/boardType.css
     .borad__pages {
         margin-top: 30px;
     }
