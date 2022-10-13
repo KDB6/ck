@@ -54,18 +54,20 @@
 .tab_menu > span.active {
     color: #6CC4B3;
 }
-.search_IDcontents {
-
-}
-.search_PASScontents {
-
-}
 .user_search {
     font-size: 16px;
     border-bottom: 1px dashed #6CC4B3;
     border-style: dashed 20px;
     padding-bottom: 5px;
     margin-bottom: 9px;
+    color: #757575;
+}
+.pwSearch_contents > .user_search {
+    font-size: 16px;
+    border-bottom: 1px dashed #6CC4B3;
+    border-style: dashed 20px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
     color: #757575;
 }
 input::placeholder {

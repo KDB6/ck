@@ -83,7 +83,7 @@
                 </div>
                 <div class="agree__footer">
                     <li class="cancel_btn"><a href="loginpopup.html">취소</a></li>
-                    <li class="confirm_btn">확인</li>
+                    <li class="confirm_btn"><a href="join.html"></a>확인</li>
                 </div>
                 <div class="close_btn">
                     <svg width="25" height="25" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

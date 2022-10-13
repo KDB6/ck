@@ -1,7 +1,17 @@
-.inner_height {
+.loginId__popup .inner_height {
     min-height: 517px;
 }
-
+.loginId__popup {
+    width: 380px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 15px;
+    border: 1px solid #6CC4B3;
+    color: #505050;
+}
 /* 아이디 찾기 */
 .emailVerifi {
     width: 100%;
@@ -9,18 +19,18 @@
 .emailVerifi > form > fieldset {
     margin-top: -10px;
 }
-.contentBox {
+.loginId__popup .contentBox {
     border-bottom: 1px dashed #6CC4B3;
-    padding-bottom: 40px;
+    padding-bottom: 39.5px;
     margin-bottom: 20px;
 }
-.contentBox p:first-child {
+.loginId__popup .contentBox p:first-child {
     font-size: 20px;
     color: #757575;
     text-align: center;
     margin: 40px 0;
 }
-.contentBox h5 {
+.loginId__popup .contentBox h5 {
     font-size: 16px;
     text-align: center;
     margin-bottom: 10px;
@@ -61,9 +71,9 @@ input:required {
 .searchIdBox > div {
     text-align: center;
 }
-.confirm__btn {
+.loginId__popup .confirm__btn {
     display: block;
-    margin: 0 auto -15px auto;
+    margin: 0 auto 0px auto;
     font-size: 20px;
     cursor: pointer;
     color: #505050;
@@ -80,11 +90,11 @@ input:required {
 .second_input > .input__style {
     margin-bottom: 30px;
 }
-.contentBox p:last-child {
+.loginId__popup .contentBox p:last-child {
     font-size: 14px;
     color: #757575;
     text-align: center;
-    /* margin-bottom: 20px; */
+    margin-bottom: 20px;
 }
 .passVer_conBox {
     padding-bottom: 20px;

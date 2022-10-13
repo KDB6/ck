@@ -6,15 +6,17 @@ body {
 .login_btn {
     cursor: pointer;
 }
-.login__popup {
+.loginPop__popup {
     margin: 0 auto;
     width: 380px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border: 1px solid #6cc4b3;
+    border-radius: 15px;
 }
-.login__inner {
+.loginPop__popup .login__inner {
     width: 380px;
     background-color: #fff;
     border-radius: 15px;
@@ -22,7 +24,7 @@ body {
     box-sizing: border-box;
     position: relative;
 }
-.login__header h3 {
+.loginPop__popup .login__header h3 {
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
@@ -31,23 +33,23 @@ body {
     padding-bottom: 20px;
     border-bottom: 0.5px dashed #6cc4b3;
 }
-.login__welcome > h3 {
+.loginPop__popup .login__welcome > h3 {
     color: #757575;
     margin-bottom: 5px;
     font-size: 16px;
     text-align: center;
 }
-.login__welcome figure {
+.loginPop__popup .login__welcome figure {
     margin-bottom: 30px;
 }
-.login__welcome figure > img {
+.loginPop__popup .login__welcome figure > img {
     width: 320px;
 }
-.login__contents {
+.loginPop__popup .login__contents {
     position: relative;
     padding-bottom: 20px;
 }
-.login__contents .input__style {
+.loginPop__popup .login__contents .input__style {
     background-color: #f5f5f5;
     padding: 10px 20px;
     width: 100%;
@@ -55,20 +57,20 @@ body {
     box-sizing: border-box;
     border-radius: 10px;
 }
-.login__contents .placeholder:hover {
+.loginPop__popup .login__contents .placeholder:hover {
     border: 0;
 }
-.login__contents .password::placeholder {
+.loginPop__popup .login__contents .password::placeholder {
     font-size: 16px;
     color: #757575;
 }
-.text_input div:first-child .input__style {
+.loginPop__popup .text_input div:first-child .input__style {
     margin-bottom: 10px;
 }
 .text_input div:last-child .input__style {
     margin-bottom: 5px;
 }
-.login__contents .input__button {
+.loginPop__popup .login__contents .input__button {
     border-radius: 10px;
     width: 100%;
     font-size: 16px;
@@ -78,14 +80,14 @@ body {
     margin-top: 10px;
     cursor: pointer;
 }
-.login__contents .btn {
+.loginPop__popup .login__contents .btn {
     justify-content: space-between;
 }
 
-input[type="checkbox"] {
+input[id="loginBox"] {
     display: none;
 }
-input[type="checkbox"] + label {
+input[id="loginBox"] + label {
     padding: 0 0 0 25px;
     font-size: 12px;
     color: #757575;
@@ -94,7 +96,7 @@ input[type="checkbox"] + label {
     cursor: pointer;
     margin-bottom: 20px;
 }
-input[type="checkbox"] + label::after {
+input[id="loginBox"] + label::after {
     content:'✔';
     font-size: 15px;
     color: #757575;
