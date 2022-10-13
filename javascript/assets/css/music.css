@@ -21,7 +21,7 @@
     font-size: 14px;
 }
 .music__contents {
-    background: #2d3e7e;
+    background: #7795ff;
     width: 100%;
 }
 .music__view {
@@ -37,14 +37,15 @@
 .music__view .title {
     width: 68.5%;
     text-align: center;
-    display: flex;
+    padding-top: 23px;
+    /* display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; */
     flex-direction: column;
     margin-top: 10px;
 }
 .music__view .title h3 {
-    font-size: 24px
+    font-size: 24px;
 }
 .music__view .title p {
     font-size: 18px;
@@ -58,7 +59,7 @@
 .music__control .progress {
     width: 100%;
     height: 6px;
-    background: #4459a5;
+    background: #425497;
     border-radius: 5px;
 }
 .music__control .progress .bar {
@@ -147,23 +148,38 @@
 }
 
 .music__footer {
-    background: #2d3e7e;
+    background: #7795ff;
     padding-top: 0px;
 }
 
 .music__list {
-    padding: 20px;
+    padding: 0px 20px 20px 20px;
+}
+.music__list.hide {
+    display: none;
 }
 .music__list ul {
     max-height: 200px;
     overflow-y: scroll;
     padding-left: 15px;
+    padding-right: 10px;
 }
 .music__list h3 {
     font-size: 16px;
     margin-bottom: 10px;
     border-top: 2px solid #000;
     padding-top: 10px;
+}
+.music__list h3 .close {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background-image: url(../img/music/music__icon.svg);
+    background-size: cover;
+    background-position: -432px 0;
+    transform: scale(0.6);
+    vertical-align: -16px;
+    margin-left: 185px;
 }
 .music__list h3 .list {
     display: inline-block;
@@ -180,7 +196,10 @@
     border-bottom: 1px solid #000;
     list-style: none;
     position: relative;
-    padding: 5px 0;
+    padding: 10px 0;
+}
+.music__list li.playing {
+    color: white;
 }
 .music__list li strong {
     display: block;
@@ -195,4 +214,20 @@
     right: 0;
     top: 30px;
     font-size: 12px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #425497;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #051655;
+    border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #051655;
 }

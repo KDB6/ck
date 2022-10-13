@@ -5,6 +5,7 @@
     overflow: 0;
     box-sizing: border-box;
     font-family: 'MabinogiClassic';
+    cursor: none;
 }
 
 body {
@@ -35,14 +36,20 @@ body {
 /* mouseType */
 .mouse__cursor {
     position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    z-index: 1;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    user-select: none;
+    pointer-events: none;
 }
 .mouse__cursor img {
     width: 32px;
     height: 32px;
-    user-select: none;
-    pointer-events: none;
 }
-
 .icon01 {
     position: absolute;
     left: 30px;
@@ -156,7 +163,7 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-    background: rgba(230, 68, 74, 0.702);
+    background: rgba(229, 67, 72, 0.702);
     display: flex;
     align-items: center;
     justify-content: space-between;
