@@ -20,13 +20,13 @@ loginpopupLoginBtn.addEventListener("click", () => {
 });
 
 
-// 회원가입 눌렀을 시 약관 동의 창 이동
-const loginpopupjoinBtn = document.querySelector(".loginpopup_joinBtn");
+// // 회원가입 눌렀을 시 약관 동의 창 이동
+// const loginpopupjoinBtn = document.querySelector(".loginpopup_joinBtn");
 
-loginpopupjoinBtn.addEventListener("click", () => {
-    loginPopup.classList.add("close");
-    agreePopup.classList.remove("close");
-});
+// loginpopupjoinBtn.addEventListener("click", () => {
+//     loginPopup.classList.add("close");
+//     agreePopup.classList.remove("close");
+// });
 
 
 
@@ -34,15 +34,15 @@ loginpopupjoinBtn.addEventListener("click", () => {
 const agree_cancelBtn = document.querySelector(".cancel_btn");
 
 // 취소 클릭 시 로그인 창으로 이동
-agree_cancelBtn.addEventListener("click", () => {
-    agreePopup.classList.add("close");
-    loginPopup.classList.remove("close");
+// agree_cancelBtn.addEventListener("click", () => {
+//     agreePopup.classList.add("close");
+//     loginPopup.classList.remove("close");
 
-    agree_checkAll.checked = false;
-    aggre_checkArray.forEach((e, i, a) => {
-        a[i].checked = false;
-    })
-});
+//     agree_checkAll.checked = false;
+//     aggre_checkArray.forEach((e, i, a) => {
+//         a[i].checked = false;
+//     })
+// });
 
 //확인 클릭 시 회원가입창으로 이동
 // function confirmButton(){

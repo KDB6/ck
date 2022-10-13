@@ -1,5 +1,6 @@
 <?php
     include "../connect/connect.php";
+    include "../connect/session.php";
 ?>
 
 <!DOCTYPE html>
@@ -34,9 +35,14 @@
                 <ul>
                     <li><a href="#">A.hopsital</a></li>
                     <li><a href="#">disease</a></li>
-                    <li><a href="#">community</a></li>
+                    <li><a href="../php/board.php">community</a></li>
                     <li><a href="#">pet shop</a></li>
-                    <li class="login"><a>LOGIN</a></li>
+                    <?php if( isset($_SESSION['myMemberID']) ){ ?>
+                    <li><a href="#" class="black">mypage</a></li>
+                    <li><a href="../php/logout.php">logout</a></li>
+                <?php } else { ?>                    
+                    <li><a href="../php/loginpopup.php" class="login">login</a></li>
+                <?php } ?>
                 </ul>
             </nav>
             <div class="ham_menu">
@@ -49,10 +55,6 @@
     </header>
 
 <?php 
-    include "../php/loginpopup.php";
-    include "../php/joinAgree.php";
-    include "../php/join.php";
-    // include "../php/join_complete.php";
 ?>
 </body>
 <script src="../asset/js/header_hamburger.js"></script>

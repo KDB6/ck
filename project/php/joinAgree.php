@@ -14,9 +14,12 @@
 
     <!-- 약관 동의 CSS -->
     <link rel="stylesheet" href="../asset/css/login/Agree.css">
+    <link rel="stylesheet" href="../asset/css/login/login.css">
 </head>
 <body>
-    <div class="agree__popup close">            
+    <?php include "../include/header.php"?>
+    
+    <div class="agree__popup">            
         <div class="agree__inner">
             <div class="agree__header">
                 <h2>회원가입</h2>
@@ -83,7 +86,7 @@
             </div>
             <div class="agree__footer">
                 <li class="cancel_btn">취소</li>
-                <li class="confirm_btn">확인</li>
+                <li class="confirm_btn"><a href="../php/join.php">확인</a></li>
             </div>
             <div class="close_btn">
                 <svg width="25" height="25" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -129,20 +132,33 @@
             });
         });
 
-        // alert 창
-        const agree_conBtn = document.querySelector(".confirm_btn");
-        const agree_require = document.querySelector(".agree_require");
-        agree_conBtn.addEventListener("click", (e) => {
-            if (aggre_checkArray[0].checked !== true || aggre_checkArray[1].checked !== true) {
-                agree_require.classList.remove("close");
-            }
-        });
+        // 필수 동의 체크시 확인 버튼 활성화
+        function confirmButton(){
+            const agree_conBtn = document.querySelector(".confirm_btn");
+            if(aggre_checkArray[0].checked == true && aggre_checkArray[1].checked){
+                agree_conBtn.classList.add("confirm_btnC")
 
-        function requireBtn(click) {
-            click.addEventListener("click", () => {
-                agree_require.classList.add("close");
-            });
+                agreeToJoin(agree_conBtn);
+            } else if(aggre_checkArray[0].checked == false || aggre_checkArray[1].checked == false){
+                agree_conBtn.classList.remove("confirm_btnC")
+            }
         }
+        confirmButton();
+
+        // // alert 창
+        // const agree_conBtn = document.querySelector(".confirm_btn");
+        // const agree_require = document.querySelector(".agree_require");
+        // agree_conBtn.addEventListener("click", (e) => {
+        //     if (aggre_checkArray[0].checked !== true || aggre_checkArray[1].checked !== true) {
+        //         agree_require.classList.remove("close");
+        //     }
+        // });
+
+        // function requireBtn(click) {
+        //     click.addEventListener("click", () => {
+        //         agree_require.classList.add("close");
+        //     });
+        // }
 
 
     </script>
