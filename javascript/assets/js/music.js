@@ -301,3 +301,11 @@ closeBtn.addEventListener("click", () => {
     muList.classList.add("hide");
     muList.classList.remove("show");
 })
+
+// 음악 볼륨
+const audio = document.querySelector("#main__audio");
+const audioVolume = document.querySelector("#volume-control");
+
+audioVolume.addEventListener("change", function(e) {
+    audio.volume = this.value/10;
+})
