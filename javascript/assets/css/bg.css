@@ -7,13 +7,13 @@ html::before {
 /* Adjusts to any size window <3 */
 
 :root {
-    --c1: hsl(219, 79%, 66%);
-    --c2: hsl(319, 100%, 60%);
+    --c1: hsl(218, 56%, 18%);
+    --c2: hsl(274, 58%, 10%);
     --c3: hsl(266, 49%, 25%);
-    --c4: hsl(60, 82%, 58%);
-    --c5: hsl(0, 67%, 55%);
+    --c4: hsl(0, 0%, 0%);
+    --c5: hsl(239, 56%, 15%);
     --c6: hsl(213, 96%, 11%);
-    --c2hsl: 319, 100%, 60%;
+    --c2hsl: 0, 0%, 0%;
 }
 
 @property --outrun {
@@ -119,5 +119,5 @@ html::before {
         radial-gradient(circle at center,
             var(--c4) min(45vh, 45vw),
             transparent min(45vh, 45vw)),
-        linear-gradient(var(--c5) 60%, var(--c3) 60%, var(--c2) 150%);
+        linear-gradient(var(--c5) 50%, var(--c3) 60%, var(--c2) 150%);
     }

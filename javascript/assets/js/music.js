@@ -288,18 +288,17 @@ const closeBtn = document.querySelector(".music__list .close")
 const muList = document.querySelector(".music__list");
 
 controlBtn.addEventListener("click", () => {
-    if(muList.classList.contains("hide")==false){
-        muList.classList.add("hide");
-        muList.classList.remove("show");
-    } else {
+    if(muList.classList.contains("hide")==true){
         muList.classList.add("show");
         muList.classList.remove("hide");
+    } else {
+        muList.classList.add("hide");
+        muList.classList.remove("show");
     }
 
 });
 closeBtn.addEventListener("click", () => {
     muList.classList.add("hide");
-    muList.classList.remove("show");
 })
 
 // 음악 볼륨
