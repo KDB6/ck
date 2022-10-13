@@ -81,6 +81,9 @@ https://kdb6.github.io/ck/site/imgTextType/imgText01.html
 ### 사이트01 페이지
 https://kdb6.github.io/ck/site/site1/index.html   
 
+### 게임 이펙트
+https://kdb6.github.io/ck/javascript/effect/gameEffect01.html   
+
 ### t_img
 https://kdb6.github.io/ck/img/javaimg.html   
 https://kdb6.github.io/ck/img/css.html   
