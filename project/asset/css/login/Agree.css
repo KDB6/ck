@@ -112,13 +112,12 @@ input[id="agreeCheckAll"]:checked + label::after {
     justify-content: space-between;
     text-align: center;
 }
-.cancel_btn {
+.agree__footer .cancel_btn {
     width: 50%;
     border-right: 1px dashed #505050;
-}
-.cancel_btn a {
     font-size: 16px;
     color: #505050;
+    cursor: pointer;
 }
 .confirm_btn {
     width: 50%;

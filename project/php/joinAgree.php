@@ -82,7 +82,7 @@
                 <label for="agreeCheckAll">전체 동의하기</label>
             </div>
             <div class="agree__footer">
-                <li class="cancel_btn"><a href="#">취소</a></li>
+                <li class="cancel_btn">취소</li>
                 <li class="confirm_btn">확인</li>
             </div>
             <div class="close_btn">
@@ -128,20 +128,6 @@
                     confirmButton();
             });
         });
-
-        // 1번과 2번이 on일시 확인 버튼 활성화, 아니면 비활성화
-        function confirmButton(){
-            const btn = document.querySelector(".confirm_btn");
-            let btnContents = btn.innerText;
-
-            if(aggre_checkArray[0].checked == true && aggre_checkArray[1].checked ){
-                btnContents = "<a href='#'>" + btnContents + "</a>";
-                btn.innerHTML = btnContents
-            } else {
-                btnContents.replace("<a href='#'>", "");
-                btn.innerHTML = btnContents
-            };
-        };
 
         // alert 창
         const agree_conBtn = document.querySelector(".confirm_btn");
