@@ -587,6 +587,20 @@
         }
         updateList();
 
+        // 피셔 에이츠 알고리즘
+        function shuffle(data) {
+            for(let i=data.length-1; i>=0; i--) {
+                const randomIndex = Math.floor(Math.random() * (i+1));
+                [data[i], data[randomIndex]] = [data[randomIndex], data[i]];
+                cssList.innerHTML += data[i];
+            }
+        }
+        document.querySelector(".btn6").addEventListener("click", (e) => {
+            e.preventDefault();
+            cssList.innerHTML = "";
+            shuffle(cssProp);
+        })
+
         // 반대로 정렬
         function sortReverse() {
             cssProperty.reverse();
@@ -648,20 +662,6 @@
         // 알파벳순 (z~a) 클릭
         document.querySelector(".btn5").addEventListener("click", () => {
             sortAlphabetZ();
-        })
-
-        // 피셔 에이츠 알고리즘
-        function shuffle(data) {
-            for(let i=data.length-1; i>=0; i--) {
-                const randomIndex = Math.floor(Math.random() * (i+1));
-                [data[i], data[randomIndex]] = [data[randomIndex], data[i]];
-                cssList.innerHTML += data[i];
-            }
-        }
-        document.querySelector(".btn6").addEventListener("click", (e) => {
-            e.preventDefault();
-            cssList.innerHTML = "";
-            shuffle(cssProp);
         })
     </script>
 </body>
