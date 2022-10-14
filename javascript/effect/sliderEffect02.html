@@ -164,48 +164,17 @@
                         </div>
                         <div class="cont">
                             <div class="active">
-<pre><code class="language-js">    const sliderInner = document.querySelector(".slider__inner");    // 움직이는 영역
-    const slider = document.querySelectorAll(".slider");             // 이미지
-    let currentIndex = 0;
-
-    sliderInner.style.transition = "all 0.6s";
-
-    setInterval(() => {
-        currentIndex = (currentIndex + 1) % slider.length;
-
-        sliderInner.style.transform = "translateX("+ -800 * currentIndex +"px)";
-    },1500)
+<pre><code class="language-js">
 </code></pre>
                             </div>
+
                             <div>
-<pre><code class="language-js">    let currentIndex = 0;
-        
-    setInterval(() => {
-        currentIndex = (currentIndex + 1) % $ (".slider").length
-
-        // $(".slider__inner").css(
-        //     "transform", "translateX("+ -800* currentIndex +" px)"
-        // );
-
-        $(".slider__inner").css("position", "relative");
-        $(".slider__inner"),animate({left : -800 * currentIndex},600)
-
-    },1500);
+<pre><code class="language-js">
 </code></pre>
                             </div>
+
                             <div>
-<pre><code class="language-js">    const slider = document.querySelectorAll(".slider");
-
-    let currentIndex = 0;
-    
-    setInterval(() => {
-        currentIndex = (currentIndex + 1) % slider.length;
-
-        gsap.to(".slider__inner", {
-            duration : 0.6,
-            x: -800 * currentIndex
-        })
-    },1500);
+<pre><code class="language-js">
 </code></pre>
                             </div>
                         </div>

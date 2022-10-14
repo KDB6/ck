@@ -155,80 +155,17 @@
                         </div>
                         <div class="cont">
                             <div class="active">
-<pre><code class="language-js">    const sliderWrap = document.querySelector(".slider__wrap")
-    const sliderImg = document.querySelector(".slider__img")
-    const slider = document.querySelectorAll(".slider")
-
-    let currentIndex = 0;                           // 현재 보이는 이미지
-    let silderCount = slider.length;                // 이미지 갯수
-
-    setInterval(() => {
-        let nextIndex = (currentIndex + 1) % 5;   // 다음 이미지
-
-        slider[currentIndex].style.opacity ="0"    // 첫번쨰 이미지를 안보이게
-        slider[nextIndex].style.opacity ="1"    // 첫번째 이미지를 보이게
-
-        currentIndex = nextIndex;
-        
-    },1000)
+<pre><code class="language-js">
 </code></pre>
                             </div>
+
                             <div>
-<pre><code class="language-js">    &lt;div class="slider__wrap"&gt;
-        &lt;div class="slider__img"&gt;
-            &lt;div class="slider"&gt;&lt;img src="../assets/img/slide01.jpg" alt="이미지1"&gt;&lt;/div&gt;
-            &lt;div class="slider"&gt;&lt;img src="../assets/img/slide02.jpg" alt="이미지2"&gt;&lt;/div&gt;
-            &lt;div class="slider"&gt;&lt;img src="../assets/img/slide03.jpg" alt="이미지3"&gt;&lt;/div&gt;
-            &lt;div class="slider"&gt;&lt;img src="../assets/img/slide04.jpg" alt="이미지4"&gt;&lt;/div&gt;
-            &lt;div class="slider"&gt;&lt;img src="../assets/img/slide05.jpg" alt="이미지5"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+<pre><code class="language-js">
 </code></pre>
                             </div>
-                            <div>
-<pre><code class="language-js">    .slider__wrap {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .slider__img {
-        position: relative;
-        width: 800px;
-        height: 450px;
-    }
-    .slider {
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
-    .slider::before {
-        position: absolute;
-        left: 5px;
-        top: 5px;
-        background: rgba(0, 0, 0, 0.4);
-        color: #fff;
-        padding: 5px 10px;
-    }
-    .slider:nth-child(1)::before {content: "이미지1";}
-    .slider:nth-child(2)::before {content: "이미지2";}
-    .slider:nth-child(3)::before {content: "이미지3";}
-    .slider:nth-child(4)::before {content: "이미지4";}
-    .slider:nth-child(5)::before {content: "이미지5";}
-    .slider:nth-child(1) {z-index: 5;}
-    .slider:nth-child(2) {z-index: 4;}
-    .slider:nth-child(3) {z-index: 3;}
-    .slider:nth-child(4) {z-index: 2}
-    .slider:nth-child(5) {z-index: 1;}
 
-    @media(max-width: 800px) {
-        .slider__img {
-        position: relative;
-        width: 400px;
-        height: 225px;
-        }
-    }
+                            <div>
+<pre><code class="language-js">
 </code></pre>
                             </div>
                         </div>

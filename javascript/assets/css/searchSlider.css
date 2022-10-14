@@ -196,10 +196,10 @@ body {
     animation: zoomIn 0.5s ease forwards;
 }
 .modal__cont.show .modal__close {    /* 닫기 배경 */
-    animation: opacityOut 0.5s 1s ease forwards;
+    animation: opacityIn 0.5s 1s;
 }
 .modal__cont.show.hide .modal__close {
-    animation: opacityIn 0.5s ease backwards;
+    animation: opacityOut 0.5s;
 }
 @keyframes foldOut {
     0%   {transform: scaleX(0) scaleY(0.001);}
