@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="../asset/css/common.css">
     <link rel="stylesheet" href="../asset/css/font.css">
     <link rel="stylesheet" href="../asset/css/login/idPassCommon.css">
+    <link rel="stylesheet" href="../asset/css/login/join.css">
 
+    
     <style>
         .join__inner {
             margin: 0 auto;
@@ -201,7 +203,7 @@
             }
 
             // 비밀번호가 동일한지 체크
-            if($("#youPassC").val() !== $("#youPassC").val()){
+            if($("#youPass").val() !== $("#youPassC").val()){
                 $("#youPassCComment").text("비밀번호가 동일하지 않습니다.");
                 return false;
             }

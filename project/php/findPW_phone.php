@@ -1,3 +1,8 @@
+<?php
+    include "../connect/connect.php";
+    include "../connect/session.php";
+?>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -24,11 +29,11 @@
                 <h3><a href="findIDPass.php">I.D/P.W 찾기</a></h3>
             </div>
             <div class="tab_menu">
-                <span class="id"><a href="findIDPass.php">ID</a></span> <em>|</em> <span class="pass active">Password</span>
+                <span class="id"><a href="findID_phone.php">ID</a></span> <em>|</em> <span class="pass active">Password</span>
                 <div class="search_contents">
                     <h4 class="user_search passVer_user">비밀번호 찾기</h4>
                     <div class="emailVerifi">
-                        <form action="" name="" method="post">
+                        <form action="findPW_phoneCheck.php" name="" method="post">
                             <fieldset>
                                 <legend class="blind">휴대번호 인증</legend>
                                 <div class="contentBox passVer_conBox">
@@ -38,8 +43,8 @@
                                         <input type="text" name="youName" id="youName" placeholder="이름을 입력해주세요." class="input__style style1" required>
                                     </div>
                                     <div class="first_input">
-                                        <label for="youId" class="blind">아이디</label>
-                                        <input type="text" name="youId" id="youId" placeholder="아이디를 입력해주세요." class="input__style style1" required>
+                                        <label for="youID" class="blind">아이디</label>
+                                        <input type="text" name="youID" id="youID" placeholder="아이디를 입력해주세요." class="input__style style1" required>
                                     </div>
                                     <div class="second_input">
                                         <label for="youPhone" class="blind">휴대번호</label>

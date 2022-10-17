@@ -25,36 +25,19 @@
         $sql = "SELECT youID FROM myMember WHERE (youName = '{$youName}' && youEmail = '{$youEmail}')";
         $result = $connect -> query($sql);
 
+        $info = $result->fetch_array(MYSQLI_ASSOC);
 
-    //     $one = mysqli_fetch_array($result);
 
-    //     echo "<script>
-    //     post_to_url('findID_confirm.php', {'youID': ".$one['youID']."});
+        $_SESSION['youID'] = $info['youID'];
 
-    //     function post_to_url(path, params, method) {
-    //         method = method || 'post';
-    //         const form = document.createElement('form');
-    //         form.setAttribute('method', method);
-    //         form.setAttribute('action', path);
-    //         for(let key in params) {
-    //             let hiddenField = document.createElement('input');
-    //             hiddenField.setAttribute('type', 'hidden');
-    //             hiddenField.setAttribute('name', key);
-    //             hiddenField.setAttribute('value', params[key]);
-    //             form.appendChild(hiddenField);
-    //         }
-    //         document.body.appendChild(form);
-    //         form.submit();
-    //     }
-    //     </script>";
 
-    //     if($result){
-    //         echo "<script>alert('이름 혹은 이메일이 틀렸습니다!')</script>";
-    //         echo "<script>location.href='findID_email.php';</script>";
-    //     } else {
-    //         echo "<script>location.href='findID_confirm.php';</script>";
-    //     }
-    // ?>
+        if($_SESSION['youID']){
+            echo "<script>location.href='findID_confirm.php';</script>";
+        } else {
+            echo "<script>alert('이름 혹은 이메일이 틀렸습니다!')</script>";
+            echo "<script>location.href='findID_email.php';</script>";
+        }
+    ?>
 </body>
 <script>
     

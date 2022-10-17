@@ -28,7 +28,7 @@
                 <div class="search_contents">
                     <h4 class="user_search">아이디 찾기</h4>
                     <div class="emailVerifi">
-                        <form action="" name="" method="post">
+                        <form action="findID_phoneCheck.php" name="" method="post">
                             <fieldset>
                                 <legend class="blind">이메일 인증</legend>
                                 <div class="contentBox">

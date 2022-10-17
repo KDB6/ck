@@ -1,3 +1,9 @@
+<?php
+    include "../connect/connect.php";
+    include "../connect/session.php";
+?>
+
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -21,10 +27,10 @@
     <div class="login__popup score inner_height">
         <div class="login__inner">
             <div class="login__header">
-                <h3><a href="findIDPass.php">I.D/P.W 찾기</a></h3>
+                <h3><a href="findID.html">I.D/P.W 찾기</a></h3>
             </div>
             <div class="tab_menu">
-                <span class="id active">ID</span> <em>|</em> <span class="pass"><a href="findID.html">Password</a></span>
+                <span class="id active">ID</span> <em>|</em> <span class="pass"><a href="findPW_email.html">Password</a></span>
                 <div class="search_contents">
                     <h4 class="user_search">아이디 찾기</h4>
                     <div class="id_find">
@@ -34,9 +40,12 @@
                         <p>당신의 소중한 아이디를 찾았습니다!</p>
                     </div>
                     <div class="searchIdBox">
-                        <h5>ID</h5>
-                        <div class="input__style">귀하의 아이디는 <span class="youID">000</span>입니다.</div>
-                    </div>
+                        <?php
+                            echo "<h5>ID</h5><div class='input__style'>귀하의 아이디는 <span class='youID'>".$_SESSION['youID']."</span> 입니다.</div>";
+
+                            unset($_SESSION['youName']);
+                            // echo $_SESSION['youID'];                            
+                        ?>                    
                 </div>
                 <div class="go_login">
                     <a href="loginpopup.php">로그인</a>
@@ -55,4 +64,4 @@
     <!-- 모달 및 탭메뉴 -->
     <script src="../asset/js/close_modalPHP.js"></script>
 </body>
-</html>
+</html> 
