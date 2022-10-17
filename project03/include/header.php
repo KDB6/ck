@@ -1,3 +1,7 @@
+<?php
+    include "../connect/connect.php";
+?>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -9,6 +13,11 @@
     <link rel="stylesheet" href="../asset/css/reset.css">
     <link rel="stylesheet" href="../asset/css/common.css">
     <link rel="stylesheet" href="../asset/css/header.css">
+
+    <link rel="stylesheet" href="../asset/css/login/login.css">
+    <link rel="stylesheet" href="../asset/css/login/Agree.css">
+    <link rel="stylesheet" href="../asset/css/login/join.css">
+    <link rel="stylesheet" href="../asset/css/login/joinCompete.css">
     <style>
                
         
@@ -27,7 +36,7 @@
                     <li><a href="#">disease</a></li>
                     <li><a href="#">community</a></li>
                     <li><a href="#">pet shop</a></li>
-                    <li class="login"><a href="#">LOGIN</a></li>
+                    <li class="login"><a>LOGIN</a></li>
                 </ul>
             </nav>
             <div class="ham_menu">
@@ -38,8 +47,17 @@
             </div>                
         </div>
     </header>
+
+<?php 
+    include "../php/loginpopup.php";
+    include "../php/joinAgree.php";
+    include "../php/join.php";
+    // include "../php/join_complete.php";
+?>
 </body>
 <script src="../asset/js/header_hamburger.js"></script>
+<script src="../asset/js/login_link.js"></script>
+<script src="../asset/js/close_modal.js"></script>
 <script>
 
 </script>

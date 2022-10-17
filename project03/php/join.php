@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../asset/css/login/join.css">
 </head>
 <body>
-    <div class="join__popup">            
+    <div class="join__popup close">            
         <div class="join__inner">
             <h2>회원 가입</h2>
             <form action="join_complete.php" name="join" method="post">
@@ -83,18 +83,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-        // 닫기 버튼
-        const joinPopup = document.querySelector(".join__popup");
-        const close_btn = document.querySelector(".close_btn");
-
-        close_btn.addEventListener("click", () => {
-            joinPopup.classList.add("close");
-            joinPopup.classList.remove(".show")
-            joinPopup.classList.add(".hide")
-        });
-    </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>

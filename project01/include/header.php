@@ -29,7 +29,7 @@
     <header id="headerType" class="header__wrap">
         <div class="header__inner container">
             <div class="header__logo">
-                <a href="../php/board.php">winimal</a>
+                <a href="#">winimal</a>
             </div>
             <nav class="header__menu">
                 <ul>

@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../asset/css/login/joinCompete.css">
 </head>
 <body>
-    <div class="join__popup">            
+    <div class="join__popup close">            
         <div class="join__inner">
             <h2>회원 가입</h2>
             <div class="complete_contents">
@@ -73,15 +73,7 @@
     </div>
 
     <script>
-        // 닫기 버튼
-        const joinPopup = document.querySelector(".join__popup");
-        const close_btn = document.querySelector(".close_btn");
 
-        close_btn.addEventListener("click", () => {
-            joinPopup.classList.add("close");
-            joinPopup.classList.remove(".show")
-            joinPopup.classList.add(".hide")
-        });
     </script>
 </body>
 </html>

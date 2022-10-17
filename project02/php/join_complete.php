@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="../asset/css/login/joinCompete.css">
 </head>
 <body>
-    <div class="join__popup close">            
+<?php include "../include/header.php"?>
+    <div class="join__popup">            
         <div class="join__inner">
             <h2>회원 가입</h2>
             <div class="complete_contents">
@@ -46,11 +47,12 @@
                         $youEmail = $connect -> real_escape_string(trim($youEmail));
                         $youPhone = $connect -> real_escape_string(trim($youPhone));
 
-                        $youPass = sha1("web".$youPass);
 
                         // 회원가입
-                        $sql = "INSERT INTO myMember (youName, youGender, youID, youPass, youPass, youEmail, regTime) VALUES('$youName', '$youGender','$youID', '$youEmail', '$youPass', '$youPhone', '$regTime')";
+                        $sql = "INSERT INTO myMember (youName, youGender, youID, youPass, youEmail, youPhone , regTime) VALUES('$youName', '$youGender','$youID', '$youPass', '$youEmail', '$youPhone', '$regTime')";
                         $result = $connect -> query($sql);
+
+
 
                         if($result){
                             echo "회원가입을 축하합니다. 로그인해주세요!";
@@ -60,7 +62,7 @@
                     ?>
             </div>
             <div class="go_login">
-                <a href="loginpopup.php">로그인 하러가기!</a>
+                <a href="../php/loginpopup.php">로그인 하러가기!</a>
             </div>
             <div class="close_btn">
                 <svg width="25" height="25" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,11 +10,10 @@
     <link rel="stylesheet" href="../asset/css/reset.css">
     <link rel="stylesheet" href="../asset/css/login/idPassCommon.css">
     
-    <link rel="stylesheet" href="../asset/css/login/login.css">
+
 </head>
 <body>
-    <div class="login_btn">로그인</div>
-    <div class="login__popup">
+    <div class="login__popup close">
         <div class="login__inner">
             <div class="login__header">
                 <h3>winimal Login</h3>
@@ -56,7 +55,7 @@
             </div>
             <div class="login__footer">
                 <div class="footer_btn">
-                    <li><a href="joinAgree.php">회원가입</a></li>
+                    <li><a class="loginpopup_joinBtn">회원가입</a></li>
                     <li><a href="findID.php">ID / PW 찾기</a></li>
                 </div>
             </div>
@@ -70,15 +69,14 @@
         </div>
     </div>
 
-    <script src="../../asset/js/close_modal.js"></script>
+
     <script>
-        const loginBtn = document.querySelector(".login_btn");
-    
-        loginBtn.addEventListener("click", () => {
-            loginPopup.classList.remove("close");
-            loginPopup.classList.add(".show")
-            loginPopup.classList.remove(".hide")
-        });
+
+
+        
+
+
+
     </script>
 </body>
 </html>

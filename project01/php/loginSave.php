@@ -14,6 +14,8 @@
                         $youID = $_POST['youID'];
                         $youPass = $_POST['youPass'];
 
+                        echo $youID;
+                        echo $youPass;
 
                         function msg($alert){
                             echo "<p class='alert'>{$alert}</p>";
@@ -39,9 +41,7 @@
                             $count = $result -> num_rows;
 
                             if($count == 0){
-                                // msg("아이디 또는 비밀번호가 틀렸습니다.");
-                                echo "<h2>아이디 또는 비밀번호가 틀렸습니다!!</h2>";
-                                echo "<a href='../php/main.php'>메인으로</a>";
+                                msg("아이디 또는 비밀번호가 틀렸습니다.");
                             } else {
                                 $info = $result -> fetch_array(MYSQLI_ASSOC);
 

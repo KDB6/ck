@@ -1,8 +1,3 @@
-<?php
-    include "../connect/connect.php";
-    include "../connect/session.php";
-?>
-
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -150,90 +145,88 @@
                         </tr>
                     </thead>
                     <tbody class="main_table_body">
-                        <?php
-                                if(isset($_GET['page'])){
-                                    $page = (int) $_GET['page'];
-                                } else {
-                                    $page = 1;
-                                }
-
-                                $viewNum = 10;
-                                $viewLimit = ($viewNum * $page) - $viewNum;
-
-                                $sql = "SELECT b.myBoardID, b.boardTitle, m.youName, b.regTime, b.boardView FROM myBoard b JOIN myMember m ON (b.myMemberID = m.myMemberID) ORDER BY myBoardID DESC LIMIT {$viewLimit}, {$viewNum}";
-                                $result = $connect -> query($sql);
-
-                                if($result){
-                                    $count = $result -> num_rows;
-
-                                    if($count > 0 ){
-                                        for($i=1; $i <= $count; $i++){
-                                            $info = $result -> fetch_array(MYSQLI_ASSOC);
-                                            echo "<tr>";
-                                            echo "<td>".$info['myBoardID']."</td>";
-                                            echo "<td><a href='boardView.php?myBoardID={$info['myBoardID']}'>".$info['boardTitle']."</td>";
-                                            echo "<td>".$info['youName']."</td>";
-                                            echo "<td>".date('Y-m-d', $info['regTime'] )."</td>";
-                                            echo "<td>".$info['boardView']."</td>";
-                                            echo "</tr>";
-                                        }
-                                    } else {
-                                        echo "<tr><td colspan='4'>게시글이 없습니다.</td></tr>";
-                                    }
-                                }
-                            ?>
+                        <tr>
+                            <td>1</td>
+                            <td>해당 종은 어떤가요?</td>
+                            <td>이영아</td>
+                            <td>2022-09-16</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>강아지가 보고싶어요..</td>
+                            <td>김다빈</td>
+                            <td>2022-09-16</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>고양이보단 강아지가 나은거같아요</td>
+                            <td>문병내</td>
+                            <td>2022-09-16</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>요즘 강아지 털갈이가..</td>
+                            <td>이승욱</td>
+                            <td>2022-09-16</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>강아지가 이상해요 요즘</td>
+                            <td>아름이</td>
+                            <td>2022-09-16</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>님들 이거 왜이런거임?</td>
+                            <td>김아로</td>
+                            <td>2022-09-16</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>아.. 집에가고싶다..</td>
+                            <td>루아</td>
+                            <td>2022-09-16</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>강아지보단 고양이가 더 좋은거같아요</td>
+                            <td>유리</td>
+                            <td>2022-09-16</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>요즘 어떤 강아지들이 인기많나요??</td>
+                            <td>김로아</td>
+                            <td>2022-09-16</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>우리 강아지 상태좀 봐주세요!!</td>
+                            <td>박서림</td>
+                            <td>2022-09-16</td>
+                            <td>34</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
             <div class="borad__pages">
                 <ul>
-                    <?php
-                            $sql = "SELECT count(myBoardID) FROM myBoard";
-                            $result = $connect -> query($sql);
-
-                            $boardCount = $result -> fetch_array(MYSQLI_ASSOC);
-                            $boardCount = $boardCount['count(myBoardID)'];
-
-                            
-
-                            // 총 페이지 갯수
-                            $boardCount = ceil($boardCount / $viewNum);
-
-                            // echo $boardCount;
-
-                            // 현재 페이지 기준으로 보여주고 싶은 갯수
-                            $pageCurrent = 5;
-                            $startPage = $page - $pageCurrent;
-                            $endPage = $page + $pageCurrent;
-
-                            // 처음 페이지 초기화
-
-                            if($startPage < 1) $startPage = 1;
-
-                            // 마지막 페이지 초기화
-                            if($endPage >= $boardCount) $endPage = $boardCount;
-
-                            // 이전 페이지 , 처음 페이지
-                            if($page != 1){
-                                $prevPage = $page - 1;
-                                echo "<li><a href='board.php?page=1'>처음으로</li>";
-                                echo "<li><a href='board.php?page={$prevPage}'>이전</li>";
-                            }
-
-                            // 페이지 넘버 표시
-                            for($i = $startPage; $i<=$endPage; $i++){
-                                $active = "";
-                                if($i == $page) $active = "active";
-                                echo"<li class='{$active}'><a href='board.php?page={$i}'>{$i}</a></li>";
-                            }
-
-                            // 다음 페이지 , 마지막 페이지
-                            if($page != $endPage){
-                                $nextPage = $page + 1;
-                                echo "<li><a href='board.php?page={$nextPage}'>다음</li>";
-                                echo "<li><a href='board.php?page={$boardCount}'>마지막으로</li>";
-                            }
-                        ?>
+                    <li><a href="#">&lt;</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&gt;</a></li>
                 </ul>
             </div>
             <div class="search__box">
@@ -241,7 +234,7 @@
                     <fieldset>
                         <input class="search-txt" type="text" placeholder="검색어를 입력해주세요." required>
                         <button class="search-btn" type="submit">SEARCH</button>
-                        <a href="boardWrite.php" class="board_write">글쓰기</a>
+                        <a href="#" class="board_write">글쓰기</a>
                     </fieldset>
                 </form>
             </div>
@@ -252,7 +245,12 @@
 </body>
 
 <!-- footer -->
-<?php include "../include/footer.php"?>
+<footer id="footer" class="footer">
+    <h2>
+        winimal Copyright 2022. All Rights Reserved
+        <button><a href="">문의하기</a></button>
+    </h2>
+</footer>
 <!-- //footer -->
 
 <script src="../../asset/js/header_hamburger.js"></script>

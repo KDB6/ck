@@ -48,6 +48,9 @@
     transform: translate(-50%, -50%);
     padding-right: 10px;
 }
+.agree__inner .desc ul {
+
+}
 .agree__inner .desc li {
     font-size: 14px;
     font-weight: 300;
@@ -59,8 +62,8 @@
     border-radius: 50px;
 }
 .agree__inner ::-webkit-scrollbar-thumb {
-    height: 25%;                /* 스크롤바의 길이 */
-    background: #757575;      /* 스크롤바의 색상 */
+    height: 25%; /* 스크롤바의 길이 */
+    background: #757575; /* 스크롤바의 색상 */
     border-radius: 5px;
 }
 .agree__inner ::-webkit-scrollbar-track {
@@ -151,3 +154,4 @@ input[id="agreeCheckAll"]:checked + label::after {
     cursor: pointer;
     background-color: #fff;
 }
+
