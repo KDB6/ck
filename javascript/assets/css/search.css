@@ -96,8 +96,45 @@ li {
     font-size: 6vw;
     margin-bottom: 10px;
 }
+.search__wrap .time {
+    width: 140px;
+    height: 140px;
+    line-height: 140px;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 auto;
+    background: var(--htmlColor);
+    margin-top: 20px;
+}
+.search__wrap .time span {
+    color: #fff;
+    font-size: 34px;
+    font-weight: 400;
+}
 .search__box {
     margin-bottom: 20px;
+    position: relative;
+}
+.search__box input {
+    border: 2px solid var(--htmlColor);
+    padding: 15px 40px;
+    width: 30%;
+    border-radius: 50px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.search__box .start {
+    position: absolute;
+    left: 50%; bottom: 0;
+    transform: translateX(-50%);
+    background: #223547;
+    width: 30%;
+    border-radius: 50px;
+    font-size: 20px;
+    border: 2px solid var(--htmlColor);
+    padding: 15px 40px;
+    color: #fff;
+    cursor: pointer;
 }
 .search__box label {
     position:absolute;
@@ -106,13 +143,6 @@ li {
     height:1px;
     margin:-1px;
     overflow:hidden
-}
-.search__box input{
-    border: 2px solid var(--htmlColor);
-    padding: 15px 40px;
-    width: 70%;
-    border-radius: 50px;
-    font-size: 20px;
 }
 .search__list {
     margin-top: 50px;
@@ -259,4 +289,27 @@ li {
 }
 footer a:hover {
     text-decoration: underline;
+}
+
+.search__answers {
+    border-bottom: 2px dashed var(--htmlColor);
+    padding-bottom: 40px;
+}
+.search__answers span {
+    display: inline-block;
+    background: var(--htmlColor);
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 30px;
+}
+.search__missAnswers {
+    border-bottom: 2px dashed var(--htmlColor);
+    padding: 40px 0;
+}
+.search__missAnswers span {
+    display: inline-block;
+    border: 1px solid var(--htmlColor);
+    color: var(--htmlColor);
+    padding: 10px 20px;
+    border-radius: 30px;
 }
