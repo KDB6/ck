@@ -303,13 +303,26 @@
             sliderLast = slider[sliderLength -1],       // 마지막 이미지
             cloneFirst = sliderFirst.cloneNode(true),   // 첫번째 이미지 복사
             cloneLast = sliderLast.cloneNode(true),     // 마지막 이미지 복사
-            dotIndex = "";
+            dotIndex = "",
+            interval = 3000,
+            sliderTimer = "";
 
         function init() {
             imgClone();    // 이미지 복사
             createDot();   // 닷 버튼 생성
+            autoPlay();    // 오토 플레이
         }
         init();
+
+        function autoPlay() {
+            sliderTimer = setInterval(() => {
+                let intervalNum = currentIndex + 1;
+                gotoSlider(intervalNum);
+            }, interval);
+        }
+        function stopPlay() {
+            clearInterval(sliderTimer);
+        }
 
         function imgClone() {
             sliderInner.appendChild(cloneFirst);
@@ -337,6 +350,7 @@
             currentIndex = index;
         }
 
+        // 순간이동 메서드
         function checkIndex() {
             sliderInner.classList.remove("transition");
 
@@ -362,7 +376,10 @@
             let nextIndex = currentIndex + 1;
             gotoSlider(nextIndex);
         });
-        slider.addEventListener("transitionend", checkIndex)
+
+        sliderInner.addEventListener("mouseenter", stopPlay)
+        sliderInner.addEventListener("mouseleave", autoPlay)
+        sliderInner.addEventListener("transitionend", checkIndex)
     </script>
     
 </body>
