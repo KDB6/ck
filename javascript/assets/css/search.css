@@ -27,20 +27,20 @@ li {
 }
 
 /* header */
-#header {
+#headerSearch {
     display: flex;
 }
-#header h1 {
+#headerSearch h1 {
     margin: 10px;
 }
-#header nav {
+#headerSearch nav {
     margin: 10px;
 }
-#header nav li {
+#headerSearch nav li {
     display: inline;
     position: relative;
 }
-#header nav li a {
+#headerSearch nav li a {
     width: 30px;
     height: 30px;
     border: 1px solid var(--htmlColor);
@@ -50,17 +50,17 @@ li {
     line-height: 30px;
     font-family: "SCoreDream";
 }
-#header nav ul li.active a {
+#headerSearch nav ul li.active a {
     background-color: var(--htmlColor);
     color: #fff;
 }
-#header nav li .sub {
+#headerSearch nav li .sub {
     position: absolute;
     left: 0;
     top: 35px;
     width: 400px;
 }
-#header nav li .sub li a {
+#headerSearch nav li .sub li a {
     width: auto;
     background-color: transparent;
     color: var(--htmColor);
@@ -68,12 +68,12 @@ li {
     text-align: left;
     line-height: 1.2;
 }
-#header nav li .sub li.active a {
+#headerSearch nav li .sub li.active a {
     text-decoration: underline;
 }
 
 /* main */
-#main{
+#mainSearch{
     margin: 50px 10px;
 }
 .search__wrap {
