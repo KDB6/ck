@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="../asset/css/common.css">
     <link rel="stylesheet" href="../asset/css/font.css">
     <link rel="stylesheet" href="../asset/css/login/idPassCommon.css">
+
     <link rel="stylesheet" href="../asset/css/login/join.css">
 
-    
     <style>
         .join__inner {
             margin: 0 auto;
@@ -85,15 +85,14 @@
                 </fieldset>                                  
                 <button class="join__btn" type="submit">가입하기</button>
             </form>
-            <div class="close_btn">
+            <div class="close_btn"><a href="board.php">
                 <svg width="25" height="25" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z" fill="#ffffff"/>
                     <path d="M5.33334 4.66675L14.6667 15.3334" stroke="#6CC4B3" stroke-linecap="round"/>
                     <path d="M14.6667 4.66675L5.33333 15.3334" stroke="#6CC4B3" stroke-linecap="round"/>
                 </svg>
-            </div>
+            </a></div>
         </div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
 
@@ -203,7 +202,7 @@
             }
 
             // 비밀번호가 동일한지 체크
-            if($("#youPass").val() !== $("#youPassC").val()){
+            if($("#youPassC").val() !== $("#youPassC").val()){
                 $("#youPassCComment").text("비밀번호가 동일하지 않습니다.");
                 return false;
             }

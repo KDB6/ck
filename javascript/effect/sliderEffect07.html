@@ -295,6 +295,8 @@
         const sliderBtn = document.querySelector(".slider__btn");              // 버튼
         const sliderBtnPrev = document.querySelector(".slider__btn .prev");    // 왼쪽 버튼
         const sliderBtnNext = document.querySelector(".slider__btn .next");    // 오른쪽 버튼
+        const sliderBtnPlay = document.querySelector(".slider__dot");    // 플레이 버튼
+        const sliderBtnStop = document.querySelector(".slider__dot");    // 정지 버튼
 
         let currentIndex = 0,
             sliderLength = slider.length,
@@ -377,9 +379,16 @@
             gotoSlider(nextIndex);
         });
 
-        sliderInner.addEventListener("mouseenter", stopPlay)
-        sliderInner.addEventListener("mouseleave", autoPlay)
-        sliderInner.addEventListener("transitionend", checkIndex)
+        sliderBtnPlay.addEventListener("click", () => {
+            sliderBtnPlay.classList.remove("play")
+            if(sliderBtnPlay.classList.remove("play")) {
+                sliderBtnPlay.classList.add("stop")
+            };
+        });
+        
+        sliderInner.addEventListener("mouseenter", stopPlay);
+        sliderInner.addEventListener("mouseleave", autoPlay);
+        sliderInner.addEventListener("transitionend", checkIndex);
     </script>
     
 </body>

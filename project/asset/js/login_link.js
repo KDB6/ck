@@ -3,7 +3,6 @@ const loginpopupLoginBtn = document.querySelector(".login");
 const loginPopup = document.querySelector(".login__popup");
 const agreePopup = document.querySelector(".agree__popup");
 const joinPopup = document.querySelector(".join__popup");
-const close_btn = document.querySelectorAll(".close_btn");
 
 const popupArray = [
     loginPopup,
@@ -61,8 +60,12 @@ const agree_cancelBtn = document.querySelector(".cancel_btn");
 
 
 // <닫기 버튼>
-close_btn.forEach((e, i, a) => {
-    e.addEventListener("click", () => {
-        popupArray[i].classList.add("close");
-    });
-});
+// close_btn.forEach((e, i, a) => {
+//     // e.addEventListener("click", () => {
+//         //     popupArray[i].classList.add("close");
+//         // });
+// });
+
+
+    
+

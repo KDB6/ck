@@ -16,7 +16,7 @@
 .header__logo a {
     color: #6cc4b3;
     font-weight: 200;
-    font-size: 40px;
+    font-size: 400px;
 }
 .header__logo em {
     font-size: 18px;
@@ -31,20 +31,19 @@
 }
 .header__menu li {
     display: inline;
-    border-right: 1px solid #6cc4b3;
 }
 .header__menu li a {
     font-weight: 400;
-    font-size: 20px;
-    padding: 0px 25px;
+    font-size: 16px;
+    padding: 0px 20px;
     color: #757575;
     cursor: pointer;
 }
 .header__menu .login {
+    font-size: 14px;
     border: none;
 }
 .header__menu .login a {
-    font-size: 14px;
     padding-right: 0;
 }
 .header__menu li a:hover {

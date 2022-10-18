@@ -15,13 +15,11 @@
     <link rel="stylesheet" href="../asset/css/common.css">
     <link rel="stylesheet" href="../asset/css/font.css">
 
-    <link rel="stylesheet" href="../asset/css/header.css">
     <link rel="stylesheet" href="../asset/css/board/boardLoginBanner.css">
     <link rel="stylesheet" href="../asset/css/board/boardImageType.css">
     <link rel="stylesheet" href="../asset/css/board/boardView.css">
     <link rel="stylesheet" href="../asset/css/board/boardComment.css">
-    <link rel="stylesheet" href="../asset/css/board/boardTypeView.css">
-    <link rel="stylesheet" href="../asset/css/footer.css">
+    <link rel="stylesheet" href="../asset/css/board/boardViewType.css">
 </head>
 
 <!-- header -->
@@ -64,36 +62,38 @@
     <!-- boardView -->
     <section id="boardView">
         <div class="view__inner container">
-            <?php
-                $myBoardID = $_GET['myBoardID'];
-                
-                // echo $myBoardID;
+            <div class="view__innerCont">
+                <?php
+                    $myBoardID = $_GET['myBoardID'];
+                    
+                    // echo $myBoardID;
 
-                $sql = "SELECT b.boardTitle, m.youName, b.regTime, b.boardView, b.boardContents FROM myBoard b JOIN myMember m ON(m.MymemberID = b.myMemberID) WHERE b.myBoardID = {$myBoardID}";
-                
-                     
-                $boardView = "UPDATE myBoard SET boardView = boardView + 1 WHERE myBoardID = {$myBoardID}";
-                $connect -> query($boardView);
-                
-                
-                $result = $connect -> query($sql);
+                    $sql = "SELECT b.boardTitle, m.youName, b.regTime, b.boardView, b.boardContents FROM myBoard b JOIN myMember m ON(m.MymemberID = b.myMemberID) WHERE b.myBoardID = {$myBoardID}";
+                    
+                        
+                    $boardView = "UPDATE myBoard SET boardView = boardView + 1 WHERE myBoardID = {$myBoardID}";
+                    $connect -> query($boardView);
+                    
+                    
+                    $result = $connect -> query($sql);
 
-                if($result){
-                    $info = $result -> fetch_array(MYSQLI_ASSOC);
+                    if($result){
+                        $info = $result -> fetch_array(MYSQLI_ASSOC);
 
 
-                    echo "<div class='view__top'>";
-                    echo "<h2>제목 : ".$info['boardTitle']."</h2>";
-                    echo "<div class='view__top__right'><h3 class='like'><img src='../asset/img/like.svg' alt=''>";
-                    echo "추천 수 : 20개</h3>";
-                    echo "<h3>조회 수 : ".$info['boardView']."개</h3>";
-                    echo "<h3 class='date'>".date('Y-m-d', $info['regTime'])."</h3></div></div>";
-                    echo "<div class='view__bot'>";
-                    echo "<p>".$info['boardContents']."</p>";
-                    echo "</div>";
-                }
+                        echo "<div class='view__top'>";
+                        echo "<h2>제목 : ".$info['boardTitle']."</h2>";
+                        echo "<div class='view__top__right'><h3 class='like'><img src='../asset/img/like.svg' alt=''>";
+                        echo "추천 수 : 20개</h3>";
+                        echo "<h3>조회 수 : ".$info['boardView']."개</h3>";
+                        echo "<h3 class='date'>".date('Y-m-d', $info['regTime'])."</h3></div></div>";
+                        echo "<div class='view__bot'>";
+                        echo "<p>".$info['boardContents']."</p>";
+                        echo "</div>";
+                    }
                 ?>
-
+            </div>
+            
 
 
 

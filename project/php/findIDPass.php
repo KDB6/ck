@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="../asset/css/font.css">
     <link rel="stylesheet" href="../asset/css/login/idPassCommon.css">
 
-        <!-- 아이디찾기 CSS -->
-        <link rel="stylesheet" href="../asset/css/login/findID.css">
+    <!-- 아이디찾기 CSS -->
+    <link rel="stylesheet" href="../asset/css/login/findID.css">
 
     <style>
         /* .join__inner {
@@ -67,21 +67,19 @@
                     </div>
                 </div>
                 <div class="certify_confirm">선택완료</div>
-
             </div>
-            <div class="close_btn">
+            <div class="close_btn"><a href="board.php">
                 <svg width="25" height="25" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z" fill="#ffffff"/>
                     <path d="M5.33334 4.66675L14.6667 15.3334" stroke="#6CC4B3" stroke-linecap="round"/>
                     <path d="M14.6667 4.66675L5.33333 15.3334" stroke="#6CC4B3" stroke-linecap="round"/>
                 </svg>
-            </div>
+            </a></div>
         </div>
     </div>
 
     <!-- 모달 및 탭메뉴 -->
     <script src="../asset/js/tab_modal.js"></script>
-    <script src="../asset/js/close_modalPHP.js"></script>
 
     <script>
         // 공통 선택자

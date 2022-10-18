@@ -150,90 +150,90 @@
                         </tr>
                     </thead>
                     <tbody class="main_table_body">
-                        <?php
-                                if(isset($_GET['page'])){
-                                    $page = (int) $_GET['page'];
-                                } else {
-                                    $page = 1;
-                                }
+<?php
+        if(isset($_GET['page'])){
+            $page = (int) $_GET['page'];
+        } else {
+            $page = 1;
+        }
 
-                                $viewNum = 10;
-                                $viewLimit = ($viewNum * $page) - $viewNum;
+        $viewNum = 10;
+        $viewLimit = ($viewNum * $page) - $viewNum;
 
-                                $sql = "SELECT b.myBoardID, b.boardTitle, m.youName, b.regTime, b.boardView FROM myBoard b JOIN myMember m ON (b.myMemberID = m.myMemberID) ORDER BY myBoardID DESC LIMIT {$viewLimit}, {$viewNum}";
-                                $result = $connect -> query($sql);
+        $sql = "SELECT b.myBoardID, b.boardTitle, m.youName, b.regTime, b.boardView FROM myBoard b JOIN myMember m ON (b.myMemberID = m.myMemberID) ORDER BY myBoardID DESC LIMIT {$viewLimit}, {$viewNum}";
+        $result = $connect -> query($sql);
 
-                                if($result){
-                                    $count = $result -> num_rows;
+        if($result){
+            $count = $result -> num_rows;
 
-                                    if($count > 0 ){
-                                        for($i=1; $i <= $count; $i++){
-                                            $info = $result -> fetch_array(MYSQLI_ASSOC);
-                                            echo "<tr>";
-                                            echo "<td>".$info['myBoardID']."</td>";
-                                            echo "<td><a href='boardView.php?myBoardID={$info['myBoardID']}'>".$info['boardTitle']."</td>";
-                                            echo "<td>".$info['youName']."</td>";
-                                            echo "<td>".date('Y-m-d', $info['regTime'] )."</td>";
-                                            echo "<td>".$info['boardView']."</td>";
-                                            echo "</tr>";
-                                        }
-                                    } else {
-                                        echo "<tr><td colspan='4'>게시글이 없습니다.</td></tr>";
-                                    }
-                                }
-                            ?>
+            if($count > 0 ){
+                for($i=1; $i <= $count; $i++){
+                    $info = $result -> fetch_array(MYSQLI_ASSOC);
+                    echo "<tr>";
+                    echo "<td>".$info['myBoardID']."</td>";
+                    echo "<td><a href='boardView.php?myBoardID={$info['myBoardID']}'>".$info['boardTitle']."</td>";
+                    echo "<td>".$info['youName']."</td>";
+                    echo "<td>".date('Y-m-d', $info['regTime'] )."</td>";
+                    echo "<td>".$info['boardView']."</td>";
+                    echo "</tr>";
+                }
+            } else {
+                echo "<tr><td colspan='4'>게시글이 없습니다.</td></tr>";
+            }
+        }
+    ?>
                     </tbody>
                 </table>
             </div>
             <div class="borad__pages">
                 <ul>
-                    <?php
-                            $sql = "SELECT count(myBoardID) FROM myBoard";
-                            $result = $connect -> query($sql);
+<?php
+    $sql = "SELECT count(myBoardID) FROM myBoard";
+    $result = $connect -> query($sql);
 
-                            $boardCount = $result -> fetch_array(MYSQLI_ASSOC);
-                            $boardCount = $boardCount['count(myBoardID)'];
+    $boardCount = $result -> fetch_array(MYSQLI_ASSOC);
+    $boardCount = $boardCount['count(myBoardID)'];
 
-                            
+    
 
-                            // 총 페이지 갯수
-                            $boardCount = ceil($boardCount / $viewNum);
+    // 총 페이지 갯수
+    $boardCount = ceil($boardCount / $viewNum);
 
-                            // echo $boardCount;
+    // echo $boardCount;
 
-                            // 현재 페이지 기준으로 보여주고 싶은 갯수
-                            $pageCurrent = 5;
-                            $startPage = $page - $pageCurrent;
-                            $endPage = $page + $pageCurrent;
+    // 현재 페이지 기준으로 보여주고 싶은 갯수
+    $pageCurrent = 5;
+    $startPage = $page - $pageCurrent;
+    $endPage = $page + $pageCurrent;
 
-                            // 처음 페이지 초기화
+    // 처음 페이지 초기화
 
-                            if($startPage < 1) $startPage = 1;
+    if($startPage < 1) $startPage = 1;
 
-                            // 마지막 페이지 초기화
-                            if($endPage >= $boardCount) $endPage = $boardCount;
+    // 마지막 페이지 초기화
+    if($endPage >= $boardCount) $endPage = $boardCount;
 
-                            // 이전 페이지 , 처음 페이지
-                            if($page != 1){
-                                $prevPage = $page - 1;
-                                echo "<li><a href='board.php?page=1'>처음으로</li>";
-                                echo "<li><a href='board.php?page={$prevPage}'>이전</li>";
-                            }
+    // 이전 페이지 , 처음 페이지
+    if($page != 1){
+        $prevPage = $page - 1;
+        echo "<li><a href='board.php?page=1'>처음으로</li>";
+        echo "<li><a href='board.php?page={$prevPage}'>이전</li>";
+    }
 
-                            // 페이지 넘버 표시
-                            for($i = $startPage; $i<=$endPage; $i++){
-                                $active = "";
-                                if($i == $page) $active = "active";
-                                echo"<li class='{$active}'><a href='board.php?page={$i}'>{$i}</a></li>";
-                            }
+    // 페이지 넘버 표시
+    for($i = $startPage; $i<=$endPage; $i++){
+        $active = "";
+        if($i == $page) $active = "active";
+        echo"<li class='{$active}'><a href='board.php?page={$i}'>{$i}</a></li>";
+    }
 
-                            // 다음 페이지 , 마지막 페이지
-                            if($page != $endPage){
-                                $nextPage = $page + 1;
-                                echo "<li><a href='board.php?page={$nextPage}'>다음</li>";
-                                echo "<li><a href='board.php?page={$boardCount}'>마지막으로</li>";
-                            }
-                        ?>
+    // 다음 페이지 , 마지막 페이지
+    if($page != $endPage){
+        $nextPage = $page + 1;
+        echo "<li><a href='board.php?page={$nextPage}'>다음</li>";
+        echo "<li><a href='board.php?page={$boardCount}'>마지막으로</li>";
+    }
+?>
                 </ul>
             </div>
             <div class="search__box">

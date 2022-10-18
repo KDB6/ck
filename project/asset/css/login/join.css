@@ -56,6 +56,9 @@
 .join__box > div > input::placeholder {
     color: #757575;
 }
+#youPassC {
+    margin-bottom: 10px;
+}
 .choice_gender {
     display: flex;
     justify-content: space-between;
