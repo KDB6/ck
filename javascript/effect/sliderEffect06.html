@@ -22,7 +22,7 @@
         position: relative;
         width: 800px;
         height: 450px;
-        overflow: hidden;
+        /* overflow: hidden; */
     }
     .slider__inner {    /* 이미지를 감싸고 있는 부모 : 움직이는 부분 */
         display: flex;
@@ -253,10 +253,16 @@
         const slider = document.querySelectorAll(".slider");                    // 이미지
         const sliderDot = document.querySelector(".slider__dot");               // 닷 메뉴
 
-        let currentIndex = 0;                       // 현재 이미지
-        let sliderCount = slider.length;            // 이미지 갯수
-        let sliderWidth = sliderImg.offsetWidth;    // 이미지 가로값
-        let dotIndex = "";
+        let currentIndex = 0,
+            sliderLength = slider.length,
+            sliderWidth = slider.offsetWidth;
+            sldierFirst = slider[0],                    // 첫 번째 이미지
+            sliderLast = slider[slider.length -1],      // 마지막 이미지
+            cloneFirst = sldierFirst.cloneNode(true);   // 첫 번째 이미지 복사
+            cloneLast = sliderLast.cloneNode(true);     // 마지막 이미지 복사
+
+            sliderInner.appendChild(cloneFirst);
+            sliderInner.insertBefore(cloneLast, sldierFirst);
     </script>
     
 </body>
