@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="../assets/css/music.css">
     <link rel="stylesheet" href="../assets/css/font.css">
 
-    <link rel="stylesheet" href="../assets/css/search.css">
-    <link rel="stylesheet" href="../assets/css/searchAni.css">
-    <link rel="stylesheet" href="../assets/css/searchDracula.css">
+    <link rel="stylesheet" href="../assets/css/gameSearch.css">
+    <link rel="stylesheet" href="../assets/css/gameSearchAni.css">
+    <link rel="stylesheet" href="../assets/css/gameSearchDracula.css">
 
     <link href="https://webfontworld.github.io/tmon/Tmon.css" rel="stylesheet">
     <link href="https://webfontworld.github.io/score/SCoreDream.css" rel="stylesheet">
@@ -21,6 +21,8 @@
 
     <style>
         .search__answers, .search__missAnswers {display: none;}
+
+        #searchGame {}
     </style>
 </head>
 <body>
@@ -223,23 +225,8 @@
     </div>
 
     <!-- searchGame -->
-    <searchGame>
-        <header id="header">
-            <nav>
-                <ul>
-                    <li><a href="searchEffect01.html">1</a></li>
-                    <li><a href="searchEffect02.html">2</a></li>
-                    <li><a href="searchEffect03.html">3</a></li>
-                    <li><a href="searchEffect04.html">4</a></li>
-                    <li><a href="searchEffect05.html">5</a></li>
-                    <li><a href="searchEffect06.html">6</a></li>
-                    <li class="active"><a href="searchEffect07.html">7</a></li>
-                </ul>
-            </nav>
-        </header>
-        <!-- //header -->
-    
-        <main id="main">
+    <searchGame id="searchGame">
+        <main id="mainSearch">
             <div class="search__wrap">
                 <div class="search__audio">
                     <span class="play">
