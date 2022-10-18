@@ -9,7 +9,7 @@ modalBtn.addEventListener("click", () => {
 });
 modalClose.addEventListener("click", () => {
     modalCont.classList.add("hide");
-})
+});
 
 // 탭 메뉴
 const tabBtn = document.querySelectorAll(".modal__box .tabs > div");

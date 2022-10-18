@@ -5,17 +5,22 @@
 }
 
 /* main */
+#searchGame {
+    width: 1200px;
+}
 #searchGame #mainSearch{
     margin: 50px 10px;
+    width: 1200px;
 }
 .search__wrap {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     border: 3px solid var(--htmlColor);
     border-radius: 20px;
     background-color: #f1f3f6;
     padding: 30px;
     text-align: center;
+    display: none;
 }
 .search__wrap > span {
     font-size: 20px;
@@ -25,7 +30,7 @@
 .search__wrap > h1 {
     font-family: 'Tmon';
     color: var(--htmlColor);
-    font-size: 6vw;
+    font-size: 4vw;
     margin-bottom: 10px;
 }
 .search__audio {
@@ -84,6 +89,7 @@
     overflow:hidden
 }
 .search__list {
+    height: 400px;
     margin-top: 50px;
 }
 .search__list li {
@@ -322,3 +328,23 @@ footer a:hover {
         transform: scale3d(1, 1, 1);
     }
   }
+
+/* 모달 애니메이션 */
+.search__wrap.show {    /* 전체 배경 */
+    animation: foldOut 1s ease forwards;
+    display: block;
+}
+.search__wrap.show.hide{     
+    animation: foldIn 0.3s 0.5s ease backwards;
+    display: none;
+}
+@keyframes foldOut {
+    0%   {transform: scaleX(0) scaleY(0.001);}
+    50%  {transform: scaleX(1) scaleY(0.001);}
+    100% {transform: scaleX(1) scaleY(1);}
+}
+@keyframes foldIn {
+    0%   {transform: scaleX(1) scaleY(1);}
+    50%  {transform: scaleX(1) scaleY(0.001);}
+    100% {transform: scaleX(0) scaleY(0.001);}
+}

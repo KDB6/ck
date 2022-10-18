@@ -21,8 +21,6 @@
 
     <style>
         .search__answers, .search__missAnswers {display: none;}
-
-        #searchGame {}
     </style>
 </head>
 <body>
@@ -74,7 +72,7 @@
     </footer>
 
     <!-- CODE footer -->
-    <footer id="footer">
+    <footer id="codeFooter">
         <div class="modal__wrap">
             <div class="modal__btn">CODE</div>
             <div class="modal__cont">
@@ -240,6 +238,7 @@
     
                 <span>CSS 속성 검색 이벤트</span>
                 <h1>2분동안 CSS 속성 검색하기</h1>
+                <h2 class="search__close">끄기</h2>
                 <p class="desc">
                     2분 동안 CSS 속성을 많이 검색하면 점수가 올라갑니다.<br>
                     기억이 나지 않는다면 힌트보기를 세 번 이용하실 수 있습니다.
@@ -454,13 +453,16 @@
             cursor.style.top = e.clientY - 8 + "px";
         });
 
+        $("#searchGame").draggable();
+
         $(".muisc__wrap").draggable();
 
-        $(".icon01").draggable({
-            drag : function() {
-                $(".mouse__cursor img").attr("src","../assets/img/music/star.svg")
-            }
-        });
+
+        // $(".icon01").draggable({
+        //     drag : function() {
+        //         $(".mouse__cursor img").attr("src","../assets/img/music/star.svg")
+        //     }
+        // });
         $(".icon02").draggable({
             drag : function() {
                 $(".mouse__cursor img").attr("src","../assets/img/music/six.svg")

@@ -22,7 +22,7 @@
         position: relative;
         width: 800px;
         height: 450px;
-        /* overflow: hidden; */
+        overflow: hidden;
     }
     .slider__inner {    /* 이미지를 감싸고 있는 부모 : 움직이는 부분 */
         display: flex;
@@ -306,7 +306,7 @@
             cloneFirst = sliderFirst.cloneNode(true),   // 첫번째 이미지 복사
             cloneLast = sliderLast.cloneNode(true),     // 마지막 이미지 복사
             dotIndex = "",
-            interval = 3000,
+            interval = 2000,
             sliderTimer = "";
 
         function init() {
@@ -337,8 +337,8 @@
                 dotIndex += "<a href='#' class='dot'></a>";
             }
 
-            dotIndex += "<a href='#' class='play'></a>";
-            // dotIndex += "<a href='#' class='stop'></a>";
+            // dotIndex += "<a href='#' class='play'></a>";
+            dotIndex += "<a href='#' class='stop'></a>";
 
             sliderDot.innerHTML = dotIndex;
             sliderDot.firstElementChild.classList.add("active");
@@ -352,9 +352,15 @@
 
             currentIndex = index;
 
-            let dotActive = document.querySelectorAll(".slider__dot .dot");
-            dotActive.forEach(el => el.classList.remove("active"));
-            dotActive[index].classList.add("active");
+            if(currentIndex <= 4) {
+                let dotActive = document.querySelectorAll(".slider__dot .dot");
+                dotActive.forEach(el => el.classList.remove("active"));
+                dotActive[index].classList.add("active");
+            } else {
+                let dotActive = document.querySelectorAll(".slider__dot .dot");
+                dotActive.forEach(el => el.classList.remove("active"));
+                dotActive[0].classList.add("active");
+            }
         }
 
         // 순간이동 메서드
@@ -384,11 +390,14 @@
             gotoSlider(nextIndex);
         });
 
+        sliderBtnStop.addEventListener("click", () => {
+            sliderBtnPlay.classList.add("stop")
+            stopPlay();
+        });
+
         sliderBtnPlay.addEventListener("click", () => {
-            sliderBtnPlay.classList.remove("play")
-            if(sliderBtnPlay.classList.remove("play")) {
-                sliderBtnPlay.classList.add("stop")
-            };
+            sliderBtnPlay.classList.add("play")
+            autoPlay();
         });
         
         sliderInner.addEventListener("mouseenter", stopPlay);

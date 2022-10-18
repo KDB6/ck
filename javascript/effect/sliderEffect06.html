@@ -251,67 +251,6 @@
         hljs.highlightAll();
     </script>
 
-    <!-- <script>
-        const sliderWrap = document.querySelector(".slider__wrap");
-        const sliderImg = document.querySelector(".slider__img");               // 보여지는 영역
-        const sliderInner = document.querySelector(".slider__inner");           // 움직이는 영역
-        const slider = document.querySelectorAll(".slider");                    // 이미지
-        const sliderDot = document.querySelector(".slider__dot");               // 닷 메뉴
-        const sliderPrev = document.querySelector(".slider__btn .prev");        // 왼쪽 메뉴
-        const sliderNext = document.querySelector(".slider__btn .next");        // 오른쪽 메뉴
-
-        let currentIndex = 0,
-            sliderLength = slider.length,
-            sliderWidth = slider[0].offsetWidth,
-            sldierFirst = slider[0],                    // 첫 번째 이미지
-            sliderLast = slider[slider.Length -1],       // 마지막 이미지
-            cloneFirst = sldierFirst.cloneNode(true),   // 첫 번째 이미지 복사
-            cloneLast = sliderLast.cloneNode(true),     // 마지막 이미지 복사
-            dotIndex = "";
-
-        sliderInner.appendChild(cloneFirst);
-        sliderInner.insertBefore(cloneLast, sldierFirst);
-
-        // function init() {
-        //     // 이미지 갯수 만큼 닷 메뉴 만들기
-        //     for(let i=0; i<sliderLength; i++) {
-        //         dotIndex +=`<a href='#' class='dot'>image01</a>`;
-        //         sldierDotIndex = dotIndex;
-        //         sliderDot.innerHTML = sldierDotIndex;
-        //         if(sliderDot) {
-        //             sliderDot.classList.add("active");
-        //         }
-        //     }
-        // }
-        // init()
-
-        function init() {
-            for(let i=0; i<sliderLength; i++) {
-                dotIndex += "<a href='#' class='dot'></a>";
-            }
-            sliderDot.innerHTML = dotIndex;
-            sliderDot.firstElementChild.classList.add("active");
-        }
-        init();
-
-        function gotoSlider(direction) {
-
-            posInitial = sliderInner.offsetLeft;
-            console.log(posInitial);
-
-            if(direction == -1) {
-                sliderInner.style.left = (posInitial + sliderWidth) + "px";
-                currentIndex--;
-            } else if(direction == 1) {
-                sliderInner.style.left = (posInitial - sliderWidth) + "px";
-                currentIndex++;
-            }
-        }
-
-        sliderPrev.addEventListener("click", () => {gotoSlider(-1)})
-        sliderNext.addEventListener("click", () => {gotoSlider(1)})
-    </script> -->
-
     <script>
         const sliderWrap = document.querySelector(".slider__wrap");            // 전체 이미지 슬라이드
         const sliderImg = document.querySelector(".slider__img");              // 보여지는 영역
@@ -339,6 +278,7 @@
             for(let i=0; i<sliderLength; i++){
                 dotIndex += "<a href='#' class='dot'></a>";
             }
+
             sliderDot.innerHTML = dotIndex;
             sliderDot.firstElementChild.classList.add("active");
         }

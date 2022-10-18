@@ -408,6 +408,7 @@ let timeReamining = 120,    // 남은 시간
 function updateList() {
     cssProperty.forEach(data => {
         searchList.innerHTML += `<span>${data.name}</span>`;
+        searchList.style.overflow = "scroll";
     });
 }
 updateList();
@@ -444,12 +445,12 @@ function musicStop() {
 };
 musicStop();
 
-function musicPlay() {
+function musicplaySearch() {
     searchPlay.addEventListener("click", () => {
         searchAudio.play();
     });
 };
-musicPlay();
+musicplaySearch();
 
 // 인풋 체크하기
 function checkInput() {
@@ -554,3 +555,16 @@ function restart() {
 searchStart.addEventListener("click", startQuiz);
 searchInput.addEventListener("input", checkInput);
 searchRestart.addEventListener("click", restart);
+
+// 게임 모달
+const gameStar = document.querySelector(".icon01");
+const searchClose = document.querySelector(".search__close")
+const searchGame = document.querySelector(".search__wrap");
+
+gameStar.addEventListener("click", () => {
+    searchGame.classList.add("show");
+    searchGame.classList.remove("hide");
+});
+searchClose.addEventListener("click", () => {
+    searchGame.classList.add("hide");
+});
