@@ -27,20 +27,20 @@ li {
 }
 
 /* header */
-#headerSearch {
+#header {
     display: flex;
 }
-#headerSearch h1 {
+#header h1 {
     margin: 10px;
 }
-#headerSearch nav {
+#header nav {
     margin: 10px;
 }
-#headerSearch nav li {
+#header nav li {
     display: inline;
     position: relative;
 }
-#headerSearch nav li a {
+#header nav li a {
     width: 30px;
     height: 30px;
     border: 1px solid var(--htmlColor);
@@ -50,17 +50,17 @@ li {
     line-height: 30px;
     font-family: "SCoreDream";
 }
-#headerSearch nav ul li.active a {
+#header nav ul li.active a {
     background-color: var(--htmlColor);
     color: #fff;
 }
-#headerSearch nav li .sub {
+#header nav li .sub {
     position: absolute;
     left: 0;
     top: 35px;
     width: 400px;
 }
-#headerSearch nav li .sub li a {
+#header nav li .sub li a {
     width: auto;
     background-color: transparent;
     color: var(--htmColor);
@@ -68,12 +68,12 @@ li {
     text-align: left;
     line-height: 1.2;
 }
-#headerSearch nav li .sub li.active a {
+#header nav li .sub li.active a {
     text-decoration: underline;
 }
 
 /* main */
-#mainSearch{
+#main {
     margin: 50px 10px;
 }
 .search__wrap {
@@ -102,6 +102,10 @@ li {
 }
 .search__audio .play {
     display: none;
+}
+.search__wrap > span {
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 .search__wrap .time {
     width: 140px;
@@ -291,10 +295,6 @@ li {
 /* footer */
 #footer {
     text-align: center;
-}
-.search__wrap > span {
-    font-size: 16px;
-    margin-bottom: 10px;
 }
 #footer a {
     color: #000;

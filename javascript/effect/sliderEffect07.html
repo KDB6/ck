@@ -295,8 +295,8 @@
         const sliderBtn = document.querySelector(".slider__btn");              // 버튼
         const sliderBtnPrev = document.querySelector(".slider__btn .prev");    // 왼쪽 버튼
         const sliderBtnNext = document.querySelector(".slider__btn .next");    // 오른쪽 버튼
-        const sliderBtnPlay = document.querySelector(".slider__dot");    // 플레이 버튼
-        const sliderBtnStop = document.querySelector(".slider__dot");    // 정지 버튼
+        const sliderBtnPlay = document.querySelector(".slider__dot");          // 플레이 버튼
+        const sliderBtnStop = document.querySelector(".slider__dot");          // 정지 버튼
 
         let currentIndex = 0,
             sliderLength = slider.length,
@@ -322,6 +322,7 @@
                 gotoSlider(intervalNum);
             }, interval);
         }
+
         function stopPlay() {
             clearInterval(sliderTimer);
         }
@@ -350,6 +351,10 @@
             sliderInner.style.left = -sliderWidth * (index + 1) + "px";
 
             currentIndex = index;
+
+            let dotActive = document.querySelectorAll(".slider__dot .dot");
+            dotActive.forEach(el => el.classList.remove("active"));
+            dotActive[index].classList.add("active");
         }
 
         // 순간이동 메서드
