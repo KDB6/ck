@@ -3,7 +3,6 @@
     include "../connect/session.php";
 ?>
 
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -15,12 +14,10 @@
     <link rel="stylesheet" href="../asset/css/reset.css">
     <link rel="stylesheet" href="../asset/css/common.css">
     <link rel="stylesheet" href="../asset/css/font.css">
-    
-    <link rel="stylesheet" href="../asset/css/header.css">
+
     <link rel="stylesheet" href="../asset/css/board/boardLoginBanner.css">
     <link rel="stylesheet" href="../asset/css/board/boardImageType.css">
     <link rel="stylesheet" href="../asset/css/board/boardWriteModify.css">
-    <link rel="stylesheet" href="../asset/css/footer.css">
 </head>
 
 <!-- header -->
@@ -93,9 +90,9 @@
                     <div class="border_titleCate">
                         <div class="selectBox">
                             <select name="boardCate" id="boardCate">
-                                <option value="카테고리1">카테고리1</option>
-                                <option value="카테고리2">카테고리2</option>
-                                <option value="카테고리3">카테고리3</option>
+                                <option value="CATEGORY01">CATEGORY</option>
+                                <option value="CATEGORY02">CATEGORY</option>
+                                <option value="CATEGORY03">CATEGORY</option>
                             </select>
                         </div>
                         <div class="imgAttachBox">
@@ -114,11 +111,11 @@
                     <div>
                         <label for="boardPass"></label>
                         <input type="password" name="boardPass" id="boardPass" placeholder="비밀번호를 입력해주세요." autocomplete="pff" minlength="8" required>
-                    </div> -->
+                    </div>
                     <button type="submit" value="저장하기">수정 완료</button>
                     <span>|</span>
                     <span><a href="boardMain.html">취소</a></span>
-                </div>
+                </div> -->
             </form>
 
         </div>        

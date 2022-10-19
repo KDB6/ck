@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="../asset/css/board/boardLoginBanner.css">
     <link rel="stylesheet" href="../asset/css/board/boardImageType.css">
     <link rel="stylesheet" href="../asset/css/board/boardWriteModify.css">
-    <!-- <link rel="stylesheet" href="../asset/css/footer.css"> -->
 </head>
 
 <!-- header -->
@@ -71,9 +70,9 @@
                     <div class="border_titleCate">
                         <div class="selectBox">
                             <select name="boardCate" id="boardCate">
-                                <option value="카테고리1">카테고리1</option>
-                                <option value="카테고리2">카테고리2</option>
-                                <option value="카테고리3">카테고리3</option>
+                                <option value="CATEGORY01">CATEGORY</option>
+                                <option value="CATEGORY02">CATEGORY</option>
+                                <option value="CATEGORY03">CATEGORY</option>
                             </select>
                         </div>
                         <div class="imgAttachBox">
