@@ -49,6 +49,7 @@
 }
 .view__bot > p {
     margin-bottom: 20px;
+    font-weight: 300;
 }
 .boardView__btn {
     margin: 0 auto;

@@ -92,6 +92,7 @@
     font-size: 18px;
     border: none;
     resize: none;
+    font-weight: 300;
 }
 .board_writeBox > textarea::placeholder {color: #ccc;}
 .board_writeBox > textarea:focus {
