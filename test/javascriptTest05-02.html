@@ -218,7 +218,13 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
     <div id="sample1" class="sample">
         <h2>01. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">
+<pre class="line-numbers"><code class="language-js">const zip = ["coding"]
+
+function solution(zip) {
+    return Array.from(zip,e =>e += "man");
+}
+
+console.log(solution(zip))
 </code></pre>
         </div>
     </div>
@@ -228,7 +234,14 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
     <div id="sample2" class="sample">
         <h2>02. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">
+<pre class="line-numbers"><code class="language-js">const aaa = "naverkakao";
+        
+function solution(s) {
+    const answer = "gon";
+    return s.length * 2 == 1 ? answer + s[s.length/3 | 1] : answer + s.slice(s.length/5 - 1, s.length/2);
+}
+
+console.log(solution(aaa));
 </code></pre>
         </div>
     </div>
@@ -238,7 +251,19 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
     <div id="sample3" class="sample">
         <h2>03. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">
+<pre class="line-numbers"><code class="language-js">const zip = [2,2,2,2,2,2,2,2];
+
+function solution(two) {
+    var answer = 10;
+
+    for(let i=5; i&lt;two.length; i++) {
+        answer = answer + two[i]
+    }
+    answer = answer * two.length;
+    return answer
+}
+
+console.log(solution(zip));
 </code></pre>
         </div>
     </div>
@@ -248,7 +273,18 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
     <div id="sample4" class="sample">
         <h2>04. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">
+<pre class="line-numbers"><code class="language-js">const yes = "ogsesuohiz";
+
+function solution(s) {
+    let no = '';
+
+    for(let i = s.length - 3; i>=3; i--) {
+        no = no + s[i];
+    }
+    return no;
+}
+
+console.log(solution(yes))
 </code></pre>
         </div>
     </div>
@@ -258,7 +294,23 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
     <div id="sample5" class="sample">
         <h2>05. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">
+<pre class="line-numbers"><code class="language-js">const num = 10;
+
+function solution(n) {
+    let answer = '';
+    for(i=0; i&lt;n; i++) {
+        if(i % 2 == 0) {
+            answer += "멍";
+        } else if (i % 3 == 0) {
+            answer += "꿀"
+        } else {
+            answer += "왈"
+        }
+    }
+    return answer;
+}
+
+console.log(solution(num))
 </code></pre>
         </div>
     </div>
@@ -268,7 +320,20 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
     <div id="sample6" class="sample">
         <h2>06. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">
+<pre class="line-numbers"><code class="language-js">const num = "ziphouse";
+
+function solution(s) {
+    let answer;
+    let arr = [...s]
+    if(arr.length % 3 == 0) {
+        answer = arr.splice(arr.length/3-1, 2)
+    } else {
+        answer = arr.splice(Math.ceil(arr.length/3), 5)
+    }
+    return answer.join("").toUpperCase();
+}
+
+console.log(solution(num))
 </code></pre>
         </div>
     </div>
@@ -278,7 +343,18 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
     <div id="sample7" class="sample">
         <h2>07. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">
+<pre class="line-numbers"><code class="language-js">const num = [2,1,7,5,2,2,1,5]
+
+function solution(aa,bb) {
+    var answer = [];
+
+    for(i=2; i&lt;aa.length; i++) {
+        if(aa[i] % bb == 0) answer.push("코딩조아")
+    }
+    return answer;
+}
+
+console.log(solution(num, 2))
 </code></pre>
         </div>
     </div>
@@ -288,7 +364,21 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
     <div id="sample8" class="sample">
         <h2>08. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">
+<pre class="line-numbers"><code class="language-js">const num = [5,4,2,7,8];
+
+    function solution(abc) {
+        let sm = abc[0], index = 0;
+
+        for(i=0; i&lt;abc.length; i++) {
+            if(abc[i] &lt; sm) {
+                sm = abc[i];
+                index = i;
+            }
+        }
+        abc.sort().splice(index, 2, "coding");
+        return abc;
+    }
+    console.log(solution(num))
 </code></pre>
         </div>
     </div>
@@ -298,7 +388,18 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
     <div id="sample9" class="sample">
         <h2>09. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">
+<pre class="line-numbers"><code class="language-js">const abc = "Hamburger";
+
+function solution(s) {
+    let answer = s.split("");
+
+    for(i=0; i&lt;answer.length-8; i++) {
+        answer[i+2] = "eat";
+    }
+    return answer.join("").toLowerCase().toUpperCase();
+}
+
+console.log(solution(abc))
 </code></pre>
         </div>
     </div>
@@ -307,7 +408,27 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
     <div id="sample9" class="sample">
         <h2>10. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">
+<pre class="line-numbers"><code class="language-js">function solution(abc1, abc2) {
+
+    let answer = [];
+    abc1.reverse();
+    abc2.reverse();
+    let p1 = p2 = 2;
+
+    while(p1 &lt; abc1.length && p2 &lt; abc2.length) {
+        if(abc1[p1] !== abc2[p2]) {
+            answer.push(abc1[p1++]);
+            p2++
+        }
+        else if(abc1[p1] >= abc2[p2]) p1++;
+        else p2++;
+    }
+    return answer;
+}
+
+let a = [5,5,8,2,1,3];
+let b = [10,2,3,5,7,8];
+console.log(solution(a,b));
 </code></pre>
         </div>
     </div>
@@ -317,58 +438,58 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
     <script>
         // 1
         {
-            const arr = [1,1,3,3,0,1,1]
+            const zip = ["coding"]
 
-            function solution(arr) {
-                return arr.filter((item, idx) => item !== arr[idx+1]);
+            function solution(zip) {
+                return Array.from(zip,e =>e += "man");
             }
 
-            console.log(solution(arr))
+            console.log(solution(zip))
         }
 
         // 2
         {
-            const arr = "webstoryboy";
+            const aaa = "naverkakao";
         
             function solution(s) {
-                const answer = '';
-                return s.length % 2 == 1 ? s[s.length/2 | 0] : s.slice(s.length/2 - 1, s.length/2 + 1);
+                const answer = "gon";
+                return s.length * 2 == 1 ? answer + s[s.length/3 | 1] : answer + s.slice(s.length/5 - 1, s.length/2);
             }
             
-            console.log(solution(arr));
+            console.log(solution(aaa));
         }
 
         // 3
         {
-            const arr = [1,2,3,4,5,6,7,8,9,10];
+            const zip = [2,2,2,2,2,2,2,2];
 
-            function solution(numbers) {
-                var answer = 0;
+            function solution(two) {
+                var answer = 10;
 
-                for(let i=0; i<numbers.length; i++) {
-                    answer = answer + numbers[i]
+                for(let i=5; i<two.length; i++) {
+                    answer = answer + two[i]
                 }
-                answer =answer/numbers.length;
+                answer = answer * two.length;
                 return answer
             }
 
-            console.log(solution(arr));
+            console.log(solution(zip));
         }
 
         // 4
         {
-            const string = "webstoryboy";
+            const yes = "ogsesuohiz";
 
             function solution(s) {
-                const answer = '';
+                let no = '';
 
-                for(let i = s.length -1; i>=0; i--) {
-                    answer = answer + s[i];
+                for(let i = s.length - 3; i>=3; i--) {
+                    no = no + s[i];
                 }
-                return answer;
+                return no;
             }
 
-            console.log(solution(string))
+            console.log(solution(yes))
         }
 
         // 5
@@ -379,9 +500,11 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
                 let answer = '';
                 for(i=0; i<n; i++) {
                     if(i % 2 == 0) {
-                        answer += "코";
+                        answer += "멍";
+                    } else if (i % 3 == 0) {
+                        answer += "꿀"
                     } else {
-                        answer += "딩";
+                        answer += "왈"
                     }
                 }
                 return answer;
@@ -392,17 +515,17 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 
         // 6
         {
-            const num = "webstoryboy";
+            const num = "ziphouse";
 
             function solution(s) {
                 let answer;
                 let arr = [...s]
-                if(arr.length % 2 ==0) {
-                    answer = arr.splice(arr.length/2-1, 2)
+                if(arr.length % 3 == 0) {
+                    answer = arr.splice(arr.length/3-1, 2)
                 } else {
-                    answer = arr.splice(Math.floor(arr.length/2),1)
+                    answer = arr.splice(Math.ceil(arr.length/3), 5)
                 }
-                return answer.join("");
+                return answer.join("").toUpperCase();
             }
 
             console.log(solution(num))
@@ -410,77 +533,77 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 
         // 7
         {
-            const num = [5,9,7,10]
+            const num = [2,1,7,5,2,2,1,5]
 
-            function solutionA(arr,divisor) {
+            function solution(aa,bb) {
                 var answer = [];
 
-                for(i=0; i<arr.length; i++) {
-                    if(arr[i] % divisor == 0) answer.push(arr[i])
+                for(i=2; i<aa.length; i++) {
+                    if(aa[i] % bb == 0) answer.push("코딩조아")
                 }
                 return answer;
             }
 
-            console.log(solution(num,5))
+            console.log(solution(num, 2))
         }
 
         // 8
         {
-            const num = [5,9,7,10];
+            const num = [5,4,2,7,8];
 
-            function solution(arr) {
-                let sm = arr[0], index = 0;
+            function solution(abc) {
+                let sm = abc[0], index = 0;
 
-                for(i=0; i<arr.length; i++) {
-                    if(arr[i] < sm) {
-                        sm = arr[i];
+                for(i=0; i<abc.length; i++) {
+                    if(abc[i] < sm) {
+                        sm = abc[i];
                         index = i;
                     }
                 }
-                arr.splice(index, 1);
-                return arr;
+                abc.sort().splice(index, 2, "coding");
+                return abc;
             }
             console.log(solution(num))
         }
 
         // 9
         {
-            const num = "webstoryboy";
+            const abc = "Hamburger";
 
             function solution(s) {
                 let answer = s.split("");
 
-                for(i=0; i<answer.length-4; i++) {
-                    answer[i] = "*";
+                for(i=0; i<answer.length-8; i++) {
+                    answer[i+2] = "eat";
                 }
-                return answer.join("");
+                return answer.join("").toLowerCase().toUpperCase();
             }
 
-            console.log(solution(num))
+            console.log(solution(abc))
         }
 
         // 10
         {
-            function solution(arr1, arr2) {
+            function solution(abc1, abc2) {
 
                 let answer = [];
-                arr1.sort();
-                arr2.sort();
-                let p1 = p2 = 0;
+                abc1.reverse();
+                abc2.reverse();
+                let p1 = p2 = 2;
 
-                while(p1 < arr1.length && p2 < arr2.length) {
-                    if(arr1[p1] == arr2[p2]) {
-                        answer.push(arr1[p1++]);
+                while(p1 < abc1.length && p2 < abc2.length) {
+                    if(abc1[p1] !== abc2[p2]) {
+                        answer.push(abc1[p1++]);
                         p2++
                     }
-                    else if(arr1[p1] < arr2[p2]) p1++;
+                    else if(abc1[p1] >= abc2[p2]) p1++;
                     else p2++;
                 }
                 return answer;
             }
 
-            let a = [1,3,9,5,2];
-            let b = [3,2,5,7,8];
+            let a = [5,5,8,2,1,3];
+            let b = [10,2,3,5,7,8];
             console.log(solution(a,b));
         }
     </script>
